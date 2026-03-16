@@ -1,0 +1,1095 @@
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IFSU Équilibre · Marjorie M. — Fondations mentales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2744;
+    --navy-deep: #0d1828;
+    --navy-mid: #1a3060;
+    --coral: #D85A30;
+    --coral-light: #e8794f;
+    --amber: #c4892a;
+    --amber-light: #d4a050;
+    --cream: #f5f0e8;
+    --cream-dark: #ede6d6;
+    --text-light: #d4dff5;
+    --text-muted: #8a9bbf;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy-deep);
+    color: var(--text-light);
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.2rem 2.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(13,24,40,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid rgba(196,137,42,0.2);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 400;
+    color: var(--white); letter-spacing: 0.02em;
+  }
+  .nav-logo span { color: var(--amber); }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-links a {
+    font-size: 0.82rem; font-weight: 400; letter-spacing: 0.06em;
+    color: var(--text-muted); text-decoration: none;
+    text-transform: uppercase; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--amber); }
+  .nav-cta {
+    background: transparent; border: 0.5px solid var(--coral);
+    color: var(--coral) !important; padding: 0.5rem 1.2rem;
+    border-radius: 2px; font-size: 0.78rem !important;
+    letter-spacing: 0.08em !important; cursor: pointer;
+    transition: all 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--coral) !important; color: var(--white) !important; }
+
+  /* ─── HERO ─── */
+  #hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 8rem 2rem 4rem;
+    position: relative; overflow: hidden;
+    background: linear-gradient(160deg, #0d1828 0%, #1a2744 45%, #2c1e3a 100%);
+  }
+  .hero-lines {
+    position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+  }
+  .hero-lines::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      -55deg,
+      transparent, transparent 60px,
+      rgba(196,137,42,0.03) 60px, rgba(196,137,42,0.03) 61px
+    );
+  }
+  .hero-accent {
+    position: absolute; top: 15%; right: -5%;
+    width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(216,90,48,0.08) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .hero-accent-2 {
+    position: absolute; bottom: 5%; left: -8%;
+    width: 400px; height: 400px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,137,42,0.07) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.72rem; letter-spacing: 0.2em;
+    color: var(--amber); text-transform: uppercase;
+    margin-bottom: 2rem; opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    font-weight: 300; line-height: 1.1;
+    text-align: center; max-width: 800px;
+    color: var(--white); margin-bottom: 1rem;
+    opacity: 0; animation: fadeUp 0.8s 0.4s forwards;
+  }
+  .hero-title em {
+    font-style: italic; color: var(--amber);
+  }
+  .hero-title strong {
+    font-weight: 600; color: var(--coral);
+  }
+  .hero-sub {
+    font-size: 1rem; font-weight: 300; line-height: 1.8;
+    color: var(--text-muted); text-align: center;
+    max-width: 520px; margin-bottom: 3.5rem;
+    opacity: 0; animation: fadeUp 0.8s 0.6s forwards;
+  }
+
+  .hero-paths {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.2rem; max-width: 680px; width: 100%;
+    opacity: 0; animation: fadeUp 0.8s 0.8s forwards;
+  }
+  .path-card {
+    border: 0.5px solid rgba(255,255,255,0.1);
+    border-radius: 4px; padding: 2rem 1.8rem;
+    cursor: pointer; transition: all 0.3s;
+    position: relative; overflow: hidden;
+    background: rgba(26,39,68,0.6);
+    text-decoration: none; display: block;
+  }
+  .path-card::before {
+    content: ''; position: absolute; inset: 0;
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .path-card.particulier::before {
+    background: linear-gradient(135deg, rgba(196,137,42,0.08), transparent);
+  }
+  .path-card.entreprise::before {
+    background: linear-gradient(135deg, rgba(216,90,48,0.08), transparent);
+  }
+  .path-card:hover { transform: translateY(-3px); border-color: rgba(255,255,255,0.2); }
+  .path-card.particulier:hover { border-color: var(--amber); }
+  .path-card.entreprise:hover { border-color: var(--coral); }
+  .path-card:hover::before { opacity: 1; }
+
+  .path-tag {
+    font-size: 0.68rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.8rem;
+  }
+  .particulier .path-tag { color: var(--amber); }
+  .entreprise .path-tag { color: var(--coral); }
+  .path-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 400;
+    color: var(--white); margin-bottom: 0.6rem; line-height: 1.2;
+  }
+  .path-desc {
+    font-size: 0.82rem; color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .path-arrow {
+    position: absolute; bottom: 1.5rem; right: 1.5rem;
+    font-size: 1.2rem; transition: transform 0.2s;
+  }
+  .particulier .path-arrow { color: var(--amber); }
+  .entreprise .path-arrow { color: var(--coral); }
+  .path-card:hover .path-arrow { transform: translateX(4px); }
+
+  .hero-signature {
+    margin-top: 3rem; font-size: 0.75rem;
+    color: rgba(255,255,255,0.25); letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0; animation: fadeUp 0.8s 1s forwards;
+  }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 7rem 2rem; }
+
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+
+  .section-eyebrow {
+    font-size: 0.7rem; letter-spacing: 0.2em;
+    text-transform: uppercase; margin-bottom: 1rem;
+  }
+  .eyebrow-amber { color: var(--amber); }
+  .eyebrow-coral { color: var(--coral); }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 300; line-height: 1.15;
+    color: var(--white); margin-bottom: 1.5rem;
+  }
+  .section-title em { font-style: italic; color: var(--amber); }
+  .section-title.coral-accent em { color: var(--coral); }
+
+  .section-lead {
+    font-size: 1rem; font-weight: 300; line-height: 1.9;
+    color: var(--text-muted); max-width: 600px;
+    margin-bottom: 3rem;
+  }
+
+  /* ─── DIVIDER ─── */
+  .divider {
+    height: 0.5px;
+    background: linear-gradient(90deg, transparent, rgba(196,137,42,0.3), transparent);
+    margin: 0;
+  }
+
+  /* ─── PARTICULIER SECTION ─── */
+  #particulier {
+    background: var(--navy-deep);
+    position: relative; overflow: hidden;
+  }
+  #particulier::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--amber), transparent);
+  }
+
+  .two-col {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: start;
+  }
+  .three-col {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem; margin-top: 3rem;
+  }
+
+  .offer-card {
+    border: 0.5px solid rgba(255,255,255,0.08);
+    border-radius: 4px; padding: 2rem;
+    background: rgba(26,48,96,0.3);
+    transition: all 0.3s; position: relative;
+  }
+  .offer-card:hover {
+    border-color: rgba(255,255,255,0.18);
+    transform: translateY(-2px);
+  }
+  .offer-card.featured {
+    border-color: var(--amber);
+    background: rgba(196,137,42,0.05);
+  }
+  .offer-badge {
+    position: absolute; top: -0.6rem; left: 1.5rem;
+    background: var(--amber); color: var(--navy-deep);
+    font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; padding: 0.2rem 0.7rem;
+    border-radius: 2px;
+  }
+  .offer-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-weight: 400;
+    color: var(--white); margin-bottom: 0.5rem;
+  }
+  .offer-price {
+    font-size: 1.6rem; font-weight: 300;
+    color: var(--amber); margin-bottom: 0.8rem;
+  }
+  .offer-price span {
+    font-size: 0.8rem; color: var(--text-muted); font-weight: 300;
+  }
+  .offer-desc {
+    font-size: 0.83rem; color: var(--text-muted);
+    line-height: 1.7; margin-bottom: 1rem;
+  }
+  .offer-meta {
+    font-size: 0.75rem; color: var(--text-muted);
+    border-top: 0.5px solid rgba(255,255,255,0.06);
+    padding-top: 0.8rem; line-height: 1.8;
+  }
+
+  .practice-block { margin-bottom: 3rem; }
+  .practice-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem; font-weight: 400;
+    color: var(--white); margin-bottom: 0.8rem;
+  }
+  .practice-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; font-style: italic;
+    color: var(--amber); border-left: 2px solid var(--amber);
+    padding-left: 1rem; margin-bottom: 1.2rem;
+    line-height: 1.6;
+  }
+  .practice-body {
+    font-size: 0.88rem; color: var(--text-muted);
+    line-height: 1.9;
+  }
+
+  .location-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1rem; margin-top: 2rem;
+  }
+  .location-card {
+    background: rgba(26,48,96,0.4);
+    border: 0.5px solid rgba(255,255,255,0.07);
+    border-radius: 4px; padding: 1.4rem;
+  }
+  .location-name {
+    font-size: 0.78rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--amber);
+    margin-bottom: 0.4rem;
+  }
+  .location-addr {
+    font-size: 0.82rem; color: var(--text-light);
+    line-height: 1.5; margin-bottom: 0.6rem;
+  }
+  .location-details {
+    font-size: 0.78rem; color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ─── TRUTH BOX ─── */
+  .truth-box {
+    background: rgba(26,48,96,0.5);
+    border: 0.5px solid rgba(196,137,42,0.3);
+    border-radius: 4px; padding: 1.8rem 2rem;
+    margin: 2.5rem 0;
+    position: relative; overflow: hidden;
+  }
+  .truth-box::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: var(--amber);
+  }
+  .truth-label {
+    font-size: 0.65rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--amber);
+    margin-bottom: 0.6rem;
+  }
+  .truth-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; color: var(--white);
+    line-height: 1.7; font-style: italic;
+  }
+
+  /* ─── ENTREPRISE SECTION ─── */
+  #entreprise {
+    background: linear-gradient(180deg, var(--navy-deep) 0%, #1a1430 100%);
+    position: relative; overflow: hidden;
+  }
+  #entreprise::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--coral), transparent);
+  }
+
+  .stat-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1rem; margin: 2.5rem 0;
+  }
+  .stat-item {
+    background: rgba(26,39,68,0.6);
+    border: 0.5px solid rgba(255,255,255,0.07);
+    border-radius: 4px; padding: 1.5rem;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem; font-weight: 300;
+    color: var(--coral); line-height: 1; margin-bottom: 0.4rem;
+  }
+  .stat-label {
+    font-size: 0.75rem; color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .stat-source {
+    font-size: 0.65rem; color: rgba(255,255,255,0.2);
+    margin-top: 0.3rem;
+  }
+
+  .ritual-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1rem; margin: 2.5rem 0;
+  }
+  .ritual-card {
+    background: rgba(26,39,68,0.5);
+    border: 0.5px solid rgba(255,255,255,0.07);
+    border-radius: 4px; padding: 1.6rem;
+    transition: all 0.3s;
+  }
+  .ritual-card:hover {
+    border-color: rgba(216,90,48,0.3);
+    transform: translateY(-2px);
+  }
+  .ritual-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; font-weight: 300;
+    color: rgba(216,90,48,0.3); line-height: 1;
+    margin-bottom: 0.6rem;
+  }
+  .ritual-name {
+    font-size: 0.88rem; font-weight: 500;
+    color: var(--white); margin-bottom: 0.4rem;
+  }
+  .ritual-desc {
+    font-size: 0.8rem; color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .ritual-time {
+    display: inline-block; margin-top: 0.6rem;
+    font-size: 0.68rem; color: var(--coral);
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+
+  .pilot-box {
+    background: rgba(216,90,48,0.05);
+    border: 0.5px solid rgba(216,90,48,0.3);
+    border-radius: 4px; padding: 2.5rem;
+    margin-top: 3rem; position: relative;
+  }
+  .pilot-box::before {
+    content: 'PROGRAMME PILOTE 2026';
+    position: absolute; top: -0.6rem; left: 2rem;
+    background: var(--coral); color: var(--white);
+    font-size: 0.65rem; font-weight: 500;
+    letter-spacing: 0.12em; padding: 0.2rem 0.8rem;
+    border-radius: 2px;
+  }
+  .pilot-header {
+    display: flex; align-items: flex-end;
+    gap: 1.5rem; margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .pilot-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem; font-weight: 300;
+    color: var(--coral); line-height: 1;
+  }
+  .pilot-price small {
+    font-size: 1rem; color: var(--text-muted);
+  }
+  .pilot-real-val {
+    font-size: 0.82rem; color: var(--text-muted);
+  }
+  .pilot-real-val s { color: rgba(255,255,255,0.2); }
+  .pilot-seats {
+    margin-left: auto;
+    background: rgba(216,90,48,0.15);
+    border: 0.5px solid rgba(216,90,48,0.4);
+    border-radius: 3px; padding: 0.6rem 1rem;
+    text-align: center;
+  }
+  .pilot-seats-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; font-weight: 300; color: var(--coral);
+  }
+  .pilot-seats-label {
+    font-size: 0.65rem; color: var(--text-muted);
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .pilot-conditions {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 0.8rem; margin-top: 1.5rem;
+  }
+  .pilot-condition {
+    font-size: 0.8rem; color: var(--text-muted);
+    display: flex; gap: 0.5rem; align-items: flex-start;
+  }
+  .pilot-condition::before {
+    content: '—'; color: var(--coral); flex-shrink: 0;
+  }
+
+  /* ─── MARJORIE SECTION ─── */
+  #marjorie {
+    background: var(--navy);
+    border-top: 0.5px solid rgba(196,137,42,0.15);
+    border-bottom: 0.5px solid rgba(196,137,42,0.15);
+  }
+  .bio-grid {
+    display: grid; grid-template-columns: 2fr 3fr;
+    gap: 5rem; align-items: start;
+  }
+  .bio-left { position: sticky; top: 7rem; }
+  .bio-avatar {
+    width: 100px; height: 100px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--coral), var(--amber));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem; color: var(--white); font-weight: 300;
+    margin-bottom: 1.5rem;
+    border: 0.5px solid rgba(196,137,42,0.4);
+  }
+  .bio-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem; font-weight: 300;
+    color: var(--white); margin-bottom: 0.3rem;
+  }
+  .bio-role {
+    font-size: 0.78rem; color: var(--amber);
+    letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .bio-creds {
+    display: flex; flex-direction: column; gap: 0.5rem;
+  }
+  .bio-cred {
+    font-size: 0.78rem; color: var(--text-muted);
+    display: flex; gap: 0.5rem; align-items: flex-start;
+  }
+  .bio-cred::before { content: '·'; color: var(--amber); }
+
+  .bio-right {}
+  .bio-text {
+    font-size: 0.92rem; color: var(--text-muted);
+    line-height: 1.95; margin-bottom: 1.5rem;
+  }
+  .bio-text strong { color: var(--text-light); font-weight: 400; }
+
+  .anti-claims {
+    margin-top: 2rem;
+    border-top: 0.5px solid rgba(255,255,255,0.06);
+    padding-top: 2rem;
+  }
+  .anti-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 0.6rem; margin-top: 1rem;
+  }
+  .anti-item {
+    font-size: 0.78rem; color: var(--text-muted);
+    display: flex; gap: 0.5rem; align-items: flex-start;
+  }
+  .anti-no { color: rgba(255,255,255,0.2); text-decoration: line-through; }
+  .anti-yes { color: var(--text-light); }
+
+  /* ─── CONTACT ─── */
+  #contact {
+    background: var(--navy-deep);
+    padding-bottom: 5rem;
+  }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3rem; margin-top: 3rem;
+  }
+  .contact-block {
+    background: rgba(26,39,68,0.5);
+    border: 0.5px solid rgba(255,255,255,0.07);
+    border-radius: 4px; padding: 2rem;
+  }
+  .contact-block-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-weight: 400;
+    color: var(--white); margin-bottom: 1.2rem;
+  }
+  .contact-line {
+    font-size: 0.82rem; color: var(--text-muted);
+    display: flex; gap: 0.8rem; align-items: flex-start;
+    margin-bottom: 0.7rem; line-height: 1.5;
+  }
+  .contact-line-icon { color: var(--amber); flex-shrink: 0; font-size: 0.9rem; }
+  .contact-line a { color: var(--amber); text-decoration: none; }
+  .contact-line a:hover { color: var(--amber-light); }
+
+  .cta-btn {
+    display: inline-block; margin-top: 1.5rem;
+    padding: 0.85rem 2rem;
+    font-size: 0.78rem; font-weight: 400;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none; border-radius: 2px;
+    transition: all 0.25s; cursor: pointer;
+  }
+  .cta-amber {
+    background: transparent; border: 0.5px solid var(--amber);
+    color: var(--amber);
+  }
+  .cta-amber:hover {
+    background: var(--amber); color: var(--navy-deep);
+  }
+  .cta-coral {
+    background: transparent; border: 0.5px solid var(--coral);
+    color: var(--coral);
+  }
+  .cta-coral:hover {
+    background: var(--coral); color: var(--white);
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: #060e1a;
+    padding: 2rem 2.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 0.5px solid rgba(255,255,255,0.04);
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; color: rgba(255,255,255,0.3);
+    letter-spacing: 0.02em;
+  }
+  .footer-logo span { color: var(--amber); }
+  .footer-links {
+    display: flex; gap: 2rem;
+  }
+  .footer-links a {
+    font-size: 0.72rem; color: rgba(255,255,255,0.2);
+    text-decoration: none; letter-spacing: 0.08em;
+    text-transform: uppercase; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--amber); }
+  .footer-note {
+    font-size: 0.68rem; color: rgba(255,255,255,0.12);
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    .hero-paths { grid-template-columns: 1fr; }
+    .two-col, .bio-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .three-col, .ritual-grid { grid-template-columns: 1fr; }
+    .stat-grid { grid-template-columns: 1fr 1fr; }
+    .location-grid { grid-template-columns: 1fr; }
+    .pilot-conditions { grid-template-columns: 1fr; }
+    .anti-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .bio-left { position: static; }
+    .pilot-header { flex-direction: column; }
+    .pilot-seats { margin-left: 0; }
+    nav { padding: 1rem 1.5rem; }
+    section { padding: 5rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo" style="display:flex;align-items:center;gap:0.8rem;">
+    <svg width="12" height="22" viewBox="0 0 24 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="nF" x1="12" y1="0" x2="12" y2="44" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#c4892a"/>
+          <stop offset="55%" stop-color="#bf2a1a"/>
+          <stop offset="100%" stop-color="#c4892a" stop-opacity="0.6"/>
+        </linearGradient>
+      </defs>
+      <path d="M12 1 C18 8 22 18 20 28 C18 36 15 40 12 43 C9 40 6 36 4 28 C2 18 6 8 12 1Z" fill="url(#nF)"/>
+      <path d="M12 14 C14 18 15 24 14 30 C13.2 35 12.6 38 12 41 C11.4 38 10.8 35 10 30 C9 24 10 18 12 14Z" fill="#fffcf0" opacity="0.85"/>
+    </svg>
+    IFSU Équilibre <span>·</span> Marjorie M.
+  </div>
+  <div class="nav-links">
+    <a href="#particulier">Pour vous</a>
+    <a href="#entreprise">Pour votre équipe</a>
+    <a href="#marjorie">Qui suis-je</a>
+    <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20je%20souhaite%20vous%20contacter." class="nav-cta">Prendre contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-lines"></div>
+  <div class="hero-accent"></div>
+  <div class="hero-accent-2"></div>
+
+  <div style="margin-bottom:2.5rem;opacity:0;animation:fadeUp 0.8s 0.1s forwards;">
+    <svg width="40" height="72" viewBox="0 0 24 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 0 28px rgba(196,137,42,0.22)) drop-shadow(0 0 8px rgba(191,42,26,0.18));">
+      <defs>
+        <linearGradient id="hF" x1="12" y1="0" x2="12" y2="44" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#c4892a"/>
+          <stop offset="52%" stop-color="#bf2a1a"/>
+          <stop offset="100%" stop-color="#c4892a" stop-opacity="0.5"/>
+        </linearGradient>
+      </defs>
+      <path d="M12 1 C18 8 22 18 20 28 C18 36 15 40 12 43 C9 40 6 36 4 28 C2 18 6 8 12 1Z" fill="url(#hF)"/>
+      <path d="M12 14 C14 18 15 24 14 30 C13.2 35 12.6 38 12 41 C11.4 38 10.8 35 10 30 C9 24 10 18 12 14Z" fill="#fffcf0" opacity="0.9"/>
+    </svg>
+  </div>
+
+  <p class="hero-eyebrow">Fondations mentales · Ath, Belgique</p>
+
+  <h1 class="hero-title">
+    Certaines personnes tiennent.<br>
+    D'autres <em>s'épuisent.</em><br>
+    La différence n'est pas le talent —<br>
+    <strong>ce sont les fondations mentales.</strong>
+  </h1>
+
+  <p class="hero-sub">
+    Je ne vends pas des séances. Je construis les fondations qui permettent aux individus et aux équipes de tenir dans la durée.
+  </p>
+
+  <div class="hero-paths">
+    <a href="#particulier" class="path-card particulier">
+      <div class="path-tag">Pour vous</div>
+      <div class="path-title">Ressourcement personnel</div>
+      <div class="path-desc">Yoga Viniyoga & méditation védique IFSU. Des pratiques authentiques, transmises depuis 50 ans.</div>
+      <div class="path-arrow">→</div>
+    </a>
+    <a href="#entreprise" class="path-card entreprise">
+      <div class="path-tag">Pour votre équipe</div>
+      <div class="path-title">Équilibre & Performance</div>
+      <div class="path-desc">Programme pilote pour PME belges. Culture d'entreprise, rétention des talents, résultats mesurables.</div>
+      <div class="path-arrow">→</div>
+    </a>
+  </div>
+
+  <p class="hero-signature">ifsu-equilibre.be &nbsp;·&nbsp; ifsu@etik.com &nbsp;·&nbsp; Ath, Belgique</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- PARTICULIER -->
+<section id="particulier">
+  <div class="section-inner">
+    <p class="section-eyebrow eyebrow-amber">Pour les individus</p>
+    <h2 class="section-title">Deux pratiques.<br><em>Un ancrage profond.</em></h2>
+    <p class="section-lead">
+      Pas de jargon ésotérique. Pas de promesses miraculeuses. Des techniques authentiques, transmises avec soin, adaptées à chaque personne.
+    </p>
+
+    <div class="two-col">
+      <div>
+        <div class="practice-block">
+          <h3 class="practice-title">Yoga Viniyoga</h3>
+          <div class="practice-quote">
+            "Le yoga s'adapte à toi,<br>pas toi au yoga." — Krishnamacharya
+          </div>
+          <p class="practice-body">
+            Le Viniyoga, c'est l'art d'adapter le yoga à ton corps — pas l'inverse. Issu de la lignée du grand maître Krishnamacharya, cette approche est profondément thérapeutique : elle respecte ton anatomie, ton histoire, tes limites du moment.<br><br>
+            Tu n'as pas besoin d'être souple. Tu n'as pas besoin d'avoir déjà fait du yoga. Tu as juste besoin d'envie.
+          </p>
+        </div>
+
+        <div class="practice-block">
+          <h3 class="practice-title">Méditation védique IFSU</h3>
+          <div class="practice-quote">
+            "Nous ne créons pas une force spirituelle — elle existe déjà. Il suffit de l'activer." — Gururaj Ananda Yogi
+          </div>
+          <p class="practice-body">
+            La méditation IFSU s'adresse à ceux qui cherchent quelque chose de plus profond. Pas un outil de gestion du stress — une voie vers soi. Vers le silence intérieur. Vers la paix et la joie réelles.<br><br>
+            Méthode «Path of Unfoldment» de Gururaj Ananda Yogi. Transmise depuis 1975 dans 8 pays. Technique prescrite individuellement — jamais one-size-fits-all.
+          </p>
+        </div>
+
+        <div class="truth-box">
+          <div class="truth-label">Soyons honnêtes</div>
+          <div class="truth-text">La méditation IFSU demande 20 minutes le matin et 20 minutes le soir. 40 minutes par jour. Ce n'est pas négociable si tu veux des résultats réels. Je préfère te le dire maintenant plutôt qu'après.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="location-grid">
+          <div class="location-card">
+            <div class="location-name">Ath · Centre Équilibre</div>
+            <div class="location-addr">Rue des Hauts-Degrés 18<br>7800 Ath</div>
+            <div class="location-details">
+              Mercredi 18h30 · 90 min<br>
+              Max 10 personnes<br>
+              <strong style="color:var(--amber)">5€ · 10€ · 15€</strong> selon tes moyens
+            </div>
+          </div>
+          <div class="location-card">
+            <div class="location-name">Meslin-l'Évêque</div>
+            <div class="location-addr">25 rue de la Procession<br>7822 Meslin-l'Évêque</div>
+            <div class="location-details">
+              Samedi & dimanche 10h00 · 90 min<br>
+              Max 10 personnes<br>
+              <strong style="color:var(--amber)">15€</strong>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;">
+          <p style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber);margin-bottom:1rem;">Méditation · Le parcours</p>
+          <div class="three-col" style="grid-template-columns:1fr;gap:0.8rem;">
+            <div class="offer-card">
+              <div class="offer-name">Session découverte</div>
+              <div class="offer-price">Gratuite <span>· individuelle · sur RDV</span></div>
+              <div class="offer-desc">Vous explorez la méthode, vous posez toutes vos questions, vous décidez en connaissance de cause.</div>
+            </div>
+            <div class="offer-card featured">
+              <div class="offer-badge">Cycle complet</div>
+              <div class="offer-name">10 séances individuelles</div>
+              <div class="offer-price">250€ <span>ou 25€/séance · à votre rythme</span></div>
+              <div class="offer-desc">Technique prescrite pour vous. Progression accompagnée. Suivi individuel de chaque séance.</div>
+              <div class="offer-meta">+ Groupe hebdomadaire gratuit à vie après le cycle</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20je%20souhaite%20réserver%20une%20session%20découverte%20gratuite." class="cta-btn cta-amber">Session découverte →</a>
+          <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20j%27aimerais%20en%20savoir%20plus%20sur%20les%20cours%20de%20yoga." class="cta-btn" style="border:0.5px solid rgba(255,255,255,0.15);color:var(--text-muted);">Infos yoga →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ENTREPRISE -->
+<section id="entreprise">
+  <div class="section-inner">
+    <p class="section-eyebrow eyebrow-coral">Pour les entreprises · PME belges 50–200 employés</p>
+    <h2 class="section-title coral-accent">Vos talents partent ?<br><em>Le problème n'est pas votre équipe.</em></h2>
+    <p class="section-lead">
+      C'est l'absence de fondations opérationnelles qui ancrent l'engagement dans le quotidien. Les entreprises avec une culture forte retiennent 3× plus de talents.
+    </p>
+
+    <div class="stat-grid">
+      <div class="stat-item">
+        <div class="stat-num">39%</div>
+        <div class="stat-label">des incapacités de travail liées au stress chronique en Belgique</div>
+        <div class="stat-source">Securex 2024</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">80k€</div>
+        <div class="stat-label">coût annuel de l'absentéisme pour 50 employés</div>
+        <div class="stat-source">SD Worx 2025</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">+39%</div>
+        <div class="stat-label">de productivité dans les équipes engagées vs les autres</div>
+        <div class="stat-source">Securex 2024</div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <p style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);margin-bottom:1.2rem;">Les 4 rituels opérationnels</p>
+        <div class="ritual-grid">
+          <div class="ritual-card">
+            <div class="ritual-num">01</div>
+            <div class="ritual-name">Radio Taiso</div>
+            <div class="ritual-desc">70 ans chez Toyota. Cohésion d'équipe + énergie collective dès 9h. Zéro entreprise belge ne l'utilise encore.</div>
+            <span class="ritual-time">10 min · matin</span>
+          </div>
+          <div class="ritual-card">
+            <div class="ritual-num">02</div>
+            <div class="ritual-name">Pauses 90 minutes</div>
+            <div class="ritual-desc">Le cerveau fonctionne par cycles ultradian de 90 min. 2 pauses structurées = +15-20% de concentration.</div>
+            <span class="ritual-time">INRS · prouvé</span>
+          </div>
+          <div class="ritual-card">
+            <div class="ritual-num">03</div>
+            <div class="ritual-name">Time Blocking</div>
+            <div class="ritual-desc">4h de formation = 2-3h de productivité récupérées par jour. Vos équipes font plus en moins de temps.</div>
+            <span class="ritual-time">Goldman Sachs · Yale</span>
+          </div>
+          <div class="ritual-card">
+            <div class="ritual-num">04</div>
+            <div class="ritual-name">Ambassadeurs internes</div>
+            <div class="ritual-desc">2 personnes de votre équipe pilotent le système. Quand je pars, la culture reste. Zéro dépendance consultant.</div>
+            <span class="ritual-time">6 mois · autonomie</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);margin-bottom:1.2rem;">Le parcours · 4 semaines</p>
+
+        <div style="display:flex;flex-direction:column;gap:0.8rem;margin-bottom:2rem;">
+          <div style="background:rgba(26,39,68,0.5);border:0.5px solid rgba(255,255,255,0.06);border-radius:4px;padding:1.2rem;display:flex;gap:1rem;align-items:flex-start;">
+            <div style="color:var(--coral);font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;flex-shrink:0;line-height:1;">0</div>
+            <div>
+              <div style="font-size:0.78rem;color:var(--white);margin-bottom:0.3rem;">Semaine avant · Diagnostic</div>
+              <div style="font-size:0.75rem;color:var(--text-muted);line-height:1.5;">Audit avec DRH/Direction. Co-construction des rituels. Identification des 2 futurs ambassadeurs.</div>
+            </div>
+          </div>
+          <div style="background:rgba(26,39,68,0.5);border:0.5px solid rgba(255,255,255,0.06);border-radius:4px;padding:1.2rem;display:flex;gap:1rem;align-items:flex-start;">
+            <div style="color:var(--coral);font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;flex-shrink:0;line-height:1;">1–3</div>
+            <div>
+              <div style="font-size:0.78rem;color:var(--white);margin-bottom:0.3rem;">Semaines 1-3 · Formation terrain</div>
+              <div style="font-size:0.75rem;color:var(--text-muted);line-height:1.5;">Formation quotidienne 1h/jour. Mise en place des 4 rituels. Ajustements en temps réel.</div>
+            </div>
+          </div>
+          <div style="background:rgba(26,39,68,0.5);border:0.5px solid rgba(255,255,255,0.06);border-radius:4px;padding:1.2rem;display:flex;gap:1rem;align-items:flex-start;">
+            <div style="color:var(--coral);font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;flex-shrink:0;line-height:1;">+6</div>
+            <div>
+              <div style="font-size:0.78rem;color:var(--white);margin-bottom:0.3rem;">6 mois · Consolidation</div>
+              <div style="font-size:0.75rem;color:var(--text-muted);line-height:1.5;">Vos 2 ambassadeurs pilotent. Rapport d'impact à J+21 et J+180. Chiffres, pas des impressions.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pilot-box">
+          <div class="pilot-header">
+            <div>
+              <div class="pilot-price">800€ <small>HTVA</small></div>
+              <div class="pilot-real-val">Valeur réelle : <s>3 500€</s> · Tarif partenaire pilote</div>
+            </div>
+            <div class="pilot-seats">
+              <div class="pilot-seats-num">3</div>
+              <div class="pilot-seats-label">places disponibles</div>
+            </div>
+          </div>
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:1rem;border-top:0.5px solid rgba(255,255,255,0.06);padding-top:1rem;">
+            Garantie Jour 3 : 50% remboursé si ça ne colle pas — vous gardez tout le matériel.
+          </div>
+          <div class="pilot-conditions">
+            <div class="pilot-condition">Accès direct aux équipes</div>
+            <div class="pilot-condition">Participation active</div>
+            <div class="pilot-condition">Feedback honnête J+21 et J+180</div>
+            <div class="pilot-condition">Témoignage client en fin de mission</div>
+          </div>
+          <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20le%20programme%20pilote%20Équilibre%20%26%20Performance." class="cta-btn cta-coral" style="margin-top:1.5rem;">Discutons-en →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- MARJORIE -->
+<section id="marjorie">
+  <div class="section-inner">
+    <div class="bio-grid">
+      <div class="bio-left">
+        <div class="bio-avatar">M</div>
+        <div class="bio-name">Marjorie Mathieu</div>
+        <div class="bio-role">IFSU Belgique · Ath</div>
+        <div class="bio-creds">
+          <div class="bio-cred">Yoga Viniyoga · pratique depuis 2011, enseigne depuis 2014</div>
+          <div class="bio-cred">Méditation védique IFSU · 12 ans de pratique</div>
+          <div class="bio-cred">Co-responsable IFSU Belgique</div>
+          <div class="bio-cred">Lignée Krishnamacharya / Gururaj Ananda Yogi</div>
+          <div class="bio-cred">Certifiée Viniyoga & IFSU</div>
+        </div>
+      </div>
+
+      <div class="bio-right">
+        <p class="section-eyebrow eyebrow-amber">Qui suis-je</p>
+        <h2 class="section-title" style="font-size:2.2rem;">Je ne suis pas une gourou.<br><em>Je suis quelqu'un qui a traversé la même chose.</em></h2>
+
+        <p class="bio-text">
+          Je pratique le yoga depuis 2011 et j'enseigne depuis 2014. Je suis en méditation védique IFSU depuis 12 ans. J'ai trouvé dans ces deux pratiques quelque chose de précieux — <strong>un ancrage, une clarté, une forme de paix qui ne dépend pas des circonstances extérieures.</strong>
+        </p>
+        <p class="bio-text">
+          Mon approche : honnête, directe, sans bullshit. Je dis les vraies choses, y compris quand ce n'est pas simple. <strong>Je n'essaie pas de convaincre — j'invite.</strong> Si c'est pour vous, vous le sentirez.
+        </p>
+        <p class="bio-text">
+          Pour les entreprises, je construis des cultures qui retiennent les talents et se mesurent à J+180. Pas du bien-être décoratif. Des résultats traçables.
+        </p>
+
+        <div class="truth-box" style="border-color:rgba(216,90,48,0.3);">
+          <div class="truth-label" style="color:var(--coral);">Ce que je ne suis pas</div>
+          <div class="anti-grid">
+            <div class="anti-item"><span class="anti-no">Gourou</span></div>
+            <div class="anti-item"><span class="anti-no">Coach de productivité spirituelle</span></div>
+            <div class="anti-item"><span class="anti-no">Promesses miraculeuses</span></div>
+            <div class="anti-item"><span class="anti-no">Bien-être décoratif</span></div>
+            <div class="anti-item"><span class="anti-yes">→ Quelqu'un qui a traversé la même chose</span></div>
+            <div class="anti-item"><span class="anti-yes">→ Résultats mesurables à J+180</span></div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;padding-top:2rem;border-top:0.5px solid rgba(255,255,255,0.06);">
+          <p style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber);margin-bottom:0.8rem;">IFSU en bref</p>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.8;">Organisation internationale fondée en 1975 par Gururaj Ananda Yogi. Présente dans 8 pays : USA, Canada, Belgique, Danemark, Espagne, Irlande, France, Royaume-Uni. Plus de 1 000 pratiquants dans le monde. Structure associative à but non lucratif.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <p class="section-eyebrow eyebrow-amber">Prendre contact</p>
+    <h2 class="section-title">La meilleure façon de comprendre<br><em>ce que je propose, c'est de vivre l'expérience.</em></h2>
+    <p class="section-lead">Pour le yoga : venez un mercredi ou un week-end. Pour la méditation : commencez par la session découverte gratuite. Dans les deux cas, vous partez libre — sans pression, sans obligation.</p>
+
+    <div class="contact-grid">
+      <div class="contact-block">
+        <div class="contact-block-title">Yoga & Méditation · Particuliers</div>
+        <div class="contact-line">
+          <span class="contact-line-icon">✉</span>
+          <span><a href="mailto:ifsu@etik.com">ifsu@etik.com</a></span>
+        </div>
+        <div class="contact-line">
+          <span class="contact-line-icon">📱</span>
+          <span><a href="https://wa.me/32477091803">0477/09.18.03</a> (WhatsApp)</span>
+        </div>
+        <div class="contact-line">
+          <span class="contact-line-icon">🌐</span>
+          <span><a href="https://ifsu.online">ifsu.online</a></span>
+        </div>
+        <div class="contact-line">
+          <span class="contact-line-icon">📍</span>
+          <span>Centre Équilibre, Rue des Hauts-Degrés 18, Ath · Mercredi 18h30</span>
+        </div>
+        <div class="contact-line">
+          <span class="contact-line-icon">📍</span>
+          <span>25 rue de la Procession, Meslin-l'Évêque · Sam & Dim 10h00</span>
+        </div>
+        <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20je%20souhaite%20réserver%20une%20session%20découverte%20gratuite." class="cta-btn cta-amber">Session découverte gratuite →</a>
+      </div>
+
+      <div class="contact-block">
+        <div class="contact-block-title">Équilibre & Performance · Entreprises</div>
+        <div class="contact-line">
+          <span class="contact-line-icon">✉</span>
+          <span><a href="mailto:hello@marjoriemathieu.be">hello@marjoriemathieu.be</a></span>
+        </div>
+        <div class="contact-line">
+          <span class="contact-line-icon">💼</span>
+          <span><a href="https://linkedin.com/in/equilibreperformance">LinkedIn · Équilibre Performance</a></span>
+        </div>
+        <div class="contact-line">
+          <span class="contact-line-icon">📋</span>
+          <span>Programme pilote · 800€ HTVA · 3 places · 4 semaines</span>
+        </div>
+        <div class="contact-line">
+          <span class="contact-line-icon">✓</span>
+          <span>Garantie Jour 3 · 50% remboursé si ça ne colle pas</span>
+        </div>
+        <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20le%20programme%20pilote%20Équilibre%20%26%20Performance." class="cta-btn cta-coral">Discutons-en →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo" style="display:flex;align-items:center;gap:0.5rem;">
+    <svg width="7" height="13" viewBox="0 0 24 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="fF" x1="12" y1="0" x2="12" y2="44" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#c4892a"/>
+          <stop offset="55%" stop-color="#bf2a1a"/>
+          <stop offset="100%" stop-color="#c4892a" stop-opacity="0.5"/>
+        </linearGradient>
+      </defs>
+      <path d="M12 1 C18 8 22 18 20 28 C18 36 15 40 12 43 C9 40 6 36 4 28 C2 18 6 8 12 1Z" fill="url(#fF)"/>
+      <path d="M12 14 C14 18 15 24 14 30 C13.2 35 12.6 38 12 41 C11.4 38 10.8 35 10 30 C9 24 10 18 12 14Z" fill="#fffcf0" opacity="0.8"/>
+    </svg>
+    IFSU Équilibre <span>·</span> Marjorie M.
+  </div>
+  <div class="footer-links">
+    <a href="#particulier">Particuliers</a>
+    <a href="#entreprise">Entreprises</a>
+    <a href="#marjorie">À propos</a>
+    <a href="https://ifsu.online">ifsu.online</a>
+  </div>
+  <div class="footer-note">Ath, Belgique · ifsu@etik.com</div>
+</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.borderBottomColor = window.scrollY > 50
+      ? 'rgba(196,137,42,0.35)'
+      : 'rgba(196,137,42,0.2)';
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.offer-card, .ritual-card, .stat-item, .location-card, .contact-block').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(16px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
