@@ -129,6 +129,87 @@
 
   #meditation { background: var(--navy); position: relative; overflow: hidden; }
 
+  /* RETRAITE SECTION */
+  #retraite {
+    background: linear-gradient(175deg, var(--navy) 0%, #1e2d4a 40%, #2a2248 100%);
+    position: relative; overflow: hidden;
+  }
+  #retraite::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--amber), transparent); }
+  .retraite-glow { position: absolute; top: -10%; right: -10%; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(196,137,42,0.06) 0%, transparent 60%); pointer-events: none; }
+  .retraite-glow-2 { position: absolute; bottom: -5%; left: -8%; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(216,90,48,0.04) 0%, transparent 60%); pointer-events: none; }
+
+  .retraite-header-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-bottom: 4rem; }
+  .retraite-header-left { }
+  .retraite-date-badge {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: rgba(196,137,42,0.1); border: 0.5px solid rgba(196,137,42,0.35);
+    border-radius: 3px; padding: 0.5rem 1rem; margin-bottom: 1.5rem;
+    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber);
+  }
+  .retraite-date-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--amber); animation: pulse-dot 2s ease-in-out infinite; }
+  @keyframes pulse-dot { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+  .retraite-key-facts {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem;
+  }
+  .retraite-fact {
+    background: rgba(36,54,86,0.5); border: 0.5px solid rgba(255,255,255,0.08);
+    border-radius: 4px; padding: 1.2rem; text-align: center;
+  }
+  .retraite-fact-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: var(--amber); line-height: 1; margin-bottom: 0.3rem; }
+  .retraite-fact-label { font-size: 0.72rem; color: var(--text-muted); line-height: 1.4; }
+
+  .retraite-programme { margin-top: 3rem; }
+  .retraite-techniques { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; margin-top: 1.5rem; }
+  .retraite-tech {
+    background: rgba(36,54,86,0.45); border: 0.5px solid rgba(255,255,255,0.08);
+    border-radius: 4px; padding: 1.2rem; transition: all 0.3s;
+  }
+  .retraite-tech:hover { border-color: rgba(196,137,42,0.3); transform: translateY(-2px); }
+  .retraite-tech-name { font-size: 0.82rem; font-weight: 500; color: var(--white); margin-bottom: 0.4rem; }
+  .retraite-tech-desc { font-size: 0.75rem; color: var(--text-muted); line-height: 1.6; }
+
+  .retraite-journee {
+    margin-top: 3rem; background: rgba(36,54,86,0.4);
+    border: 0.5px solid rgba(255,255,255,0.08); border-radius: 4px;
+    padding: 2rem; position: relative; overflow: hidden;
+  }
+  .retraite-journee::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(180deg, var(--amber), var(--coral)); }
+  .retraite-journee-title { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber); margin-bottom: 1.2rem; }
+  .retraite-heure { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 0.6rem; }
+  .retraite-heure-time { font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; font-weight: 400; color: var(--amber); min-width: 50px; flex-shrink: 0; }
+  .retraite-heure-desc { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
+
+  .retraite-enseignantes { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 3rem; }
+  .retraite-ens {
+    background: rgba(36,54,86,0.5); border: 0.5px solid rgba(255,255,255,0.08);
+    border-radius: 4px; padding: 1.5rem; transition: all 0.3s;
+  }
+  .retraite-ens:hover { border-color: rgba(196,137,42,0.25); }
+  .retraite-ens-name { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 400; color: var(--white); margin-bottom: 0.2rem; }
+  .retraite-ens-origin { font-size: 0.7rem; color: var(--amber); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.6rem; }
+  .retraite-ens-bio { font-size: 0.78rem; color: var(--text-muted); line-height: 1.7; }
+
+  .retraite-pricing-box {
+    background: rgba(196,137,42,0.06); border: 0.5px solid rgba(196,137,42,0.3);
+    border-radius: 4px; padding: 2.5rem; margin-top: 3rem; position: relative;
+  }
+  .retraite-pricing-box::before {
+    content: 'NOVEMBRE 2026'; position: absolute; top: -0.6rem; left: 2rem;
+    background: var(--amber); color: var(--navy-deep); font-size: 0.65rem; font-weight: 500;
+    letter-spacing: 0.12em; padding: 0.2rem 0.8rem; border-radius: 2px;
+  }
+  .retraite-pricing-header { display: flex; align-items: flex-end; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .retraite-pricing-main { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: var(--amber); line-height: 1; }
+  .retraite-pricing-main small { font-size: 1rem; color: var(--text-muted); }
+  .retraite-pricing-alt { font-size: 0.82rem; color: var(--text-muted); }
+  .retraite-pricing-seats { margin-left: auto; background: rgba(196,137,42,0.12); border: 0.5px solid rgba(196,137,42,0.35); border-radius: 3px; padding: 0.6rem 1rem; text-align: center; }
+  .retraite-pricing-seats-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: var(--amber); }
+  .retraite-pricing-seats-label { font-size: 0.65rem; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; }
+  .retraite-inclus { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-top: 1.5rem; border-top: 0.5px solid rgba(255,255,255,0.08); padding-top: 1.2rem; }
+  .retraite-inclus-item { font-size: 0.78rem; color: var(--text-muted); display: flex; gap: 0.5rem; align-items: flex-start; }
+  .retraite-inclus-item::before { content: '—'; color: var(--amber); flex-shrink: 0; }
+
   #entreprise { background: linear-gradient(180deg, var(--navy-deep) 0%, #2a2248 100%); position: relative; overflow: hidden; }
   #entreprise::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--coral), transparent); }
 
@@ -214,6 +295,13 @@
     .pilot-seats { margin-left: 0; }
     nav { padding: 1rem 1.5rem; }
     section { padding: 5rem 1.5rem; }
+    .retraite-header-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .retraite-techniques { grid-template-columns: 1fr; }
+    .retraite-enseignantes { grid-template-columns: 1fr; }
+    .retraite-key-facts { grid-template-columns: 1fr 1fr; }
+    .retraite-inclus { grid-template-columns: 1fr; }
+    .retraite-pricing-header { flex-direction: column; }
+    .retraite-pricing-seats { margin-left: 0; }
   }
 </style>
 </head>
@@ -227,6 +315,7 @@
   <div class="nav-links">
     <a href="#yoga">Yoga</a>
     <a href="#meditation">Méditation</a>
+    <a href="#retraite">Retraite résidentielle</a>
     <a href="#entreprise">Entreprises</a>
     <a href="#marjorie">Qui suis-je</a>
     <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20je%20souhaite%20te%20contacter." class="nav-cta">Prendre contact</a>
@@ -255,6 +344,12 @@
       <div class="path-arrow">→</div>
     </a>
   </div>
+  <a href="#retraite" class="path-card particulier" style="max-width:680px;width:100%;margin-top:0.4rem;opacity:0;animation:fadeUp 0.8s 1s forwards;border-color:rgba(196,137,42,0.35);background:rgba(196,137,42,0.06);">
+    <div class="path-tag">Ressourcement 5 jours</div>
+    <div class="path-title">Retraite résidentielle · Novembre 2026</div>
+    <div class="path-desc">5 jours de méditation et yoga au centre Koningsteen, entre Bruxelles et Anvers. 750€ tout compris. Débutants bienvenus.</div>
+    <div class="path-arrow">→</div>
+  </a>
   <p class="hero-signature">ifsu-equilibre.be &nbsp;·&nbsp; ifsu@etik.com &nbsp;·&nbsp; Ath, Belgique</p>
 </section>
 
@@ -361,6 +456,156 @@
         <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20je%20souhaite%20r%C3%A9server%20une%20session%20d%C3%A9couverte%20gratuite." class="cta-btn cta-amber">Session découverte gratuite →</a>
       </div>
     </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- RETRAITE -->
+<section id="retraite">
+  <div class="retraite-glow"></div>
+  <div class="retraite-glow-2"></div>
+  <div class="section-inner">
+
+    <div class="retraite-header-grid">
+      <div class="retraite-header-left">
+        <div class="retraite-date-badge">
+          <span class="dot"></span>
+          23 — 27 novembre 2026
+        </div>
+        <p class="section-eyebrow eyebrow-amber">Retraite résidentielle · 5 jours</p>
+        <h2 class="section-title">Cinq jours pour sortir du bruit.<br><em>Et retrouver le silence.</em></h2>
+        <p class="section-lead" style="margin-bottom:1.5rem;">Pas un week-end spa. Pas un buffet de techniques piochées ici et là. Un programme structuré de méditation et yoga, basé sur 50 ans d'enseignement IFSU — dans un lieu pensé pour ça.</p>
+        <p style="font-size:0.88rem;color:var(--text-muted);line-height:1.9;">Cinq jours sans notifications, sans to-do list, sans charge mentale. Tout est pris en charge — logement, repas, programme — pour que la seule chose à faire soit d'être présent. Tu repars avec des outils concrets : calme, clarté mentale, techniques de respiration et de concentration que tu pourras pratiquer chez toi.</p>
+      </div>
+      <div>
+        <div class="retraite-key-facts">
+          <div class="retraite-fact">
+            <div class="retraite-fact-num">5</div>
+            <div class="retraite-fact-label">jours complets<br>lundi → vendredi</div>
+          </div>
+          <div class="retraite-fact">
+            <div class="retraite-fact-num">20</div>
+            <div class="retraite-fact-label">participants<br>maximum</div>
+          </div>
+          <div class="retraite-fact">
+            <div class="retraite-fact-num">2</div>
+            <div class="retraite-fact-label">enseignantes<br>FR · EN · DK</div>
+          </div>
+          <div class="retraite-fact">
+            <div class="retraite-fact-num">0</div>
+            <div class="retraite-fact-label">prérequis<br>débutants bienvenus</div>
+          </div>
+        </div>
+
+        <!-- Enseignantes -->
+        <div class="retraite-enseignantes">
+          <div class="retraite-ens">
+            <div class="retraite-ens-name">Marjorie</div>
+            <div class="retraite-ens-origin">Belgique · FR & EN</div>
+            <div class="retraite-ens-bio">Certifiée IFSU et Viniyoga, 14 ans de pratique. Approche concrète et accessible. Elle rend la pratique accessible à ceux qui pensent que «&nbsp;la méditation, ce n'est pas pour moi&nbsp;».</div>
+          </div>
+          <div class="retraite-ens">
+            <div class="retraite-ens-name">Breeyana</div>
+            <div class="retraite-ens-origin">Belgique · EN, FR & DK</div>
+            <div class="retraite-ens-bio">Fondatrice de la Société belge de méditation (IFSU Belgique). Enseignante IFSU en connexion directe avec l'enseignement de Gururaj Ananda Yogi. Sa profondeur d'enseignement et son ancrage en Belgique apportent une dimension complémentaire unique.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Techniques -->
+    <div class="retraite-programme">
+      <p style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber);margin-bottom:0.4rem;">Ce qu'on pratique</p>
+      <p style="font-size:0.88rem;color:var(--text-muted);line-height:1.7;max-width:700px;margin-bottom:1.5rem;">Chaque technique s'inscrit dans une progression cohérente. Ce n'est pas un menu à la carte — c'est un programme construit.</p>
+      <div class="retraite-techniques">
+        <div class="retraite-tech">
+          <div class="retraite-tech-name">Méditation avec gong</div>
+          <div class="retraite-tech-desc">Pratique de groupe incluant chant (mantra) et méditation profonde accompagnée par le son du gong.</div>
+        </div>
+        <div class="retraite-tech">
+          <div class="retraite-tech-name">Yoga doux (Viniyoga)</div>
+          <div class="retraite-tech-desc">Adapté à tous les niveaux. Axé sur la respiration et le mouvement conscient — pas sur la performance.</div>
+        </div>
+        <div class="retraite-tech">
+          <div class="retraite-tech-name">Yoga Nidra</div>
+          <div class="retraite-tech-desc">Relaxation profonde guidée, allongé. Un repos équivalent à plusieurs heures de sommeil.</div>
+        </div>
+        <div class="retraite-tech">
+          <div class="retraite-tech-name">Marche silencieuse</div>
+          <div class="retraite-tech-desc">Promenade matinale sans conversation dans le cadre verdoyant de Koningsteen.</div>
+        </div>
+        <div class="retraite-tech">
+          <div class="retraite-tech-name">Tratak</div>
+          <div class="retraite-tech-desc">Concentration sur la flamme d'une bougie, en cercle. Apaise le mental de façon remarquable.</div>
+        </div>
+        <div class="retraite-tech">
+          <div class="retraite-tech-name">Satsangs</div>
+          <div class="retraite-tech-desc">Écoute d'enregistrements de Gururaj suivie de discussions ouvertes. Des échanges vivants sur la peur, la colère, le sommeil, les relations.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Journée type -->
+    <div class="retraite-journee">
+      <div class="retraite-journee-title">Journée type</div>
+      <div class="retraite-heure"><div class="retraite-heure-time">07h15</div><div class="retraite-heure-desc">Pratiques personnelles ou session de yoga</div></div>
+      <div class="retraite-heure"><div class="retraite-heure-time">08h00</div><div class="retraite-heure-desc">Petit-déjeuner — en silence certains matins</div></div>
+      <div class="retraite-heure"><div class="retraite-heure-time">09h00</div><div class="retraite-heure-desc">Marche silencieuse dans la nature</div></div>
+      <div class="retraite-heure"><div class="retraite-heure-time">09h30</div><div class="retraite-heure-desc">Pratique de groupe ou satsang du matin</div></div>
+      <div class="retraite-heure"><div class="retraite-heure-time">11h00</div><div class="retraite-heure-desc">Pause</div></div>
+      <div class="retraite-heure"><div class="retraite-heure-time">11h30</div><div class="retraite-heure-desc">Satsang ou activité complémentaire</div></div>
+      <div class="retraite-heure"><div class="retraite-heure-time">13h00</div><div class="retraite-heure-desc">Déjeuner</div></div>
+      <div class="retraite-heure"><div class="retraite-heure-time">14h00</div><div class="retraite-heure-desc">Tratak, visualisation ou relaxation</div></div>
+      <div class="retraite-heure"><div class="retraite-heure-time">15h30</div><div class="retraite-heure-desc">Satsang ou pratique de groupe</div></div>
+      <div class="retraite-heure"><div class="retraite-heure-time">17h00</div><div class="retraite-heure-desc">Yoga Nidra ou session questions-réponses</div></div>
+      <div class="retraite-heure"><div class="retraite-heure-time">18h30</div><div class="retraite-heure-desc">Dîner</div></div>
+      <div class="retraite-heure"><div class="retraite-heure-time">20h00</div><div class="retraite-heure-desc">Satsang du soir ou soirée libre</div></div>
+      <p style="font-size:0.75rem;color:var(--text-muted);margin-top:1rem;font-style:italic;">Le rythme est soutenu mais jamais forcé. Il y a des pauses, du temps libre, des moments sociaux.</p>
+    </div>
+
+    <!-- Lieu -->
+    <div style="margin-top:3rem;">
+      <p style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber);margin-bottom:1rem;">Le lieu</p>
+      <div class="location-card" style="background:rgba(36,54,86,0.5);border-color:rgba(196,137,42,0.2);">
+        <div class="location-name">Koningsteen Center · Kapelle-op-den-Bos</div>
+        <div class="location-addr">Entre Bruxelles et Anvers · Belgique</div>
+        <div class="location-details" style="margin-top:0.6rem;">Centre de retraite reconnu depuis plus de 25 ans. Un cadre verdoyant et calme, avec salles de pratique, espaces communs, hébergement et restauration sur place. Ce n'est pas un Airbnb improvisé — c'est un lieu pensé pour ce type de séjour.</div>
+      </div>
+    </div>
+
+    <!-- Accueil débutants -->
+    <div class="truth-box" style="margin-top:2.5rem;">
+      <div class="truth-label">Débutants : on ne te lâche pas</div>
+      <div class="truth-text">Briefing individuel sur le chant et le mantra. Introduction au tratak avant la pratique. Cartes de respiration distribuées. Tu n'es pas le spectateur des pratiquants avancés — tu es accompagné dès le premier instant.</div>
+    </div>
+
+    <!-- Pricing -->
+    <div class="retraite-pricing-box">
+      <div class="retraite-pricing-header">
+        <div>
+          <div class="retraite-pricing-main">750€ <small>tout compris</small></div>
+          <div class="retraite-pricing-alt">Option à la journée : 150€/jour</div>
+        </div>
+        <div class="retraite-pricing-seats">
+          <div class="retraite-pricing-seats-num">20</div>
+          <div class="retraite-pricing-seats-label">places maximum</div>
+        </div>
+      </div>
+      <div class="retraite-inclus">
+        <div class="retraite-inclus-item">5 jours complets (lundi → vendredi)</div>
+        <div class="retraite-inclus-item">Hébergement sur place</div>
+        <div class="retraite-inclus-item">Tous les repas inclus</div>
+        <div class="retraite-inclus-item">Programme complet de pratiques</div>
+        <div class="retraite-inclus-item">Bilingue français & anglais</div>
+        <div class="retraite-inclus-item">Aucun prérequis</div>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20retraite%20de%20novembre%202026." class="cta-btn cta-amber">Réserver ma place →</a>
+        <a href="mailto:ifsu@etik.com?subject=Retraite%20novembre%202026%20-%20Question" class="cta-btn" style="border:0.5px solid rgba(255,255,255,0.18);color:var(--text-muted);">J'ai une question →</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -486,7 +731,7 @@
     IFSU Équilibre <span>·</span> Marjorie M.
   </div>
   <div class="footer-links">
-    <a href="#yoga">Yoga</a><a href="#meditation">Méditation</a><a href="#entreprise">Entreprises</a><a href="#marjorie">À propos</a><a href="https://ifsu.online">ifsu.online</a>
+    <a href="#yoga">Yoga</a><a href="#meditation">Méditation</a><a href="#retraite">Retraite résidentielle</a><a href="#entreprise">Entreprises</a><a href="#marjorie">À propos</a><a href="https://ifsu.online">ifsu.online</a>
   </div>
   <div class="footer-note">Ath, Belgique · ifsu@etik.com</div>
 </footer>
@@ -495,7 +740,7 @@
   document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'})}})});
   const nav=document.querySelector('nav');window.addEventListener('scroll',()=>{nav.style.borderBottomColor=window.scrollY>50?'rgba(196,137,42,0.35)':'rgba(196,137,42,0.2)'});
   const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.style.opacity='1';el.target.style.transform='translateY(0)'}})},{threshold:0.1});
-  document.querySelectorAll('.offer-card,.ritual-card,.stat-item,.location-card,.contact-block').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(16px)';el.style.transition='opacity 0.6s ease, transform 0.6s ease';obs.observe(el)});
+  document.querySelectorAll('.offer-card,.ritual-card,.stat-item,.location-card,.contact-block,.retraite-tech,.retraite-ens,.retraite-fact').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(16px)';el.style.transition='opacity 0.6s ease, transform 0.6s ease';obs.observe(el)});
 </script>
 </body>
 </html>
