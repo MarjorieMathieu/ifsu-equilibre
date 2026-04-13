@@ -2,6 +2,7 @@
 <html lang="fr-BE">
 <head>
 <meta charset="UTF-8">
+<meta name="google-site-verification" content="google144fc9397f56fa7a" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- SEO #1 : Titre optimisé -->
@@ -484,7 +485,7 @@
     <div class="path-desc">5 jours de méditation et yoga au centre Koningsteen, entre Bruxelles et Anvers. 750€ participation aux frais, tout compris. Débutants bienvenus.</div>
     <div class="path-arrow">→</div>
   </a>
-  <p class="hero-signature">ifsu-equilibre.be &nbsp;·&nbsp; <a href="mailto:ifsu@etik.com" style="color:inherit;text-decoration:none;">ifsu@etik.com</a> &nbsp;·&nbsp; Ath, Belgique</p>
+  <p class="hero-signature">ifsu-equilibre.be &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection#e188879294a18495888acf828e8c" style="color:inherit;text-decoration:none;"><span class="__cf_email__" data-cfemail="e089869395a08594898bce838f8d">[email&#160;protected]</span></a> &nbsp;·&nbsp; Ath, Belgique</p>
 </section>
 
 <div class="divider"></div>
@@ -515,7 +516,7 @@
             <div class="offer-name">Séance individuelle Viniyoga</div>
             <div class="offer-price">65€ <span>· 90 min · sur rendez-vous</span></div>
             <div class="offer-desc">Le cours est entièrement construit autour de toi : ton corps, tes contraintes, tes objectifs du moment. Récupération après blessure, adaptation posturale, approfondissement d'une pratique existante — ou simplement avancer à ton rythme, sans groupe.</div>
-            <div class="offer-meta">Sur rendez-vous uniquement · Contacte-moi par <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20j%27aimerais%20r%C3%A9server%20une%20s%C3%A9ance%20priv%C3%A9e%20de%20yoga." style="color:var(--gold);text-decoration:none;">WhatsApp</a> ou <a href="mailto:ifsu@etik.com" style="color:var(--gold);text-decoration:none;">e-mail</a></div>
+            <div class="offer-meta">Sur rendez-vous uniquement · Contacte-moi par <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20j%27aimerais%20r%C3%A9server%20une%20s%C3%A9ance%20priv%C3%A9e%20de%20yoga." style="color:var(--gold);text-decoration:none;">WhatsApp</a> ou <a href="/cdn-cgi/l/email-protection#87eee1f4f2c7e2f3eeeca9e4e8ea" style="color:var(--gold);text-decoration:none;">e-mail</a></div>
           </div>
         </div>
       </div>
@@ -745,7 +746,7 @@
       </div>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;">
         <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20retraite%20de%20novembre%202026." class="cta-btn cta-gold">Réserver ma place →</a>
-        <a href="mailto:ifsu@etik.com?subject=Retraite%20novembre%202026%20-%20Question" class="cta-btn cta-ghost">J'ai une question →</a>
+        <a href="/cdn-cgi/l/email-protection#3e57584d4b7e5b4a5755105d5153014d4b5c545b5d4a036c5b4a4c5f574a5b1b0c0e5051485b535c4c5b1b0c0e0c0e0c081b0c0e131b0c0e6f4b5b4d4a575150" class="cta-btn cta-ghost">J'ai une question →</a>
       </div>
     </div>
 
@@ -898,7 +899,7 @@
       <div class="contact-block-dark">
         <div class="contact-block-title" style="color:var(--lin);">Yoga & Méditation</div>
         <div class="contact-line"><span class="contact-line-icon">🗓</span><span><a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener">Réserver un cours de yoga</a> (en ligne)</span></div>
-        <div class="contact-line"><span class="contact-line-icon">✉</span><span><a href="mailto:ifsu@etik.com">ifsu@etik.com</a></span></div>
+        <div class="contact-line"><span class="contact-line-icon">✉</span><span><a href="/cdn-cgi/l/email-protection#b5dcd3c6c0f5d0c1dcde9bd6dad8"><span class="__cf_email__" data-cfemail="f39a958086b396879a98dd909c9e">[email&#160;protected]</span></a></span></div>
         <div class="contact-line"><span class="contact-line-icon">📱</span><span><a href="https://wa.me/32477091803">0477/09.18.03</a> · WhatsApp</span></div>
         <div class="contact-line"><span class="contact-line-icon">🌐</span><span><a href="https://ifsu.online">ifsu.online</a></span></div>
         <div class="contact-line"><span class="contact-line-icon">📍</span><span>Mardi & Jeudi 18h30 · Rue des Hauts-Degrés 20, 7800 Ath</span></div>
@@ -933,7 +934,7 @@
       </div>
       <div class="contact-block-dark">
         <div class="contact-block-title" style="color:var(--lin);">Équilibre & Performance · Entreprises</div>
-        <div class="contact-line"><span class="contact-line-icon">✉</span><span><a href="mailto:ifsu@etik.com">ifsu@etik.com</a></span></div>
+        <div class="contact-line"><span class="contact-line-icon">✉</span><span><a href="/cdn-cgi/l/email-protection#dab3bca9af9abfaeb3b1f4b9b5b7"><span class="__cf_email__" data-cfemail="c6afa0b5b386a3b2afade8a5a9ab">[email&#160;protected]</span></a></span></div>
         <div class="contact-line"><span class="contact-line-icon">💼</span><span><a href="https://www.linkedin.com/in/marjoriemathieu-equilibre/">LinkedIn · Marjorie Mathieu</a></span></div>
         <div class="contact-line"><span class="contact-line-icon">📋</span><span>Programme pilote · 1 500€ HTVA · 3 places · 4 semaines</span></div>
         <div class="contact-line"><span class="contact-line-icon">✓</span><span>Garantie Jour 3 · 50% remboursé si ça ne colle pas</span></div>
@@ -973,7 +974,7 @@
     </div>
     <div class="footer-nap-item">
       <strong>Email</strong>
-      <a href="mailto:ifsu@etik.com">ifsu@etik.com</a>
+      <a href="/cdn-cgi/l/email-protection#7a131c090f3a1f0e131154191517"><span class="__cf_email__" data-cfemail="167f7065635673627f7d3875797b">[email&#160;protected]</span></a>
     </div>
     <div class="footer-nap-item">
       <strong>Site</strong>
@@ -982,11 +983,5 @@
   </div>
 </footer>
 
-<script>
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'})}})});
-  const nav=document.querySelector('nav');window.addEventListener('scroll',()=>{nav.style.borderBottomColor=window.scrollY>50?'rgba(201,168,76,0.4)':'rgba(201,168,76,0.25)'});
-  const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.style.opacity='1';el.target.style.transform='translateY(0)'}})},{threshold:0.1});
-  document.querySelectorAll('.offer-card-light,.offer-card-dark,.ritual-card,.stat-item,.loc-card-light,.loc-card-dark,.contact-block-dark,.retraite-tech,.retraite-ens,.retraite-fact').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(16px)';el.style.transition='opacity 0.6s ease, transform 0.6s ease';obs.observe(el)});
-</script>
-</body>
-</html>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'sm
