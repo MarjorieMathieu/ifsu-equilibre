@@ -2,8 +2,9 @@
 <html lang="fr-BE">
 <head>
 <meta charset="UTF-8">
-<meta name="google-site-verification" content="google144fc9397f56fa7a" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="zYjPrtRORDJH2KseJLVvPwDcyBFEzW3v22QmhdeRKms" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- SEO #1 : Titre optimisé -->
 <title>Cours de Viniyoga &amp; Méditation à Ath | IFSU Équilibre – Marjorie Mathieu</title>
