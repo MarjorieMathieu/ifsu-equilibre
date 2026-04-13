@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr-BE">
 <head>
 <meta charset="UTF-8">
@@ -91,23 +92,19 @@
     line-height: 1.75;
   }
 
-  /* ── LANG SWITCHER ── */
+  /* ── LANG SWITCHER (dans la nav) ── */
   .lang-switcher {
-    position: fixed; top: 1rem; left: 50%;
-    transform: translateX(-50%);
-    z-index: 300;
     display: flex;
-    background: rgba(61,83,99,0.97);
-    border: 0.5px solid rgba(201,168,76,0.35);
-    border-radius: 4px; overflow: hidden;
-    box-shadow: 0 2px 14px rgba(0,0,0,0.25);
+    background: rgba(255,255,255,0.08);
+    border: 0.5px solid rgba(201,168,76,0.3);
+    border-radius: 3px; overflow: hidden;
   }
   .lang-btn {
-    padding: 0.4rem 1rem;
-    font-size: 0.7rem; font-weight: 500;
-    letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
     cursor: pointer; border: none;
-    background: transparent; color: rgba(247,243,238,0.45);
+    background: transparent; color: rgba(247,243,238,0.4);
     transition: all 0.2s; font-family: 'DM Sans', sans-serif;
   }
   .lang-btn.active { background: var(--gold); color: var(--ardoise-deep); font-weight: 700; }
@@ -414,12 +411,6 @@
 </head>
 <body class="fr">
 
-<!-- LANG SWITCHER -->
-<div class="lang-switcher">
-  <button class="lang-btn active" onclick="switchLang('fr')" id="btn-fr">FR</button>
-  <button class="lang-btn" onclick="switchLang('en')" id="btn-en">EN</button>
-</div>
-
 <!-- FLOATING SOCIAL -->
 <div class="social-float">
   <a href="https://www.facebook.com/IFSU.Yoga.Meditation.Ath" target="_blank" rel="noopener noreferrer nofollow" aria-label="Facebook">
@@ -442,6 +433,10 @@
     <a href="#retraite"><span class="lang-fr">Retraite résidentielle</span><span class="lang-en">Residential retreat</span></a>
     <a href="#entreprise"><span class="lang-fr">Entreprises</span><span class="lang-en">Companies</span></a>
     <a href="#marjorie"><span class="lang-fr">Qui suis-je</span><span class="lang-en">About</span></a>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="switchLang('fr')" id="btn-fr">FR</button>
+      <button class="lang-btn" onclick="switchLang('en')" id="btn-en">EN</button>
+    </div>
     <a href="https://wa.me/32477091803?text=Hello%20Marjorie%2C%20I%20would%20like%20to%20get%20in%20touch." class="nav-cta">
       <span class="lang-fr">Prendre contact</span><span class="lang-en">Get in touch</span>
     </a>
@@ -488,7 +483,7 @@
     <div class="path-desc"><span class="lang-fr">5 jours de méditation et yoga au centre Koningsteen, entre Bruxelles et Anvers. 750€ participation aux frais, tout compris. Débutants bienvenus.</span><span class="lang-en">5 days of meditation and yoga at Koningsteen centre, between Brussels and Antwerp. €750 cost-sharing, all included. Beginners welcome.</span></div>
     <div class="path-arrow">→</div>
   </a>
-  <p class="hero-signature">ifsu-equilibre.be &nbsp;·&nbsp; ifsu@etik.com &nbsp;·&nbsp; Ath, Belgique</p>
+  <p class="hero-signature">ifsu-equilibre.be &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d6bfb0a5a396b3a2bfbdf8b5b9bb">[email&#160;protected]</a> &nbsp;·&nbsp; Ath, Belgique</p>
 </section>
 
 <div class="divider"></div>
@@ -527,7 +522,7 @@
             <div class="offer-price">65€ <span><span class="lang-fr">· 90 min · sur rendez-vous</span><span class="lang-en">· 90 min · by appointment</span></span></div>
             <div class="offer-desc lang-fr">Le cours est entièrement construit autour de toi : ton corps, tes contraintes, tes objectifs du moment. Récupération après blessure, adaptation posturale, approfondissement d'une pratique existante — ou simplement avancer à ton rythme, sans groupe.</div>
             <div class="offer-desc lang-en">The session is built entirely around you: your body, your constraints, your current goals. Post-injury recovery, postural adjustment, deepening an existing practice — or simply moving at your own pace, without a group.</div>
-            <div class="offer-meta"><span class="lang-fr">Sur rendez-vous uniquement · <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20j%27aimerais%20r%C3%A9server%20une%20s%C3%A9ance%20priv%C3%A9e%20de%20yoga." style="color:var(--gold);text-decoration:none;">WhatsApp</a> ou <a href="mailto:ifsu@etik.com" style="color:var(--gold);text-decoration:none;">e-mail</a></span><span class="lang-en">By appointment only · <a href="https://wa.me/32477091803?text=Hello%20Marjorie%2C%20I%27d%20like%20to%20book%20a%20private%20yoga%20session." style="color:var(--gold);text-decoration:none;">WhatsApp</a> or <a href="mailto:ifsu@etik.com" style="color:var(--gold);text-decoration:none;">email</a></span></div>
+            <div class="offer-meta"><span class="lang-fr">Sur rendez-vous uniquement · <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20j%27aimerais%20r%C3%A9server%20une%20s%C3%A9ance%20priv%C3%A9e%20de%20yoga." style="color:var(--gold);text-decoration:none;">WhatsApp</a> ou <a href="/cdn-cgi/l/email-protection#147d7267615471607d7f3a777b79" style="color:var(--gold);text-decoration:none;">e-mail</a></span><span class="lang-en">By appointment only · <a href="https://wa.me/32477091803?text=Hello%20Marjorie%2C%20I%27d%20like%20to%20book%20a%20private%20yoga%20session." style="color:var(--gold);text-decoration:none;">WhatsApp</a> or <a href="/cdn-cgi/l/email-protection#630a0510162306170a084d000c0e" style="color:var(--gold);text-decoration:none;">email</a></span></div>
           </div>
         </div>
       </div>
@@ -805,7 +800,7 @@
       </div>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;">
         <a href="https://wa.me/32477091803?text=Hello%20Marjorie%2C%20I%27d%20like%20to%20register%20for%20the%20November%202026%20retreat." class="cta-btn cta-gold"><span class="lang-fr">Réserver ma place →</span><span class="lang-en">Reserve my spot →</span></a>
-        <a href="mailto:ifsu@etik.com" class="cta-btn cta-ghost"><span class="lang-fr">J'ai une question →</span><span class="lang-en">I have a question →</span></a>
+        <a href="/cdn-cgi/l/email-protection#7c151a0f093c19081517521f1311" class="cta-btn cta-ghost"><span class="lang-fr">J'ai une question →</span><span class="lang-en">I have a question →</span></a>
       </div>
     </div>
   </div>
@@ -934,7 +929,7 @@
       <div class="contact-block-dark">
         <div class="contact-block-title" style="color:var(--lin);"><span class="lang-fr">Yoga & Méditation</span><span class="lang-en">Yoga & Meditation</span></div>
         <div class="contact-line"><span class="contact-line-icon">🗓</span><span><a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener"><span class="lang-fr">Réserver un cours de yoga</span><span class="lang-en">Book a yoga class</span></a> (<span class="lang-fr">en ligne</span><span class="lang-en">online</span>)</span></div>
-        <div class="contact-line"><span class="contact-line-icon">✉</span><span><a href="mailto:ifsu@etik.com">ifsu@etik.com</a></span></div>
+        <div class="contact-line"><span class="contact-line-icon">✉</span><span><a href="/cdn-cgi/l/email-protection#244d4257516441504d4f0a474b49"><span class="__cf_email__" data-cfemail="e68f809593a683928f8dc885898b">[email&#160;protected]</span></a></span></div>
         <div class="contact-line"><span class="contact-line-icon">📱</span><span><a href="https://wa.me/32477091803">0477/09.18.03</a> · WhatsApp</span></div>
         <div class="contact-line"><span class="contact-line-icon">🌐</span><span><a href="https://ifsu.online">ifsu.online</a></span></div>
         <div class="contact-line"><span class="contact-line-icon">📍</span><span><span class="lang-fr">Mardi & Jeudi 18h30 · Rue des Hauts-Degrés 20, 7800 Ath</span><span class="lang-en">Tue & Thu 6:30 PM · Rue des Hauts-Degrés 20, 7800 Ath</span></span></div>
@@ -954,7 +949,7 @@
       </div>
       <div class="contact-block-dark">
         <div class="contact-block-title" style="color:var(--lin);">Équilibre &amp; Performance · <span class="lang-fr">Entreprises</span><span class="lang-en">Companies</span></div>
-        <div class="contact-line"><span class="contact-line-icon">✉</span><span><a href="mailto:hello@marjoriemathieu.be">hello@marjoriemathieu.be</a></span></div>
+        <div class="contact-line"><span class="contact-line-icon">✉</span><span><a href="/cdn-cgi/l/email-protection#4f272a2323200f222e3d25203d262a222e3b27262a3a612d2a"><span class="__cf_email__" data-cfemail="b6ded3dadad9f6dbd7c4dcd9c4dfd3dbd7c2dedfd3c398d4d3">[email&#160;protected]</span></a></span></div>
         <div class="contact-line"><span class="contact-line-icon">💼</span><span><a href="https://www.linkedin.com/in/marjoriemathieu-equilibre/">LinkedIn · Marjorie Mathieu</a></span></div>
         <div class="contact-line"><span class="contact-line-icon">📋</span><span><span class="lang-fr">Programme pilote · 1 500€ HTVA · 3 places · 4 semaines</span><span class="lang-en">Pilot programme · €1,500 excl. VAT · 3 spots · 4 weeks</span></span></div>
         <div class="contact-line"><span class="contact-line-icon">✓</span><span><span class="lang-fr">Garantie Jour 3 · 50% remboursé si ça ne colle pas</span><span class="lang-en">Day 3 guarantee · 50% refunded if it's not a fit</span></span></div>
@@ -998,7 +993,7 @@
     </div>
     <div class="footer-nap-item">
       <strong>Email</strong>
-      <a href="mailto:ifsu@etik.com">ifsu@etik.com</a>
+      <a href="/cdn-cgi/l/email-protection#553c3326201530213c3e7b363a38"><span class="__cf_email__" data-cfemail="e48d829791a481908d8fca878b89">[email&#160;protected]</span></a>
     </div>
     <div class="footer-nap-item">
       <strong>Site</strong>
@@ -1007,7 +1002,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   function switchLang(lang) {
     document.body.className = lang;
     document.documentElement.lang = lang === 'fr' ? 'fr-BE' : 'en';
@@ -1016,26 +1011,4 @@
     document.title = lang === 'en'
       ? 'Viniyoga & Meditation Classes in Ath | IFSU Équilibre – Marjorie Mathieu'
       : 'Cours de Viniyoga & Méditation à Ath | IFSU Équilibre – Marjorie Mathieu';
-    try { localStorage.setItem('ifsu_lang', lang); } catch(e) {}
-  }
-
-  (function() {
-    let saved;
-    try { saved = localStorage.getItem('ifsu_lang'); } catch(e) {}
-    if (saved === 'en') {
-      switchLang('en');
-    } else if (!saved) {
-      const bl = (navigator.language || navigator.userLanguage || 'fr').toLowerCase();
-      if (bl.startsWith('en')) switchLang('en');
-    }
-  })();
-
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const t = document.querySelector(a.getAttribute('href'));
-      if (t) { e.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' }); }
-    });
-  });
-</script>
-</body>
-</html>
+    try {
