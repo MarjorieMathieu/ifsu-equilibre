@@ -33,10 +33,9 @@
   .lang-btn.active { background: var(--gold); color: var(--ardoise-deep); font-weight: 700; }
   .lang-btn:hover:not(.active) { color: var(--gold); }
 
-  /* ── VISIBILITY — règles correctes sans conflit ── */
+  /* ── VISIBILITY ── */
   body.fr .lang-en { display: none !important; }
   body.en .lang-fr { display: none !important; }
-  /* Les éléments lang-fr et lang-en sont visibles par défaut */
 
   /* ── FLOATING SOCIAL ── */
   .social-float { position: fixed; right: 1.2rem; top: 50%; transform: translateY(-50%); z-index: 99; display: flex; flex-direction: column; gap: 0.6rem; }
@@ -113,8 +112,9 @@
   .offer-card-light.featured { border-color: var(--gold); background: rgba(201,168,76,0.06); }
   .offer-card-light .offer-badge { position: absolute; top: -0.6rem; left: 1.5rem; background: var(--gold); color: var(--white); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.7rem; border-radius: 2px; }
   .offer-card-light .offer-name { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--ardoise-deep); margin-bottom: 0.5rem; }
-  .offer-card-light .offer-price { font-size: 1.6rem; font-weight: 300; color: var(--terracotta); margin-bottom: 0.8rem; }
+  .offer-card-light .offer-price { font-size: 1.6rem; font-weight: 300; color: var(--terracotta); margin-bottom: 0.3rem; }
   .offer-card-light .offer-price span { font-size: 0.8rem; color: #3a5a70; font-weight: 300; }
+  .offer-card-light .offer-unit { font-size: 0.78rem; color: var(--ardoise); font-style: italic; margin-bottom: 0.8rem; }
   .offer-card-light .offer-desc { font-size: 0.9rem; color: #2d4a5e; line-height: 1.8; margin-bottom: 1rem; }
   .offer-card-light .offer-meta { font-size: 0.75rem; color: #3d5a6e; border-top: 0.5px solid rgba(74,98,116,0.1); padding-top: 0.8rem; line-height: 1.8; }
 
@@ -149,6 +149,20 @@
   .practical-title { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
   .practical-item { font-size: 0.9rem; color: #2d4a5e; line-height: 1.7; display: flex; gap: 0.8rem; align-items: flex-start; margin-bottom: 0.8rem; }
   .practical-item::before { content: '·'; color: var(--gold); flex-shrink: 0; }
+
+  /* ── FAQ ACCORDÉON ── */
+  .faq-wrap { margin-top: 1.5rem; background: var(--white); border: 0.5px solid rgba(74,98,116,0.1); border-radius: 4px; padding: 0.4rem 1.8rem; }
+  .faq-title { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); padding: 1.2rem 0 0.6rem; }
+  .faq-item { border-top: 0.5px solid rgba(74,98,116,0.1); }
+  .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 0.95rem 0; cursor: pointer; font-size: 0.88rem; color: var(--ardoise-deep); font-weight: 400; gap: 1rem; user-select: none; }
+  .faq-chevron { color: var(--gold); font-size: 0.8rem; transition: transform 0.25s; flex-shrink: 0; }
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+  .faq-answer { font-size: 0.86rem; color: #2d4a5e; line-height: 1.8; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.25s ease; }
+  .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 1rem; }
+
+  /* ── CONDITIONS ── */
+  .conditions-note { font-size: 0.7rem; color: #7A9AB0; line-height: 1.8; border-top: 0.5px solid rgba(74,98,116,0.1); padding-top: 1rem; margin-top: 1.5rem; }
+  .conditions-note strong { color: var(--ardoise); font-weight: 500; }
 
   /* ── PONT SÉMANTIQUE ── */
   .pont-semiotique { background: rgba(74,98,116,0.4); border: 0.5px solid rgba(201,168,76,0.2); border-radius: 4px; padding: 2.5rem; margin-top: 4rem; position: relative; }
@@ -320,7 +334,7 @@
     <a href="#meditation-ath"><span class="lang-fr">Méditation</span><span class="lang-en">Meditation</span></a>
     <a href="#retraite"><span class="lang-fr">Retraite</span><span class="lang-en">Retreat</span></a>
     <a href="#entreprise"><span class="lang-fr">Entreprises</span><span class="lang-en">Companies</span></a>
-    <a href="#marjorie"><span class="lang-fr">Qui suis-je</span><span class="lang-en">About</span></a>
+    <a href="#marjorie"><span class="lang-fr">Qui suis-je</span><span class="lang-en">About</span></div>
     <div class="lang-switcher">
       <button class="lang-btn active" onclick="switchLang('fr')" id="btn-fr">FR</button>
       <button class="lang-btn" onclick="switchLang('en')" id="btn-en">EN</button>
@@ -374,7 +388,8 @@
   <div class="section-inner">
     <p class="section-eyebrow eyebrow-gold"><span class="lang-fr">Yoga Viniyoga à Ath</span><span class="lang-en">Viniyoga in Ath</span></p>
     <h2 class="section-title"><span class="lang-fr">Le Viniyoga s'adapte à toi.<br><em>Pas toi au Viniyoga.</em></span><span class="lang-en">Viniyoga adapts to you.<br><em>Not you to Viniyoga.</em></span></h2>
-    <div class="two-col">
+    <!-- BLOC 1 : Description + Séance privée -->
+    <div class="two-col" style="grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:4rem;">
       <div>
         <div class="practice-block">
           <div class="practice-quote"><span class="lang-fr">"Le yoga s'adapte à toi, pas toi au yoga." — Krishnamacharya</span><span class="lang-en">"Yoga adapts to you, not you to yoga." — Krishnamacharya</span></div>
@@ -385,56 +400,172 @@
             <a href="#contact"><span class="lang-fr">→ Organiser une séance sur mesure</span><span class="lang-en">→ Book a tailored session</span></a>
           </div>
         </div>
-        <div style="margin-top:1rem;">
-          <p style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;"><span class="lang-fr">Séance privée</span><span class="lang-en">Private session</span></p>
-          <div class="offer-card-light">
-            <div class="offer-name"><span class="lang-fr">Séance individuelle Viniyoga</span><span class="lang-en">Individual Viniyoga session</span></div>
-            <div class="offer-price">65€ <span><span class="lang-fr">· 90 min · sur rendez-vous</span><span class="lang-en">· 90 min · by appointment</span></span></div>
-            <div class="offer-desc"><span class="lang-fr">Le cours est entièrement construit autour de toi : ton corps, tes contraintes, tes objectifs. Récupération après blessure, adaptation posturale, approfondissement d'une pratique existante.</span><span class="lang-en">The session is built entirely around you: your body, your constraints, your goals. Post-injury recovery, postural adjustment, deepening an existing practice.</span></div>
-            <div class="offer-meta"><span class="lang-fr">Sur rendez-vous uniquement · <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20je%20souhaite%20une%20s%C3%A9ance%20priv%C3%A9e." style="color:var(--gold);text-decoration:none;">WhatsApp</a> ou <a href="mailto:ifsu@etik.com" style="color:var(--gold);text-decoration:none;">e-mail</a></span><span class="lang-en">By appointment only · <a href="https://wa.me/32477091803?text=Hello%20Marjorie%2C%20I%27d%20like%20a%20private%20session." style="color:var(--gold);text-decoration:none;">WhatsApp</a> or <a href="mailto:ifsu@etik.com" style="color:var(--gold);text-decoration:none;">email</a></span></div>
-          </div>
-        </div>
       </div>
       <div>
-        <div style="margin-bottom:1.5rem;">
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--ardoise-deep);margin-bottom:0.6rem;"><span class="lang-fr">Cours collectifs — <em style="color:var(--gold);">Ath & Meslin-l'Évêque</em></span><span class="lang-en">Group classes — <em style="color:var(--gold);">Ath & Meslin-l'Évêque</em></span></h3>
-          <p style="font-size:0.88rem;color:var(--gris-bleute);line-height:1.7;"><span class="lang-fr">Trois lieux, trois ambiances, un principe : le yoga reste accessible.</span><span class="lang-en">Three venues, three atmospheres, one principle: yoga stays accessible.</span></p>
+        <p style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;"><span class="lang-fr">Séance privée</span><span class="lang-en">Private session</span></p>
+        <div class="offer-card-light">
+          <div class="offer-name"><span class="lang-fr">Séance individuelle Viniyoga</span><span class="lang-en">Individual Viniyoga session</span></div>
+          <div class="offer-price">65€ <span><span class="lang-fr">· 90 min · sur rendez-vous</span><span class="lang-en">· 90 min · by appointment</span></span></div>
+          <div class="offer-desc"><span class="lang-fr">Le cours est entièrement construit autour de toi : ton corps, tes contraintes, tes objectifs. Récupération après blessure, adaptation posturale, approfondissement d'une pratique existante.</span><span class="lang-en">The session is built entirely around you: your body, your constraints, your goals. Post-injury recovery, postural adjustment, deepening an existing practice.</span></div>
+          <div class="offer-meta"><span class="lang-fr">Sur rendez-vous uniquement · <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20je%20souhaite%20une%20s%C3%A9ance%20priv%C3%A9e." style="color:var(--gold);text-decoration:none;">WhatsApp</a> ou <a href="mailto:ifsu@etik.com" style="color:var(--gold);text-decoration:none;">e-mail</a></span><span class="lang-en">By appointment only · <a href="https://wa.me/32477091803?text=Hello%20Marjorie%2C%20I%27d%20like%20a%20private%20session." style="color:var(--gold);text-decoration:none;">WhatsApp</a> or <a href="mailto:ifsu@etik.com" style="color:var(--gold);text-decoration:none;">email</a></span></div>
         </div>
-        <div class="location-grid">
-          <div class="loc-card-light">
-            <div class="location-name"><span class="lang-fr">Mardi & Jeudi · Chez IFSU, Ath</span><span class="lang-en">Tue & Thu · Studio IFSU, Ath</span></div>
-            <div class="location-addr">Rue des Hauts-Degrés 20 · 7800 Ath</div>
-            <div class="location-details"><span class="lang-fr">18h30 · 90 min · max 6 personnes</span><span class="lang-en">6:30 PM · 90 min · max 6 people</span><br><strong style="color:var(--terracotta)">10€</strong></div>
-            <a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener" class="location-book"><span class="lang-fr">Réserver en ligne →</span><span class="lang-en">Book online →</span></a>
-          </div>
-          <div class="loc-card-light">
-            <div class="location-name"><span class="lang-fr">Mercredi · Centre Équilibre, Ath</span><span class="lang-en">Wednesday · Centre Équilibre, Ath</span></div>
-            <div class="location-addr">Rue des Hauts-Degrés 18 · 7800 Ath</div>
-            <div class="location-details"><span class="lang-fr">18h30 · 90 min · max 12 personnes<br><strong style="color:var(--terracotta)">Tarif libre : 5€, 10€ ou 15€</strong></span><span class="lang-en">6:30 PM · 90 min · max 12 people<br><strong style="color:var(--terracotta)">Pay what you can: €5, €10 or €15</strong></span></div>
-            <a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener" class="location-book"><span class="lang-fr">Réserver en ligne →</span><span class="lang-en">Book online →</span></a>
-          </div>
-          <div class="loc-card-light">
-            <div class="location-name"><span class="lang-fr">Samedi · Medsquare, Meslin-l'Évêque</span><span class="lang-en">Saturday · Medsquare, Meslin-l'Évêque</span></div>
-            <div class="location-addr">25 rue de la Procession · 7822 Meslin-l'Évêque</div>
-            <div class="location-details"><span class="lang-fr">10h00 · 90 min · max 12 personnes<br><strong style="color:var(--terracotta)">15€</strong><br><em style="font-size:0.75rem;color:#546E7A;">Cours ouvert à partir de 8 personnes</em></span><span class="lang-en">10:00 AM · 90 min · max 12 people<br><strong style="color:var(--terracotta)">€15</strong><br><em style="font-size:0.75rem;color:#546E7A;">Minimum 8 registered participants</em></span></div>
-            <a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener" class="location-book"><span class="lang-fr">Réserver en ligne →</span><span class="lang-en">Book online →</span></a>
-          </div>
-        </div>
-        <div class="offer-card-light featured" style="margin-top:1.5rem;">
-          <div class="offer-badge"><span class="lang-fr">Fidélité</span><span class="lang-en">Loyalty</span></div>
-          <div class="offer-name"><span class="lang-fr">Carte fidélité 10 séances</span><span class="lang-en">10-class loyalty card</span></div>
-          <div class="offer-price"><span class="lang-fr">11ème séance à 50%</span><span class="lang-en">11th class at 50%</span> <span><span class="lang-fr">· valable tous lieux</span><span class="lang-en">· valid at all venues</span></span></div>
-          <div class="offer-desc"><span class="lang-fr">Viens 10 fois, la 11ème est à moitié prix — quel que soit le lieu. La carte est disponible directement en cours.</span><span class="lang-en">Come 10 times, the 11th is half price — regardless of venue. The card is available directly in class.</span></div>
-        </div>
-        <div class="practical-box">
-          <div class="practical-title"><span class="lang-fr">Infos pratiques</span><span class="lang-en">Practical information</span></div>
-          <div class="practical-item"><span class="lang-fr">Apporte ton tapis, une couverture et une tenue confortable</span><span class="lang-en">Bring your mat, a blanket and comfortable clothing</span></div>
-          <div class="practical-item"><span class="lang-fr">Annulation gratuite jusqu'à 24h avant le cours</span><span class="lang-en">Free cancellation up to 24h before the class</span></div>
-          <div class="practical-item"><span class="lang-fr">Cours complet ? <a href="https://wa.me/32477091803" style="color:var(--gold);text-decoration:none;">WhatsApp</a> pour la liste d'attente.</span><span class="lang-en">Class full? <a href="https://wa.me/32477091803" style="color:var(--gold);text-decoration:none;">WhatsApp</a> for the waiting list.</span></div>
-        </div>
-        <a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener" class="cta-btn cta-gold"><span class="lang-fr">Réserver un cours →</span><span class="lang-en">Book a class →</span></a>
       </div>
     </div>
+
+    <!-- BLOC 2 : Cours collectifs — 3 lieux en ligne -->
+    <div style="margin-bottom:3rem;">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--ardoise-deep);margin-bottom:0.4rem;"><span class="lang-fr">Cours collectifs — <em style="color:var(--gold);">Ath & Meslin-l'Évêque</em></span><span class="lang-en">Group classes — <em style="color:var(--gold);">Ath & Meslin-l'Évêque</em></span></h3>
+      <p style="font-size:0.88rem;color:var(--gris-bleute);line-height:1.7;margin-bottom:1.2rem;"><span class="lang-fr">Trois lieux, trois ambiances, un principe : le yoga reste accessible.</span><span class="lang-en">Three venues, three atmospheres, one principle: yoga stays accessible.</span></p>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;">
+        <div class="loc-card-light">
+          <div class="location-name"><span class="lang-fr">Mardi & Jeudi · Chez IFSU, Ath</span><span class="lang-en">Tue & Thu · Studio IFSU, Ath</span></div>
+          <div class="location-addr">Rue des Hauts-Degrés 20 · 7800 Ath</div>
+          <div class="location-details"><span class="lang-fr">18h30 · 90 min · max 6 personnes</span><span class="lang-en">6:30 PM · 90 min · max 6 people</span></div>
+          <a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener" class="location-book"><span class="lang-fr">Réserver sur Momoyoga →</span><span class="lang-en">Book on Momoyoga →</span></a>
+        </div>
+        <div class="loc-card-light">
+          <div class="location-name"><span class="lang-fr">Mercredi · Centre Équilibre, Ath</span><span class="lang-en">Wednesday · Centre Équilibre, Ath</span></div>
+          <div class="location-addr">Rue des Hauts-Degrés 18 · 7800 Ath</div>
+          <div class="location-details"><span class="lang-fr">18h30 · 90 min · max 12 personnes</span><span class="lang-en">6:30 PM · 90 min · max 12 people</span></div>
+          <a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener" class="location-book"><span class="lang-fr">Réserver sur Momoyoga →</span><span class="lang-en">Book on Momoyoga →</span></a>
+        </div>
+        <div class="loc-card-light">
+          <div class="location-name"><span class="lang-fr">Samedi · Medsquare, Meslin-l'Évêque</span><span class="lang-en">Saturday · Medsquare, Meslin-l'Évêque</span></div>
+          <div class="location-addr">25 rue de la Procession · 7822 Meslin-l'Évêque</div>
+          <div class="location-details"><span class="lang-fr">10h00 · 90 min · max 12 personnes<br><em style="font-size:0.75rem;color:#546E7A;">Cours ouvert à partir de 8 inscrits</em></span><span class="lang-en">10:00 AM · 90 min · max 12 people<br><em style="font-size:0.75rem;color:#546E7A;">Minimum 8 registered participants</em></span></div>
+          <a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener" class="location-book"><span class="lang-fr">Réserver sur Momoyoga →</span><span class="lang-en">Book on Momoyoga →</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOC 3 : Formules — 3 colonnes -->
+    <div style="margin-bottom:3rem;">
+      <p style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;"><span class="lang-fr">Formules · dès le 1er mai 2026</span><span class="lang-en">Pricing · from 1 May 2026</span></p>
+      <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem;align-items:start;">
+        <!-- Abonnement -->
+        <div class="offer-card-light featured" style="margin-bottom:0;">
+          <div class="offer-badge"><span class="lang-fr">Le plus avantageux</span><span class="lang-en">Best value</span></div>
+          <div class="offer-name"><span class="lang-fr">Abonnement mensuel</span><span class="lang-en">Monthly subscription</span></div>
+          <div class="offer-price">40€ <span><span class="lang-fr">/ mois</span><span class="lang-en">/ month</span></span></div>
+          <div class="offer-unit"><span class="lang-fr">soit 10€ / séance (base 4 séances/mois)</span><span class="lang-en">i.e. €10 / class (based on 4/month)</span></div>
+          <div class="offer-desc"><span class="lang-fr">Ta place est réservée chaque semaine sur ton créneau fixe — sans aucune démarche de réservation. Ton tapis t'attend.</span><span class="lang-en">Your spot is reserved every week at your fixed timeslot — no booking needed. Your mat is waiting.</span></div>
+          <div class="offer-meta"><span class="lang-fr">Paiement en début de mois · virement BE54 1030 5707 7797, Payconiq ou liquide · engagement mensuel non remboursable</span><span class="lang-en">Payment at start of month · transfer BE54 1030 5707 7797, Payconiq or cash · non-refundable</span></div>
+        </div>
+        <!-- Séance unique -->
+        <div class="offer-card-light" style="margin-bottom:0;">
+          <div class="offer-name"><span class="lang-fr">Séance unique</span><span class="lang-en">Drop-in</span></div>
+          <div class="offer-price">15€ <span><span class="lang-fr">/ séance</span><span class="lang-en">/ class</span></span></div>
+          <div class="offer-unit"><span class="lang-fr">selon places disponibles</span><span class="lang-en">subject to availability</span></div>
+          <div class="offer-desc"><span class="lang-fr">Flexibilité totale, sans engagement.</span><span class="lang-en">Full flexibility, no commitment.</span></div>
+          <div class="offer-meta"><span class="lang-fr">🎁 Carte fidélité : 10 séances → 11ème offerte (4 mois) · soit 13,60€/séance en moyenne</span><span class="lang-en">🎁 Loyalty: 10 → 11th free (4 months) · avg €13.60</span></div>
+        </div>
+        <!-- Séance d'essai -->
+        <div class="offer-card-light" style="margin-bottom:0;">
+          <div class="offer-name"><span class="lang-fr">Séance d'essai</span><span class="lang-en">Trial class</span></div>
+          <div class="offer-price">10€</div>
+          <div class="offer-unit"><span class="lang-fr">nouveaux élèves · une seule fois</span><span class="lang-en">new students · once only</span></div>
+          <div class="offer-desc"><span class="lang-fr">Tu veux voir si ça te convient avant de t'engager. C'est fait pour ça.</span><span class="lang-en">See if it's right before committing.</span></div>
+          <div class="offer-meta"><span class="lang-fr">Réservation Momoyoga · paiement le jour même</span><span class="lang-en">Book via Momoyoga · pay on the day</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOC 4 : Infos pratiques + FAQ côte à côte -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;align-items:start;">
+      <div class="practical-box" style="margin-top:0;">
+        <div class="practical-title"><span class="lang-fr">Infos pratiques</span><span class="lang-en">Practical information</span></div>
+        <div class="practical-item"><span class="lang-fr"><strong>Momoyoga = réservations uniquement.</strong> Aucun paiement via la plateforme.</span><span class="lang-en"><strong>Momoyoga = bookings only.</strong> No payment through the platform.</span></div>
+        <div class="practical-item"><span class="lang-fr"><strong>Paiement :</strong> virement BE54 1030 5707 7797 (NOM + mois), Payconiq ou liquide.</span><span class="lang-en"><strong>Payment:</strong> transfer BE54 1030 5707 7797 (NAME + month), Payconiq or cash.</span></div>
+        <div class="practical-item"><span class="lang-fr"><strong>Absence :</strong> SMS 24h avant au +32 477 09 18 03 → rattrapage mardi ou jeudi (semaine en cours ou suivante).</span><span class="lang-en"><strong>Absence:</strong> SMS 24h ahead to +32 477 09 18 03 → make-up Tue or Thu (current or next week).</span></div>
+        <div class="practical-item"><span class="lang-fr">Tapis, couverture, tenue confortable. Arrive 5–10 min avant.</span><span class="lang-en">Mat, blanket, comfortable clothing. Arrive 5–10 min early.</span></div>
+        <div class="practical-item"><span class="lang-fr">Cours complet ? <a href="https://wa.me/32477091803" style="color:var(--gold);text-decoration:none;">WhatsApp</a> pour la liste d'attente.</span><span class="lang-en">Class full? <a href="https://wa.me/32477091803" style="color:var(--gold);text-decoration:none;">WhatsApp</a> for the waiting list.</span></div>
+      </div>
+      <div class="faq-wrap" style="margin-top:0;">
+          <div class="faq-title"><span class="lang-fr">Questions fréquentes</span><span class="lang-en">FAQ</span></div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="lang-fr">Mon abonnement est-il remboursé si je m'absente ?</span>
+              <span class="lang-en">Is my subscription refunded if I'm absent?</span>
+              <span class="faq-chevron">▼</span>
+            </div>
+            <div class="faq-answer">
+              <span class="lang-fr">Non — ta place t'est réservée même quand tu n'es pas là, c'est justement ce qui garantit le petit groupe. Si tu préfères ne pas t'engager sur un mois, la séance unique à 15€ est faite pour toi : tu réserves quand tu peux, selon les places disponibles.</span>
+              <span class="lang-en">No — your spot is reserved even when you're absent, which is precisely what keeps the group small. If you'd rather not commit to a month, the drop-in class at €15 is the right option: book when you can, subject to availability.</span>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="lang-fr">Comment ne pas perdre mes séances si je m'absente ?</span>
+              <span class="lang-en">How do I avoid losing classes when I'm absent?</span>
+              <span class="faq-chevron">▼</span>
+            </div>
+            <div class="faq-answer">
+              <span class="lang-fr">Tu me préviens par SMS au moins 24h avant, et tu peux rattraper ta séance sur un autre créneau (mardi ou jeudi) dans la semaine en cours ou la suivante — soit jusqu'à 14 jours de souplesse.</span>
+              <span class="lang-en">Text me at least 24h in advance and you can make up your class on another slot (Tuesday or Thursday) in the current or following week — up to 14 days of flexibility.</span>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="lang-fr">Puis-je déduire une séance de mon abonnement si je sais que je ne viendrai pas ?</span>
+              <span class="lang-en">Can I deduct a class from my subscription if I know I won't come?</span>
+              <span class="faq-chevron">▼</span>
+            </div>
+            <div class="faq-answer">
+              <span class="lang-fr">Non. L'abonnement est un forfait mensuel fixe — pas de calcul au prorata. Si tu préfères une flexibilité totale sans engagement, opte pour la séance unique à 15€.</span>
+              <span class="lang-en">No. The subscription is a fixed monthly flat rate — no pro-rata. If you prefer full flexibility with no commitment, go for the drop-in at €15.</span>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="lang-fr">Pourquoi la séance unique est-elle à 15€ ?</span>
+              <span class="lang-en">Why is the drop-in class €15?</span>
+              <span class="faq-chevron">▼</span>
+            </div>
+            <div class="faq-answer">
+              <span class="lang-fr">Le tarif abonnement (10€/séance) récompense ton engagement. La séance unique à 15€, c'est le prix de la flexibilité totale — tu viens quand tu veux, sans garantie de place chaque semaine.</span>
+              <span class="lang-en">The subscription rate (€10/class) rewards your commitment. The €15 drop-in is the price of full flexibility — come when you like, no guaranteed weekly spot.</span>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="lang-fr">Que se passe-t-il si j'arrête mon abonnement ?</span>
+              <span class="lang-en">What happens if I cancel my subscription?</span>
+              <span class="faq-chevron">▼</span>
+            </div>
+            <div class="faq-answer">
+              <span class="lang-fr">Ta place est immédiatement proposée aux personnes sur liste d'attente. Je ne peux pas garantir qu'une place sera disponible sur ton créneau habituel à ton retour.</span>
+              <span class="lang-en">Your spot is immediately offered to people on the waiting list. I can't guarantee availability on your usual timeslot if you come back.</span>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="lang-fr">Pourquoi ne pas payer directement sur Momoyoga ?</span>
+              <span class="lang-en">Why not pay directly on Momoyoga?</span>
+              <span class="faq-chevron">▼</span>
+            </div>
+            <div class="faq-answer">
+              <span class="lang-fr">Momoyoga est notre outil de réservation — pour voir les places disponibles en temps réel. Le règlement se fait directement : virement, Payconiq ou liquide. Pas de frais de plateforme, lien direct maintenu.</span>
+              <span class="lang-en">Momoyoga is our booking tool — to see available spots in real time. Payment is made directly: bank transfer, Payconiq or cash. No platform fees, direct link maintained.</span>
+            </div>
+          </div>
+
+      </div><!-- /faq-wrap -->
+    </div><!-- /infos+faq grid -->
+
+    <!-- CONDITIONS GÉNÉRALES -->
+    <div class="conditions-note">
+          <strong><span class="lang-fr">Conditions générales</span><span class="lang-en">General conditions</span></strong><br>
+          <span class="lang-fr">Conformément à l'Art. VI.53, 12° du Code de droit économique belge, le droit de rétractation ne s'applique pas aux services de loisirs fournis à une date déterminée. · En cas d'annulation de ma part, la séance est intégralement remboursée ou créditée. · En cas de force majeure médicale prolongée, un report peut être discuté.</span>
+          <span class="lang-en">Under Art. VI.53, 12° of the Belgian Code of Economic Law, the right of withdrawal does not apply to leisure services provided at a set date. · If I cancel, the session is fully refunded or credited. · In the event of prolonged medical force majeure, rescheduling can be discussed.</span>
+        </div>
+
+    <a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener" class="cta-btn cta-gold"><span class="lang-fr">Réserver un cours →</span><span class="lang-en">Book a class →</span></a>
   </div>
 </section>
 
@@ -700,9 +831,9 @@
     <div class="contact-grid">
       <div class="contact-block-dark">
         <div class="contact-block-title" style="color:var(--lin);"><span class="lang-fr">Yoga &amp; Méditation</span><span class="lang-en">Yoga &amp; Meditation</span></div>
-        <div class="contact-line"><span class="contact-line-icon">🗓</span><span><a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener"><span class="lang-fr">Réserver un cours de yoga</span><span class="lang-en">Book a yoga class</span></a></span></div>
+        <div class="contact-line"><span class="contact-line-icon">🗓</span><span><a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener"><span class="lang-fr">Réserver un cours de yoga (Momoyoga)</span><span class="lang-en">Book a yoga class (Momoyoga)</span></a></span></div>
         <div class="contact-line"><span class="contact-line-icon">✉</span><span><a href="mailto:ifsu@etik.com">ifsu@etik.com</a></span></div>
-        <div class="contact-line"><span class="contact-line-icon">📱</span><span><a href="https://wa.me/32477091803">0477/09.18.03</a> · WhatsApp</span></div>
+        <div class="contact-line"><span class="contact-line-icon">📱</span><span><a href="https://wa.me/32477091803">0477/09.18.03</a> · WhatsApp / SMS</span></div>
         <div class="contact-line"><span class="contact-line-icon">🌐</span><span><a href="https://ifsu.online">ifsu.online</a></span></div>
         <div class="contact-line"><span class="contact-line-icon">📍</span><span><span class="lang-fr">Mardi &amp; Jeudi 18h30 · Rue des Hauts-Degrés 20, 7800 Ath</span><span class="lang-en">Tue &amp; Thu 6:30 PM · 20 Rue des Hauts-Degrés, 7800 Ath</span></span></div>
         <div class="contact-line"><span class="contact-line-icon">📍</span><span><span class="lang-fr">Mercredi 18h30 · Centre Équilibre, Rue des Hauts-Degrés 18, 7800 Ath</span><span class="lang-en">Wed 6:30 PM · Centre Équilibre, 18 Rue des Hauts-Degrés, 7800 Ath</span></span></div>
@@ -764,6 +895,7 @@
 </footer>
 
 <script>
+  // ── LANG SWITCHER ──
   function switchLang(lang) {
     document.body.className = lang;
     document.documentElement.lang = lang === 'fr' ? 'fr-BE' : 'en';
@@ -780,10 +912,24 @@
     if (saved === 'en') { switchLang('en'); }
     else if (!saved && (navigator.language || 'fr').toLowerCase().startsWith('en')) { switchLang('en'); }
   })();
+
+  // ── SMOOTH SCROLL ──
   document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     a.addEventListener('click', function(e) {
       var t = document.querySelector(a.getAttribute('href'));
       if (t) { e.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' }); }
+    });
+  });
+
+  // ── FAQ ACCORDÉON ──
+  document.querySelectorAll('.faq-question').forEach(function(q) {
+    q.addEventListener('click', function() {
+      var item = q.parentElement;
+      var isOpen = item.classList.contains('open');
+      // ferme tous
+      document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+      // ouvre celui-ci si c'était fermé
+      if (!isOpen) { item.classList.add('open'); }
     });
   });
 </script>
