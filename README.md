@@ -441,7 +441,7 @@
     <!-- BLOC 3 : Formules — 3 colonnes -->
     <div style="margin-bottom:3rem;">
       <p style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;"><span class="lang-fr">Formules · dès le 1er mai 2026</span><span class="lang-en">Pricing · from 1 May 2026</span></p>
-      <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem;align-items:start;">
+      <div style="display:grid;grid-template-columns:2fr 1fr;gap:1rem;align-items:start;">
         <!-- Abonnement -->
         <div class="offer-card-light featured" style="margin-bottom:0;">
           <div class="offer-badge"><span class="lang-fr">Le plus avantageux</span><span class="lang-en">Best value</span></div>
@@ -454,17 +454,9 @@
         <!-- Séance unique -->
         <div class="offer-card-light" style="margin-bottom:0;">
           <div class="offer-name"><span class="lang-fr">Séance unique</span><span class="lang-en">Drop-in</span></div>
-          <div class="offer-price">15€ <span><span class="lang-fr">/ séance</span><span class="lang-en">/ class</span></span></div>
+          <div class="offer-price">10€ <span><span class="lang-fr">/ séance</span><span class="lang-en">/ class</span></span></div>
           <div class="offer-unit"><span class="lang-fr">selon places disponibles</span><span class="lang-en">subject to availability</span></div>
           <div class="offer-desc"><span class="lang-fr">Flexibilité totale, sans engagement.</span><span class="lang-en">Full flexibility, no commitment.</span></div>
-          <div class="offer-meta"><span class="lang-fr">🎁 Carte fidélité : 10 séances → 11ème offerte (4 mois) · soit 13,60€/séance en moyenne</span><span class="lang-en">🎁 Loyalty: 10 → 11th free (4 months) · avg €13.60</span></div>
-        </div>
-        <!-- Séance d'essai -->
-        <div class="offer-card-light" style="margin-bottom:0;">
-          <div class="offer-name"><span class="lang-fr">Séance d'essai</span><span class="lang-en">Trial class</span></div>
-          <div class="offer-price">10€</div>
-          <div class="offer-unit"><span class="lang-fr">nouveaux élèves · une seule fois</span><span class="lang-en">new students · once only</span></div>
-          <div class="offer-desc"><span class="lang-fr">Tu veux voir si ça te convient avant de t'engager. C'est fait pour ça.</span><span class="lang-en">See if it's right before committing.</span></div>
           <div class="offer-meta"><span class="lang-fr">Réservation Momoyoga · paiement le jour même</span><span class="lang-en">Book via Momoyoga · pay on the day</span></div>
         </div>
       </div>
@@ -490,8 +482,8 @@
               <span class="faq-chevron">▼</span>
             </div>
             <div class="faq-answer">
-              <span class="lang-fr">Non — ta place t'est réservée même quand tu n'es pas là, c'est justement ce qui garantit le petit groupe. Si tu préfères ne pas t'engager sur un mois, la séance unique à 15€ est faite pour toi : tu réserves quand tu peux, selon les places disponibles.</span>
-              <span class="lang-en">No — your spot is reserved even when you're absent, which is precisely what keeps the group small. If you'd rather not commit to a month, the drop-in class at €15 is the right option: book when you can, subject to availability.</span>
+              <span class="lang-fr">Non — ta place t'est réservée même quand tu n'es pas là, c'est justement ce qui garantit le petit groupe. Si tu préfères ne pas t'engager sur un mois, la séance unique à 10€ est faite pour toi : tu réserves quand tu peux, selon les places disponibles.</span>
+              <span class="lang-en">No — your spot is reserved even when you're absent, which is precisely what keeps the group small. If you'd rather not commit to a month, the drop-in class at €10 is the right option: book when you can, subject to availability.</span>
             </div>
           </div>
 
@@ -514,20 +506,8 @@
               <span class="faq-chevron">▼</span>
             </div>
             <div class="faq-answer">
-              <span class="lang-fr">Non. L'abonnement est un forfait mensuel fixe — pas de calcul au prorata. Si tu préfères une flexibilité totale sans engagement, opte pour la séance unique à 15€.</span>
-              <span class="lang-en">No. The subscription is a fixed monthly flat rate — no pro-rata. If you prefer full flexibility with no commitment, go for the drop-in at €15.</span>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span class="lang-fr">Pourquoi la séance unique est-elle à 15€ ?</span>
-              <span class="lang-en">Why is the drop-in class €15?</span>
-              <span class="faq-chevron">▼</span>
-            </div>
-            <div class="faq-answer">
-              <span class="lang-fr">Le tarif abonnement (10€/séance) récompense ton engagement. La séance unique à 15€, c'est le prix de la flexibilité totale — tu viens quand tu veux, sans garantie de place chaque semaine.</span>
-              <span class="lang-en">The subscription rate (€10/class) rewards your commitment. The €15 drop-in is the price of full flexibility — come when you like, no guaranteed weekly spot.</span>
+              <span class="lang-fr">Non. L'abonnement est un forfait mensuel fixe — pas de calcul au prorata. Si tu préfères une flexibilité totale sans engagement, opte pour la séance unique à 10€.</span>
+              <span class="lang-en">No. The subscription is a fixed monthly flat rate — no pro-rata. If you prefer full flexibility with no commitment, go for the drop-in at €10.</span>
             </div>
           </div>
 
