@@ -27,24 +27,20 @@
   html { scroll-behavior: smooth; }
   body { font-family: 'DM Sans', sans-serif; background: var(--ardoise); color: var(--anthracite); overflow-x: hidden; font-size: 16px; line-height: 1.75; }
 
-  /* ── LANG SWITCHER ── */
   .lang-switcher { display: flex; background: rgba(255,255,255,0.08); border: 0.5px solid rgba(201,168,76,0.3); border-radius: 3px; overflow: hidden; }
   .lang-btn { padding: 0.3rem 0.75rem; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; border: none; background: transparent; color: rgba(247,243,238,0.5); transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
   .lang-btn.active { background: var(--gold); color: var(--ardoise-deep); font-weight: 700; }
   .lang-btn:hover:not(.active) { color: var(--gold); }
 
-  /* ── VISIBILITY ── */
   body.fr .lang-en { display: none !important; }
   body.en .lang-fr { display: none !important; }
 
-  /* ── FLOATING SOCIAL ── */
   .social-float { position: fixed; right: 1.2rem; top: 50%; transform: translateY(-50%); z-index: 99; display: flex; flex-direction: column; gap: 0.6rem; }
   .social-float a { width: 40px; height: 40px; border-radius: 50%; background: var(--ardoise-deep); border: 0.5px solid rgba(201,168,76,0.3); display: flex; align-items: center; justify-content: center; transition: all 0.25s; text-decoration: none; }
   .social-float a:hover { background: var(--gold); border-color: var(--gold); transform: scale(1.1); }
   .social-float a svg { width: 18px; height: 18px; fill: var(--lin); transition: fill 0.25s; }
   .social-float a:hover svg { fill: var(--ardoise-deep); }
 
-  /* ── NAV ── */
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.2rem 2.5rem; display: flex; align-items: center; justify-content: space-between; background: rgba(74,98,116,0.92); backdrop-filter: blur(12px); border-bottom: 0.5px solid rgba(201,168,76,0.25); }
   .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: var(--lin); letter-spacing: 0.02em; }
   .nav-logo span { color: var(--gold); }
@@ -54,8 +50,11 @@
   .nav-cta { background: transparent; border: 0.5px solid var(--terracotta); color: var(--terracotta) !important; padding: 0.5rem 1.2rem; border-radius: 2px; font-size: 0.78rem !important; letter-spacing: 0.08em !important; cursor: pointer; transition: all 0.2s !important; }
   .nav-cta:hover { background: var(--terracotta) !important; color: var(--white) !important; }
 
-  /* ── HERO ── */
-  #hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8rem 2rem 4rem; position: relative; overflow: hidden; background: linear-gradient(160deg, var(--ardoise-deep) 0%, var(--ardoise) 45%, #5a4a5a 100%); }
+  #hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8rem 2rem 4rem; position: relative; overflow: hidden; background: var(--ardoise-deep); }
+  .hero-video-bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+  .hero-video-bg video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%,-50%); object-fit: cover; opacity: 0.32; filter: saturate(0.55) brightness(0.65); }
+  .hero-video-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(42,62,76,0.78) 0%, rgba(61,83,99,0.62) 50%, rgba(74,60,80,0.72) 100%); pointer-events: none; }
+  .hero-lines, .hero-accent, .hero-accent-2, .hero-eyebrow, .hero-title, .hero-sub, .hero-paths, .hero-signature { position: relative; z-index: 2; }
   .hero-lines { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
   .hero-lines::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(-55deg, transparent, transparent 60px, rgba(201,168,76,0.03) 60px, rgba(201,168,76,0.03) 61px); }
   .hero-accent { position: absolute; top: 15%; right: -5%; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(196,113,74,0.1) 0%, transparent 65%); pointer-events: none; }
@@ -85,7 +84,6 @@
   .path-card:hover .path-arrow { transform: translateX(4px); }
   .hero-signature { margin-top: 3rem; font-size: 0.75rem; color: rgba(247,243,238,0.6); letter-spacing: 0.1em; text-transform: uppercase; opacity: 0; animation: fadeUp 0.8s 1.2s forwards; }
 
-  /* ── SECTIONS ── */
   section { padding: 7rem 2rem; }
   .section-inner { max-width: 1100px; margin: 0 auto; }
   .section-eyebrow { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem; font-weight: 500; }
@@ -106,7 +104,6 @@
   .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0; }
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
 
-  /* ── OFFER CARDS ── */
   .offer-card-light { border: 0.5px solid rgba(74,98,116,0.15); border-radius: 4px; padding: 2rem; background: var(--white); transition: all 0.3s; position: relative; }
   .offer-card-light:hover { border-color: rgba(74,98,116,0.3); transform: translateY(-2px); }
   .offer-card-light.featured { border-color: var(--gold); background: rgba(201,168,76,0.06); }
@@ -118,12 +115,10 @@
   .offer-card-light .offer-desc { font-size: 0.9rem; color: #2d4a5e; line-height: 1.8; margin-bottom: 1rem; }
   .offer-card-light .offer-meta { font-size: 0.75rem; color: #3d5a6e; border-top: 0.5px solid rgba(74,98,116,0.1); padding-top: 0.8rem; line-height: 1.8; }
 
-  /* ── PRACTICE ── */
   .practice-block { margin-bottom: 3rem; }
   .practice-quote { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; color: var(--gold); border-left: 2px solid var(--gold); padding-left: 1rem; margin-bottom: 1.2rem; line-height: 1.6; }
   .practice-body-light { font-size: 1rem; color: #2d4a5e; line-height: 1.85; }
 
-  /* ── LOCATION ── */
   .location-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
   .loc-card-light { background: var(--white); border: 0.5px solid rgba(74,98,116,0.12); border-radius: 4px; padding: 1.4rem; }
   .loc-card-dark { background: rgba(74,98,116,0.5); border: 0.5px solid rgba(247,243,238,0.09); border-radius: 4px; padding: 1.4rem; }
@@ -135,7 +130,6 @@
   .location-book { display: inline-block; margin-top: 0.6rem; font-size: 0.72rem; letter-spacing: 0.06em; color: var(--gold); text-decoration: none; }
   .location-book:hover { color: var(--gold-light); }
 
-  /* ── TRUTH BOX ── */
   .truth-box-light { background: rgba(74,98,116,0.06); border: 0.5px solid rgba(201,168,76,0.3); border-radius: 4px; padding: 1.8rem 2rem; margin: 2.5rem 0; position: relative; overflow: hidden; }
   .truth-box-light::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--gold); }
   .truth-box-dark { background: rgba(61,83,99,0.6); border: 0.5px solid rgba(201,168,76,0.3); border-radius: 4px; padding: 1.8rem 2rem; margin: 2.5rem 0; position: relative; overflow: hidden; }
@@ -144,13 +138,11 @@
   .truth-text-light { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--ardoise-deep); line-height: 1.7; font-style: italic; }
   .truth-text-dark { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #f0ebe4; line-height: 1.7; font-style: italic; }
 
-  /* ── PRACTICAL BOX ── */
   .practical-box { background: var(--white); border: 0.5px solid rgba(74,98,116,0.1); border-radius: 4px; padding: 1.6rem 1.8rem; margin-top: 1.5rem; }
   .practical-title { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
   .practical-item { font-size: 0.9rem; color: #2d4a5e; line-height: 1.7; display: flex; gap: 0.8rem; align-items: flex-start; margin-bottom: 0.8rem; }
   .practical-item::before { content: '·'; color: var(--gold); flex-shrink: 0; }
 
-  /* ── FAQ ACCORDÉON ── */
   .faq-wrap { margin-top: 1.5rem; background: var(--white); border: 0.5px solid rgba(74,98,116,0.1); border-radius: 4px; padding: 0.4rem 1.8rem; }
   .faq-title { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); padding: 1.2rem 0 0.6rem; }
   .faq-item { border-top: 0.5px solid rgba(74,98,116,0.1); }
@@ -160,11 +152,9 @@
   .faq-answer { font-size: 0.86rem; color: #2d4a5e; line-height: 1.8; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.25s ease; }
   .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 1rem; }
 
-  /* ── CONDITIONS ── */
   .conditions-note { font-size: 0.7rem; color: #7A9AB0; line-height: 1.8; border-top: 0.5px solid rgba(74,98,116,0.1); padding-top: 1rem; margin-top: 1.5rem; }
   .conditions-note strong { color: var(--ardoise); font-weight: 500; }
 
-  /* ── PONT SÉMANTIQUE ── */
   .pont-semiotique { background: rgba(74,98,116,0.4); border: 0.5px solid rgba(201,168,76,0.2); border-radius: 4px; padding: 2.5rem; margin-top: 4rem; position: relative; }
   .pont-semiotique::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(180deg, var(--gold), var(--terracotta)); border-radius: 4px 0 0 4px; }
   .pont-semiotique h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; color: var(--lin); margin-bottom: 1rem; line-height: 1.3; }
@@ -172,7 +162,6 @@
   .pont-semiotique p { font-size: 0.95rem; color: #ddeaf2; line-height: 1.85; margin-bottom: 1rem; }
   .pont-semiotique a { font-size: 0.78rem; color: var(--gold); text-decoration: none; }
 
-  /* ── RETRAITE ── */
   #retraite { position: relative; overflow: hidden; }
   .retraite-glow { position: absolute; top: -10%; right: -10%; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 60%); pointer-events: none; }
   .retraite-glow-2 { position: absolute; bottom: -5%; left: -8%; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(196,113,74,0.04) 0%, transparent 60%); pointer-events: none; }
@@ -214,7 +203,6 @@
   .retraite-inclus-item { font-size: 0.78rem; color: #a8c4d4; display: flex; gap: 0.5rem; align-items: flex-start; }
   .retraite-inclus-item::before { content: '—'; color: var(--gold); flex-shrink: 0; }
 
-  /* ── ENTREPRISE ── */
   .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2.5rem 0; }
   .stat-item { background: var(--white); border: 0.5px solid rgba(74,98,116,0.1); border-radius: 4px; padding: 1.5rem; text-align: center; }
   .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; color: var(--terracotta); line-height: 1; margin-bottom: 0.4rem; }
@@ -241,7 +229,6 @@
   .pilot-condition { font-size: 0.8rem; color: #3d5a6e; display: flex; gap: 0.5rem; align-items: flex-start; }
   .pilot-condition::before { content: '—'; color: var(--terracotta); flex-shrink: 0; }
 
-  /* ── BIO ── */
   .bio-grid { display: grid; grid-template-columns: 2fr 3fr; gap: 5rem; align-items: start; }
   .bio-left { position: sticky; top: 7rem; }
   .bio-avatar { width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, var(--terracotta), var(--gold)); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--white); font-weight: 300; margin-bottom: 1.5rem; }
@@ -255,7 +242,6 @@
   .anti-item { font-size: 0.78rem; display: flex; gap: 0.5rem; align-items: flex-start; }
   .anti-no { color: rgba(74,98,116,0.55); text-decoration: line-through; }
 
-  /* ── CONTACT ── */
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
   .contact-block-dark { background: rgba(74,98,116,0.5); border: 0.5px solid rgba(247,243,238,0.1); border-radius: 4px; padding: 2rem; }
   .contact-block-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; margin-bottom: 1.2rem; }
@@ -266,7 +252,6 @@
   .map-container { margin-top: 2rem; border-radius: 4px; overflow: hidden; border: 0.5px solid rgba(247,243,238,0.1); }
   .map-container iframe { width: 100%; height: 220px; border: 0; display: block; filter: grayscale(20%); }
 
-  /* ── CTA BUTTONS ── */
   .cta-btn { display: inline-block; margin-top: 1.5rem; padding: 0.85rem 2rem; font-size: 0.78rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: all 0.25s; cursor: pointer; }
   .cta-gold { background: transparent; border: 0.5px solid var(--gold); color: var(--gold); }
   .cta-gold:hover { background: var(--gold); color: var(--ardoise-deep); }
@@ -275,7 +260,6 @@
   .cta-ghost { border: 1px solid rgba(247,243,238,0.55); color: rgba(247,243,238,0.9); }
   .cta-ghost:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.08); }
 
-  /* ── FOOTER ── */
   footer { background: var(--ardoise-deep); padding: 2.5rem 2.5rem 2rem; border-top: 0.5px solid rgba(201,168,76,0.15); }
   .footer-main { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
   .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: rgba(247,243,238,0.75); }
@@ -288,6 +272,37 @@
   .footer-nap-item strong { color: rgba(247,243,238,0.75); font-weight: 400; display: block; margin-bottom: 0.2rem; }
   .footer-nap-item a { color: rgba(247,243,238,0.60); text-decoration: none; }
   .footer-nap-item a:hover { color: var(--gold); }
+
+  /* ── YOGA HERO VIDEO ── */
+  .yoga-video-hero { position: relative; overflow: hidden; border-radius: 6px; margin-bottom: 3rem; }
+  .yoga-video-hero video { width: 100%; max-height: 460px; object-fit: cover; display: block; filter: brightness(0.82) saturate(0.85); }
+  .yoga-video-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(247,243,238,0.06) 0%, transparent 40%, rgba(247,243,238,0.1) 100%); pointer-events: none; border-radius: 6px; }
+  .yoga-video-caption { position: absolute; bottom: 1.2rem; right: 1.5rem; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(247,243,238,0.45); }
+
+  /* ── GALERIE POSTURES ── */
+  .galerie-outer { padding: 5rem 2rem; background: var(--ardoise-deep); overflow: hidden; }
+  .galerie-inner { max-width: 1100px; margin: 0 auto; }
+  .galerie-eyebrow { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+  .galerie-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 300; color: var(--lin); line-height: 1.15; margin-bottom: 2.5rem; }
+  .galerie-title em { font-style: italic; color: var(--gold); }
+  .galerie-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
+  .galerie-grid-2 { display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 0.75rem; }
+  .galerie-item { position: relative; overflow: hidden; border-radius: 3px; }
+  .galerie-item img { width: 100%; height: 240px; object-fit: cover; display: block; filter: saturate(0.82) brightness(0.9); transition: filter 0.5s ease, transform 0.5s ease; }
+  .galerie-item.tall img { height: 360px; }
+  .galerie-item:hover img { filter: saturate(1.0) brightness(1.0); transform: scale(1.04); }
+  .galerie-item-inner { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(42,62,74,0.82) 100%); opacity: 0; transition: opacity 0.35s; display: flex; align-items: flex-end; padding: 1.2rem; }
+  .galerie-item:hover .galerie-item-inner { opacity: 1; }
+  .galerie-item-label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(247,243,238,0.92); }
+  .galerie-note { font-size: 0.65rem; color: rgba(247,243,238,0.3); text-align: right; margin-top: 1rem; font-style: italic; }
+
+  /* ── SCROLL REVEAL ── */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
 
   @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -308,7 +323,50 @@
     .social-float { right: 0.6rem; }
     .social-float a { width: 34px; height: 34px; }
     .footer-nap { flex-direction: column; gap: 1rem; }
+    .galerie-grid, .galerie-grid-2 { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+    .galerie-item img, .galerie-item.tall img { height: 160px !important; }
   }
+
+  /* ── KONINGSTEEN GALLERY ── */
+  .koningsteen-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-bottom: 0.6rem; align-items: start; }
+  .koningsteen-main { position: relative; overflow: hidden; border-radius: 3px; }
+  .koningsteen-main img { width: 100%; height: auto; display: block; filter: saturate(0.9); transition: transform 0.5s ease; }
+  .koningsteen-main:hover img { transform: scale(1.03); }
+  .koningsteen-side { display: flex; flex-direction: column; gap: 0.6rem; align-items: stretch; }
+  .koningsteen-sm { position: relative; overflow: hidden; border-radius: 3px; flex: 1; }
+  .koningsteen-sm img { width: 100%; height: auto; display: block; filter: saturate(0.9); transition: transform 0.5s ease; }
+  .koningsteen-sm:hover img { transform: scale(1.04); }
+  .koningsteen-full { position: relative; overflow: hidden; border-radius: 3px; }
+  .koningsteen-full img { width: 100%; height: auto; display: block; filter: saturate(0.9); transition: transform 0.5s ease; }
+  .koningsteen-full:hover img { transform: scale(1.02); }
+  .koningsteen-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 0.6rem 0.9rem; background: linear-gradient(0deg, rgba(42,62,74,0.82) 0%, transparent 100%); font-size: 0.65rem; color: rgba(247,243,238,0.85); letter-spacing: 0.08em; text-transform: uppercase; }
+  @media (max-width: 768px) {
+    .koningsteen-grid { grid-template-columns: 1fr; }
+    .koningsteen-main img { height: 220px; }
+    .koningsteen-sm img { height: 160px; }
+  }
+
+
+  /* ── OFFER CARD WITH PHOTO ── */
+  .offer-card-photo { padding: 0 !important; overflow: hidden; }
+  .offer-photo-wrap { overflow: hidden; background: #f0ece6; }
+  .offer-photo { width: 100%; height: auto; display: block; filter: saturate(0.88) brightness(0.95); transition: transform 0.5s ease; }
+  .offer-card-photo:hover .offer-photo { transform: scale(1.02); }
+
+  /* ── YOGA SECTION VIDEO (not hero) ── */
+  .yoga-section-video { position: relative; overflow: hidden; border-radius: 6px; margin-bottom: 3rem; }
+  .yoga-section-video video { width: 100%; height: auto; display: block; filter: brightness(0.85) saturate(0.88); max-height: 600px; }
+  .yoga-video-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(247,243,238,0.06) 0%, transparent 40%, rgba(247,243,238,0.1) 100%); pointer-events: none; border-radius: 6px; }
+  .yoga-video-caption { position: absolute; bottom: 1.2rem; right: 1.5rem; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(247,243,238,0.5); }
+
+  /* ── YOGA INTER-PHOTOS ── */
+  .yoga-interphoto { position: relative; overflow: hidden; border-radius: 4px; margin-bottom: 2.5rem; }
+  .yoga-interphoto img { width: 100%; height: auto; display: block; filter: saturate(0.85) brightness(0.92); transition: transform 0.6s ease; }
+  .yoga-interphoto-sm img { height: auto; }
+  .yoga-interphoto:hover img { transform: scale(1.02); }
+  .yoga-interphoto-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(42,62,74,0.65) 100%); }
+  .yoga-interphoto-label { position: absolute; bottom: 1.2rem; left: 1.5rem; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(247,243,238,0.88); }
+
 </style>
 </head>
 <body class="fr">
@@ -334,7 +392,7 @@
     <a href="#meditation-ath"><span class="lang-fr">Méditation</span><span class="lang-en">Meditation</span></a>
     <a href="#retraite"><span class="lang-fr">Retraite</span><span class="lang-en">Retreat</span></a>
     <a href="#entreprise"><span class="lang-fr">Entreprises</span><span class="lang-en">Companies</span></a>
-    <a href="#marjorie"><span class="lang-fr">Qui suis-je</span><span class="lang-en">About</span></div>
+    <a href="#marjorie"><span class="lang-fr">Qui suis-je</span><span class="lang-en">About</span></a>
     <div class="lang-switcher">
       <button class="lang-btn active" onclick="switchLang('fr')" id="btn-fr">FR</button>
       <button class="lang-btn" onclick="switchLang('en')" id="btn-en">EN</button>
@@ -345,6 +403,12 @@
 
 <!-- HERO -->
 <section id="hero">
+  <!-- Vidéo fond hero -->
+  <div class="hero-video-bg">
+    <video autoplay muted loop playsinline>
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="hero-lines"></div><div class="hero-accent"></div><div class="hero-accent-2"></div>
   <div style="margin-bottom:2.5rem;opacity:0;animation:fadeUp 0.8s 0.1s forwards;">
     <svg aria-hidden="true" width="52" height="80" viewBox="0 0 56 88" fill="none" style="filter:drop-shadow(0 0 24px rgba(201,168,76,0.2));"><defs><linearGradient id="hF" x1="28" y1="2" x2="28" y2="56" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#C9A84C"/><stop offset="46%" stop-color="#C4714A"/><stop offset="100%" stop-color="#9a4a2a" stop-opacity="0.6"/></linearGradient></defs><path d="M28 2 C35 13 44 27 40 42 C37 52 28 56 28 56 C28 56 19 52 16 42 C12 27 21 13 28 2Z" fill="url(#hF)"/><path d="M28 18 C30.5 25 31.5 35 30.5 44 C29.6 49.5 29 52.5 28 55 C27 52.5 26.4 49.5 25.5 44 C24.5 35 25.5 25 28 18Z" fill="#fffcf0" opacity="0.82"/><line x1="6" y1="68" x2="50" y2="68" stroke="rgba(201,168,76,0.45)" stroke-width="1.2"/><line x1="27.5" y1="62" x2="27.5" y2="74" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -388,12 +452,30 @@
   <div class="section-inner">
     <p class="section-eyebrow eyebrow-gold"><span class="lang-fr">Yoga Viniyoga à Ath</span><span class="lang-en">Viniyoga in Ath</span></p>
     <h2 class="section-title"><span class="lang-fr">Le Viniyoga s'adapte à toi.<br><em>Pas toi au Viniyoga.</em></span><span class="lang-en">Viniyoga adapts to you.<br><em>Not you to Viniyoga.</em></span></h2>
+
+    <!-- ── VIDÉO YOGA EN STUDIO ── -->
+    <div class="yoga-section-video reveal">
+      <video autoplay muted loop playsinline>
+        <source src="assets/hero.mp4" type="video/mp4">
+      </video>
+      <div class="yoga-video-overlay"></div>
+      <span class="yoga-video-caption lang-fr">Cours de Viniyoga · Studio IFSU · Ath</span>
+      <span class="yoga-video-caption lang-en">Viniyoga class · Studio IFSU · Ath</span>
+    </div>
+
     <!-- BLOC 1 : Description + Séance privée -->
     <div class="two-col" style="grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:4rem;">
       <div>
         <div class="practice-block">
           <div class="practice-quote"><span class="lang-fr">"Le yoga s'adapte à toi, pas toi au yoga." — Krishnamacharya</span><span class="lang-en">"Yoga adapts to you, not you to yoga." — Krishnamacharya</span></div>
           <p class="practice-body-light"><span class="lang-fr">Le Viniyoga, c'est l'art d'adapter le yoga à ton corps — pas l'inverse. Issu de la lignée du grand maître Krishnamacharya, cette approche est profondément thérapeutique : elle respecte ton anatomie, ton histoire, tes limites du moment.<br><br>Tu n'as pas besoin d'être souple. Tu n'as pas besoin d'avoir déjà fait du yoga. Tu as juste besoin d'envie.</span><span class="lang-en">Viniyoga is the art of adapting yoga to your body — not the other way around. Rooted in the lineage of master teacher Krishnamacharya, this approach is deeply therapeutic: it respects your anatomy, your history, your current limits.<br><br>You don't need to be flexible. You don't need prior yoga experience. You just need the desire to start.</span></p>
+          <div style="border-radius:4px;overflow:hidden;margin:1.5rem 0;position:relative;">
+            <img src="https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop"
+                 alt="Cours collectif Viniyoga en studio"
+                 style="width:100%;height:200px;object-fit:cover;object-position:center 40%;display:block;filter:saturate(0.85) brightness(0.95);">
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(61,83,99,0.55) 100%);border-radius:4px;"></div>
+            <span style="position:absolute;bottom:0.7rem;left:0.9rem;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(247,243,238,0.8);"><span class="lang-fr">Cours collectif · studio</span><span class="lang-en">Group class · studio</span></span>
+          </div>
           <div class="pont-semiotique" style="margin-top:2rem;">
             <h3><span class="lang-fr">De la <em>stabilité intérieure</em> à la performance sereine</span><span class="lang-en">From <em>inner stability</em> to grounded performance</span></h3>
             <p><span class="lang-fr">Le Viniyoga est l'art d'adapter le yoga à l'individu. Cette précision s'applique à votre <strong style="color:var(--lin);">pratique personnelle au Studio IFSU (n°20)</strong> comme à mes <strong style="color:var(--lin);">cours du mercredi au Centre Équilibre (n°18)</strong>.</span><span class="lang-en">Viniyoga means adapting the practice to the individual. This applies equally to your <strong style="color:var(--lin);">personal practice at Studio IFSU (no. 20)</strong> and my <strong style="color:var(--lin);">Wednesday classes at Centre Équilibre (no. 18)</strong>.</span></p>
@@ -402,17 +484,22 @@
         </div>
       </div>
       <div>
-        <p style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;"><span class="lang-fr">Séance privée</span><span class="lang-en">Private session</span></p>
-        <div class="offer-card-light">
-          <div class="offer-name"><span class="lang-fr">Séance individuelle Viniyoga</span><span class="lang-en">Individual Viniyoga session</span></div>
-          <div class="offer-price">65€ <span><span class="lang-fr">· 90 min · sur rendez-vous</span><span class="lang-en">· 90 min · by appointment</span></span></div>
-          <div class="offer-desc"><span class="lang-fr">Le cours est entièrement construit autour de toi : ton corps, tes contraintes, tes objectifs. Récupération après blessure, adaptation posturale, approfondissement d'une pratique existante.</span><span class="lang-en">The session is built entirely around you: your body, your constraints, your goals. Post-injury recovery, postural adjustment, deepening an existing practice.</span></div>
-          <div class="offer-meta"><span class="lang-fr">Sur rendez-vous uniquement · <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20je%20souhaite%20une%20s%C3%A9ance%20priv%C3%A9e." style="color:var(--gold);text-decoration:none;">WhatsApp</a> ou <a href="mailto:ifsu@etik.com" style="color:var(--gold);text-decoration:none;">e-mail</a></span><span class="lang-en">By appointment only · <a href="https://wa.me/32477091803?text=Hello%20Marjorie%2C%20I%27d%20like%20a%20private%20session." style="color:var(--gold);text-decoration:none;">WhatsApp</a> or <a href="mailto:ifsu@etik.com" style="color:var(--gold);text-decoration:none;">email</a></span></div>
+        <p style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;"><span class="lang-fr">Séance privée · Viniyoga</span><span class="lang-en">Private session · Viniyoga</span></p>
+        <div class="offer-card-light offer-card-photo">
+          <div class="offer-photo-wrap">
+            <img src="assets/privee.jpg" alt="Séance privée Viniyoga — ajustement individuel" class="offer-photo">
+          </div>
+          <div style="padding:1.5rem 1.8rem;">
+            <div class="offer-name"><span class="lang-fr">Séance individuelle Viniyoga</span><span class="lang-en">Individual Viniyoga session</span></div>
+            <div class="offer-price">65€ <span><span class="lang-fr">· 90 min · sur rendez-vous</span><span class="lang-en">· 90 min · by appointment</span></span></div>
+            <div class="offer-desc"><span class="lang-fr">Le cours est entièrement construit autour de toi : ton corps, tes contraintes, tes objectifs. Récupération après blessure, adaptation posturale, approfondissement d'une pratique existante.</span><span class="lang-en">The session is built entirely around you: your body, your constraints, your goals. Post-injury recovery, postural adjustment, deepening an existing practice.</span></div>
+            <div class="offer-meta"><span class="lang-fr">Sur rendez-vous · <a href="https://wa.me/32477091803?text=Bonjour%20Marjorie%2C%20je%20souhaite%20une%20s%C3%A9ance%20priv%C3%A9e." style="color:var(--gold);text-decoration:none;">WhatsApp</a> ou <a href="mailto:ifsu@etik.com" style="color:var(--gold);text-decoration:none;">e-mail</a></span><span class="lang-en">By appointment · <a href="https://wa.me/32477091803?text=Hello%20Marjorie%2C%20I%27d%20like%20a%20private%20session." style="color:var(--gold);text-decoration:none;">WhatsApp</a> or <a href="mailto:ifsu@etik.com" style="color:var(--gold);text-decoration:none;">email</a></span></div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- BLOC 2 : Cours collectifs — 3 lieux en ligne -->
+    <!-- BLOC 2 : Cours collectifs -->
     <div style="margin-bottom:3rem;">
       <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--ardoise-deep);margin-bottom:0.4rem;"><span class="lang-fr">Cours collectifs — <em style="color:var(--gold);">Ath & Meslin-l'Évêque</em></span><span class="lang-en">Group classes — <em style="color:var(--gold);">Ath & Meslin-l'Évêque</em></span></h3>
       <p style="font-size:0.88rem;color:var(--gris-bleute);line-height:1.7;margin-bottom:1.2rem;"><span class="lang-fr">Trois lieux, trois ambiances, un principe : le yoga reste accessible.</span><span class="lang-en">Three venues, three atmospheres, one principle: yoga stays accessible.</span></p>
@@ -438,11 +525,20 @@
       </div>
     </div>
 
-    <!-- BLOC 3 : Formules — 3 colonnes -->
+
+    
+    <!-- PHOTO INTERMÉDIAIRE — respiration -->
+    <div class="yoga-interphoto reveal">
+      <img src="https://images.pexels.com/photos/4056535/pexels-photo-4056535.jpeg?auto=compress&cs=tinysrgb&w=1100"
+           alt="Pranayama — respiration consciente en cours collectif" loading="lazy">
+      <div class="yoga-interphoto-overlay"></div>
+      <span class="yoga-interphoto-label"><span class="lang-fr">Pranayama · respiration consciente</span><span class="lang-en">Pranayama · conscious breathing</span></span>
+    </div>
+
+        <!-- BLOC 3 : Formules -->
     <div style="margin-bottom:3rem;">
       <p style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;"><span class="lang-fr">Formules · dès le 1er mai 2026</span><span class="lang-en">Pricing · from 1 May 2026</span></p>
       <div style="display:grid;grid-template-columns:2fr 1fr;gap:1rem;align-items:start;">
-        <!-- Abonnement -->
         <div class="offer-card-light featured" style="margin-bottom:0;">
           <div class="offer-badge"><span class="lang-fr">Le plus avantageux</span><span class="lang-en">Best value</span></div>
           <div class="offer-name"><span class="lang-fr">Abonnement mensuel</span><span class="lang-en">Monthly subscription</span></div>
@@ -451,7 +547,6 @@
           <div class="offer-desc"><span class="lang-fr">Ta place est réservée chaque semaine sur ton créneau fixe — sans aucune démarche de réservation. Ton tapis t'attend.</span><span class="lang-en">Your spot is reserved every week at your fixed timeslot — no booking needed. Your mat is waiting.</span></div>
           <div class="offer-meta"><span class="lang-fr">Paiement en début de mois · virement BE54 1030 5707 7797, Payconiq ou liquide · engagement mensuel non remboursable</span><span class="lang-en">Payment at start of month · transfer BE54 1030 5707 7797, Payconiq or cash · non-refundable</span></div>
         </div>
-        <!-- Séance unique -->
         <div class="offer-card-light" style="margin-bottom:0;">
           <div class="offer-name"><span class="lang-fr">Séance unique</span><span class="lang-en">Drop-in</span></div>
           <div class="offer-price">10€ <span><span class="lang-fr">/ séance</span><span class="lang-en">/ class</span></span></div>
@@ -462,7 +557,16 @@
       </div>
     </div>
 
-    <!-- BLOC 4 : Infos pratiques + FAQ côte à côte -->
+
+    <!-- PHOTO INTERMÉDIAIRE — relaxation -->
+    <div class="yoga-interphoto yoga-interphoto-sm reveal">
+      <img src="assets/savasana.jpg"
+           alt="Relaxation finale — savasana" loading="lazy">
+      <div class="yoga-interphoto-overlay"></div>
+      <span class="yoga-interphoto-label"><span class="lang-fr">Relaxation finale · savasana</span><span class="lang-en">Final relaxation · savasana</span></span>
+    </div>
+
+        <!-- BLOC 4 : Infos pratiques + FAQ -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;align-items:start;">
       <div class="practical-box" style="margin-top:0;">
         <div class="practical-title"><span class="lang-fr">Infos pratiques</span><span class="lang-en">Practical information</span></div>
@@ -473,81 +577,42 @@
         <div class="practical-item"><span class="lang-fr">Cours complet ? <a href="https://wa.me/32477091803" style="color:var(--gold);text-decoration:none;">WhatsApp</a> pour la liste d'attente.</span><span class="lang-en">Class full? <a href="https://wa.me/32477091803" style="color:var(--gold);text-decoration:none;">WhatsApp</a> for the waiting list.</span></div>
       </div>
       <div class="faq-wrap" style="margin-top:0;">
-          <div class="faq-title"><span class="lang-fr">Questions fréquentes</span><span class="lang-en">FAQ</span></div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span class="lang-fr">Mon abonnement est-il remboursé si je m'absente ?</span>
-              <span class="lang-en">Is my subscription refunded if I'm absent?</span>
-              <span class="faq-chevron">▼</span>
-            </div>
-            <div class="faq-answer">
-              <span class="lang-fr">Non — ta place t'est réservée même quand tu n'es pas là, c'est justement ce qui garantit le petit groupe. Si tu préfères ne pas t'engager sur un mois, la séance unique à 10€ est faite pour toi : tu réserves quand tu peux, selon les places disponibles.</span>
-              <span class="lang-en">No — your spot is reserved even when you're absent, which is precisely what keeps the group small. If you'd rather not commit to a month, the drop-in class at €10 is the right option: book when you can, subject to availability.</span>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span class="lang-fr">Comment ne pas perdre mes séances si je m'absente ?</span>
-              <span class="lang-en">How do I avoid losing classes when I'm absent?</span>
-              <span class="faq-chevron">▼</span>
-            </div>
-            <div class="faq-answer">
-              <span class="lang-fr">Tu me préviens par SMS au moins 24h avant, et tu peux rattraper ta séance sur un autre créneau (mardi ou jeudi) dans la semaine en cours ou la suivante — soit jusqu'à 14 jours de souplesse.</span>
-              <span class="lang-en">Text me at least 24h in advance and you can make up your class on another slot (Tuesday or Thursday) in the current or following week — up to 14 days of flexibility.</span>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span class="lang-fr">Puis-je déduire une séance de mon abonnement si je sais que je ne viendrai pas ?</span>
-              <span class="lang-en">Can I deduct a class from my subscription if I know I won't come?</span>
-              <span class="faq-chevron">▼</span>
-            </div>
-            <div class="faq-answer">
-              <span class="lang-fr">Non. L'abonnement est un forfait mensuel fixe — pas de calcul au prorata. Si tu préfères une flexibilité totale sans engagement, opte pour la séance unique à 10€.</span>
-              <span class="lang-en">No. The subscription is a fixed monthly flat rate — no pro-rata. If you prefer full flexibility with no commitment, go for the drop-in at €10.</span>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span class="lang-fr">Que se passe-t-il si j'arrête mon abonnement ?</span>
-              <span class="lang-en">What happens if I cancel my subscription?</span>
-              <span class="faq-chevron">▼</span>
-            </div>
-            <div class="faq-answer">
-              <span class="lang-fr">Ta place est immédiatement proposée aux personnes sur liste d'attente. Je ne peux pas garantir qu'une place sera disponible sur ton créneau habituel à ton retour.</span>
-              <span class="lang-en">Your spot is immediately offered to people on the waiting list. I can't guarantee availability on your usual timeslot if you come back.</span>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span class="lang-fr">Pourquoi ne pas payer directement sur Momoyoga ?</span>
-              <span class="lang-en">Why not pay directly on Momoyoga?</span>
-              <span class="faq-chevron">▼</span>
-            </div>
-            <div class="faq-answer">
-              <span class="lang-fr">Momoyoga est notre outil de réservation — pour voir les places disponibles en temps réel. Le règlement se fait directement : virement, Payconiq ou liquide. Pas de frais de plateforme, lien direct maintenu.</span>
-              <span class="lang-en">Momoyoga is our booking tool — to see available spots in real time. Payment is made directly: bank transfer, Payconiq or cash. No platform fees, direct link maintained.</span>
-            </div>
-          </div>
-
-      </div><!-- /faq-wrap -->
-    </div><!-- /infos+faq grid -->
-
-    <!-- CONDITIONS GÉNÉRALES -->
-    <div class="conditions-note">
-          <strong><span class="lang-fr">Conditions générales</span><span class="lang-en">General conditions</span></strong><br>
-          <span class="lang-fr">Conformément à l'Art. VI.53, 12° du Code de droit économique belge, le droit de rétractation ne s'applique pas aux services de loisirs fournis à une date déterminée. · En cas d'annulation de ma part, la séance est intégralement remboursée ou créditée. · En cas de force majeure médicale prolongée, un report peut être discuté.</span>
-          <span class="lang-en">Under Art. VI.53, 12° of the Belgian Code of Economic Law, the right of withdrawal does not apply to leisure services provided at a set date. · If I cancel, the session is fully refunded or credited. · In the event of prolonged medical force majeure, rescheduling can be discussed.</span>
+        <div class="faq-title"><span class="lang-fr">Questions fréquentes</span><span class="lang-en">FAQ</span></div>
+        <div class="faq-item">
+          <div class="faq-question"><span class="lang-fr">Mon abonnement est-il remboursé si je m'absente ?</span><span class="lang-en">Is my subscription refunded if I'm absent?</span><span class="faq-chevron">▼</span></div>
+          <div class="faq-answer"><span class="lang-fr">Non — ta place t'est réservée même quand tu n'es pas là, c'est justement ce qui garantit le petit groupe. Si tu préfères ne pas t'engager sur un mois, la séance unique à 10€ est faite pour toi.</span><span class="lang-en">No — your spot is reserved even when you're absent, which is precisely what keeps the group small. If you'd rather not commit to a month, the drop-in class at €10 is the right option.</span></div>
         </div>
+        <div class="faq-item">
+          <div class="faq-question"><span class="lang-fr">Comment ne pas perdre mes séances si je m'absente ?</span><span class="lang-en">How do I avoid losing classes when I'm absent?</span><span class="faq-chevron">▼</span></div>
+          <div class="faq-answer"><span class="lang-fr">Tu me préviens par SMS au moins 24h avant, et tu peux rattraper ta séance sur un autre créneau (mardi ou jeudi) dans la semaine en cours ou la suivante — soit jusqu'à 14 jours de souplesse.</span><span class="lang-en">Text me at least 24h in advance and you can make up your class on another slot (Tuesday or Thursday) in the current or following week — up to 14 days of flexibility.</span></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question"><span class="lang-fr">Puis-je déduire une séance de mon abonnement ?</span><span class="lang-en">Can I deduct a class from my subscription?</span><span class="faq-chevron">▼</span></div>
+          <div class="faq-answer"><span class="lang-fr">Non. L'abonnement est un forfait mensuel fixe — pas de calcul au prorata. Si tu préfères une flexibilité totale, opte pour la séance unique à 10€.</span><span class="lang-en">No. The subscription is a fixed monthly flat rate — no pro-rata. For full flexibility, go for the drop-in at €10.</span></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question"><span class="lang-fr">Que se passe-t-il si j'arrête mon abonnement ?</span><span class="lang-en">What happens if I cancel my subscription?</span><span class="faq-chevron">▼</span></div>
+          <div class="faq-answer"><span class="lang-fr">Ta place est immédiatement proposée aux personnes sur liste d'attente. Je ne peux pas garantir qu'une place sera disponible sur ton créneau habituel à ton retour.</span><span class="lang-en">Your spot is immediately offered to people on the waiting list. I can't guarantee availability on your usual timeslot if you come back.</span></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question"><span class="lang-fr">Pourquoi ne pas payer directement sur Momoyoga ?</span><span class="lang-en">Why not pay directly on Momoyoga?</span><span class="faq-chevron">▼</span></div>
+          <div class="faq-answer"><span class="lang-fr">Momoyoga est notre outil de réservation — pour voir les places disponibles en temps réel. Le règlement se fait directement : virement, Payconiq ou liquide. Pas de frais de plateforme.</span><span class="lang-en">Momoyoga is our booking tool — to see available spots in real time. Payment is made directly: bank transfer, Payconiq or cash. No platform fees.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conditions-note">
+      <strong><span class="lang-fr">Conditions générales</span><span class="lang-en">General conditions</span></strong><br>
+      <span class="lang-fr">Conformément à l'Art. VI.53, 12° du Code de droit économique belge, le droit de rétractation ne s'applique pas aux services de loisirs fournis à une date déterminée. · En cas d'annulation de ma part, la séance est intégralement remboursée ou créditée. · En cas de force majeure médicale prolongée, un report peut être discuté.</span>
+      <span class="lang-en">Under Art. VI.53, 12° of the Belgian Code of Economic Law, the right of withdrawal does not apply to leisure services provided at a set date. · If I cancel, the session is fully refunded or credited. · In the event of prolonged medical force majeure, rescheduling can be discussed.</span>
+    </div>
 
     <a href="https://www.momoyoga.com/ifsu/" target="_blank" rel="noopener" class="cta-btn cta-gold"><span class="lang-fr">Réserver un cours →</span><span class="lang-en">Book a class →</span></a>
   </div>
 </section>
+
+<div class="divider"></div>
+
 
 <div class="divider"></div>
 
@@ -667,11 +732,29 @@
     </div>
 
     <div style="margin-top:3rem;">
-      <p style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;"><span class="lang-fr">Le lieu</span><span class="lang-en">The venue</span></p>
-      <div class="loc-card-dark" style="border-color:rgba(201,168,76,0.2);">
-        <div class="location-name">Koningsteen Center · Kapelle-op-den-Bos</div>
-        <div class="location-addr"><span class="lang-fr">Entre Bruxelles et Anvers · Belgique</span><span class="lang-en">Between Brussels and Antwerp · Belgium</span></div>
-        <div class="location-details" style="margin-top:0.6rem;"><span class="lang-fr">Centre de retraite reconnu depuis plus de 25 ans. Un cadre verdoyant et calme, avec salles de pratique, hébergement et restauration sur place.</span><span class="lang-en">A recognised retreat centre for over 25 years. A green, peaceful setting with practice rooms, on-site accommodation and catering.</span></div>
+      <p style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;"><span class="lang-fr">Le lieu</span><span class="lang-en">The venue</span></p>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--lin);margin-bottom:0.4rem;line-height:1.2;">Koningsteen · <em style="color:var(--gold);">Kapelle-op-den-Bos</em></p>
+      <p style="font-size:0.82rem;color:#a8c4d4;margin-bottom:1.2rem;"><span class="lang-fr">Entre Bruxelles et Anvers · Centre de retraite depuis plus de 25 ans</span><span class="lang-en">Between Brussels and Antwerp · Retreat centre for over 25 years</span></p>
+      <div class="koningsteen-grid">
+        <div class="koningsteen-main">
+          <img src="assets/koningsteen-salle.webp" alt="Salle de méditation Koningsteen — tapis disposés en cercle" loading="lazy">
+          <div class="koningsteen-caption"><span class="lang-fr">Salle de méditation · parquet, mandala, lumière naturelle</span><span class="lang-en">Meditation hall · parquet, mandala, natural light</span></div>
+        </div>
+        <div class="koningsteen-side">
+          <div class="koningsteen-sm">
+            <img src="assets/tuinzaal-interieur.webp" alt="Salle de pratique yoga — grandes baies vitrées sur jardin" loading="lazy">
+            <div class="koningsteen-caption"><span class="lang-fr">Tuinzaal · baies vitrées sur le parc</span><span class="lang-en">Garden hall · panoramic park views</span></div>
+          </div>
+          <div class="koningsteen-sm">
+            <img src="assets/koningsteen-vue.webp" alt="Koningsteen — vue aérienne au coucher du soleil" loading="lazy">
+            <div class="koningsteen-caption"><span class="lang-fr">Le domaine · au cœur des arbres</span><span class="lang-en">The estate · surrounded by trees</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="koningsteen-full">
+        <img src="assets/tuinzaal-exterieur.webp" alt="Bâtiment Koningsteen — pavillon dans les bois" loading="lazy">
+        <div class="koningsteen-caption lang-fr">Le Tuinzaal — pavillon de pratique niché dans les arbres</div>
+        <div class="koningsteen-caption lang-en">The Tuinzaal — practice pavilion nestled among the trees</div>
       </div>
     </div>
 
@@ -852,7 +935,7 @@
     <div class="footer-links">
       <a href="#yoga-ath"><span class="lang-fr">Yoga</span><span class="lang-en">Yoga</span></a>
       <a href="#meditation-ath"><span class="lang-fr">Méditation</span><span class="lang-en">Meditation</span></a>
-      <a href="#retraite"><span class="lang-fr">Retraite</span><span class="lang-en">Retreat</span></a>
+      <a href="#retraite"><span class="lang-fr">Retraite</span><span class="lang-en">Retreat</span></div>
       <a href="#entreprise"><span class="lang-fr">Entreprises</span><span class="lang-en">Companies</span></a>
       <a href="#marjorie"><span class="lang-fr">À propos</span><span class="lang-en">About</span></a>
       <a href="https://ifsu.online">ifsu.online</a>
@@ -906,12 +989,21 @@
     q.addEventListener('click', function() {
       var item = q.parentElement;
       var isOpen = item.classList.contains('open');
-      // ferme tous
       document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
-      // ouvre celui-ci si c'était fermé
       if (!isOpen) { item.classList.add('open'); }
     });
   });
+
+  // ── SCROLL REVEAL ──
+  (function() {
+    var els = document.querySelectorAll('.reveal');
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function(el) { io.observe(el); });
+  })();
 </script>
 </body>
 </html>
