@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>{{ page.title }} — Les Carnets de la Tradition</title>
+<link rel="canonical" href="https://www.ifsu-equilibre.be{{ page.url }}">
 <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -206,7 +207,7 @@ a { color: inherit; }
 <body class="page-body">
 
 <nav class="nav">
-  <a href="index.html" class="nav-logo">
+  <a href="/" class="nav-logo">
     <svg width="36" height="36" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
       <circle cx="28" cy="28" r="26" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.9"/>
       <circle cx="28" cy="28" r="21" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.8"/>
@@ -228,7 +229,7 @@ a { color: inherit; }
   </a>
   <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Accueil</a></li>
+    <li><a href="/">Accueil</a></li>
     <li><a href="yoga.html">Yoga</a></li>
     <li><a href="meditation.html">Méditation</a></li>
     <li><a href="carnets.html" class="active">Carnets</a></li>
