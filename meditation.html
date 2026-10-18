@@ -534,6 +534,23 @@ footer{background:#2C3F52;padding:2.5rem;display:flex;flex-wrap:wrap;justify-con
   .site-nav-links a{display:block;padding:.75rem 2rem;border-bottom:none;font-size:.9rem}
 }
 
+
+/* ── POURQUOI DEUX OFFRES ── */
+#deux-offres{background:var(--cream2)}
+#deux-offres .do-lead{max-width:60ch;margin-top:1.5rem;font-size:1.05rem;color:rgba(14,26,14,.72);line-height:1.85}
+#deux-offres .pq{max-width:62ch}
+.do-grid{margin-top:3rem;display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;align-items:stretch}
+.do-card{background:var(--cream);border:1px solid rgba(184,148,63,.22);border-top:3px solid var(--gold);padding:2.2rem 2rem}
+.do-card h3{font-family:var(--f-s);font-size:1.7rem;font-weight:400;color:var(--ink);line-height:1.15;margin-bottom:.4rem}
+.do-card h3 em{color:var(--gold);font-style:italic}
+.do-tag{display:block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem}
+.do-card p{font-size:.95rem;color:rgba(14,26,14,.7);line-height:1.85}
+.do-after{max-width:62ch;margin-top:2.4rem;font-size:.97rem;color:rgba(14,26,14,.7);line-height:1.88}
+.do-close{margin-top:2.4rem;display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap}
+.do-close p{font-family:var(--f-s);font-size:1.25rem;font-style:italic;color:var(--ink);line-height:1.5;margin:0}
+.do-close .btn-g{display:inline-block}
+.do-close .btn-line{font-size:.73rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:.2rem}
+@media(max-width:820px){.do-grid{grid-template-columns:1fr}.do-card{padding:1.8rem 1.5rem}}
 </style>
 </head>
 <body>
@@ -872,6 +889,45 @@ footer{background:#2C3F52;padding:2.5rem;display:flex;flex-wrap:wrap;justify-con
         <div class="testi-author">Andreas</div>
         <div class="testi-role">Chef et restaurateur</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- SECTION 6b: POURQUOI DEUX OFFRES -->
+<section id="deux-offres">
+  <div class="sw">
+    <p class="sl rv">Deux portes d'entrée</p>
+    <h2 class="st rv">Pourquoi<br>deux <em>offres ?</em></h2>
+    <p class="do-lead rv">La méditation n’est pas de la relaxation. C’est un outil, et il demande qu’on s’en serve.</p>
+
+    <div class="pq rv">
+      <p>Pense à une vitre sale. La lumière est derrière, elle y a toujours été. Mais tu la vois à travers la crasse, alors elle te paraît terne. Méditer, c’est nettoyer la vitre : apaiser les bruits parasites du mental pour voir ce qu’il y a réellement derrière, et te regarder en face. Ça prend du temps. Ça demande de frotter. Une vitre ne se nettoie pas en une passe.</p>
+    </div>
+
+    <div class="do-grid">
+      <div class="do-card rv">
+        <span class="do-tag">Pour voir</span>
+        <h3>L’atelier <em>découverte</em></h3>
+        <p>L’atelier découverte s’adresse à toi si tu ne connais pas du tout la méditation, ou si tu hésites à t’y investir. Tu pratiques, tu vois ce que c’est, tu n’as rien à croire. Trois ateliers à Ath, cinq personnes au maximum, des audios guidés pour pratiquer chez toi. À la fin, tu sais si tu veux aller plus loin. 180 €.</p>
+      </div>
+      <div class="do-card rv d2">
+        <span class="do-tag">Pour aller jusqu’au bout</span>
+        <h3>Le cycle <em>individuel</em></h3>
+        <p>Le cycle individuel s’adresse à toi si tu veux aller jusqu’au bout. Je te transmets des techniques précises, en tête-à-tête, à Ath ou en visio. Si tu bloques, je t’aide et je te conseille. Le travail, c’est toi qui le fais. Ce cycle demande plus d’investissement : de la régularité, de la sincérité. Je ne l’ouvre qu’à des personnes décidées à le mener jusqu’au bout, parce que c’est la condition pour qu’il serve à quelque chose. 250 €, payable en plusieurs fois.</p>
+      </div>
+    </div>
+
+    <p class="do-after rv">À la fin du cycle, tu peux rejoindre le groupe de méditation du lundi, en ligne. Ses participants pratiquent depuis longtemps. C’est pour ça que le cycle passe d’abord : on y vient avec une pratique à soi, et on la prend au sérieux.</p>
+
+    <div class="do-close rv">
+      <p>Pour voir par toi-même : l’atelier.</p>
+      <a href="atelier-decouverte.html" class="btn-g">Découvrir l’atelier</a>
+    </div>
+    <div class="do-close rv" style="margin-top:1.2rem">
+      <p>Si tu sais déjà que tu veux aller jusqu’au bout : écris-moi.</p>
+      <a href="mailto:ifsu@etik.com?subject=Cycle individuel méditation IFSU" class="btn-line">ifsu@etik.com</a>
     </div>
   </div>
 </section>
