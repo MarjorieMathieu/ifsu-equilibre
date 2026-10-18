@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Les Carnets de la Tradition — IFSU Équilibre · Ath</title>
+<link rel="canonical" href="https://www.ifsu-equilibre.be/carnets.html">
 <meta name="description" content="Études critiques et analyse historique des fondements du corps subtil. Yoga Viniyoga et méditation védique IFSU, sources et textes de référence.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -957,8 +958,15 @@ a { color: inherit; }
 </style>
 <body class="page-body">
 
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span><b>Rentrée septembre 2026</b> — tous les cours au Studio IFSU Ath &nbsp;•&nbsp; nouveaux horaires : mardi 17h30–19h00 &amp; 19h30–21h00, mercredi 9h00–10h30, 17h30–19h00 &amp; 19h30–21h00 &nbsp;•&nbsp; tarifs : 15€/séance · 48€ abonnement 4 séances/mois · 60€ abonnement 5 séances/mois · carte de fidélité 150€/10 séances (11<sup>e</sup> à -50%, valable 4 mois)</span>
+    <span aria-hidden="true"><b>Rentrée septembre 2026</b> — tous les cours au Studio IFSU Ath &nbsp;•&nbsp; nouveaux horaires : mardi 17h30–19h00 &amp; 19h30–21h00, mercredi 9h00–10h30, 17h30–19h00 &amp; 19h30–21h00 &nbsp;•&nbsp; tarifs : 15€/séance · 48€ abonnement 4 séances/mois · 60€ abonnement 5 séances/mois · carte de fidélité 150€/10 séances (11<sup>e</sup> à -50%, valable 4 mois)</span>
+  </div>
+</div>
+
 <nav class="nav">
-  <a href="index.html" class="nav-logo">
+  <a href="/" class="nav-logo">
     <svg width="36" height="36" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
       <circle cx="28" cy="28" r="26" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.9"/>
       <circle cx="28" cy="28" r="21" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.8"/>
@@ -980,7 +988,7 @@ a { color: inherit; }
   </a>
   <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Accueil</a></li>
+    <li><a href="/">Accueil</a></li>
     <li><a href="yoga.html">Yoga</a></li>
     <li><a href="meditation.html">Méditation</a></li>
     <li><a href="carnets.html" class="active">Carnets</a></li>
@@ -1021,7 +1029,7 @@ a { color: inherit; }
       <h2 class="carnet-card-title">{{ carnet.title }}</h2>
       <p class="carnet-card-text">{{ carnet.excerpt }}</p>
       <span class="carnet-card-meta">{{ carnet.meta }}</span>
-      <a href="{{ carnet.href }}" class="carnet-card-link">Lire</a>
+      <a href="{{ carnet.url }}" class="carnet-card-link">Lire</a>
     </article>
 {% endfor %}
   </div>
