@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>{{ page.title }} — Les Carnets de la Tradition</title>
+<link rel="canonical" href="https://ifsu-equilibre.be{{ page.url }}">
 <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -206,7 +207,7 @@ a { color: inherit; }
 <body class="page-body">
 
 <nav class="nav">
-  <a href="index.html" class="nav-logo">
+  <a href="/" class="nav-logo">
     <svg width="36" height="36" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
       <circle cx="28" cy="28" r="26" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.9"/>
       <circle cx="28" cy="28" r="21" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.8"/>
@@ -228,7 +229,7 @@ a { color: inherit; }
   </a>
   <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Accueil</a></li>
+    <li><a href="/">Accueil</a></li>
     <li><a href="yoga.html">Yoga</a></li>
     <li><a href="meditation.html">Méditation</a></li>
     <li><a href="carnets.html" class="active">Carnets</a></li>
@@ -258,7 +259,7 @@ a { color: inherit; }
   <h2 style="font-family:var(--font-titre);font-size:1.6rem;font-weight:300;color:var(--lin);margin-bottom:1.25rem;">Une question ? Un doute ?</h2>
   <p style="font-size:.9rem;color:rgba(247,243,238,.8);margin-bottom:.3rem;">Écris à <a href="mailto:ifsu@etik.com" style="color:var(--lin);">ifsu@etik.com</a></p>
   <p style="font-size:.9rem;color:rgba(247,243,238,.8);">Ou par WhatsApp au <a href="tel:+32477091803" style="color:var(--lin);">0477 09 18 03</a></p>
-  <p style="margin-top:1rem;font-size:.82rem;color:rgba(247,243,238,.4);">Réservations via <a href="https://momoyoga.com/ifsu" target="_blank" style="color:rgba(247,243,238,.5);">momoyoga.com/ifsu</a></p>
+  <p style="margin-top:1rem;font-size:.82rem;color:rgba(247,243,238,.4);">Réservations via <a href="https://ifsu-equilibre.web.app/" target="_blank" rel="noopener" style="color:rgba(247,243,238,.5);">ifsu-equilibre.web.app</a></p>
 </section>
 
 <footer class="footer">
@@ -271,6 +272,8 @@ a { color: inherit; }
     <a href="https://mastodon.social/@IFSUYogameditation" target="_blank">Mastodon</a>
   </div>
   <p class="footer-legal">© 2026 IFSU Équilibre · <a href="https://ifsu-equilibre.be" style="color:inherit;">ifsu-equilibre.be</a></p>
+  <p class="footer-legal" style="margin-top:.4rem">Site créé par Marjorie Mathieu, IFSU Équilibre. Toute reproduction du code est interdite.</p>
+  <p class="footer-legal" style="margin-top:.4rem"><a href="mentions-legales.html" style="color:inherit;">Mentions légales</a> · <a href="confidentialite.html" style="color:inherit;">Confidentialité et cookies</a> · <a href="conditions.html" style="color:inherit;">Conditions</a></p>
 </footer>
 <script>document.getElementById('burger').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');});</script>
 </body></html>

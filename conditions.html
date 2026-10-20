@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Conditions d’utilisation et de vente — IFSU Équilibre</title>
+<link rel="canonical" href="https://ifsu-equilibre.be/conditions.html">
+<meta name="description" content="Règles d’utilisation du site, prix, annulation et rétractation chez IFSU Équilibre.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   IFSU Équilibre — Feuille de style partagée
+   Palette : ardoise / lin / terracotta / gold / anthracite
+   Typo : Cormorant Garamond (titres) + DM Sans (corps)
+   ============================================================ */
+
+:root {
+  --ardoise:      #4A6274;
+  --ardoise-dark: #2C3F52;
+  --lin:          #F7F3EE;
+  --lin-deep:     #EDE8E0;
+  --terracotta:   #C4714A;
+  --gold:         #C9A84C;
+  --anthracite:   #2C2C2C;
+  --gris-bleuté:  #7A9AB0;
+  --blanc:        #FFFFFF;
+
+  --font-titre: 'Cormorant Garamond', Georgia, serif;
+  --font-corps: 'DM Sans', system-ui, sans-serif;
+
+  --max-w: 860px;
+  --max-w-large: 1100px;
+  --nav-h: 68px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-corps);
+  font-weight: 300;
+  color: var(--anthracite);
+  background: var(--lin);
+  font-size: 17px;
+  line-height: 1.7;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: var(--ardoise-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 100;
+}
+.nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+.nav-logo-text {
+  font-family: var(--font-titre);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--lin);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+.nav-logo-text span {
+  display: block;
+  font-size: 0.7rem;
+  font-family: var(--font-corps);
+  font-weight: 300;
+  color: var(--gris-bleuté);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+  font-family: var(--font-corps);
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--lin);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+.nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.nav-burger span { display: block; width: 24px; height: 1.5px; background: var(--lin); transition: transform 0.3s, opacity 0.3s; }
+.nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+@media (max-width: 700px) {
+  .nav-burger { display: flex; }
+  .nav-links {
+    display: none; position: absolute; top: var(--nav-h); left: 0; right: 0;
+    background: var(--ardoise-dark); flex-direction: column; gap: 0; padding: 0.5rem 0 1rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a { display: block; padding: 0.75rem 2rem; border-bottom: none; font-size: 0.9rem; }
+}
+
+.page-body { padding-top: var(--nav-h); }
+.section { padding: 5rem 2rem; }
+.section-inner { max-width: var(--max-w); margin: 0 auto; }
+.section-title {
+  font-family: var(--font-titre);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--ardoise-dark);
+  margin-bottom: 1.5rem;
+}
+
+.carnet-tag {
+  display: inline-block; width: fit-content;
+  font-family: var(--font-corps); font-size: .68rem; font-weight: 500;
+  letter-spacing: .14em; text-transform: uppercase;
+  padding: .3rem .7rem; border: 1px solid currentColor;
+}
+.carnet-tag.yoga { color: var(--terracotta); }
+.carnet-tag.meditation { color: var(--ardoise); }
+.carnet-tag.editorial { color: var(--anthracite); }
+
+.article-back {
+  font-family: var(--font-corps); font-size: .75rem; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--ardoise);
+  text-decoration: none; display: inline-flex; align-items: center; gap: .5rem; margin-bottom: 2rem;
+}
+.article-back:hover { color: var(--terracotta); }
+.article-meta-line { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.article-date { font-family: var(--font-corps); font-size: .78rem; color: #888; letter-spacing: .03em; }
+.article-body { max-width: var(--max-w); margin: 0 auto; }
+.article-body p { font-size: 1.02rem; line-height: 1.85; color: #444; margin-bottom: 1.4rem; }
+.article-h2 {
+  font-family: var(--font-titre); font-size: 1.35rem; font-weight: 500;
+  color: var(--ardoise-dark); margin: 2.5rem 0 1rem;
+}
+.article-signature {
+  margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--lin-deep);
+  font-family: var(--font-titre); font-style: italic; color: var(--ardoise); font-size: 1rem;
+}
+
+.formation-list { list-style: none; margin-top: 1rem; }
+.formation-list li {
+  font-size: 0.95rem; color: #444; padding: 0.55rem 0; border-bottom: 1px solid var(--lin-deep);
+  padding-left: 1rem; position: relative; line-height: 1.6;
+}
+.formation-list li::before { content: '—'; position: absolute; left: 0; color: var(--gold); }
+
+.info-bloc { background: var(--blanc); border-top: 2px solid var(--terracotta); padding: 1.75rem 2rem; margin: 2.5rem 0; }
+.info-bloc-title {
+  font-family: var(--font-corps); font-size: 0.72rem; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 1rem;
+}
+.info-bloc p { font-size: .92rem; color: #444; margin-bottom: .9rem; }
+.info-bloc p:last-child { margin-bottom: 0; }
+
+.btn {
+  display: inline-block; font-family: var(--font-corps); font-size: 0.8rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+  padding: 0.75rem 1.75rem; border: 1px solid currentColor; transition: background 0.2s, color 0.2s; cursor: pointer;
+}
+.btn-terracotta { color: var(--terracotta); border-color: var(--terracotta); }
+.btn-terracotta:hover { background: var(--terracotta); color: var(--lin); }
+.btn-ardoise { color: var(--ardoise); border-color: var(--ardoise); }
+.btn-ardoise:hover { background: var(--ardoise); color: var(--lin); }
+
+.marquee-bar {
+  background: var(--ardoise-dark); color: var(--lin); overflow: hidden; white-space: nowrap;
+  border-bottom: 1px solid rgba(201,168,76,.35); position: relative;
+}
+.marquee-track { display: inline-flex; align-items: center; animation: marquee 34s linear infinite; will-change: transform; }
+.marquee-track span {
+  display: inline-block; padding: .6rem 0; font-family: var(--font-corps); font-size: .78rem;
+  font-weight: 400; letter-spacing: .04em; color: var(--lin); white-space: nowrap; padding-right: 3.5rem;
+}
+.marquee-track span b { color: var(--gold); font-weight: 500; }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; overflow-x: auto; } }
+
+.footer { background: var(--ardoise-dark); padding: 4rem 2rem 2.5rem; text-align: center; }
+.footer-name { font-family: var(--font-titre); font-size: 1.4rem; font-weight: 300; color: var(--lin); margin-bottom: 0.25rem; }
+.footer-tagline {
+  font-family: var(--font-corps); font-size: 0.75rem; font-weight: 300; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gris-bleuté); margin-bottom: 2rem;
+}
+.footer-contact { font-size: 0.9rem; color: rgba(247,243,238,0.75); line-height: 2; margin-bottom: 2rem; }
+.footer-contact a { color: var(--lin); text-decoration: none; }
+.footer-contact a:hover { color: var(--gold); }
+.footer-social { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 2.5rem; }
+.footer-social a {
+  font-family: var(--font-corps); font-size: 0.75rem; font-weight: 400; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gris-bleuté); text-decoration: none; transition: color 0.2s;
+}
+.footer-social a:hover { color: var(--gold); }
+.footer-divider { width: 32px; height: 1px; background: rgba(201,168,76,0.3); margin: 0 auto 1.5rem; }
+.footer-legal { font-size: 0.75rem; color: rgba(122,154,176,0.6); letter-spacing: 0.06em; }
+</style>
+</head>
+<body class="page-body">
+
+<nav class="nav">
+  <a href="/" class="nav-logo">
+    <svg width="36" height="36" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="28" cy="28" r="26" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.9"/>
+      <circle cx="28" cy="28" r="21" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.8"/>
+      <circle cx="28" cy="28" r="16" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.7"/>
+      <circle cx="28" cy="28" r="11" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
+      <circle cx="28" cy="28" r="6"  fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
+      <circle cx="28" cy="2" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="47.5" cy="9.5" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="54" cy="28" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="47.5" cy="46.5" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="28" cy="54" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="8.5" cy="46.5" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="2" cy="28" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <circle cx="8.5" cy="9.5" r="2.4" fill="#C9A84C" opacity="0.75"/>
+      <defs><linearGradient id="fn" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#C4714A"/><stop offset="100%" stop-color="#F0EAE0"/></linearGradient></defs>
+      <ellipse cx="28" cy="26" rx="3" ry="5" fill="url(#fn)" opacity="0.9"/>
+    </svg>
+    <span class="nav-logo-text">IFSU Équilibre<span>Ath · Hainaut</span></span>
+  </a>
+  <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="/">Accueil</a></li>
+    <li><a href="yoga.html">Yoga</a></li>
+    <li><a href="meditation.html">Méditation</a></li>
+    <li><a href="carnets.html" >Carnets</a></li>
+    <li><a href="ateliers.html">Ateliers</a></li>
+    <li><a href="retraite.html">Retraite</a></li>
+  </ul>
+</nav>
+
+<style>.legal h2{font-family:var(--font-titre);font-weight:400;font-size:1.6rem;color:var(--ardoise-dark);margin:2.2rem 0 .8rem}.legal ul{margin:0 0 1.4rem 1.2rem;color:#444;line-height:1.8;font-size:1.02rem}.legal .maj{font-size:.85rem;color:#7A9AB0}</style>
+<article class="section legal" style="padding-bottom:2rem;"><div class="article-body">
+<a href="/" class="article-back">← Accueil</a>
+<h1 class="section-title" style="font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:1.5rem;">Conditions d’utilisation et de vente</h1>
+
+<h2>Utilisation du site</h2>
+<p>Le site est en accès libre. Les informations y sont données de bonne foi et peuvent changer : les horaires et les tarifs en vigueur sont ceux de la page Yoga, des ateliers et de l’application de réservation. Le site peut être indisponible temporairement. L’éditrice n’est pas responsable des contenus des sites externes vers lesquels il renvoie.</p>
+<p>Les contenus sont protégés (voir les <a href="mentions-legales.html">mentions légales</a>). Les informations sur le yoga et la méditation ne constituent pas un avis médical. Si la douleur dure, un avis médical reste utile.</p>
+<h2>Prix et paiement</h2>
+<p>Les prix sont ceux affichés sur le site au moment de ta réservation, en euros, taxes comprises.</p>
+<ul>
+<li>Cours collectifs : 15 € la séance ; abonnement mensuel de 48 € (mois de quatre semaines) ou 60 € (mois de cinq semaines) ; carte 10 + 1 à 150 €, valable 4 mois.</li>
+<li>Séance privée de yoga : 45 € (90 minutes).</li>
+<li>Méditation : cycle individuel 250 €, payable en plusieurs fois ; ateliers découverte et bootcamp aux prix indiqués sur leur page.</li>
+<li>Moyens de paiement du cycle individuel : espèces, Payconiq ou virement. Les versements échelonnés convenus à la commande restent dus aux dates prévues. Pour les cours et séances, le paiement se règle selon les modalités indiquées lors de la réservation.</li>
+</ul>
+<h2>Cours collectifs : règles</h2>
+<ul>
+<li>Six places au maximum par cours.</li>
+<li>Pas de cours d’essai.</li>
+<li>Annulation gratuite jusqu’à 48 h avant le cours. Passé ce délai, la séance est due.</li>
+<li>L’abonnement mensuel couvre toutes les dates du mois : si une date ne te convient pas, tu choisis un autre créneau. Il n’y a pas de liste d’attente pour les abonnements.</li>
+</ul>
+<h2>Droit de rétractation</h2>
+<p>Pour un achat à distance, la loi belge prévoit en principe 14 jours pour te rétracter, sans donner de motif. Elle prévoit des exceptions, notamment pour les activités de loisirs fournies à une date précise (cours, séances, ateliers à date fixe) et pour le contenu numérique dont tu demandes l’accès immédiat (atelier vidéo). Pour le cycle individuel de méditation : tu es remboursé·e intégralement si tu te rétractes avant son début. Si tu demandes qu’il commence pendant les 14 jours, puis que tu te rétractes, tu paies la part déjà réalisée. Passé ce délai et une fois le cycle commencé, aucun remboursement n’est dû, y compris si tu l’interromps. Pour te rétracter ou poser une question : <a href="mailto:ifsu@etik.com">ifsu@etik.com</a>.</p>
+<h2>Garanties et litiges</h2>
+<p>Les garanties légales de conformité s’appliquent à tes achats. En cas de désaccord, écris d’abord à <a href="mailto:ifsu@etik.com">ifsu@etik.com</a> ; à défaut d’accord, tu peux saisir le Service de médiation pour le consommateur (mediationconsommateur.be). Le droit belge s’applique ; les tribunaux belges sont compétents.</p>
+<p>Voir aussi : <a href="confidentialite.html">Confidentialité et cookies</a>.</p>
+
+<p class="maj">Dernière mise à jour : octobre 2026.</p>
+</div></article>
+
+<footer class="footer">
+  <p class="footer-name">IFSU Équilibre</p>
+  <p class="footer-tagline">Marjorie Mathieu · Ath, Hainaut</p>
+  <div class="footer-divider"></div>
+  <div class="footer-contact"><a href="mailto:ifsu@etik.com">ifsu@etik.com</a><br><a href="tel:+32477091803">0477 09 18 03</a></div>
+  <div class="footer-social">
+    <a href="https://facebook.com/IFSU.Yoga.Meditation.Ath" target="_blank">Facebook</a>
+    <a href="https://mastodon.social/@IFSUYogameditation" target="_blank">Mastodon</a>
+  </div>
+  <p class="footer-legal">© 2026 IFSU Équilibre · <a href="https://ifsu-equilibre.be" style="color:inherit;">ifsu-equilibre.be</a></p>
+  <p class="footer-legal" style="margin-top:.4rem">Site créé par Marjorie Mathieu, IFSU Équilibre. Toute reproduction du code est interdite.</p>
+  <p class="footer-legal" style="margin-top:.4rem"><a href="mentions-legales.html" style="color:inherit;">Mentions légales</a> · <a href="confidentialite.html" style="color:inherit;">Confidentialité et cookies</a> · <a href="conditions.html" style="color:inherit;">Conditions</a></p>
+</footer>
+<script>document.getElementById('burger').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');});</script>
+</body></html>
