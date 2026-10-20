@@ -152,6 +152,7 @@ h2.st em{color:var(--terracotta);font-style:italic}
 .format-cta{margin-top:.5rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--terracotta);border-bottom:1px solid var(--terracotta);align-self:flex-start;padding-bottom:2px}
 .format-email{display:flex;gap:.5rem;margin-top:.5rem;flex-wrap:wrap}
 .format-email input{flex:1;min-width:120px;padding:.6rem .8rem;border:1px solid rgba(14,26,14,.15);font-size:.85rem;font-family:var(--f-n)}
+.format-notify{display:inline-block;margin-top:.5rem;padding:.6rem 1rem;background:var(--terracotta);color:white;text-decoration:none;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
 .format-email button{padding:.6rem 1rem;background:var(--terracotta);color:white;border:none;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
 @media(max-width:960px){.formats-grid{grid-template-columns:1fr}}
 
@@ -325,10 +326,7 @@ footer{background:#2C3F52;padding:2.2rem 2.5rem;display:flex;flex-wrap:wrap;just
           <li><span>Lancement</span><span>Date à venir</span></li>
         </ul>
         <div class="format-price">150 €</div>
-        <form class="format-email" onsubmit="return false;">
-          <input type="email" placeholder="Ton email" required>
-          <button type="submit">Être prévenu·e</button>
-        </form>
+        <a class="format-notify" href="mailto:ifsu@etik.com?subject=Atelier%20vid%C3%A9o%20%3A%20me%20pr%C3%A9venir&body=Bonjour%20Marjorie%2C%0A%0AJe%20souhaite%20%C3%AAtre%20pr%C3%A9venu%C2%B7e%20du%20lancement%20de%20l%27atelier%20vid%C3%A9o.%0A%0AMon%20pr%C3%A9nom%20%3A%20">Me prévenir par e-mail</a>
       </div>
     </div>
   </div>
