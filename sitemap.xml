@@ -91,4 +91,7 @@
     <priority>0.5</priority>
   </url>
 
+  <url><loc>https://ifsu-equilibre.be/mentions-legales.html</loc></url>
+  <url><loc>https://ifsu-equilibre.be/confidentialite.html</loc></url>
+  <url><loc>https://ifsu-equilibre.be/conditions.html</loc></url>
 </urlset>
