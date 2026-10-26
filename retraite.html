@@ -746,6 +746,13 @@ a { color: inherit; }
 }
 
 /* Buttons */
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem 1rem;justify-content:center}
+.hero-actions .btn-primary,.hero-actions .btn-day{text-align:center}
+@media (max-width:560px){.hero-actions{flex-direction:column;align-items:stretch;max-width:20rem;margin:0 auto}}
+.btn-day{display:inline-block;padding:1rem 1.8rem;border:1px solid #E8E2D8;color:#F7F3EE;text-decoration:none;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;transition:background .2s,color .2s}
+.btn-day:hover{background:#F7F3EE;color:#2C3F52}
+.btn-day:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.hero-day{font-size:.88rem;line-height:1.6;color:#E8E2D8;margin:1.2rem auto 0;max-width:30rem}
 .btn-primary {
   display: inline-block;
   background: var(--terracotta);
@@ -926,7 +933,11 @@ a { color: inherit; }
     <p class="hero-eyebrow">23 – 27 novembre 2026 · Koningsteen, Belgique</p>
     <h1 class="hero-title">Cinq jours pour<br><em>retrouver le fil.</em></h1>
     <p class="hero-sub">Une immersion dans les pratiques IFSU : corps, souffle, silence, dans un lieu conçu pour ça.</p>
-    <a href="#tarif" class="btn-primary">Réserver ma place</a>
+    <div class="hero-actions">
+      <a href="#tarif" class="btn-primary">Les 5 jours&nbsp;· 750&nbsp;€</a>
+      <a href="#tarif" class="btn-day">Une seule journée&nbsp;· 150&nbsp;€</a>
+    </div>
+    <p class="hero-day">Hébergement et repas compris dans les deux cas. La journée se réserve selon les disponibilités.</p>
   </div>
 </section>
 
