@@ -623,6 +623,78 @@ a { color: inherit; }
   color: var(--gold);
 }
 
+/* Qui suis-je — version aérée */
+.qui-grid--air { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 4.5rem; }
+
+.qs-quote {
+  font-family: var(--font-titre);
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.25;
+  color: var(--ardoise-dark);
+  margin-bottom: 1rem;
+}
+.qs-lead { font-size: 1.1rem; max-width: 34rem; }
+
+.qs-timeline { display: grid; gap: 2.75rem; margin: 3rem 0 2.5rem; }
+.qs-row { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 1.5rem; align-items: start; }
+.qs-year {
+  font-family: var(--font-titre);
+  font-size: 1.9rem;
+  line-height: 1;
+  color: var(--gold);
+  border-top: 1px solid var(--gold);
+  padding-top: 0.7rem;
+}
+.qs-kicker {
+  font-family: var(--font-corps);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 0.6rem;
+}
+.qs-row .section-text { max-width: 34rem; margin-bottom: 0; }
+.qs-aside {
+  font-family: var(--font-titre);
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--ardoise-dark);
+  margin-top: 1.1rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--gold);
+  max-width: 30rem;
+}
+
+.qs-coulisses { border-top: 1px solid var(--lin-deep); padding-top: 1.75rem; }
+.qs-coulisses .section-text { max-width: 34rem; }
+
+.qs-card {
+  position: sticky;
+  top: calc(var(--nav-h) + 1.5rem);
+  background: var(--blanc);
+  border: 1px solid var(--lin-deep);
+  padding: 2rem 1.75rem;
+  text-align: center;
+}
+.qs-card .portrait-marjorie { margin-bottom: 1rem; }
+.qs-name { font-family: var(--font-titre); font-size: 1.5rem; color: var(--ardoise-dark); line-height: 1.2; }
+.qs-role { font-size: 0.85rem; color: #666; margin: 0.35rem 0 1.75rem; }
+.qs-card .qs-kicker { text-align: left; margin-bottom: 0; }
+.qs-card .formation-list { text-align: left; margin: 0.5rem 0 1.75rem; }
+
+@media (max-width: 860px) {
+  .qui-grid--air { grid-template-columns: 1fr; gap: 3rem; }
+  .qs-card { position: static; }
+}
+@media (max-width: 520px) {
+  .qs-row { grid-template-columns: 1fr; gap: 0.75rem; }
+  .qs-year { border-top: none; padding-top: 0; }
+}
+
 /* ============================================================
    FOOTER
    ============================================================ */
@@ -1025,41 +1097,62 @@ a { color: inherit; }
     <p class="section-label">Marjorie Mathieu</p>
     <h2 class="section-title">Qui suis-je</h2>
   </div>
-  <div class="section-inner">
-    <div class="qui-grid">
-      <div>
-        <p class="section-text" style="font-family:var(--font-titre);font-size:1.15rem;font-style:italic;color:var(--ardoise-dark);">Je ne suis pas sportive du tout. Ce que je cherchais, au départ, c'était de quoi renforcer mes muscles sans me dégoûter de l'effort.</p>
-        <p class="section-text">Accessoirement, de quoi faire taire l'anxiété qui me tordait le corps depuis des années : dos coincé, nuque en miettes, genoux abîmés à force d'hypertension, respiration courte, diaphragme tendu. Asthmatique en prime — le moindre effort m'essoufflait en deux secondes.</p>
-        <p class="section-text">Le yoga a répondu à tout ça, et particulièrement à la respiration. J'ai commencé en 2011, avec une prof géniale, après avoir survécu à des cours trop acrobatiques, trop haut perchés en mode hippie, ou carrément trop gymnastiques.</p>
-        <p class="section-text">Le cours de Yanayoga, lui, m'a mise à l'aise immédiatement : 1h15 de respiration, de postures adaptées, de bienveillance. Dès le lendemain, je respirais à nouveau à pleins poumons.</p>
-        <p class="section-text">Je m'en souviens encore : dans les couloirs du bureau, stressée comme d'habitude, un souffle profond a rempli mes poumons, grand ouverts. Tu ne peux pas imaginer le contentement — je respirais à fond pour la première fois depuis des années. Le bonheur !</p>
-        <div class="divider"></div>
-        <p class="section-text">La méditation est arrivée plus tard, en 2013, croisée lors d'un séminaire de Taï-chi en Grèce — oui, j'ai un peu tout essayé. J'y ai rencontré Breeyana par une amie qui faisait partie de son groupe.</p>
-        <p class="section-text">On en a parlé deux minutes, et sceptique et méfiante comme je suis, j'ai tout de suite zappé : un « truc de hippies », trop haut perché, des techniques ancestrales, un gourou en prime — Gururaj Ananda Yogi, franchement pas pour moi. Il m'a fallu deux ans pour lâcher la garde et me lancer.</p>
-        <p class="section-text" style="font-family:var(--font-titre);font-size:1.1rem;font-style:italic;color:var(--ardoise-dark);">Qui suis-je, sans ma famille, sans mes amis, sans mon boulot ? Juste moi.</p>
-        <p class="section-text">C'était exactement ce que je cherchais depuis des années. Il reste du travail, mais je suis sur la voie, et j'ai croisé des gens vraiment formidables — des portes se sont ouvertes que je ne pensais pas pouvoir ouvrir dans ma vie.</p>
-        <p class="section-text">Honnêtement, il y a des gens bizarres dans tout groupe, yoga et méditation compris, il a fallu faire le tri. Mais au final, j'adore ceux qui m'entourent aujourd'hui, sur le même chemin que moi. Un chemin semé d'embûches, mais magnifique, avec de la volonté, de la pratique régulière, et les bonnes personnes pour avancer.</p>
-        <p class="section-text">C'est pour ça que je veux transmettre ça à d'autres — à toi qui luttes aussi dans ta vie de tous les jours, parce que je sais à quel point c'est difficile. Ça m'a donné un point d'ancrage et des réponses concrètes.</p>
-        <div class="divider"></div>
-        <p style="font-family:var(--font-corps);font-size:.72rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--ardoise-dark);margin-bottom:.75rem;">Ma manière d'enseigner</p>
-        <p class="section-text">Cette méfiance-là, je ne m'en suis jamais débarrassée, et c'est tant mieux. Je ne fais partie d'aucune Église, d'aucune foi particulière — les dogmes et les « fais ceci, fais cela, sinon... » ne sont pas pour moi. J'aime chercher la vérité par moi-même : je lis beaucoup de textes anciens, je débats avec les autres pour confronter mes idées, parfois erronées, à d'autres points de vue.</p>
-        <p class="section-text">J'enseigne de la même manière. En yoga, un maximum d'explications : mes élèves savent pourquoi ils font telle respiration ou telle posture, et je leur donne la philosophie derrière — ce n'est pas de la simple gymnastique, c'est plus profond que ça. En méditation, pareil : les questions sont encouragées, je pousse chacun à faire ses propres recherches et à en débattre après.</p>
-        <p class="section-text">Chacun est libre d'avoir sa propre opinion — je n'ai pas la science infuse, j'ai juste 13 ans d'expérience, de doutes, de méfiance, de réponses, de relaxation profonde, de repos mental. Et tout ça s'apprend : ce n'est pas un talent inné, c'est une technique à pratiquer tous les jours, avec une progression plus ou moins lente selon les personnes. Chacun son rythme, chacun ses blocages — l'important, c'est de commencer, et surtout de persévérer.</p>
+  <div class="section-inner-large">
+    <div class="qui-grid qui-grid--air">
+
+      <div class="qs-story">
+        <p class="qs-quote">Je ne suis pas sportive du tout.</p>
+        <p class="section-text qs-lead">Au départ, je cherchais de quoi renforcer mes muscles sans me dégoûter de l'effort.</p>
+
+        <div class="qs-timeline">
+          <div class="qs-row">
+            <p class="qs-year">2011</p>
+            <div>
+              <p class="qs-kicker">Le yoga</p>
+              <p class="section-text">Dos coincé, nuque en miettes, respiration courte. Après plusieurs cours trop acrobatiques ou trop haut perchés, un cours de Yanayoga m'a mise à l'aise tout de suite. Le lendemain, dans les couloirs de mon bureau, mes poumons se sont remplis à fond. Pour la première fois depuis des années.</p>
+            </div>
+          </div>
+
+          <div class="qs-row">
+            <p class="qs-year">2013</p>
+            <div>
+              <p class="qs-kicker">La méditation</p>
+              <p class="section-text">Je l'ai croisée lors d'un séminaire de taï-chi en Grèce. Un truc de hippies, des techniques ancestrales, un gourou : j'ai zappé. Il m'a fallu deux ans pour baisser la garde.</p>
+              <p class="qs-aside">Qui suis-je, sans ma famille, sans mes amis, sans mon boulot&nbsp;? Juste moi.</p>
+            </div>
+          </div>
+
+          <div class="qs-row">
+            <p class="qs-year">2014</p>
+            <div>
+              <p class="qs-kicker">L'enseignement</p>
+              <p class="section-text">En yoga, je donne le pourquoi de chaque respiration et de chaque posture, et la philosophie qui est derrière. En méditation, les questions sont les bienvenues et chacun fait ses propres recherches. Je ne fais partie d'aucune Église : chacun son rythme, chacun ses blocages.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="qs-coulisses">
+          <p class="qs-kicker">Avant le yoga : les coulisses</p>
+          <p class="section-text">Je suis curieuse de nature. Je lis des dossiers, des articles scientifiques, des livres de géopolitique, parce que j'aime savoir ce qu'il y a derrière ce qu'on me présente. Ça ne me met pas à l'abri : comme tout le monde, il m'arrive de me laisser influencer.</p>
+          <p class="section-text">J'ai appris le maquillage de scène et passé du temps dans les coulisses des théâtres, des tournages, des clips, à voir comment la magie se fabrique pour que le spectateur profite de l'œuvre. Avec le yoga, j'ai regardé mon corps de la même façon, jusqu'à étudier l'anatomie. Avec la méditation, le mental : comment il tourne, ce qu'il répète, ce qu'il a reçu sans que j'aie rien demandé.</p>
+        </div>
       </div>
-      <div>
+
+      <aside class="qs-card">
         <img src="assets/media/index-img-2.png" alt="Marjorie Mathieu — IFSU Équilibre" class="portrait-marjorie">
-        <p style="font-family:var(--font-corps);font-size:.72rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--ardoise-dark);margin-bottom:.75rem;">Formation &amp; Lignée</p>
+        <p class="qs-name">Marjorie Mathieu</p>
+        <p class="qs-role">Co-responsable IFSU Belgique francophone</p>
+        <p class="qs-kicker">Formation &amp; Lignée</p>
         <ul class="formation-list">
-          <li>Yoga Viniyoga · pratique depuis 2011, enseigne depuis 2014</li>
+          <li>Yoga Viniyoga · lignée Krishnamacharya / Desikachar · pratique depuis 2011, enseigne depuis 2014</li>
+          <li>Méditation védique IFSU · lignée Gururaj Ananda Yogi · pratique quotidienne depuis 2013</li>
           <li>Suivi pédagogique · Huguette Declercq (ABEPY)</li>
           <li>SSV 200h Yoga Teacher Training</li>
-          <li>Méditation védique IFSU · 13 ans de pratique quotidienne</li>
-          <li>Co-responsable IFSU Belgique francophone</li>
-          <li>Lignée directe Krishnamacharya / Gururaj Ananda Yogi</li>
           <li>Formation continue &amp; séminaires en cours</li>
         </ul>
-        <div style="margin-top:1.5rem;"><a href="mailto:ifsu@etik.com" class="btn btn-ardoise">Me contacter</a></div>
-      </div>
+        <a href="mailto:ifsu@etik.com" class="btn btn-ardoise">Me contacter</a>
+      </aside>
+
     </div>
   </div>
 </section>
