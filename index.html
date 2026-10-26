@@ -623,30 +623,21 @@ a { color: inherit; }
   color: var(--gold);
 }
 
-/* Qui suis-je — version aérée */
-.qui-grid--air { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 4.5rem; }
+/* Qui suis-je — repères à gauche, texte à droite */
+.qs-wrap { display: grid; grid-template-columns: minmax(0, 1fr) 19rem; gap: 4rem; align-items: start; }
 
-.qs-quote {
-  font-family: var(--font-titre);
-  font-size: clamp(1.7rem, 4vw, 2.3rem);
-  font-style: italic;
-  font-weight: 300;
-  line-height: 1.25;
-  color: var(--ardoise-dark);
-  margin-bottom: 1rem;
+.qs-chapter {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 2rem;
+  padding: 3.5rem 0;
+  border-top: 1px solid var(--lin-deep);
 }
-.qs-lead { font-size: 1.1rem; max-width: 34rem; }
+.qs-chapter:first-child { border-top: none; padding-top: 0; }
+.qs-chapter:last-child { padding-bottom: 0; }
 
-.qs-timeline { display: grid; gap: 2.75rem; margin: 3rem 0 2.5rem; }
-.qs-row { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 1.5rem; align-items: start; }
-.qs-year {
-  font-family: var(--font-titre);
-  font-size: 1.9rem;
-  line-height: 1;
-  color: var(--gold);
-  border-top: 1px solid var(--gold);
-  padding-top: 0.7rem;
-}
+.qs-marker { position: sticky; top: calc(var(--nav-h) + 2rem); align-self: start; }
+.qs-year { font-family: var(--font-titre); font-size: 2.4rem; font-weight: 300; line-height: 1; color: var(--gold); margin-bottom: 0.6rem; }
 .qs-kicker {
   font-family: var(--font-corps);
   font-size: 0.72rem;
@@ -654,45 +645,69 @@ a { color: inherit; }
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--terracotta);
-  margin-bottom: 0.6rem;
 }
-.qs-row .section-text { max-width: 34rem; margin-bottom: 0; }
-.qs-aside {
+
+.qs-body { max-width: 36rem; }
+.qs-body h3 {
   font-family: var(--font-titre);
-  font-size: 1.15rem;
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--ardoise-dark);
+  margin-bottom: 1.25rem;
+}
+.qs-body h3.qs-bigquote {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 1.75rem;
+}
+.qs-body .section-text { margin-bottom: 1.15rem; }
+
+.qs-turn, .qs-aside {
+  font-family: var(--font-titre);
+  font-size: 1.25rem;
   font-style: italic;
   line-height: 1.4;
   color: var(--ardoise-dark);
-  margin-top: 1.1rem;
-  padding-left: 1rem;
+  margin-top: 1.75rem;
+  padding-left: 1.1rem;
   border-left: 2px solid var(--gold);
-  max-width: 30rem;
 }
-
-.qs-coulisses { border-top: 1px solid var(--lin-deep); padding-top: 1.75rem; }
-.qs-coulisses .section-text { max-width: 34rem; }
-
-.qs-card {
-  position: sticky;
-  top: calc(var(--nav-h) + 1.5rem);
-  background: var(--blanc);
-  border: 1px solid var(--lin-deep);
-  padding: 2rem 1.75rem;
-  text-align: center;
+.qs-closing {
+  font-family: var(--font-titre);
+  font-size: clamp(1.5rem, 3.2vw, 1.85rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.3;
+  color: var(--ardoise-dark);
+  margin: 2.25rem 0 1.25rem;
 }
-.qs-card .portrait-marjorie { margin-bottom: 1rem; }
-.qs-name { font-family: var(--font-titre); font-size: 1.5rem; color: var(--ardoise-dark); line-height: 1.2; }
-.qs-role { font-size: 0.85rem; color: #666; margin: 0.35rem 0 1.75rem; }
-.qs-card .qs-kicker { text-align: left; margin-bottom: 0; }
-.qs-card .formation-list { text-align: left; margin: 0.5rem 0 1.75rem; }
+.qs-cta { font-size: 0.95rem; line-height: 1.7; color: #555; }
+.qs-cta a { color: var(--terracotta); text-underline-offset: 3px; }
+.qs-cta a:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 3px; }
 
-@media (max-width: 860px) {
-  .qui-grid--air { grid-template-columns: 1fr; gap: 3rem; }
-  .qs-card { position: static; }
+.qs-side { display: grid; gap: 1.25rem; }
+@media (min-width: 901px) and (min-height: 860px) {
+  .qs-side { position: sticky; top: calc(var(--nav-h) + 2rem); }
 }
-@media (max-width: 520px) {
-  .qs-row { grid-template-columns: 1fr; gap: 0.75rem; }
-  .qs-year { border-top: none; padding-top: 0; }
+.qs-id, .qs-formation { background: var(--blanc); border: 1px solid var(--lin-deep); padding: 1.75rem 1.5rem; }
+.qs-id { text-align: center; }
+.qs-id .portrait-marjorie { margin-bottom: 1rem; }
+.qs-name { font-family: var(--font-titre); font-size: 1.5rem; line-height: 1.2; color: var(--ardoise-dark); }
+.qs-role { font-size: 0.85rem; color: #666; margin: 0.35rem 0 1.5rem; }
+.qs-formation .formation-list { margin-top: 0.75rem; }
+
+@media (max-width: 900px) {
+  .qs-wrap { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
+  .qs-side { display: contents; }
+  .qs-id { order: 0; }
+  .qs-story { order: 1; }
+  .qs-formation { order: 2; }
+  .qs-chapter { grid-template-columns: minmax(0, 1fr); gap: 1rem; padding: 2.5rem 0; }
+  .qs-marker { position: static; display: flex; align-items: baseline; gap: 0.9rem; }
+  .qs-year { font-size: 2rem; margin-bottom: 0; }
 }
 
 /* ============================================================
@@ -1098,59 +1113,75 @@ a { color: inherit; }
     <h2 class="section-title">Qui suis-je</h2>
   </div>
   <div class="section-inner-large">
-    <div class="qui-grid qui-grid--air">
+    <div class="qs-wrap">
 
       <div class="qs-story">
-        <p class="qs-quote">Je ne suis pas sportive du tout.</p>
-        <p class="section-text qs-lead">Au départ, je cherchais de quoi renforcer mes muscles sans me dégoûter de l'effort.</p>
 
-        <div class="qs-timeline">
-          <div class="qs-row">
-            <p class="qs-year">2011</p>
-            <div>
-              <p class="qs-kicker">Le yoga</p>
-              <p class="section-text">Dos coincé, nuque en miettes, respiration courte. Après plusieurs cours trop acrobatiques ou trop haut perchés, un cours de Yanayoga m'a mise à l'aise tout de suite. Le lendemain, dans les couloirs de mon bureau, mes poumons se sont remplis à fond. Pour la première fois depuis des années.</p>
-            </div>
+        <article class="qs-chapter">
+          <div class="qs-marker"><p class="qs-kicker">La curiosité</p></div>
+          <div class="qs-body">
+            <h3 class="qs-bigquote">Depuis toujours, je regarde ce qu'il y a derrière la façade.</h3>
+            <p class="section-text">J'ai appris le maquillage de scène. J'ai passé des heures dans les coulisses des théâtres, sur des tournages, sur des clips, avec les comédiens et l'équipe technique, pour voir comment la magie se fabrique.</p>
+            <p class="section-text">Ma curiosité et mon besoin de comprendre m'ont menée sur des chemins et dans des métiers très différents. J'ai été hôtesse d'accueil, j'ai tenu un bar, j'ai eu une boutique en Grèce. J'ai mené plusieurs vies.</p>
+            <p class="section-text">Aujourd'hui encore, je lis des dossiers, des articles scientifiques, des livres de géopolitique, parce que je veux savoir ce qu'il y a derrière ce qu'on me présente. Ça ne me met pas à l'abri : comme tout le monde, il m'arrive de me laisser influencer.</p>
+            <p class="qs-turn">Un jour, j'ai voulu regarder derrière ma propre façade. C'est ce qui m'a menée au yoga, puis à la méditation.</p>
           </div>
+        </article>
 
-          <div class="qs-row">
-            <p class="qs-year">2013</p>
-            <div>
-              <p class="qs-kicker">La méditation</p>
-              <p class="section-text">Je l'ai croisée lors d'un séminaire de taï-chi en Grèce. Un truc de hippies, des techniques ancestrales, un gourou : j'ai zappé. Il m'a fallu deux ans pour baisser la garde.</p>
-              <p class="qs-aside">Qui suis-je, sans ma famille, sans mes amis, sans mon boulot&nbsp;? Juste moi.</p>
-            </div>
+        <article class="qs-chapter">
+          <div class="qs-marker"><p class="qs-year">2011</p><p class="qs-kicker">Le yoga</p></div>
+          <div class="qs-body">
+            <h3>Le corps d'abord</h3>
+            <p class="section-text">Je ne suis pas sportive. Je cherchais de quoi renforcer mes muscles sans me dégoûter de l'effort. Dos coincé, nuque en miettes, respiration courte.</p>
+            <p class="section-text">Après plusieurs cours trop acrobatiques ou trop haut perchés, j'ai trouvé une prof formidable et un lieu consacré à la pratique. Le lendemain d'une séance, mes poumons se sont remplis à fond, pour la première fois depuis des années.</p>
+            <p class="section-text">J'ai voulu comprendre ce que je sentais : les muscles, les tendons, les nerfs qui bougent selon la posture, l'endroit qui finit par céder après quelques respirations. J'ai étudié l'anatomie.</p>
+            <p class="qs-aside">Essaie, là : sens où va ton souffle quand tu ne t'en occupes pas.</p>
           </div>
+        </article>
 
-          <div class="qs-row">
-            <p class="qs-year">2014</p>
-            <div>
-              <p class="qs-kicker">L'enseignement</p>
-              <p class="section-text">En yoga, je donne le pourquoi de chaque respiration et de chaque posture, et la philosophie qui est derrière. En méditation, les questions sont les bienvenues et chacun fait ses propres recherches. Je ne fais partie d'aucune Église : chacun son rythme, chacun ses blocages.</p>
-            </div>
+        <article class="qs-chapter">
+          <div class="qs-marker"><p class="qs-year">2013</p><p class="qs-kicker">La méditation</p></div>
+          <div class="qs-body">
+            <h3>Le mental ensuite</h3>
+            <p class="section-text">Je l'ai croisée lors d'un séminaire de taï-chi en Grèce. Un truc de hippies, des techniques ancestrales, un gourou : j'ai zappé. Il m'a fallu deux ans pour m'y mettre.</p>
+            <p class="section-text">J'ai commencé en 2013, et depuis la même année, je participe à la retraite en Belgique.</p>
+            <p class="section-text">Elle m'a fait regarder le mental : comment il tourne, ce qu'il répète. Et chercher qui je suis sous tout ce qui vient de l'extérieur, les conditionnements de la famille et de la société. C'est ma vérité que je cherche : ce qui m'appartient vraiment.</p>
+            <p class="qs-turn">Je continue parce que c'est, pour moi, le seul moment où je suis en paix avec mon mental.</p>
           </div>
-        </div>
+        </article>
 
-        <div class="qs-coulisses">
-          <p class="qs-kicker">Avant le yoga : les coulisses</p>
-          <p class="section-text">Je suis curieuse de nature. Je lis des dossiers, des articles scientifiques, des livres de géopolitique, parce que j'aime savoir ce qu'il y a derrière ce qu'on me présente. Ça ne me met pas à l'abri : comme tout le monde, il m'arrive de me laisser influencer.</p>
-          <p class="section-text">J'ai appris le maquillage de scène et passé du temps dans les coulisses des théâtres, des tournages, des clips, à voir comment la magie se fabrique pour que le spectateur profite de l'œuvre. Avec le yoga, j'ai regardé mon corps de la même façon, jusqu'à étudier l'anatomie. Avec la méditation, le mental : comment il tourne, ce qu'il répète, ce qu'il a reçu sans que j'aie rien demandé.</p>
-        </div>
+        <article class="qs-chapter">
+          <div class="qs-marker"><p class="qs-year">2014</p><p class="qs-kicker">L'enseignement</p></div>
+          <div class="qs-body">
+            <h3>Pourquoi j'enseigne</h3>
+            <p class="section-text">Ces deux pratiques sont des outils, et je les trouve magnifiques. On me les a transmises. À mon tour, je transmets, et je redonne ce que j'ai reçu.</p>
+            <p class="section-text">Je donne la technique telle que je l'ai reçue, avec un cadre. En yoga, j'explique le pourquoi de chaque posture et de chaque respiration. En méditation, les questions sont les bienvenues.</p>
+            <p class="section-text">Ce que chacun y trouve, je n'y ai pas accès : chacun cherche sa propre vérité. Je donne l'outil, je réponds quand on bloque, et la personne fait le travail.</p>
+            <p class="section-text">Je ne fais partie d'aucune Église et je ne te demande de croire à rien. Si la pratique fait remonter des choses qui ne sont pas de mon ressort, je te renvoie vers un professionnel.</p>
+            <p class="qs-closing">Cet outil m'a beaucoup donné. Le transmettre, c'est ma façon de le rendre.</p>
+            <p class="qs-cta">Envie de voir comment ça se pratique ? <a href="mailto:ifsu@etik.com">Écris-moi</a>, on en parle librement, sans engagement.</p>
+          </div>
+        </article>
+
       </div>
 
-      <aside class="qs-card">
-        <img src="assets/media/index-img-2.png" alt="Marjorie Mathieu — IFSU Équilibre" class="portrait-marjorie">
-        <p class="qs-name">Marjorie Mathieu</p>
-        <p class="qs-role">Co-responsable IFSU Belgique francophone</p>
-        <p class="qs-kicker">Formation &amp; Lignée</p>
-        <ul class="formation-list">
-          <li>Yoga Viniyoga · lignée Krishnamacharya / Desikachar · pratique depuis 2011, enseigne depuis 2014</li>
-          <li>Méditation védique IFSU · lignée Gururaj Ananda Yogi · pratique quotidienne depuis 2013</li>
-          <li>Suivi pédagogique · Huguette Declercq (ABEPY)</li>
-          <li>SSV 200h Yoga Teacher Training</li>
-          <li>Formation continue &amp; séminaires en cours</li>
-        </ul>
-        <a href="mailto:ifsu@etik.com" class="btn btn-ardoise">Me contacter</a>
+      <aside class="qs-side" aria-label="Marjorie Mathieu : formation et contact">
+        <div class="qs-id">
+          <img src="assets/media/index-img-2.png" alt="Marjorie Mathieu — IFSU Équilibre" class="portrait-marjorie">
+          <p class="qs-name">Marjorie Mathieu</p>
+          <p class="qs-role">Co-responsable IFSU Belgique francophone</p>
+          <a href="mailto:ifsu@etik.com" class="btn btn-ardoise">Me contacter</a>
+        </div>
+        <div class="qs-formation">
+          <p class="qs-kicker">Formation &amp; Lignée</p>
+          <ul class="formation-list">
+            <li>Yoga Viniyoga · lignée Krishnamacharya / Desikachar · pratique depuis 2011, enseigne depuis 2014</li>
+            <li>Méditation védique IFSU · lignée Gururaj Ananda Yogi · pratique quotidienne depuis 2013</li>
+            <li>Suivi pédagogique · Huguette Declercq (ABEPY)</li>
+            <li>SSV 200h Yoga Teacher Training</li>
+            <li>Formation continue &amp; séminaires en cours</li>
+          </ul>
+        </div>
       </aside>
 
     </div>
