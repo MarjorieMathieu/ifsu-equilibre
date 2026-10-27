@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Retreat November 2026 — IFSU Équilibre · Koningsteen</title>
+<link href="https://ifsu-equilibre.be/en/retraite.html" rel="canonical"/><link href="https://ifsu-equilibre.be/retraite.html" hreflang="fr" rel="alternate"/><link href="https://ifsu-equilibre.be/en/retraite.html" hreflang="en" rel="alternate"/><link href="https://ifsu-equilibre.be/retraite.html" hreflang="x-default" rel="alternate"/>
+<meta content="IFSU residential retreat 23–27 November 2026 at Koningsteen. €750 all inclusive. Marjorie &amp; Breeyana." name="description"/>
+<link href="/assets/fonts/fonts.css" rel="stylesheet"/>
+<style>
+/* ============================================================
+   IFSU Équilibre — Feuille de style partagée
+   Palette : ardoise / lin / terracotta / gold / anthracite
+   Typo : Cormorant Garamond (titres) + DM Sans (corps)
+   ============================================================ */
+
+
+
+:root {
+  --ardoise:      #4A6274;
+  --ardoise-dark: #2C3F52;
+  --lin:          #F7F3EE;
+  --lin-deep:     #EDE8E0;
+  --terracotta:   #C4714A;
+  --gold:         #C9A84C;
+  --anthracite:   #2C2C2C;
+  --gris-bleuté:  #7A9AB0;
+  --blanc:        #FFFFFF;
+
+  --font-titre: 'Cormorant Garamond', Georgia, serif;
+  --font-corps: 'DM Sans', system-ui, sans-serif;
+
+  --max-w: 860px;
+  --max-w-large: 1100px;
+  --nav-h: 68px;
+}
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-corps);
+  font-weight: 300;
+  color: var(--anthracite);
+  background: var(--lin);
+  font-size: 17px;
+  line-height: 1.7;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: var(--ardoise-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 100;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.nav-logo-text {
+  font-family: var(--font-titre);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--lin);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.nav-logo-text span {
+  display: block;
+  font-size: 0.7rem;
+  font-family: var(--font-corps);
+  font-weight: 300;
+  color: var(--gris-bleuté);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-corps);
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--lin);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* Burger */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.nav-burger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--lin);
+  transition: transform 0.3s, opacity 0.3s;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile nav */
+@media (max-width: 700px) {
+  .nav-burger { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    background: var(--ardoise-dark);
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0 1rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a {
+    display: block;
+    padding: 0.75rem 2rem;
+    border-bottom: none;
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================================================
+   LAYOUT GÉNÉRAL
+   ============================================================ */
+
+.page-body {
+  padding-top: var(--nav-h);
+}
+
+.section {
+  padding: 5rem 2rem;
+}
+
+.section-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.section-inner-large {
+  max-width: var(--max-w-large);
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: var(--font-corps);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: var(--font-titre);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--ardoise-dark);
+  margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  font-family: var(--font-titre);
+  font-size: 1.35rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ardoise);
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.section-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+
+/* Séparateur */
+.divider {
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+  margin: 2.5rem 0;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+  background: var(--ardoise-dark);
+  padding: 7rem 2rem 6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 40%, rgba(201,168,76,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-emblem {
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+.hero-title {
+  font-family: var(--font-titre);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 300;
+  color: var(--lin);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-sub {
+  font-family: var(--font-titre);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  color: var(--gris-bleuté);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.hero-tagline {
+  font-family: var(--font-corps);
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ============================================================
+   BOUTONS & CTA
+   ============================================================ */
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-corps);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid currentColor;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.btn-terracotta {
+  color: var(--terracotta);
+  border-color: var(--terracotta);
+}
+.btn-terracotta:hover {
+  background: var(--terracotta);
+  color: var(--lin);
+}
+
+.btn-gold {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+.btn-gold:hover {
+  background: var(--gold);
+  color: var(--ardoise-dark);
+}
+
+.btn-ardoise {
+  color: var(--ardoise);
+  border-color: var(--ardoise);
+}
+.btn-ardoise:hover {
+  background: var(--ardoise);
+  color: var(--lin);
+}
+
+.btn-light {
+  color: var(--lin);
+  border-color: rgba(247,243,238,0.4);
+}
+.btn-light:hover {
+  background: rgba(247,243,238,0.1);
+}
+
+/* ============================================================
+   SECTIONS ALTERNÉES (fond clair / fond crème profond)
+   ============================================================ */
+
+.section-alt {
+  background: var(--lin-deep);
+}
+
+.section-dark {
+  background: var(--ardoise-dark);
+  color: var(--lin);
+}
+
+.section-dark .section-title { color: var(--lin); }
+.section-dark .section-text { color: rgba(247,243,238,0.8); }
+.section-dark .section-label { color: var(--gold); }
+
+/* ============================================================
+   GRILLE CARTES
+   ============================================================ */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background: var(--blanc);
+  padding: 2rem;
+  border-top: 2px solid var(--gold);
+}
+
+.card-title {
+  font-family: var(--font-titre);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--ardoise-dark);
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+/* ============================================================
+   TABLEAU HORAIRES
+   ============================================================ */
+
+.horaires-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.horaires-table th {
+  font-family: var(--font-corps);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ardoise);
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--lin-deep);
+  text-align: left;
+}
+
+.horaires-table td {
+  padding: 1rem 1rem;
+  border-bottom: 1px solid var(--lin-deep);
+  vertical-align: top;
+  color: #444;
+}
+
+.horaires-table tr:last-child td { border-bottom: none; }
+
+.horaires-table .jour {
+  font-weight: 500;
+  color: var(--ardoise-dark);
+  white-space: nowrap;
+}
+
+.horaires-table .tarif {
+  color: var(--terracotta);
+  font-weight: 400;
+}
+
+.horaires-table a {
+  color: var(--ardoise);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .horaires-table thead { display: none; }
+  .horaires-table tr { display: block; padding: 1rem 0; border-bottom: 1px solid var(--lin-deep); }
+  .horaires-table td { display: block; padding: 0.2rem 0; border: none; }
+  .horaires-table td::before {
+    content: attr(data-label) " ";
+    font-weight: 500;
+    color: var(--ardoise);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+/* ============================================================
+   PHOTOS
+   ============================================================ */
+
+.photo-reduced {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-reduced-sm {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 500px) {
+  .photo-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   BLOC CITATION
+   ============================================================ */
+
+.citation {
+  border-left: 2px solid var(--gold);
+  padding: 0.5rem 0 0.5rem 1.75rem;
+  margin: 2.5rem 0;
+}
+
+.citation-text {
+  font-family: var(--font-titre);
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--ardoise);
+}
+
+.citation-source {
+  font-size: 0.8rem;
+  color: var(--gris-bleuté);
+  margin-top: 0.5rem;
+  letter-spacing: 0.08em;
+}
+
+/* ============================================================
+   BLOC INFO (tarifs, logistique)
+   ============================================================ */
+
+.info-bloc {
+  background: var(--blanc);
+  border-top: 2px solid var(--terracotta);
+  padding: 1.75rem 2rem;
+  margin-top: 2rem;
+}
+
+.info-bloc-title {
+  font-family: var(--font-corps);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+
+.info-ligne {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--lin-deep);
+  font-size: 0.9rem;
+  gap: 1rem;
+}
+
+.info-ligne:last-child { border-bottom: none; }
+
+.info-ligne-label { color: #555; }
+.info-ligne-valeur { font-weight: 500; color: var(--ardoise-dark); text-align: right; }
+
+/* ============================================================
+   SECTION QUI SUIS-JE
+   ============================================================ */
+
+.qui-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (max-width: 680px) {
+  .qui-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.formation-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.formation-list li {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--lin-deep);
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.formation-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+  background: var(--ardoise-dark);
+  padding: 4rem 2rem 2.5rem;
+  text-align: center;
+}
+
+.footer-emblem {
+  margin: 0 auto 1.5rem;
+  opacity: 0.85;
+}
+
+.footer-name {
+  font-family: var(--font-titre);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--lin);
+  margin-bottom: 0.25rem;
+}
+
+.footer-tagline {
+  font-family: var(--font-corps);
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gris-bleuté);
+  margin-bottom: 2rem;
+}
+
+.footer-contact {
+  font-size: 0.9rem;
+  color: rgba(247,243,238,0.75);
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+
+.footer-contact a {
+  color: var(--lin);
+  text-decoration: none;
+}
+
+.footer-contact a:hover { color: var(--gold); }
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer-social a {
+  font-family: var(--font-corps);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gris-bleuté);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-social a:hover { color: var(--gold); }
+
+.footer-divider {
+  width: 32px;
+  height: 1px;
+  background: rgba(201,168,76,0.3);
+  margin: 0 auto 1.5rem;
+}
+
+.footer-legal {
+  font-size: 0.75rem;
+  color: rgba(122,154,176,0.6);
+  letter-spacing: 0.06em;
+}
+
+/* ============================================================
+   UTILITAIRES
+   ============================================================ */
+
+.text-center { text-align: center; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+.mb-0 { margin-bottom: 0; }
+
+.hero-retraite-inner{max-width:var(--max-w);margin:0 auto;position:relative;}
+.hero-retraite-date{font-family:var(--font-corps);font-size:.7rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;}
+.hero-retraite-title{font-family:var(--font-titre);font-size:clamp(2.8rem,7vw,4.5rem);font-weight:300;color:var(--lin);line-height:1.05;margin-bottom:1rem;}
+.hero-retraite-sub{font-family:var(--font-titre);font-size:1.15rem;font-style:italic;color:var(--gris-bleuté);font-weight:300;margin-bottom:2rem;}
+
+/* Stats visuels */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:3rem 0;border:1px solid var(--lin-deep);}
+@media(max-width:600px){.stats-grid{grid-template-columns:repeat(2,1fr);}}
+.stat-item{padding:2rem 1.5rem;text-align:center;border-right:1px solid var(--lin-deep);}
+.stat-item:last-child{border-right:none;}
+@media(max-width:600px){.stat-item:nth-child(2){border-right:none;}.stat-item:nth-child(3){border-top:1px solid var(--lin-deep);}.stat-item:nth-child(4){border-top:1px solid var(--lin-deep);border-right:none;}}
+.stat-nb{font-family:var(--font-titre);font-size:3rem;font-weight:300;color:var(--ardoise-dark);line-height:1;}
+.stat-label{font-family:var(--font-corps);font-size:.7rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gris-bleuté);margin-top:.4rem;line-height:1.4;}
+
+/* Intervenantes */
+.intervenantes-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem;}
+@media(max-width:600px){.intervenantes-grid{grid-template-columns:1fr;}}
+.intervenante-card{padding:2rem;background:var(--blanc);border-top:2px solid var(--gold);}
+
+/* Ce qu'on pratique — grille 3 colonnes */
+.pratiques-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem;}
+@media(max-width:620px){.pratiques-grid{grid-template-columns:1fr;}}
+.pratique-item{padding:1.5rem;background:var(--blanc);border-left:2px solid var(--gold);}
+.pratique-titre{font-family:var(--font-titre);font-size:1.05rem;font-weight:400;color:var(--ardoise-dark);margin-bottom:.4rem;}
+.pratique-text{font-size:.85rem;color:#555;line-height:1.6;}
+
+/* Journée type */
+.journee-grid{display:grid;grid-template-columns:80px 1fr;gap:0;}
+.journee-heure{font-family:var(--font-corps);font-size:.78rem;font-weight:500;color:var(--gold);padding:.6rem 1rem .6rem 0;border-right:1px solid var(--lin-deep);white-space:nowrap;}
+.journee-activite{font-size:.88rem;color:#555;padding:.6rem 0 .6rem 1rem;border-bottom:1px solid var(--lin-deep);}
+.journee-activite:last-child{border-bottom:none;}
+
+/* Photos lieu — grille 2×2 */
+.photos-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:2rem 0;}
+@media(max-width:500px){.photos-grid{grid-template-columns:1fr;}}
+.photos-grid img{width:100%;height:240px;object-fit:cover;object-position:center;display:block;}
+
+/* Témoignage Marjorie */
+.temoignage-bloc{background:var(--ardoise);padding:3rem 2.5rem;position:relative;}
+.temoignage-bloc::before{content:'"';font-family:var(--font-titre);font-size:8rem;color:var(--gold);opacity:.2;position:absolute;top:-1rem;left:1.5rem;line-height:1;}
+/* ============================================================
+   RETRAITE — styles supplémentaires
+   ============================================================ */
+
+/* Hero retraite */
+.hero-retraite {
+  background: var(--ardoise-dark) url("/assets/media/retraite-img-1.webp") center / cover no-repeat;
+  padding: 7rem 2rem 5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-retraite::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 45%, rgba(44,63,82,.9) 0%, rgba(44,63,82,.76) 55%, rgba(44,63,82,.58) 100%);
+  pointer-events: none;
+}
+.hero-retraite-inner { position: relative; max-width: 700px; margin: 0 auto; }
+.hero-eyebrow {
+  font-family: var(--font-corps);
+  font-size: .85rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+.hero-title {
+  font-family: var(--font-titre);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 300;
+  color: var(--lin);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+.hero-title em { color: var(--gold); font-style: italic; }
+.hero-sub {
+  color: rgba(247,243,238,.75);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 560px;
+  margin-left: auto; margin-right: auto;
+}
+
+/* Buttons */
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem 1rem;justify-content:center}
+.hero-actions .btn-primary,.hero-actions .btn-day{text-align:center}
+@media (max-width:560px){.hero-actions{flex-direction:column;align-items:stretch;max-width:20rem;margin:0 auto}}
+.btn-day{display:inline-block;padding:1rem 1.8rem;border:1px solid #E8E2D8;color:#F7F3EE;text-decoration:none;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;transition:background .2s,color .2s}
+.btn-day:hover{background:#F7F3EE;color:#2C3F52}
+.btn-day:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.hero-day{font-size:.88rem;line-height:1.6;color:#E8E2D8;margin:1.2rem auto 0;max-width:30rem}
+.btn-primary {
+  display: inline-block;
+  background: var(--terracotta);
+  color: #fff;
+  padding: .9rem 2.2rem;
+  font-family: var(--font-corps);
+  font-size: .9rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background .2s;
+}
+.btn-primary:hover { background: #b5623d; }
+.btn-primary.btn-large { padding: 1.1rem 2.8rem; font-size: 1rem; }
+.btn-secondary {
+  display: inline-block;
+  border: 1px solid rgba(247,243,238,.4);
+  color: var(--lin);
+  padding: .9rem 2.2rem;
+  font-family: var(--font-corps);
+  font-size: .9rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: border-color .2s;
+}
+.btn-secondary:hover { border-color: var(--lin); }
+
+/* Section helpers */
+.section-lin { background: var(--lin); padding: 5rem 2rem; }
+.section-ardoise { background: var(--ardoise-dark); padding: 5rem 2rem; color: var(--lin); }
+.section-ardoise-light { background: var(--ardoise); padding: 5rem 2rem; color: var(--lin); }
+.section-terracotta-light { background: #f5ece8; padding: 5rem 2rem; }
+.container-narrow { max-width: var(--max-w); margin: 0 auto; }
+.section-title { font-family: var(--font-titre); font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--ardoise-dark); margin-bottom: 1.5rem; }
+.section-title-light { font-family: var(--font-titre); font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--lin); margin-bottom: 1.5rem; }
+.section-chapeau { font-size: 1.1rem; color: var(--ardoise); margin-bottom: 2.5rem; max-width: 600px; }
+
+/* Intro */
+.intro-lead { font-family: var(--font-titre); font-size: clamp(1.4rem, 3vw, 2rem); font-style: italic; color: var(--ardoise); margin-bottom: 1.5rem; line-height: 1.4; }
+
+/* Stats */
+.stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; border-top: 1px solid rgba(74,98,116,.2); padding-top: 2.5rem; }
+@media (max-width: 600px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+.stat-item { text-align: center; }
+.stat-number { display: block; font-family: var(--font-titre); font-size: 2.8rem; font-weight: 300; color: var(--terracotta); line-height: 1; }
+.stat-label { display: block; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ardoise); margin-top: .4rem; }
+
+/* Intervenantes */
+.intervenantes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+@media (max-width: 640px) { .intervenantes-grid { grid-template-columns: 1fr; } }
+.intervenante-card { display: flex; gap: 1.5rem; align-items: flex-start; background: rgba(247,243,238,.06); padding: 2rem; }
+.intervenante-initiale { width: 52px; height: 52px; border-radius: 50%; background: var(--gold); color: var(--ardoise-dark); display: flex; align-items: center; justify-content: center; font-family: var(--font-titre); font-size: 1.6rem; font-weight: 300; flex-shrink: 0; }
+.intervenante-nom { font-family: var(--font-titre); font-size: 1.4rem; font-weight: 400; color: var(--lin); margin-bottom: .25rem; }
+.intervenante-role { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-bottom: .75rem; }
+.intervenante-content p { color: rgba(247,243,238,.82); font-size: .95rem; line-height: 1.65; }
+.intervenantes-note { margin-top: 2rem; color: rgba(247,243,238,.65); font-size: .9rem; font-style: italic; text-align: center; }
+
+/* Pratiques */
+.pratiques-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem; }
+@media (max-width: 640px) { .pratiques-grid { grid-template-columns: 1fr; } }
+.pratique-item { display: flex; gap: 1rem; align-items: flex-start; padding: 1.5rem; background: rgba(74,98,116,.06); }
+.pratique-icon { color: var(--terracotta); font-size: 1.2rem; flex-shrink: 0; margin-top: .1rem; }
+.pratique-item h4 { font-family: var(--font-titre); font-size: 1.15rem; color: var(--ardoise-dark); margin-bottom: .4rem; }
+.pratique-item p { font-size: .92rem; color: #555; line-height: 1.6; }
+
+/* Programme tableau */
+.programme-tableau { margin-top: 2rem; }
+.prog-ligne { display: flex; gap: 1.5rem; padding: .75rem 0; border-bottom: 1px solid rgba(247,243,238,.12); align-items: baseline; }
+.prog-heure { font-family: var(--font-titre); font-size: 1.1rem; color: var(--gold); min-width: 70px; flex-shrink: 0; }
+.prog-activite { color: rgba(247,243,238,.88); font-size: .95rem; }
+.prog-activite em { color: rgba(247,243,238,.55); font-style: italic; font-size: .88rem; }
+.prog-note { margin-top: 1.5rem; color: rgba(247,243,238,.55); font-size: .88rem; font-style: italic; }
+
+/* Lieu */
+.lieu-features { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 2rem 0; }
+@media (max-width: 560px) { .lieu-features { grid-template-columns: 1fr; } }
+.lieu-feature { display: flex; gap: 1rem; align-items: flex-start; background: rgba(74,98,116,.06); padding: 1.2rem; }
+.lieu-icon { font-size: 1.4rem; flex-shrink: 0; }
+.lieu-feature p { font-size: .92rem; color: #555; line-height: 1.5; }
+.lieu-link { margin-top: 1.5rem; text-align: center; }
+.lieu-link a { color: var(--ardoise); text-decoration: none; border-bottom: 1px solid var(--ardoise); font-size: .9rem; }
+
+/* Débutants */
+.debutant-points { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin-top: 2rem; }
+@media (max-width: 500px) { .debutant-points { grid-template-columns: 1fr; } }
+.debutant-point { display: flex; align-items: center; gap: .75rem; background: rgba(196,113,74,.1); padding: 1rem 1.2rem; font-size: .92rem; color: var(--ardoise-dark); }
+
+/* Témoignage */
+.temoignage-texte { font-family: var(--font-titre); font-size: 1.2rem; font-style: italic; color: rgba(247,243,238,.9); line-height: 1.7; margin-bottom: 1rem; }
+.temoignage-signature { font-family: 'Kalam', var(--font-titre); color: var(--gold); font-size: 1.2rem; letter-spacing: .02em; margin-top: 1.5rem; }
+
+/* FAQ */
+.faq-liste { margin-top: 2rem; }
+.faq-item { border-bottom: 1px solid rgba(74,98,116,.2); }
+.faq-question { padding: 1.2rem 0; cursor: pointer; font-family: var(--font-corps); font-size: 1rem; color: var(--ardoise-dark); list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.faq-question::-webkit-details-marker { display: none; }
+.faq-question::after { content: '+'; font-size: 1.3rem; color: var(--terracotta); flex-shrink: 0; }
+.faq-item[open] .faq-question::after { content: '−'; }
+.faq-reponse { padding: 0 0 1.2rem; color: #555; font-size: .95rem; line-height: 1.7; }
+
+/* Tarif */
+.tarif-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+@media (max-width: 560px) { .tarif-cards { grid-template-columns: 1fr; } }
+.tarif-card { background: rgba(247,243,238,.06); padding: 2rem; position: relative; }
+.tarif-card--principal { border: 1px solid var(--gold); }
+.tarif-badge { position: absolute; top: -1px; right: 1.5rem; background: var(--gold); color: var(--ardoise-dark); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; padding: .3rem .8rem; }
+.tarif-formule { font-family: var(--font-titre); font-size: 1.4rem; color: var(--lin); margin-bottom: .4rem; }
+.tarif-duree { font-size: .82rem; color: rgba(247,243,238,.55); margin-bottom: 1.2rem; letter-spacing: .05em; }
+.tarif-prix { font-family: var(--font-titre); font-size: 3rem; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: .5rem; }
+.tarif-par { font-size: 1.2rem; }
+.tarif-detail { font-size: .82rem; color: rgba(247,243,238,.6); }
+.tarif-note { color: rgba(247,243,238,.65); font-size: .9rem; margin-bottom: 2rem; }
+.cta-bloc { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.cta-note { font-size: .85rem; color: rgba(247,243,238,.5); font-style: italic; }
+
+/* Footer */
+.footer { background: var(--ardoise-dark); padding: 2.5rem 2rem; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-logo { display: flex; align-items: center; gap: .75rem; color: var(--lin); font-size: .9rem; }
+.footer-copy { color: rgba(247,243,238,.45); font-size: .8rem; }
+.footer-copy a { color: rgba(247,243,238,.6); text-decoration: none; }
+
+/* Visuels retraite */
+.retraite-video { max-width: 520px; margin: 2.5rem auto; }
+.retraite-video video { display: block; width: 100%; aspect-ratio: 1 / 1; background: var(--ardoise-dark); }
+.retraite-photo { margin: 0 0 2.5rem; }
+.retraite-photo img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: center 40%; }
+</style>
+<link href="/favicon.ico" rel="icon" sizes="48x48"/>
+<link href="/assets/media/favicon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="/assets/media/apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="website" property="og:type"/>
+<meta content="en_GB" property="og:locale"/>
+<meta content="IFSU Équilibre" property="og:site_name"/>
+<meta content="Retreat November 2026 — IFSU Équilibre · Koningsteen" property="og:title"/>
+<meta content="IFSU residential retreat 23–27 November 2026 at Koningsteen. €750 all inclusive. Marjorie &amp; Breeyana." property="og:description"/>
+<meta content="https://ifsu-equilibre.be/en/retraite.html" property="og:url"/>
+<meta content="https://ifsu-equilibre.be/assets/media/og-image.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style id="lang-flag-css">
+.lang-flag{display:flex;align-items:center;gap:.5rem;margin-left:1.4rem;padding:.3rem .6rem;border:1px solid rgba(255,255,255,.45);border-radius:6px;color:#fff;text-decoration:none;font:600 .72rem/1 'DM Sans',system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;flex:none;opacity:1;transition:background .2s,border-color .2s}
+.lang-flag:hover{background:rgba(255,255,255,.14);border-color:#C9A84C}
+@media(max-width:1100px){.lang-flag span{display:none}.lang-flag{padding:.3rem;margin-left:.8rem}[class*="nav-links"]{gap:1.1rem!important}}
+@media(max-width:900px){.lang-flag{order:2;margin-left:auto;margin-right:.6rem}[class*="burger"]{order:3}}
+@media(min-width:701px) and (max-width:900px){.nav-reserve ~ .lang-flag{margin-left:0}.site-nav:has(.nav-reserve) .site-nav-links{gap:.55rem!important}.site-nav:has(.nav-reserve) .site-nav-links a{font-size:.6rem!important;letter-spacing:.06em!important}.site-nav:has(.nav-reserve) .site-nav-logo{min-width:0}}
+@media(max-width:520px){.nav-reserve{margin-right:.5rem!important;padding:.5rem .65rem!important;letter-spacing:.06em!important}}
+</style>
+</head>
+<body class="page-body">
+<nav class="nav">
+<a class="nav-logo" href="/en/">
+<svg height="36" viewbox="0 0 56 56" width="36" xmlns="http://www.w3.org/2000/svg">
+<circle cx="28" cy="28" fill="none" opacity="0.9" r="26" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.8" r="21" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.7" r="16" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.6" r="11" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.5" r="6" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="2" fill="#C9A84C" opacity="0.75" r="2.2"></circle><circle cx="47.5" cy="9.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="54" cy="28" fill="#C9A84C" opacity="0.75" r="2.2"></circle><circle cx="47.5" cy="46.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="28" cy="54" fill="#C9A84C" opacity="0.75" r="2.2"></circle><circle cx="8.5" cy="46.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="2" cy="28" fill="#C9A84C" opacity="0.75" r="2.2"></circle><circle cx="8.5" cy="9.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<defs><lineargradient id="fg" x1="0" x2="0" y1="1" y2="0"><stop offset="0%" stop-color="#C4714A"></stop><stop offset="100%" stop-color="#F0EAE0"></stop></lineargradient></defs>
+<ellipse cx="28" cy="26" fill="url(#fg)" opacity="0.9" rx="3" ry="5"></ellipse>
+</svg>
+<div class="nav-logo-text">IFSU Équilibre<span>Ath · Hainaut</span></div>
+</a>
+<button aria-label="Menu" class="nav-burger" id="burger"><span></span><span></span><span></span></button>
+<ul class="nav-links" id="nav-links">
+<li><a href="/en/">Home</a></li>
+<li><a href="/en/yoga.html">Yoga</a></li>
+<li><a href="/en/meditation.html">Meditation</a></li>
+<li><a href="/en/carnets.html">Notebooks</a></li>
+<li><a href="/en/ateliers.html">Workshops</a></li>
+<li><a class="active" href="/en/retraite.html">Retreat</a></li></ul>
+  <a class="lang-flag" href="/retraite.html" hreflang="fr" lang="fr" title="Version française" aria-label="Version française"><svg viewBox="0 0 60 40" width="30" height="20" aria-hidden="true" focusable="false" style="display:block;border-radius:3px"><rect width="20" height="40" fill="#0055A4"/><rect x="20" width="20" height="40" fill="#fff"/><rect x="40" width="20" height="40" fill="#EF4135"/></svg><span>FR</span></a>
+  
+  
+</nav>
+<!-- HERO -->
+<section class="hero-retraite">
+<div class="hero-retraite-inner">
+<p class="hero-eyebrow">23 – 27 November 2026 · Koningsteen, Belgium</p>
+<h1 class="hero-title">Five days to<br/><em>find the thread again.</em></h1>
+<p class="hero-sub">An immersion in IFSU practices: body, breath, silence, in a place designed for it.</p>
+<div class="hero-actions"><a class="btn-primary" href="#tarif">The 5 days · €750</a>
+<a class="btn-day" href="#tarif">One day only · €150</a></div>
+<p class="hero-day">Accommodation and meals included in both cases. The one-day option is booked subject to availability.</p>
+</div>
+</section>
+<!-- INTRO -->
+<section class="section-intro section-lin">
+<div class="container-narrow">
+<p class="intro-lead">Five days is the time it takes for something to really change. Not an impression. An anchoring.</p>
+<p>IFSU practices — Vedic meditation, yoga, chanting, satsang — are hard to explain in one sentence. They are lived. This retreat exists for that: to give you the time, the space and the support to experience them from the inside.</p>
+<p>Complete beginners welcome. No prerequisites. We start from zero if necessary.</p>
+<!-- Vidéo de présentation -->
+<figure class="retraite-video">
+<video aria-label="Presentation of the retreat, 26 seconds" controls="" playsinline="" poster="/assets/media/retraite-img-2.webp" preload="metadata" src="/assets/media/retraite-video-1.mp4">
+</video>
+</figure>
+<!-- Stats -->
+<div class="stats-row">
+<div class="stat-item"><span class="stat-number">5</span>
+<span class="stat-label">full days</span></div>
+<div class="stat-item"><span class="stat-number">20</span>
+<span class="stat-label">places maximum</span></div>
+<div class="stat-item"><span class="stat-number">€750</span>
+<span class="stat-label">all inclusive</span></div>
+<div class="stat-item"><span class="stat-number">2</span>
+<span class="stat-label">IFSU teachers</span></div>
+</div>
+</div>
+</section>
+<!-- INTERVENANTES -->
+<section class="section-ardoise">
+<div class="container-narrow">
+<h2 class="section-title-light">Who leads the retreat</h2>
+<div class="intervenantes-grid">
+<div class="intervenante-card">
+<div class="intervenante-initiale">M</div>
+<div class="intervenante-content">
+<h3 class="intervenante-nom">Marjorie (Margy)</h3>
+<p class="intervenante-role">Yoga &amp; meditation · French-speaking Belgium</p>
+<p>15 years of practice in the Krishnamacharya/Desikachar lineage. Co-lead of IFSU Belgium. Has taught in Ath since 2014 — anatomically precise yoga, IFSU Vedic meditation, a concrete approach without jargon.</p>
+</div>
+</div>
+<div class="intervenante-card">
+<div class="intervenante-initiale">B</div>
+<div class="intervenante-content">
+<h3 class="intervenante-nom">Breeyana Borum</h3>
+<p class="intervenante-role">IFSU teacher · Bilingual FR/EN</p>
+<p>Based in Belgium for many years (originally from Denmark). Gururaj Ananda Yogi personally asked her to teach in Belgium — a direct, rare transmission. Co-leads satsangs and meditation sessions within the international IFSU community.</p>
+</div>
+</div>
+</div>
+<p class="intervenantes-note">Two complementary approaches, one transmission. The retreat is held in French and English.</p>
+</div>
+</section>
+<!-- CE QU'ON PRATIQUE -->
+<section class="section-lin">
+<div class="container-narrow">
+<h2 class="section-title">What we practise</h2>
+<p class="section-chapeau">Not a tasting menu. A structured programme, built on 50 years of IFSU transmission. Each practice has a function. Together, they form something coherent.</p>
+<figure class="retraite-photo">
+<img alt="Group seated in a circle around a candle, during a meditation session" height="1080" loading="lazy" src="/assets/media/retraite-img-3.webp" width="1080"/>
+</figure>
+<div class="pratiques-grid">
+<div class="pratique-item">
+<div class="pratique-icon">◎</div>
+<div>
+<h4>IFSU Vedic meditation</h4>
+<p>The central technique. Personal mantra, seated practice, gradual inner silence.</p>
+</div>
+</div>
+<div class="pratique-item">
+<div class="pratique-icon">◎</div>
+<div>
+<h4>Yoga &amp; personal practices</h4>
+<p>Sequences adapted to each body. Postures, breathing, stretching — concrete, not spectacle.</p>
+</div>
+</div>
+<div class="pratique-item">
+<div class="pratique-icon">◎</div>
+<div>
+<h4>Chanting &amp; gong meditation</h4>
+<p>Group mantra chanting. Sound concentration. A tool for presence that many people discover here for the first time — and take home with them.</p>
+</div>
+</div>
+<div class="pratique-item">
+<div class="pratique-icon">◎</div>
+<div>
+<h4>Gururaj satsangs</h4>
+<p>Listening to audio/video recordings of Gururaj Ananda Yogi followed by group discussion. The philosophical heart of the retreat.</p>
+</div>
+</div>
+<div class="pratique-item">
+<div class="pratique-icon">◎</div>
+<div>
+<h4>Yoga Nidra &amp; deep relaxation</h4>
+<p>Guided relaxation of the layers of the body. Visualisation, Tratak (candle gazing), relaxation of the chakras. The body learns to let go without effort.</p>
+</div>
+</div>
+<div class="pratique-item">
+<div class="pratique-icon">◎</div>
+<div>
+<h4>Silent walk</h4>
+<p>Every morning, before the practices. The green setting of Koningsteen. Shared silence creates something that words describe poorly.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- JOURNÉE TYPE -->
+<section class="section-ardoise-light">
+<div class="container-narrow">
+<h2 class="section-title">A day, concretely</h2>
+<p class="section-chapeau">Five days can seem long. Rest assured: we take breaks. It's not a marathon. Nobody leaves here on a stretcher.</p>
+<div class="programme-tableau">
+<div class="prog-ligne"><span class="prog-heure">07:15</span>
+<span class="prog-activite">Personal practices or yoga</span></div>
+<div class="prog-ligne"><span class="prog-heure">08:00</span>
+<span class="prog-activite">Breakfast <em>(in silence some mornings)</em></span></div>
+<div class="prog-ligne"><span class="prog-heure">09:00</span>
+<span class="prog-activite">Silent walk</span></div>
+<div class="prog-ligne"><span class="prog-heure">09:30</span>
+<span class="prog-activite">Group practice — chanting, meditation, gong</span></div>
+<div class="prog-ligne"><span class="prog-heure">11:00</span>
+<span class="prog-activite">Tea / coffee break</span></div>
+<div class="prog-ligne"><span class="prog-heure">11:30</span>
+<span class="prog-activite">Satsang or complementary activity</span></div>
+<div class="prog-ligne"><span class="prog-heure">13:00</span>
+<span class="prog-activite">Lunch</span></div>
+<div class="prog-ligne"><span class="prog-heure">14:00</span>
+<span class="prog-activite">Visualisation, Tratak or chakra relaxation</span></div>
+<div class="prog-ligne"><span class="prog-heure">15:00</span>
+<span class="prog-activite">Tea / coffee break</span></div>
+<div class="prog-ligne"><span class="prog-heure">15:30</span>
+<span class="prog-activite">Satsang or group practice</span></div>
+<div class="prog-ligne"><span class="prog-heure">17:00</span>
+<span class="prog-activite">Yoga Nidra or questions / discussion</span></div>
+<div class="prog-ligne"><span class="prog-heure">18:30</span>
+<span class="prog-activite">Dinner</span></div>
+<div class="prog-ligne"><span class="prog-heure">20:00</span>
+<span class="prog-activite">Evening satsang, communion or free evening</span></div>
+</div>
+<p class="prog-note">Indicative programme — it breathes with the days and the needs of the group. The last evening welcomes Communion (an IFSU ceremony) and, for the night owls, the Midnight Special.</p>
+</div>
+</section>
+<!-- LE LIEU -->
+<section class="section-lin">
+<div class="container-narrow">
+<h2 class="section-title">Koningsteen</h2>
+<p class="section-chapeau">Kapelle-op-den-Bos, between Brussels and Antwerp. A centre established for 25 years, designed for residential retreats. Not an improvised Airbnb.</p>
+<div class="lieu-features">
+<div class="lieu-feature">
+<span class="lieu-icon">🌿</span>
+<p>Green, quiet setting, conducive to contemplation</p>
+</div>
+<div class="lieu-feature">
+<span class="lieu-icon">🏠</span>
+<p>On-site accommodation — single and shared rooms</p>
+</div>
+<div class="lieu-feature">
+<span class="lieu-icon">🍽️</span>
+<p>Meals included — prepared on site, adapted to dietary needs</p>
+</div>
+<div class="lieu-feature">
+<span class="lieu-icon">📍</span>
+<p>Reachable from Brussels, Antwerp and Ghent in under an hour</p>
+</div>
+</div>
+<div class="photos-grid">
+<img alt="Koningsteen centre" onerror="this.style.display='none'" src="https://koningsteen.be/wp-content/uploads/2022/01/koningsteen-retraite-yoga-2.jpg"/>
+<img alt="Path covered with autumn leaves in the woods" height="168" loading="lazy" src="/assets/media/retraite-img-4.jpg" width="300"/>
+</div>
+<p class="lieu-link"><a href="https://koningsteen.be" rel="noopener" target="_blank">koningsteen.be →</a></p>
+</div>
+</section>
+<!-- DÉBUTANTS -->
+<section class="section-terracotta-light">
+<div class="container-narrow">
+<h2 class="section-title">New to this? Perfect.</h2>
+<p>This retreat welcomes people who have practised for 20 years and people who have never meditated in their lives. The two coexist well.</p>
+<p>On arrival, you receive a separate introduction to chanting, mantra and Tratak — with practical sheets. You are also given a square-breathing card, for the moments when you wouldn't know what to do with your hands.</p>
+<p>You will never be left alone facing the group without knowing what is going on. Never.</p>
+<div class="debutant-points">
+<div class="debutant-point">✓ Dedicated welcome briefing for newcomers</div>
+<div class="debutant-point">✓ Explanatory sheets for each practice</div>
+<div class="debutant-point">✓ Individual support throughout</div>
+<div class="debutant-point">✓ No performance expected — none</div>
+</div>
+</div>
+</section>
+<!-- TÉMOIGNAGE MARJORIE -->
+<section class="section-ardoise">
+<div class="container-narrow">
+<div class="temoignage-bloc">
+<p class="temoignage-texte">I looked at my diary three times before deciding to organise this retreat. Not because I doubted what we would do there — but because I know what five days together can produce, and I wanted it to be right.</p>
+<p class="temoignage-texte">What matters to me here is not turning you into seasoned meditators in one week. It's giving you tools that also work on a Wednesday evening, when the day has been long and you don't feel like doing anything.</p>
+<p class="temoignage-signature">— Marjorie (Margy)</p>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="section-lin">
+<div class="container-narrow">
+<h2 class="section-title">Frequently asked questions</h2>
+<div class="faq-liste">
+<details class="faq-item">
+<summary class="faq-question">Do I need to know how to meditate before coming?</summary>
+<p class="faq-reponse">No. Zero prerequisites. Complete beginners are welcomed with a separate briefing on arrival. If you already have a practice, it won't be ignored either.</p>
+</details>
+<details class="faq-item">
+<summary class="faq-question">Is the retreat religious?</summary>
+<p class="faq-reponse">No. IFSU meditation rests on techniques — not on a belief. The satsangs of Gururaj Ananda Yogi address fundamental questions (meaning, consciousness, everyday life), but without dogma or any obligation to adhere. You can practise without believing anything in particular.</p>
+</details>
+<details class="faq-item">
+<summary class="faq-question">How does the accommodation work?</summary>
+<p class="faq-reponse">Single and shared rooms are available at Koningsteen. The room type is specified at registration. Everything is included in the price — accommodation, meals, programme.</p>
+</details>
+<details class="faq-item">
+<summary class="faq-question">Is the retreat in French or English?</summary>
+<p class="faq-reponse">Both. Margy leads in French, Breeyana in English (and French). Group sessions are bilingual. No problem if you don't speak both.</p>
+</details>
+<details class="faq-item">
+<summary class="faq-question">Can I come for just one day?</summary>
+<p class="faq-reponse">Yes, at €150/day, accommodation and meals included. But honestly — the full retreat makes a difference that a single day can't reproduce. Settling-in time is part of the work.</p>
+</details>
+<details class="faq-item">
+<summary class="faq-question">Are there any discounts?</summary>
+<p class="faq-reponse">No. €750 is the single, fixed price. It covers five days of programme, accommodation and all meals. It doesn't move.</p>
+</details>
+</div>
+</div>
+</section>
+<!-- TARIF & INSCRIPTION -->
+<section class="section-ardoise" id="tarif">
+<div class="container-narrow">
+<h2 class="section-title-light">Price &amp; registration</h2>
+<div class="tarif-cards">
+<div class="tarif-card tarif-card--principal">
+<div class="tarif-badge">Recommended</div>
+<h3 class="tarif-formule">Full week</h3>
+<p class="tarif-duree">Monday 23 → Friday 27 November 2026</p>
+<p class="tarif-prix">€750</p>
+<p class="tarif-detail">Accommodation · meals · full programme · all inclusive</p>
+</div>
+<div class="tarif-card">
+<h3 class="tarif-formule">By the day</h3>
+<p class="tarif-duree">Subject to availability</p>
+<p class="tarif-prix">€150 <span class="tarif-par">/ day</span></p>
+<p class="tarif-detail">Accommodation · meals · programme of the day</p>
+</div>
+</div>
+<p class="tarif-note">20 places maximum. Registration is by direct contact — no online form, no anonymous waiting list.</p>
+<div class="cta-bloc"><a class="btn-primary btn-large" href="https://wa.me/32477091803" rel="noopener" target="_blank">
+        Write on WhatsApp
+      </a>
+<a class="btn-secondary" href="mailto:ifsu@etik.com">
+        ifsu@etik.com
+      </a></div>
+<p class="cta-note">A question before you register? Write to me. I answer.</p>
+</div>
+</section>
+<footer class="footer">
+<div class="container-narrow footer-inner">
+<div class="footer-logo">
+<svg height="28" viewbox="0 0 56 56" width="28" xmlns="http://www.w3.org/2000/svg">
+<circle cx="28" cy="28" fill="none" opacity="0.9" r="26" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.7" r="21" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.5" r="16" stroke="#C9A84C" stroke-width="0.8"></circle>
+<defs><lineargradient id="fg2" x1="0" x2="0" y1="1" y2="0"><stop offset="0%" stop-color="#C4714A"></stop><stop offset="100%" stop-color="#F0EAE0"></stop></lineargradient></defs>
+<ellipse cx="28" cy="26" fill="url(#fg2)" opacity="0.9" rx="3" ry="5"></ellipse>
+</svg>
+<span>IFSU Équilibre · Ath</span>
+</div>
+<p class="footer-copy">© 2026 Marjorie Mathieu · <a href="mailto:ifsu@etik.com">ifsu@etik.com</a></p>
+<p class="footer-copy" style="margin-top:.4rem">Site created by Marjorie Mathieu, IFSU Équilibre. Reproduction of the code is prohibited.</p>
+<p class="footer-copy" style="margin-top:.4rem"><a href="/en/mentions-legales.html" style="color:inherit;">Legal notice</a> · <a href="/en/confidentialite.html" style="color:inherit;">Privacy and cookies</a> · <a href="/en/conditions.html" style="color:inherit;">Terms</a></p>
+</div>
+</footer>
+<script>
+// Burger nav
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('nav-links');
+if (burger && navLinks) {
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    burger.classList.toggle('open');
+  });
+}
+
+// FAQ accordion smooth
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('toggle', () => {
+    if (item.open) {
+      document.querySelectorAll('.faq-item[open]').forEach(other => {
+        if (other !== item) other.removeAttribute('open');
+      });
+    }
+  });
+});
+</script>
+</body>
+</html>

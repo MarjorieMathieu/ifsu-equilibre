@@ -655,6 +655,14 @@ footer{background:#2C3F52;padding:2.5rem;display:flex;flex-wrap:wrap;justify-con
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="summary_large_image" name="twitter:card"/>
+<style id="lang-flag-css">
+.lang-flag{display:flex;align-items:center;gap:.5rem;margin-left:1.4rem;padding:.3rem .6rem;border:1px solid rgba(255,255,255,.45);border-radius:6px;color:#fff;text-decoration:none;font:600 .72rem/1 'DM Sans',system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;flex:none;opacity:1;transition:background .2s,border-color .2s}
+.lang-flag:hover{background:rgba(255,255,255,.14);border-color:#C9A84C}
+@media(max-width:1100px){.lang-flag span{display:none}.lang-flag{padding:.3rem;margin-left:.8rem}[class*="nav-links"]{gap:1.1rem!important}}
+@media(max-width:900px){.lang-flag{order:2;margin-left:auto;margin-right:.6rem}[class*="burger"]{order:3}}
+@media(min-width:701px) and (max-width:900px){.nav-reserve ~ .lang-flag{margin-left:0}.site-nav:has(.nav-reserve) .site-nav-links{gap:.55rem!important}.site-nav:has(.nav-reserve) .site-nav-links a{font-size:.6rem!important;letter-spacing:.06em!important}.site-nav:has(.nav-reserve) .site-nav-logo{min-width:0}}
+@media(max-width:520px){.nav-reserve{margin-right:.5rem!important;padding:.5rem .65rem!important;letter-spacing:.06em!important}}
+</style>
 </head>
 <body>
 <nav class="site-nav" id="snav">
@@ -683,10 +691,12 @@ footer{background:#2C3F52;padding:2.5rem;display:flex;flex-wrap:wrap;justify-con
 <li><a href="/en/">Home</a></li>
 <li><a href="/en/yoga.html">Yoga</a></li>
 <li><a class="active" href="/en/meditation.html">Meditation</a></li>
-<li><a href="/carnets.html">Notebooks (FR)</a></li>
-<li><a href="/ateliers.html">Workshops (FR)</a></li>
-<li><a href="/retraite.html">Retreat (FR)</a></li>
-<li><a href="/meditation.html" hreflang="fr" lang="fr">FR</a></li></ul>
+<li><a href="/en/carnets.html">Notebooks</a></li>
+<li><a href="/en/ateliers.html">Workshops</a></li>
+<li><a href="/en/retraite.html">Retreat</a></li></ul>
+  <a class="lang-flag" href="/meditation.html" hreflang="fr" lang="fr" title="Version française" aria-label="Version française"><svg viewBox="0 0 60 40" width="30" height="20" aria-hidden="true" focusable="false" style="display:block;border-radius:3px"><rect width="20" height="40" fill="#0055A4"/><rect x="20" width="20" height="40" fill="#fff"/><rect x="40" width="20" height="40" fill="#EF4135"/></svg><span>FR</span></a>
+  
+  
 </nav>
 <!-- HERO -->
 <section id="hero">
@@ -808,8 +818,8 @@ footer{background:#2C3F52;padding:2.5rem;display:flex;flex-wrap:wrap;justify-con
 <div class="honest-note" style="margin-top:1.8rem">
           “A true guide does not shine the light on you, but on the path, so that you do not stumble.”
           <span style="display:block;margin-top:.6rem;font-size:.8rem;font-style:normal;letter-spacing:.06em">Gururaj Ananda Yogi</span>
-        </div>
-        <p class="body-k">What I notice in my practice</p>
+</div>
+<p class="body-k">What I notice in my practice</p>
 <p class="body-p">Meditation made me look closely at the mind: how it spins, what it repeats. Part of what I call “me” comes from outside: habits, inheritances, other people's expectations. I look for what truly belongs to me, without deciding in advance what that is.</p>
 <p class="body-p">During practice, thoughts sometimes pass without catching hold of me. A clear calm settles, with an intense joy. It lasts a few seconds. Over the years, for me, those seconds have grown longer. I describe what I notice, without giving it a name.</p>
 <p class="body-more">If you want to see how it's worked at, <a class="body-link" href="/en/atelier-decouverte.html">the discovery workshop</a> is made for that.</p>
@@ -836,7 +846,7 @@ footer{background:#2C3F52;padding:2.5rem;display:flex;flex-wrap:wrap;justify-con
 <p class="cta-sub">Write to me. Together we'll see whether the workshop or the cycle suits you. And if it's not for you, I'll tell you.</p>
 <a class="cta-btn" href="mailto:ifsu@etik.com?subject=Question méditation IFSU">Send an email</a>
 <p class="cta-disclaimer">No newsletter, no follow-ups. An honest exchange, that's all.</p>
-<p class="cta-disclaimer" style="margin-top:1rem;font-style:normal"><a href="/conditions.html" style="display:inline-block;margin-top:.6rem;padding:.5rem 1.2rem;border:1px solid #C9A84C;color:#C9A84C;text-decoration:none;font-weight:500;font-size:.88rem;font-style:normal;letter-spacing:.02em;border-radius:2px">Terms: price, payment, withdrawal (FR)</a></p>
+<p class="cta-disclaimer" style="margin-top:1rem;font-style:normal"><a href="/en/conditions.html" style="display:inline-block;margin-top:.6rem;padding:.5rem 1.2rem;border:1px solid #C9A84C;color:#C9A84C;text-decoration:none;font-weight:500;font-size:.88rem;font-style:normal;letter-spacing:.02em;border-radius:2px">Terms: price, payment, withdrawal</a></p>
 <div class="cta-contacts">
 <div class="cc"><div class="cc-l">Email</div><div class="cc-v">ifsu@etik.com</div></div>
 <div class="cc"><div class="cc-l">WhatsApp</div><div class="cc-v">+32 477 09 18 03</div></div>
@@ -863,7 +873,7 @@ footer{background:#2C3F52;padding:2.5rem;display:flex;flex-wrap:wrap;justify-con
 </ul>
 <p class="fc">© 2026 IFSU Équilibre · <a href="mailto:ifsu@etik.com" style="color:inherit;">ifsu@etik.com</a></p>
 <p class="fc" style="margin-top:.4rem">Site created by Marjorie Mathieu, IFSU Équilibre. Reproduction of the code is prohibited.</p>
-<p class="fc" style="margin-top:.4rem"><a href="/mentions-legales.html" style="color:inherit;">Legal notice (FR)</a> · <a href="/confidentialite.html" style="color:inherit;">Privacy and cookies (FR)</a> · <a href="/conditions.html" style="color:inherit;">Terms (FR)</a></p>
+<p class="fc" style="margin-top:.4rem"><a href="/en/mentions-legales.html" style="color:inherit;">Legal notice</a> · <a href="/en/confidentialite.html" style="color:inherit;">Privacy and cookies</a> · <a href="/en/conditions.html" style="color:inherit;">Terms</a></p>
 </footer>
 <script>
 // Nav scroll

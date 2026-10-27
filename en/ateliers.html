@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>Workshops &amp;amp; Events — IFSU Équilibre · Ath</title>
+<link href="https://ifsu-equilibre.be/en/ateliers.html" rel="canonical"/><link href="https://ifsu-equilibre.be/ateliers.html" hreflang="fr" rel="alternate"/><link href="https://ifsu-equilibre.be/en/ateliers.html" hreflang="en" rel="alternate"/><link href="https://ifsu-equilibre.be/ateliers.html" hreflang="x-default" rel="alternate"/>
+<meta content="Yoga, chanting and meditation workshops at the IFSU Studio in Ath: dates, durations, prices and booking. Marjorie Mathieu, IFSU Équilibre." name="description"/>
+<link href="/assets/fonts/fonts.css" rel="stylesheet"/>
+<style>
+/* ============================================================
+   IFSU Équilibre — Feuille de style partagée
+   Palette : ardoise / lin / terracotta / gold / anthracite
+   Typo : Cormorant Garamond (titres) + DM Sans (corps)
+   ============================================================ */
+
+
+
+:root {
+  --ardoise:      #4A6274;
+  --ardoise-dark: #2C3F52;
+  --lin:          #F7F3EE;
+  --lin-deep:     #EDE8E0;
+  --terracotta:   #C4714A;
+  --gold:         #C9A84C;
+  --anthracite:   #2C2C2C;
+  --gris-bleuté:  #7A9AB0;
+  --blanc:        #FFFFFF;
+
+  --font-titre: 'Cormorant Garamond', Georgia, serif;
+  --font-corps: 'DM Sans', system-ui, sans-serif;
+
+  --max-w: 860px;
+  --max-w-large: 1100px;
+  --nav-h: 68px;
+}
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-corps);
+  font-weight: 300;
+  color: var(--anthracite);
+  background: var(--lin);
+  font-size: 17px;
+  line-height: 1.7;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: var(--ardoise-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 100;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.nav-logo-text {
+  font-family: var(--font-titre);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--lin);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.nav-logo-text span {
+  display: block;
+  font-size: 0.7rem;
+  font-family: var(--font-corps);
+  font-weight: 300;
+  color: var(--gris-bleuté);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-corps);
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--lin);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* Burger */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.nav-burger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--lin);
+  transition: transform 0.3s, opacity 0.3s;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile nav */
+@media (max-width: 700px) {
+  .nav-burger { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    background: var(--ardoise-dark);
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0 1rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a {
+    display: block;
+    padding: 0.75rem 2rem;
+    border-bottom: none;
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================================================
+   LAYOUT GÉNÉRAL
+   ============================================================ */
+
+.page-body {
+  padding-top: var(--nav-h);
+}
+
+.section {
+  padding: 5rem 2rem;
+}
+
+.section-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.section-inner-large {
+  max-width: var(--max-w-large);
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: var(--font-corps);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: var(--font-titre);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--ardoise-dark);
+  margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  font-family: var(--font-titre);
+  font-size: 1.35rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ardoise);
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.section-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+
+/* Séparateur */
+.divider {
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+  margin: 2.5rem 0;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+  background: var(--ardoise-dark);
+  padding: 7rem 2rem 6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 40%, rgba(201,168,76,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-emblem {
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+.hero-title {
+  font-family: var(--font-titre);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 300;
+  color: var(--lin);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-sub {
+  font-family: var(--font-titre);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  color: var(--gris-bleuté);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.hero-tagline {
+  font-family: var(--font-corps);
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ============================================================
+   BOUTONS & CTA
+   ============================================================ */
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-corps);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid currentColor;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.btn-terracotta {
+  color: var(--terracotta);
+  border-color: var(--terracotta);
+}
+.btn-terracotta:hover {
+  background: var(--terracotta);
+  color: var(--lin);
+}
+
+.btn-gold {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+.btn-gold:hover {
+  background: var(--gold);
+  color: var(--ardoise-dark);
+}
+
+.btn-ardoise {
+  color: var(--ardoise);
+  border-color: var(--ardoise);
+}
+.btn-ardoise:hover {
+  background: var(--ardoise);
+  color: var(--lin);
+}
+
+.btn-light {
+  color: var(--lin);
+  border-color: rgba(247,243,238,0.4);
+}
+.btn-light:hover {
+  background: rgba(247,243,238,0.1);
+}
+
+/* ============================================================
+   SECTIONS ALTERNÉES (fond clair / fond crème profond)
+   ============================================================ */
+
+.section-alt {
+  background: var(--lin-deep);
+}
+
+.section-dark {
+  background: var(--ardoise-dark);
+  color: var(--lin);
+}
+
+.section-dark .section-title { color: var(--lin); }
+.section-dark .section-text { color: rgba(247,243,238,0.8); }
+.section-dark .section-label { color: var(--gold); }
+
+/* ============================================================
+   GRILLE CARTES
+   ============================================================ */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background: var(--blanc);
+  padding: 2rem;
+  border-top: 2px solid var(--gold);
+}
+
+.card-title {
+  font-family: var(--font-titre);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--ardoise-dark);
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+/* ============================================================
+   TABLEAU HORAIRES
+   ============================================================ */
+
+.horaires-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.horaires-table th {
+  font-family: var(--font-corps);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ardoise);
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--lin-deep);
+  text-align: left;
+}
+
+.horaires-table td {
+  padding: 1rem 1rem;
+  border-bottom: 1px solid var(--lin-deep);
+  vertical-align: top;
+  color: #444;
+}
+
+.horaires-table tr:last-child td { border-bottom: none; }
+
+.horaires-table .jour {
+  font-weight: 500;
+  color: var(--ardoise-dark);
+  white-space: nowrap;
+}
+
+.horaires-table .tarif {
+  color: var(--terracotta);
+  font-weight: 400;
+}
+
+.horaires-table a {
+  color: var(--ardoise);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .horaires-table thead { display: none; }
+  .horaires-table tr { display: block; padding: 1rem 0; border-bottom: 1px solid var(--lin-deep); }
+  .horaires-table td { display: block; padding: 0.2rem 0; border: none; }
+  .horaires-table td::before {
+    content: attr(data-label) " ";
+    font-weight: 500;
+    color: var(--ardoise);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+/* ============================================================
+   PHOTOS
+   ============================================================ */
+
+.photo-reduced {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-reduced-sm {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 500px) {
+  .photo-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   BLOC CITATION
+   ============================================================ */
+
+.citation {
+  border-left: 2px solid var(--gold);
+  padding: 0.5rem 0 0.5rem 1.75rem;
+  margin: 2.5rem 0;
+}
+
+.citation-text {
+  font-family: var(--font-titre);
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--ardoise);
+}
+
+.citation-source {
+  font-size: 0.8rem;
+  color: var(--gris-bleuté);
+  margin-top: 0.5rem;
+  letter-spacing: 0.08em;
+}
+
+/* ============================================================
+   BLOC INFO (tarifs, logistique)
+   ============================================================ */
+
+.info-bloc {
+  background: var(--blanc);
+  border-top: 2px solid var(--terracotta);
+  padding: 1.75rem 2rem;
+  margin-top: 2rem;
+}
+
+.info-bloc-title {
+  font-family: var(--font-corps);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+
+.info-ligne {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--lin-deep);
+  font-size: 0.9rem;
+  gap: 1rem;
+}
+
+.info-ligne:last-child { border-bottom: none; }
+
+.info-ligne-label { color: #555; }
+.info-ligne-valeur { font-weight: 500; color: var(--ardoise-dark); text-align: right; }
+
+/* ============================================================
+   SECTION QUI SUIS-JE
+   ============================================================ */
+
+.qui-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (max-width: 680px) {
+  .qui-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.formation-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.formation-list li {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--lin-deep);
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.formation-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+  background: var(--ardoise-dark);
+  padding: 4rem 2rem 2.5rem;
+  text-align: center;
+}
+
+.footer-emblem {
+  margin: 0 auto 1.5rem;
+  opacity: 0.85;
+}
+
+.footer-name {
+  font-family: var(--font-titre);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--lin);
+  margin-bottom: 0.25rem;
+}
+
+.footer-tagline {
+  font-family: var(--font-corps);
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gris-bleuté);
+  margin-bottom: 2rem;
+}
+
+.footer-contact {
+  font-size: 0.9rem;
+  color: rgba(247,243,238,0.75);
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+
+.footer-contact a {
+  color: var(--lin);
+  text-decoration: none;
+}
+
+.footer-contact a:hover { color: var(--gold); }
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer-social a {
+  font-family: var(--font-corps);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gris-bleuté);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-social a:hover { color: var(--gold); }
+
+.footer-divider {
+  width: 32px;
+  height: 1px;
+  background: rgba(201,168,76,0.3);
+  margin: 0 auto 1.5rem;
+}
+
+.footer-legal {
+  font-size: 0.75rem;
+  color: rgba(122,154,176,0.6);
+  letter-spacing: 0.06em;
+}
+
+/* ============================================================
+   UTILITAIRES
+   ============================================================ */
+
+.text-center { text-align: center; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+.mb-0 { margin-bottom: 0; }
+
+.hero-page{background:var(--ardoise-dark);padding:6rem 2rem 4.5rem;position:relative;overflow:hidden;}
+.hero-page::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;}
+.hero-page-inner{max-width:var(--max-w);margin:0 auto;}
+.hero-page-label{font-family:var(--font-corps);font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1rem;}
+.hero-page-title{font-family:var(--font-titre);font-size:clamp(2.4rem,6vw,3.8rem);font-weight:300;color:var(--lin);line-height:1.1;margin-bottom:1.25rem;}
+.hero-page-sub{font-family:var(--font-titre);font-size:1.15rem;font-style:italic;color:var(--gris-bleuté);font-weight:300;}
+.hero-page::after{background:linear-gradient(to right,var(--terracotta),var(--gold),transparent);}
+.hero-page-label{color:var(--terracotta);}
+.atelier-layout{display:grid;grid-template-columns:2fr 1fr;gap:3.5rem;align-items:start;}
+@media(max-width:680px){.atelier-layout{grid-template-columns:1fr;gap:2rem;}}
+.timeline{margin-top:2rem;position:relative;padding-left:1.5rem;border-left:1px solid var(--lin-deep);}
+.tl-item{margin-bottom:2rem;position:relative;}
+.tl-item::before{content:'';position:absolute;left:-1.5rem;top:.4rem;width:8px;height:8px;background:var(--gold);border-radius:50%;transform:translateX(-4px);}
+.tl-temps{font-family:var(--font-corps);font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--terracotta);margin-bottom:.3rem;}
+.tl-titre{font-family:var(--font-titre);font-size:1.15rem;font-weight:400;color:var(--ardoise-dark);margin-bottom:.3rem;}
+.tl-text{font-size:.88rem;color:#555;line-height:1.7;}
+.prochain-badge{background:var(--terracotta);color:var(--lin);display:inline-block;font-family:var(--font-corps);font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:.3rem .75rem;margin-bottom:1rem;}
+.photo-cours{width:100%;height:260px;object-fit:cover;object-position:center 30%;display:block;}
+/* ============================================================
+   PAGE ATELIERS — grille de cartes
+   ============================================================ */
+.carnet-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2.5rem;
+  max-width: var(--max-w-large);
+  margin: 0 auto;
+}
+@media(max-width:680px){ .carnet-grid { grid-template-columns: 1fr; } }
+.carnet-card {
+  padding: 2.25rem;
+  background: var(--blanc);
+  border: 1px solid var(--lin-deep);
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+}
+.carnet-tag {
+  display: inline-block;
+  width: fit-content;
+  font-family: var(--font-corps);
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: .3rem .7rem;
+  border: 1px solid currentColor;
+}
+.carnet-tag.atelier { color: var(--terracotta); }
+.carnet-card-title {
+  font-family: var(--font-titre);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--ardoise-dark);
+  line-height: 1.25;
+}
+.carnet-card-text {
+  font-size: .92rem;
+  color: #555;
+  line-height: 1.75;
+  flex: 1;
+}
+.carnet-card-meta {
+  font-family: var(--font-corps);
+  font-size: .72rem;
+  color: #888;
+  letter-spacing: .04em;
+}
+.carnet-card-link {
+  font-family: var(--font-corps);
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ardoise);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+.carnet-card-link::after { content: '→'; }
+.carnet-card-link:hover { color: var(--terracotta); }
+</style>
+<link href="/favicon.ico" rel="icon" sizes="48x48"/>
+<link href="/assets/media/favicon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="/assets/media/apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="website" property="og:type"/>
+<meta content="en_GB" property="og:locale"/>
+<meta content="IFSU Équilibre" property="og:site_name"/>
+<meta content="Workshops &amp;amp; Events — IFSU Équilibre · Ath" property="og:title"/>
+<meta content="Yoga, chanting and meditation workshops at the IFSU Studio in Ath: dates, durations, prices and booking. Marjorie Mathieu, IFSU Équilibre." property="og:description"/>
+<meta content="https://ifsu-equilibre.be/en/ateliers.html" property="og:url"/>
+<meta content="https://ifsu-equilibre.be/assets/media/og-image.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<style id="fix-info">.info-bloc{min-width:0;box-sizing:border-box}.info-ligne{flex-wrap:wrap}.info-ligne-valeur{text-align:right}</style>
+<style id="lang-flag-css">
+.lang-flag{display:flex;align-items:center;gap:.5rem;margin-left:1.4rem;padding:.3rem .6rem;border:1px solid rgba(255,255,255,.45);border-radius:6px;color:#fff;text-decoration:none;font:600 .72rem/1 'DM Sans',system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;flex:none;opacity:1;transition:background .2s,border-color .2s}
+.lang-flag:hover{background:rgba(255,255,255,.14);border-color:#C9A84C}
+@media(max-width:1100px){.lang-flag span{display:none}.lang-flag{padding:.3rem;margin-left:.8rem}[class*="nav-links"]{gap:1.1rem!important}}
+@media(max-width:900px){.lang-flag{order:2;margin-left:auto;margin-right:.6rem}[class*="burger"]{order:3}}
+@media(min-width:701px) and (max-width:900px){.nav-reserve ~ .lang-flag{margin-left:0}.site-nav:has(.nav-reserve) .site-nav-links{gap:.55rem!important}.site-nav:has(.nav-reserve) .site-nav-links a{font-size:.6rem!important;letter-spacing:.06em!important}.site-nav:has(.nav-reserve) .site-nav-logo{min-width:0}}
+@media(max-width:520px){.nav-reserve{margin-right:.5rem!important;padding:.5rem .65rem!important;letter-spacing:.06em!important}}
+</style>
+</head>
+<body class="page-body">
+<nav class="nav">
+<a class="nav-logo" href="/en/">
+<svg height="36" viewbox="0 0 56 56" width="36" xmlns="http://www.w3.org/2000/svg">
+<circle cx="28" cy="28" fill="none" opacity="0.9" r="26" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.8" r="21" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.7" r="16" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.6" r="11" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.5" r="6" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="2" fill="#C9A84C" opacity="0.75" r="2.2"></circle><circle cx="47.5" cy="9.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="54" cy="28" fill="#C9A84C" opacity="0.75" r="2.2"></circle><circle cx="47.5" cy="46.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="28" cy="54" fill="#C9A84C" opacity="0.75" r="2.2"></circle><circle cx="8.5" cy="46.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="2" cy="28" fill="#C9A84C" opacity="0.75" r="2.2"></circle><circle cx="8.5" cy="9.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<defs><lineargradient id="fg" x1="0" x2="0" y1="1" y2="0"><stop offset="0%" stop-color="#C4714A"></stop><stop offset="100%" stop-color="#F0EAE0"></stop></lineargradient></defs>
+<ellipse cx="28" cy="26" fill="url(#fg)" opacity="0.9" rx="3" ry="5"></ellipse>
+</svg>
+<div class="nav-logo-text">IFSU Équilibre<span>Ath · Hainaut</span></div>
+</a>
+<button aria-label="Menu" class="nav-burger" id="burger"><span></span><span></span><span></span></button>
+<ul class="nav-links" id="nav-links">
+<li><a href="/en/">Home</a></li>
+<li><a href="/en/yoga.html">Yoga</a></li>
+<li><a href="/en/meditation.html">Meditation</a></li>
+<li><a href="/en/carnets.html">Notebooks</a></li>
+<li><a class="active" href="/en/ateliers.html">Workshops</a></li>
+<li><a href="/en/retraite.html">Retreat</a></li></ul>
+  <a class="lang-flag" href="/ateliers.html" hreflang="fr" lang="fr" title="Version française" aria-label="Version française"><svg viewBox="0 0 60 40" width="30" height="20" aria-hidden="true" focusable="false" style="display:block;border-radius:3px"><rect width="20" height="40" fill="#0055A4"/><rect x="20" width="20" height="40" fill="#fff"/><rect x="40" width="20" height="40" fill="#EF4135"/></svg><span>FR</span></a>
+  
+  
+</nav>
+<header class="hero-page">
+<div class="hero-page-inner">
+<p class="hero-page-label">Workshops &amp; Events</p>
+<h1 class="hero-page-title">Three hours.<br/>Yoga, chanting, meditation.</h1>
+<p class="hero-page-sub">One-off formats to go further — with no long-term commitment</p>
+</div>
+</header>
+<section style="padding:0;line-height:0;">
+<img alt="Group yoga class — IFSU Équilibre Ath" class="photo-cours" src="/assets/media/ateliers-img-1.jpg"/>
+</section>
+<section class="section" style="padding-top:0;">
+<div class="carnet-grid">
+<article class="carnet-card">
+<span class="carnet-tag atelier">3h workshop</span>
+<h2 class="carnet-card-title">Solstice Workshop</h2>
+<p class="carnet-card-text">A 3-hour workshop around the summer solstice. The body settling, the breath making the link, the silence arriving. In that order. Without rushing.</p>
+<span class="carnet-card-meta">21 June 2026 · 3 hours · €25 · max 12</span>
+<a class="carnet-card-link" href="https://ifsu-equilibre.web.app/" rel="noopener" target="_blank">Book</a>
+</article>
+</div>
+</section>
+<section class="section section-alt">
+<div class="section-inner">
+<p class="section-label">Recurring format</p>
+<h2 class="section-title">3h workshops</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem;">
+<div class="info-bloc">
+<p class="info-bloc-title">Single price</p>
+<div class="info-ligne"><span class="info-ligne-label">3h workshop</span><span class="info-ligne-valeur">€25</span></div>
+<div class="info-ligne"><span class="info-ligne-label">Confirmation</span><span class="info-ligne-valeur">On receipt of payment</span></div>
+<div class="info-ligne"><span class="info-ligne-label">Cancellation</span><span class="info-ligne-valeur">Free up to 48h before</span></div>
+</div>
+<div class="info-bloc">
+<p class="info-bloc-title">Payment</p>
+<div class="info-ligne"><span class="info-ligne-label">Method</span><span class="info-ligne-valeur">Bank transfer</span></div>
+<div class="info-ligne"><span class="info-ligne-label">Details</span><span class="info-ligne-valeur">Given at registration</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Calendrier complet -->
+<section class="section text-center">
+<div class="section-inner">
+<h2 class="section-title">Full calendar</h2>
+<p class="section-text" style="max-width:480px;margin:0 auto 2rem;">Classes, workshops, talks, events — everything is updated in real time.</p>
+<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;"><a class="btn btn-terracotta" href="https://ifsu-equilibre.web.app/" rel="noopener" target="_blank">Book online</a>
+<a class="btn btn-ardoise" href="https://www.facebook.com/IFSU.Yoga.Meditation.Ath" target="_blank">IFSU Facebook page</a></div>
+</div>
+</section>
+<footer class="footer">
+<p class="footer-name">IFSU Équilibre</p>
+<p class="footer-tagline">Marjorie Mathieu · Ath, Hainaut</p>
+<div class="footer-divider"></div>
+<div class="footer-contact"><a href="mailto:ifsu@etik.com">ifsu@etik.com</a><br/><a href="tel:+32477091803">+32 477 09 18 03</a></div>
+<div class="footer-social"><a href="https://facebook.com/IFSU.Yoga.Meditation.Ath" target="_blank">Facebook</a>
+<a href="https://mastodon.social/@IFSUYogameditation" target="_blank">Mastodon</a></div>
+<p class="footer-legal">© 2026 IFSU Équilibre · <a href="https://ifsu-equilibre.be" style="color:inherit;">ifsu-equilibre.be</a></p>
+<p class="footer-legal" style="margin-top:.4rem">Site created by Marjorie Mathieu, IFSU Équilibre. Reproduction of the code is prohibited.</p>
+<p class="footer-legal" style="margin-top:.4rem"><a href="/en/mentions-legales.html" style="color:inherit;">Legal notice</a> · <a href="/en/confidentialite.html" style="color:inherit;">Privacy and cookies</a> · <a href="/en/conditions.html" style="color:inherit;">Terms</a></p>
+</footer>
+<script>document.getElementById('burger').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');});</script>
+</body></html>
