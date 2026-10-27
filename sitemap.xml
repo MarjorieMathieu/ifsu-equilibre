@@ -100,4 +100,39 @@
   <url><loc>https://ifsu-equilibre.be/mentions-legales.html</loc></url>
   <url><loc>https://ifsu-equilibre.be/confidentialite.html</loc></url>
   <url><loc>https://ifsu-equilibre.be/conditions.html</loc></url>
+  <url>
+    <loc>https://ifsu-equilibre.be/en/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ifsu-equilibre.be/en/yoga.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ifsu-equilibre.be/en/meditation.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ifsu-equilibre.be/en/cycle-individuel.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ifsu-equilibre.be/en/atelier-decouverte.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

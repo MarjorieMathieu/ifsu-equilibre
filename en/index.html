@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>IFSU Équilibre — Viniyoga Yoga &amp; Vedic Meditation · Ath</title>
+<meta content="Viniyoga yoga and IFSU Vedic meditation at the IFSU Studio, Ath (Hainaut, Belgium). Small groups, private sessions, retreats. Marjorie Mathieu." name="description"/>
+<link href="https://ifsu-equilibre.be/en/" rel="canonical"/><link href="https://ifsu-equilibre.be/" hreflang="fr" rel="alternate"/><link href="https://ifsu-equilibre.be/en/" hreflang="en" rel="alternate"/><link href="https://ifsu-equilibre.be/" hreflang="x-default" rel="alternate"/>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://ifsu-equilibre.be/#entreprise",
+  "name": "IFSU Équilibre",
+  "description": "Viniyoga yoga classes in small groups, private sessions and IFSU Vedic meditation in Ath (Hainaut, Belgium), with Marjorie Mathieu.",
+  "url": "https://ifsu-equilibre.be/en/",
+  "telephone": "+32477091803",
+  "email": "ifsu@etik.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rue des Hauts-Degrés 20",
+    "postalCode": "7800",
+    "addressLocality": "Ath",
+    "addressRegion": "Hainaut",
+    "addressCountry": "BE"
+  },
+  "areaServed": [
+    "Ath",
+    "Hainaut",
+    "Wallonia"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Marjorie Mathieu"
+  },
+  "knowsAbout": [
+    "Viniyoga Yoga",
+    "IFSU Vedic meditation"
+  ],
+  "sameAs": [
+    "https://www.facebook.com/IFSU.Yoga.Meditation.Ath",
+    "https://mastodon.social/@IFSUYogameditation"
+  ]
+}</script>
+<meta content="website" property="og:type"/>
+<meta content="en_GB" property="og:locale"/>
+<meta content="IFSU Équilibre — Viniyoga Yoga &amp; Vedic Meditation · Ath" property="og:title"/>
+<meta content="Viniyoga yoga and IFSU Vedic meditation at the IFSU Studio, Ath (Hainaut, Belgium). Small groups, private sessions, retreats. Marjorie Mathieu." property="og:description"/>
+<meta content="https://ifsu-equilibre.be/en/" property="og:url"/>
+<link href="/assets/fonts/fonts.css" rel="stylesheet"/>
+<style>
+/* ============================================================
+   IFSU Équilibre — Feuille de style partagée
+   Palette : ardoise / lin / terracotta / gold / anthracite
+   Typo : Cormorant Garamond (titres) + DM Sans (corps)
+   ============================================================ */
+
+:root {
+  --ardoise:      #4A6274;
+  --ardoise-dark: #2C3F52;
+  --lin:          #F7F3EE;
+  --lin-deep:     #EDE8E0;
+  --terracotta:   #C4714A;
+  --gold:         #C9A84C;
+  --anthracite:   #2C2C2C;
+  --gris-bleuté:  #7A9AB0;
+  --blanc:        #FFFFFF;
+
+  --font-titre: 'Cormorant Garamond', Georgia, serif;
+  --font-corps: 'DM Sans', system-ui, sans-serif;
+
+  --max-w: 860px;
+  --max-w-large: 1100px;
+  --nav-h: 68px;
+}
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-corps);
+  font-weight: 300;
+  color: var(--anthracite);
+  background: var(--lin);
+  font-size: 17px;
+  line-height: 1.7;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: var(--ardoise-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 100;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.nav-logo-text {
+  font-family: var(--font-titre);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--lin);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.nav-logo-text span {
+  display: block;
+  font-size: 0.7rem;
+  font-family: var(--font-corps);
+  font-weight: 300;
+  color: var(--gris-bleuté);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-corps);
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--lin);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* Burger */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.nav-burger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--lin);
+  transition: transform 0.3s, opacity 0.3s;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile nav */
+@media (max-width: 700px) {
+  .nav-burger { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    background: var(--ardoise-dark);
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0 1rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links a {
+    display: block;
+    padding: 0.75rem 2rem;
+    border-bottom: none;
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================================================
+   LAYOUT GÉNÉRAL
+   ============================================================ */
+
+.page-body {
+  padding-top: var(--nav-h);
+}
+
+.section {
+  padding: 5rem 2rem;
+}
+
+.section-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.section-inner-large {
+  max-width: var(--max-w-large);
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: var(--font-corps);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: var(--font-titre);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--ardoise-dark);
+  margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  font-family: var(--font-titre);
+  font-size: 1.35rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ardoise);
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.section-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+
+/* Séparateur */
+.divider {
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+  margin: 2.5rem 0;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+  background: var(--ardoise-dark);
+  padding: 7rem 2rem 6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 40%, rgba(201,168,76,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-emblem {
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+.hero-title {
+  font-family: var(--font-titre);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 300;
+  color: var(--lin);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+
+.hero-quote {
+  font-family: 'Kalam', var(--font-titre);
+  font-size: clamp(1.1rem, 2.6vw, 1.4rem);
+  font-style: normal;
+  font-weight: 300;
+  color: var(--lin);
+  line-height: 1.5;
+  max-width: 520px;
+  margin: 0 auto 0.6rem;
+  opacity: 0.92;
+}
+
+.hero-quote-author {
+  display: block;
+  font-family: var(--font-corps);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 0.6rem;
+}
+
+.hero-sub {
+  font-family: var(--font-titre);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  color: var(--gris-bleuté);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.hero-tagline {
+  font-family: var(--font-corps);
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ============================================================
+   BOUTONS & CTA
+   ============================================================ */
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-corps);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid currentColor;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.btn-terracotta {
+  color: var(--terracotta);
+  border-color: var(--terracotta);
+}
+.btn-terracotta:hover {
+  background: var(--terracotta);
+  color: var(--lin);
+}
+
+.btn-gold {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+.btn-gold:hover {
+  background: var(--gold);
+  color: var(--ardoise-dark);
+}
+
+.btn-ardoise {
+  color: var(--ardoise);
+  border-color: var(--ardoise);
+}
+.btn-ardoise:hover {
+  background: var(--ardoise);
+  color: var(--lin);
+}
+
+.btn-light {
+  color: var(--lin);
+  border-color: rgba(247,243,238,0.4);
+}
+.btn-light:hover {
+  background: rgba(247,243,238,0.1);
+}
+
+/* ============================================================
+   SECTIONS ALTERNÉES (fond clair / fond crème profond)
+   ============================================================ */
+
+.section-alt {
+  background: var(--lin-deep);
+}
+
+.section-dark {
+  background: var(--ardoise-dark);
+  color: var(--lin);
+}
+
+.section-dark .section-title { color: var(--lin); }
+.section-dark .section-text { color: rgba(247,243,238,0.8); }
+.section-dark .section-label { color: var(--gold); }
+
+/* ============================================================
+   GRILLE CARTES
+   ============================================================ */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background: var(--blanc);
+  padding: 2rem;
+  border-top: 2px solid var(--gold);
+}
+
+.card-title {
+  font-family: var(--font-titre);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--ardoise-dark);
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+/* ============================================================
+   TABLEAU HORAIRES
+   ============================================================ */
+
+.horaires-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.horaires-table th {
+  font-family: var(--font-corps);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ardoise);
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--lin-deep);
+  text-align: left;
+}
+
+.horaires-table td {
+  padding: 1rem 1rem;
+  border-bottom: 1px solid var(--lin-deep);
+  vertical-align: top;
+  color: #444;
+}
+
+.horaires-table tr:last-child td { border-bottom: none; }
+
+.horaires-table .jour {
+  font-weight: 500;
+  color: var(--ardoise-dark);
+  white-space: nowrap;
+}
+
+.horaires-table .tarif {
+  color: var(--terracotta);
+  font-weight: 400;
+}
+
+.horaires-table a {
+  color: var(--ardoise);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .horaires-table thead { display: none; }
+  .horaires-table tr { display: block; padding: 1rem 0; border-bottom: 1px solid var(--lin-deep); }
+  .horaires-table td { display: block; padding: 0.2rem 0; border: none; }
+  .horaires-table td::before {
+    content: attr(data-label) " ";
+    font-weight: 500;
+    color: var(--ardoise);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+/* ============================================================
+   PHOTOS
+   ============================================================ */
+
+.photo-reduced {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-reduced-sm {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 500px) {
+  .photo-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   BLOC CITATION
+   ============================================================ */
+
+.citation {
+  border-left: 2px solid var(--gold);
+  padding: 0.5rem 0 0.5rem 1.75rem;
+  margin: 2.5rem 0;
+}
+
+.citation-text {
+  font-family: var(--font-titre);
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--ardoise);
+}
+
+.citation-source {
+  font-size: 0.8rem;
+  color: var(--gris-bleuté);
+  margin-top: 0.5rem;
+  letter-spacing: 0.08em;
+}
+
+/* ============================================================
+   BLOC INFO (tarifs, logistique)
+   ============================================================ */
+
+.info-bloc {
+  background: var(--blanc);
+  border-top: 2px solid var(--terracotta);
+  padding: 1.75rem 2rem;
+  margin-top: 2rem;
+}
+
+.info-bloc-title {
+  font-family: var(--font-corps);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+
+.info-ligne {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--lin-deep);
+  font-size: 0.9rem;
+  gap: 1rem;
+}
+
+.info-ligne:last-child { border-bottom: none; }
+
+.info-ligne-label { color: #555; }
+.info-ligne-valeur { font-weight: 500; color: var(--ardoise-dark); text-align: right; }
+
+/* ============================================================
+   SECTION QUI SUIS-JE
+   ============================================================ */
+
+.qui-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (max-width: 680px) {
+  .qui-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.portrait-marjorie{width:160px;height:160px;display:block;object-fit:cover;border-radius:50%;margin:0 auto 1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.12);}
+
+.formation-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.formation-list li {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--lin-deep);
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.formation-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+/* Qui suis-je — repères à gauche, texte à droite */
+.qs-wrap { display: grid; grid-template-columns: minmax(0, 1fr) 19rem; gap: 4rem; align-items: start; }
+
+.qs-chapter {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 2rem;
+  padding: 3.5rem 0;
+  border-top: 1px solid var(--lin-deep);
+}
+.qs-chapter:first-child { border-top: none; padding-top: 0; }
+.qs-chapter:last-child { padding-bottom: 0; }
+
+.qs-marker { position: sticky; top: calc(var(--nav-h) + 2rem); align-self: start; }
+.qs-year { font-family: var(--font-titre); font-size: 2.4rem; font-weight: 300; line-height: 1; color: var(--gold); margin-bottom: 0.6rem; }
+.qs-kicker {
+  font-family: var(--font-corps);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+}
+
+.qs-body { max-width: 36rem; }
+.qs-body h3 {
+  font-family: var(--font-titre);
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--ardoise-dark);
+  margin-bottom: 1.25rem;
+}
+.qs-body h3.qs-bigquote {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 1.75rem;
+}
+.qs-body .section-text { margin-bottom: 1.15rem; }
+
+.qs-turn, .qs-aside {
+  font-family: var(--font-titre);
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--ardoise-dark);
+  margin-top: 1.75rem;
+  padding-left: 1.1rem;
+  border-left: 2px solid var(--gold);
+}
+.qs-closing {
+  font-family: var(--font-titre);
+  font-size: clamp(1.5rem, 3.2vw, 1.85rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.3;
+  color: var(--ardoise-dark);
+  margin: 2.25rem 0 1.25rem;
+}
+.qs-cta { font-size: 0.95rem; line-height: 1.7; color: #555; }
+.qs-cta a { color: var(--terracotta); text-underline-offset: 3px; }
+.qs-cta a:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 3px; }
+
+.qs-side { display: grid; gap: 1.25rem; }
+@media (min-width: 901px) and (min-height: 860px) {
+  .qs-side { position: sticky; top: calc(var(--nav-h) + 2rem); }
+}
+.qs-id, .qs-formation { background: var(--blanc); border: 1px solid var(--lin-deep); padding: 1.75rem 1.5rem; }
+.qs-id { text-align: center; }
+.qs-id .portrait-marjorie { margin-bottom: 1rem; }
+.qs-name { font-family: var(--font-titre); font-size: 1.5rem; line-height: 1.2; color: var(--ardoise-dark); }
+.qs-role { font-size: 0.85rem; color: #666; margin: 0.35rem 0 1.5rem; }
+.qs-formation .formation-list { margin-top: 0.75rem; }
+
+@media (max-width: 900px) {
+  .qs-wrap { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
+  .qs-side { display: contents; }
+  .qs-id { order: 0; }
+  .qs-story { order: 1; }
+  .qs-formation { order: 2; }
+  .qs-chapter { grid-template-columns: minmax(0, 1fr); gap: 1rem; padding: 2.5rem 0; }
+  .qs-marker { position: static; display: flex; align-items: baseline; gap: 0.9rem; }
+  .qs-year { font-size: 2rem; margin-bottom: 0; }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+  background: var(--ardoise-dark);
+  padding: 4rem 2rem 2.5rem;
+  text-align: center;
+}
+
+.footer-emblem {
+  margin: 0 auto 1.5rem;
+  opacity: 0.85;
+}
+
+.footer-name {
+  font-family: var(--font-titre);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--lin);
+  margin-bottom: 0.25rem;
+}
+
+.footer-tagline {
+  font-family: var(--font-corps);
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gris-bleuté);
+  margin-bottom: 2rem;
+}
+
+.footer-contact {
+  font-size: 0.9rem;
+  color: rgba(247,243,238,0.75);
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+
+.footer-contact a {
+  color: var(--lin);
+  text-decoration: none;
+}
+
+.footer-contact a:hover { color: var(--gold); }
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer-social a {
+  font-family: var(--font-corps);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gris-bleuté);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-social a:hover { color: var(--gold); }
+
+.footer-divider {
+  width: 32px;
+  height: 1px;
+  background: rgba(201,168,76,0.3);
+  margin: 0 auto 1.5rem;
+}
+
+.footer-legal {
+  font-size: 0.75rem;
+  color: rgba(122,154,176,0.6);
+  letter-spacing: 0.06em;
+}
+
+/* ============================================================
+   UTILITAIRES
+   ============================================================ */
+
+.text-center { text-align: center; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+.mb-0 { margin-bottom: 0; }
+
+
+/* Hero vidéo plein écran */
+.hero-video {
+  position: relative;
+  height: 100vh;
+  min-height: 560px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ardoise-dark);
+}
+.hero-video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(44,63,82,0.5) 0%, rgba(44,63,82,0.75) 100%);
+}
+.hero-video-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Grille 4 univers */
+.univers-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 0;
+}
+@media(max-width:680px){ .univers-grid { grid-template-columns: 1fr; } }
+.univers-card {
+  padding: 3rem 2.5rem;
+  border: 1px solid var(--lin-deep);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background .25s;
+}
+.univers-card:hover { background: var(--blanc); }
+.univers-card:nth-child(1) { border-top: 3px solid var(--terracotta); }
+.univers-card:nth-child(2) { border-top: 3px solid var(--gold); }
+.univers-card:nth-child(3) { border-top: 3px solid var(--ardoise); }
+.univers-card:nth-child(4) { border-top: 3px solid var(--gris-bleuté); }
+.univers-card-label {
+  font-family: var(--font-corps);
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+}
+.univers-card:nth-child(1) .univers-card-label { color: var(--terracotta); }
+.univers-card:nth-child(2) .univers-card-label { color: var(--gold); }
+.univers-card:nth-child(3) .univers-card-label { color: var(--ardoise); }
+.univers-card:nth-child(4) .univers-card-label { color: var(--gris-bleuté); }
+
+/* Bandeau Carnets sous la grille */
+.carnets-strip {
+  border: 1px solid var(--lin-deep);
+  border-top: none;
+  padding: 2.5rem 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background: var(--lin-deep);
+}
+.carnets-strip-text { max-width: 560px; }
+.carnets-strip-label {
+  font-family: var(--font-corps);
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ardoise);
+  margin-bottom: .6rem;
+  display: block;
+}
+.carnets-strip-title {
+  font-family: var(--font-titre);
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ardoise-dark);
+  line-height: 1.35;
+}
+
+/* Bandeau défilant — annonces */
+.marquee-bar {
+  background: var(--ardoise-dark);
+  color: var(--lin);
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(201,168,76,.35);
+  position: relative;
+}
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  animation: marquee 34s linear infinite;
+  will-change: transform;
+}
+.marquee-track span {
+  display: inline-block;
+  padding: .6rem 0;
+  font-family: var(--font-corps);
+  font-size: .78rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+  color: var(--lin);
+  white-space: nowrap;
+  padding-right: 3.5rem;
+}
+.marquee-track span b {
+  color: var(--gold);
+  font-weight: 500;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; overflow-x: auto; }
+}
+.univers-card-title {
+  font-family: var(--font-titre);
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: var(--ardoise-dark);
+  line-height: 1.2;
+}
+.univers-card-text {
+  font-size: .9rem;
+  color: #555;
+  line-height: 1.75;
+  flex: 1;
+}
+.univers-card-link {
+  font-family: var(--font-corps);
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ardoise);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  transition: color .2s;
+}
+.univers-card-link::after { content: '→'; }
+.univers-card:hover .univers-card-link { color: var(--terracotta); }
+
+</style>
+<link href="/favicon.ico" rel="icon" sizes="48x48"/>
+<link href="/assets/media/favicon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="/assets/media/apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="IFSU Équilibre" property="og:site_name"/>
+<meta content="https://ifsu-equilibre.be/assets/media/og-image.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+</head>
+<body class="page-body">
+<nav class="nav">
+<a class="nav-logo" href="/en/">
+<svg height="36" viewbox="0 0 56 56" width="36" xmlns="http://www.w3.org/2000/svg">
+<circle cx="28" cy="28" fill="none" opacity="0.9" r="26" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.8" r="21" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.7" r="16" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.6" r="11" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.5" r="6" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="2" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="47.5" cy="9.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="54" cy="28" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="47.5" cy="46.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="28" cy="54" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="8.5" cy="46.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="2" cy="28" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="8.5" cy="9.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<defs><lineargradient id="fg" x1="0" x2="0" y1="1" y2="0"><stop offset="0%" stop-color="#C4714A"></stop><stop offset="100%" stop-color="#F0EAE0"></stop></lineargradient></defs>
+<ellipse cx="28" cy="26" fill="url(#fg)" opacity="0.9" rx="3" ry="5"></ellipse>
+</svg>
+<div class="nav-logo-text">IFSU Équilibre<span>Ath · Hainaut</span></div>
+</a>
+<button aria-label="Menu" class="nav-burger" id="burger"><span></span><span></span><span></span></button>
+<ul class="nav-links" id="nav-links">
+<li><a class="active" href="/en/">Home</a></li>
+<li><a href="/en/yoga.html">Yoga</a></li>
+<li><a href="/en/meditation.html">Meditation</a></li>
+<li><a href="/carnets.html">Notebooks (FR)</a></li>
+<li><a href="/ateliers.html">Workshops (FR)</a></li>
+<li><a href="/retraite.html">Retreat (FR)</a></li>
+<li><a href="/" hreflang="fr" lang="fr">FR</a></li></ul>
+</nav>
+<div class="marquee-bar">
+<div class="marquee-track"><span><b>Five days without your diary.</b> IFSU Retreat · 23–27 November 2026 · Koningsteen  •  Yoga, meditation, chanting, meals, room. All included. You too.  •  €750 · 20 places · beginners welcome  •  <b><a href="/retraite.html" style="color:var(--gold);text-decoration:none;">Read more (FR) →</a></b></span>
+<span aria-hidden="true"><b>Five days without your diary.</b> IFSU Retreat · 23–27 November 2026 · Koningsteen  •  Yoga, meditation, chanting, meals, room. All included. You too.  •  €750 · 20 places · beginners welcome  •  <b><a href="/retraite.html" style="color:var(--gold);text-decoration:none;">Read more (FR) →</a></b></span></div>
+</div>
+<!-- HERO VIDÉO — vidéo en transparence derrière le titre -->
+<section class="hero-video">
+<video autoplay="" loop="" muted="" playsinline="">
+<source src="/assets/media/index-video-1.mp4" type="video/mp4"/>
+</video>
+<div class="hero-video-overlay"></div>
+<div class="hero-video-content">
+<svg height="72" style="margin:0 auto 1rem;display:block;" viewbox="0 0 56 56" width="72" xmlns="http://www.w3.org/2000/svg">
+<circle cx="28" cy="28" fill="none" opacity="0.9" r="26" stroke="#C9A84C" stroke-width="0.7"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.8" r="21" stroke="#C9A84C" stroke-width="0.7"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.7" r="16" stroke="#C9A84C" stroke-width="0.7"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.6" r="11" stroke="#C9A84C" stroke-width="0.7"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.5" r="6" stroke="#C9A84C" stroke-width="0.7"></circle>
+<circle cx="28" cy="2" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="47.5" cy="9.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="54" cy="28" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="47.5" cy="46.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="28" cy="54" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="8.5" cy="46.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="2" cy="28" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="8.5" cy="9.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<defs><lineargradient id="fh" x1="0" x2="0" y1="1" y2="0"><stop offset="0%" stop-color="#C4714A"></stop><stop offset="100%" stop-color="#F0EAE0"></stop></lineargradient></defs>
+<ellipse cx="28" cy="26" fill="url(#fh)" opacity="0.9" rx="3" ry="5"></ellipse>
+</svg>
+<p class="hero-title">IFSU Équilibre</p>
+<p class="hero-quote">“If you can breathe, you can do yoga.”<span class="hero-quote-author">— Tirumalai Krishnamacharya</span></p>
+<h1 class="hero-sub" style="font-weight:inherit;margin-top:0">Viniyoga Yoga &amp; IFSU Vedic Meditation in Ath</h1>
+<p class="hero-tagline">Ath · Hainaut · Belgium</p>
+</div>
+</section>
+<!-- INTRO -->
+<section class="section">
+<div class="section-inner text-center">
+<p class="section-label">The essentials</p>
+<h2 class="section-title">What happens here</h2>
+<p class="section-text" style="max-width:600px;margin:0 auto 1rem;">The body finds its ease. The mind slows down without being forced. Silence arrives — sometimes quickly, often gradually, always differently from one day to the next.</p>
+<p class="section-text" style="max-width:600px;margin:0 auto;">Two distinct practices, two precise lineages. No fusion, no tasting menu. Each has its own foundations, its own demands, its own results.</p>
+<div class="divider" style="margin:2.5rem auto;"></div>
+</div>
+</section>
+<!-- PLANNING -->
+<section class="section" id="planning">
+<div class="section-inner text-center">
+<p class="section-label">This week</p>
+<h2 class="section-title">Class schedule</h2>
+</div>
+<div class="section-inner" style="max-width:600px;">
+<div style="background:var(--lin-deep);border:1px solid rgba(74,98,116,.15);border-radius:8px;padding:2.5rem 2rem;text-align:center;">
+<p style="font-family:var(--font-titre);font-size:1.3rem;font-weight:400;color:var(--ardoise-dark);margin-bottom:.75rem;">Tuesday and Wednesday, IFSU Studio, Ath</p>
+<p style="font-size:.9rem;color:var(--anthracite);margin-bottom:1.75rem;">Live schedule, booking and loyalty card: everything now happens in the app (in French).</p>
+<a href="https://ifsu-equilibre.web.app/" rel="noopener" style="display:inline-block;background:var(--terracotta);color:var(--lin);font-size:.9rem;padding:.85rem 2rem;border-radius:4px;text-decoration:none;" target="_blank">See the schedule &amp; book</a>
+</div>
+<p style="font-size:.85rem;color:var(--ardoise-dark);margin-top:1rem;">Maximum 6 participants per session. IFSU Studio, Ath.</p>
+<p style="font-size:.85rem;margin-top:.5rem;">€15 per class · monthly pass €48 (4 classes/month) or €60 (5 classes/month) · loyalty card €150 (10 classes + 1 free, valid for 4 months) · private session €45, by appointment.</p>
+</div>
+</section>
+<!-- 4 UNIVERS -->
+<section class="section" style="padding-top:0;padding-bottom:0;">
+<div class="section-inner-large">
+<div class="univers-grid">
+<a class="univers-card" href="/en/yoga.html">
+<span class="univers-card-label">Viniyoga Yoga</span>
+<h2 class="univers-card-title">A body that moves<br/>as it can</h2>
+<p class="univers-card-text">90-minute sessions, small group or one-to-one. The posture adapts to you — not the other way round. Krishnamacharya lineage, teaching since 2014.</p>
+<span class="univers-card-link">See the times</span>
+</a>
+<a class="univers-card" href="/en/meditation.html">
+<span class="univers-card-label">IFSU Vedic Meditation</span>
+<h2 class="univers-card-title">Techniques<br/>prescribed for you</h2>
+<p class="univers-card-text">An individual practice, with techniques chosen to suit your nature. Founded in 1975 by Gururaj Ananda Yogi. A first meeting, no commitment.</p>
+<span class="univers-card-link">Discover the method</span>
+</a>
+<a class="univers-card" href="/ateliers.html">
+<span class="univers-card-label">Workshops &amp; Events</span>
+<h2 class="univers-card-title">Three hours<br/>to go further</h2>
+<p class="univers-card-text">Yoga + chanting + meditation workshops, 3 hours of immersion. Free monthly talks. One-off formats to explore without committing for the long term.</p>
+<span class="univers-card-link">See the programme</span>
+</a>
+<a class="univers-card" href="/retraite.html">
+<span class="univers-card-label">Retreat · November 2026</span>
+<h2 class="univers-card-title">Five days<br/>at Koningsteen</h2>
+<p class="univers-card-text">23–27 November 2026. Co-led with Breeyana Borum. Accommodation and meals included. Maximum 20 participants.</p>
+<span class="univers-card-link">Read more</span>
+</a>
+</div>
+<a class="carnets-strip" href="/carnets.html">
+<div class="carnets-strip-text">
+<span class="carnets-strip-label">The Notebooks of the Tradition</span>
+<p class="carnets-strip-title">Critical studies and historical analysis of the foundations of the subtle body.</p>
+</div>
+<span class="univers-card-link">Read the Notebooks</span>
+</a>
+</div>
+</section>
+<!-- QUI SUIS-JE -->
+<section class="section" id="qui-suis-je">
+<div class="section-inner text-center">
+<p class="section-label">Marjorie Mathieu</p>
+<h2 class="section-title">Who am I</h2>
+</div>
+<div class="section-inner-large">
+<div class="qs-wrap">
+<div class="qs-story">
+<article class="qs-chapter">
+<div class="qs-marker"><p class="qs-kicker">Curiosity</p></div>
+<div class="qs-body">
+<h3 class="qs-bigquote">I've always looked at what's behind the façade.</h3>
+<p class="section-text">I trained in stage make-up. I spent hours backstage in theatres, on film sets, on music-video shoots, with the actors and the technical crew, to see how the magic is made.</p>
+<p class="section-text">My curiosity and my need to understand took me down very different paths and into very different jobs. I was a receptionist, I ran a bar, I had a shop in Greece. I've lived several lives.</p>
+<p class="section-text">Even today I read case files, scientific articles, books on geopolitics, because I want to know what's behind what I'm shown. It doesn't make me immune: like everyone, I let myself be influenced sometimes.</p>
+<p class="qs-turn">One day, I wanted to look behind my own façade. That's what led me to yoga, then to meditation.</p>
+</div>
+</article>
+<article class="qs-chapter">
+<div class="qs-marker"><p class="qs-year">2011</p><p class="qs-kicker">Yoga</p></div>
+<div class="qs-body">
+<h3>The body first</h3>
+<p class="section-text">I'm not athletic. I was looking for a way to strengthen my muscles without putting myself off effort. Stiff back, wrecked neck, short breath.</p>
+<p class="section-text">After several classes that were too acrobatic or too lofty, I found a wonderful teacher and a place devoted to practice. The day after a session, my lungs filled right up, for the first time in years.</p>
+<p class="section-text">I wanted to understand what I was feeling: the muscles, tendons and nerves that move with the posture, the spot that finally gives way after a few breaths. I studied anatomy.</p>
+<p class="qs-aside">Try it now: notice where your breath goes when you leave it alone.</p>
+</div>
+</article>
+<article class="qs-chapter">
+<div class="qs-marker"><p class="qs-year">2013</p><p class="qs-kicker">Meditation</p></div>
+<div class="qs-body">
+<h3>The mind next</h3>
+<p class="section-text">In 2011, in Greece, at a tai chi seminar, a friend introduced me to Breeyana. We talked about meditation for two minutes. Hippie stuff, ancient techniques, a guru: I tuned out. It took me two years to get started.</p>
+<p class="section-text">I started in 2013. Breeyana generously passed on to me the meditation techniques that changed my perception. Since that same year, I've taken part in the retreat in Belgium.</p>
+<p class="section-text">Meditation made me look closely at the mind: how it spins, what it repeats. Part of what I call “me” comes from outside: habits, inheritances, other people's expectations. I look for what truly belongs to me, without deciding in advance what that is.</p>
+<p class="section-text">During practice, thoughts sometimes pass without catching hold of me. A clear calm settles, with an intense joy. It lasts a few seconds. Over the years, for me, those seconds have grown longer. I describe what I notice, without giving it a name.</p>
+<p class="qs-turn">I keep going because it's the only moment when I'm at peace with my mind.</p>
+</div>
+</article>
+<article class="qs-chapter">
+<div class="qs-marker"><p class="qs-year">2014</p><p class="qs-kicker">Teaching</p></div>
+<div class="qs-body">
+<h3>Why I teach</h3>
+<p class="section-text">These two practices are tools, and I find them magnificent. They were passed on to me. In turn, I pass them on, and give back what I received.</p>
+<p class="section-text">I teach the techniques as I received them, within a framework. In yoga, I explain the why of every posture and every breath. In meditation, questions are welcome.</p>
+<p class="section-text">What each person finds in them, I have no access to: everyone looks for their own truth. I give the tool, I answer when someone gets stuck, and the person does the work.</p>
+<p class="section-text">I don't belong to any Church and I don't ask you to believe in anything. If the practice brings up things that are outside my remit, I'll point you to a professional.</p>
+<p class="qs-closing">This tool has given me a great deal. Passing it on is my way of giving it back.</p>
+<p class="qs-cta">Want to see what it's like in practice? <a href="mailto:ifsu@etik.com">Write to me</a>, we'll talk it through openly, with no commitment.</p>
+</div>
+</article>
+</div>
+<aside aria-label="Marjorie Mathieu: training and contact" class="qs-side">
+<div class="qs-id">
+<img alt="Marjorie Mathieu — IFSU Équilibre" class="portrait-marjorie" src="/assets/media/index-img-2.png"/>
+<p class="qs-name">Marjorie Mathieu</p>
+<p class="qs-role">Co-lead, IFSU French-speaking Belgium</p>
+<a class="btn btn-ardoise" href="mailto:ifsu@etik.com">Contact me</a>
+</div>
+<div class="qs-formation">
+<p class="qs-kicker">Training &amp; Lineage</p>
+<ul class="formation-list">
+<li>Viniyoga Yoga · Krishnamacharya / Desikachar lineage · practising since 2011, teaching since 2014</li>
+<li>IFSU Vedic meditation · Gururaj Ananda Yogi lineage · daily practice since 2013</li>
+<li>Teaching supervision · Huguette Declercq (ABEPY)</li>
+<li>SSV 200h Yoga Teacher Training</li>
+<li>Ongoing training &amp; seminars</li>
+</ul>
+</div>
+</aside>
+</div>
+</div>
+</section>
+<!-- CONTACT -->
+<section style="background:var(--ardoise);padding:3rem 2rem;text-align:center;margin-top:5rem;">
+<h2 style="font-family:var(--font-titre);font-size:1.6rem;font-weight:300;color:var(--lin);margin-bottom:1.25rem;">A question? A doubt?</h2>
+<p style="font-size:.9rem;color:rgba(247,243,238,.8);margin-bottom:.3rem;">Write to <a href="mailto:ifsu@etik.com" style="color:var(--lin);">ifsu@etik.com</a></p>
+<p style="font-size:.9rem;color:rgba(247,243,238,.8);">Or on WhatsApp: <a href="tel:+32477091803" style="color:var(--lin);">+32 477 09 18 03</a></p>
+<p style="margin-top:1rem;font-size:.82rem;color:rgba(247,243,238,.4);">Bookings via the <a href="https://ifsu-equilibre.web.app/" style="color:rgba(247,243,238,.5);" target="_blank">IFSU Équilibre app</a> (in French)</p>
+</section>
+<footer class="footer">
+<p class="footer-name">IFSU Équilibre</p>
+<p class="footer-tagline">Marjorie Mathieu · Ath, Hainaut</p>
+<div class="footer-divider"></div>
+<div class="footer-contact"><a href="mailto:ifsu@etik.com">ifsu@etik.com</a><br/><a href="tel:+32477091803">+32 477 09 18 03</a></div>
+<div class="footer-social"><a href="https://facebook.com/IFSU.Yoga.Meditation.Ath" target="_blank">Facebook</a>
+<a href="https://mastodon.social/@IFSUYogameditation" target="_blank">Mastodon</a></div>
+<p class="footer-legal">© 2026 IFSU Équilibre · <a href="https://ifsu-equilibre.be" style="color:inherit;">ifsu-equilibre.be</a></p>
+<p class="footer-legal" style="margin-top:.4rem">Site created by Marjorie Mathieu, IFSU Équilibre. Reproduction of the code is prohibited.</p>
+<p class="footer-legal" style="margin-top:.4rem"><a href="/mentions-legales.html" style="color:inherit;">Legal notice (FR)</a> · <a href="/confidentialite.html" style="color:inherit;">Privacy and cookies (FR)</a> · <a href="/conditions.html" style="color:inherit;">Terms (FR)</a></p>
+</footer>
+<script>document.getElementById('burger').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');});</script>
+</body></html>

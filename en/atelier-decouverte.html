@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Meditation Discovery — 3 formats | IFSU Ath</title>
+<link href="https://ifsu-equilibre.be/en/atelier-decouverte.html" rel="canonical"/><link href="https://ifsu-equilibre.be/atelier-decouverte.html" hreflang="fr" rel="alternate"/><link href="https://ifsu-equilibre.be/en/atelier-decouverte.html" hreflang="en" rel="alternate"/><link href="https://ifsu-equilibre.be/atelier-decouverte.html" hreflang="x-default" rel="alternate"/>
+<meta content="Meditation Discovery in Ath: 3 formats (weekly, weekend, online coming soon). Small group, 5 people max. Marjorie Mathieu, IFSU Belgium." name="description"/>
+<link href="/assets/fonts/fonts.css" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#2C3F52;
+  --ink2:#2C3F52;
+  --gold:#C9A84C;
+  --gold2:#D4AE5A;
+  --gold3:#EDD98A;
+  --cream:#F7F3EE;
+  --cream2:#EDE8E0;
+  --sand:#EDE8E0;
+  --muted:#7A9AB0;
+  --dark:#2C2C2C;
+  --rust:#C4714A;
+  --ardoise:#4A6274;
+  --terracotta:#C4714A;
+  --lin:#F7F3EE;
+  --anthracite:#2C2C2C;
+  --f-s:'Cormorant Garamond',Georgia,serif;
+  --f-n:'DM Sans',system-ui,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--lin);color:var(--dark);font-family:var(--f-n);font-weight:300;font-size:16px;line-height:1.75;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:inherit}
+img{display:block;max-width:100%}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:68px;background:var(--ink2);border-bottom:1px solid rgba(201,168,76,.15);transition:box-shadow .3s}
+nav.s{box-shadow:0 2px 20px rgba(44,44,44,.15)}
+.nb{display:flex;align-items:center;gap:.7rem}
+.nl{width:34px;height:34px;border-radius:50%;object-fit:cover;opacity:.9}
+.nt{font-family:var(--f-s);font-size:1.05rem;color:var(--cream);letter-spacing:.04em}
+.nt em{color:var(--gold);font-style:italic}
+.nav-links{display:flex;gap:1.8rem;list-style:none}
+.nav-links a{font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--cream);opacity:.7;transition:opacity .2s,color .2s;text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
+.nav-links a:hover{opacity:1;color:var(--gold);border-bottom-color:var(--gold)}
+.nav-btn{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:.5rem 1.4rem;background:var(--terracotta);color:var(--cream);border:none;transition:background .25s;text-decoration:none;display:inline-block}
+.nav-btn:hover{background:var(--gold);color:var(--ink2)}
+.hb{display:none;background:none;border:none;color:var(--cream);font-size:1.3rem}
+
+/* HERO */
+#hero{min-height:92vh;display:flex;align-items:center;background:#2C3F52;position:relative;overflow:hidden;padding:7rem 2.5rem 4rem}
+.hbg{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 60% 80% at 75% 45%,rgba(201,168,76,.10) 0%,transparent 60%),radial-gradient(ellipse 40% 50% at 15% 70%,rgba(201,168,76,.06) 0%,transparent 55%)}
+.hero-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center;position:relative;z-index:2;width:100%}
+.he{display:inline-block;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);padding:.3rem .9rem;border:1px solid rgba(184,148,63,.3);background:rgba(184,148,63,.07);margin-bottom:2rem}
+.ht{font-family:var(--f-s);font-size:clamp(2.4rem,4.8vw,4.2rem);font-weight:300;line-height:1.08;color:var(--cream)}
+.ht em{font-style:italic;color:var(--gold)}
+.hs{margin-top:1.6rem;max-width:48ch;font-size:1.02rem;color:rgba(250,246,238,.6);line-height:1.85}
+.ha{margin-top:2.4rem;display:flex;gap:1rem;flex-wrap:wrap}
+.btn-g{padding:.9rem 2.2rem;background:var(--gold);color:var(--dark);font-size:.73rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;border:none;box-shadow:0 4px 24px rgba(184,148,63,.35);transition:background .25s,transform .2s,box-shadow .2s;display:inline-block}
+.btn-g:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(184,148,63,.45)}
+.btn-o{padding:.9rem 2.2rem;background:transparent;color:rgba(250,246,238,.7);font-size:.73rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(250,246,238,.2);transition:border-color .25s,color .25s;display:inline-block}
+.btn-o:hover{border-color:rgba(250,246,238,.5);color:var(--cream)}
+.hero-img-wrap{position:relative}
+.hero-img-wrap img{width:100%;border-radius:2px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.hero-badge{position:absolute;bottom:-1.2rem;left:-1.2rem;background:var(--terracotta);color:var(--cream);padding:1rem 1.4rem;font-family:var(--f-s);font-size:1rem;font-style:italic;box-shadow:0 8px 24px rgba(0,0,0,.25);max-width:220px}
+
+/* SECTION WRAPPER */
+.sw{max-width:1100px;margin:0 auto;padding:6rem 2.5rem}
+.sl{display:inline-flex;align-items:center;gap:.7rem;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
+.sl::before{content:'';width:20px;height:1px;background:var(--gold)}
+h2.st{font-family:var(--f-s);font-size:clamp(2.1rem,4vw,3.4rem);font-weight:300;line-height:1.15;color:var(--ink)}
+h2.st em{color:var(--terracotta);font-style:italic}
+.body-p{font-size:.97rem;color:rgba(14,26,14,.68);line-height:1.9;margin-top:1.2rem;max-width:65ch}
+
+/* PROBLEM */
+#problem{background:var(--cream)}
+.trigger-list{display:flex;flex-direction:column;gap:1rem;margin-top:3rem}
+.trigger{display:flex;align-items:flex-start;gap:1.2rem;padding:1.5rem 1.7rem;background:white;border:1px solid rgba(184,148,63,.12);border-left:3px solid var(--terracotta);transition:box-shadow .25s,transform .2s}
+.trigger:hover{box-shadow:0 4px 20px rgba(14,26,14,.07);transform:translateX(4px)}
+.trigger-icon{font-size:1.2rem;flex-shrink:0;margin-top:.1rem;opacity:.75}
+.trigger-text{font-size:.94rem;color:rgba(14,26,14,.72);line-height:1.75}
+
+/* METHOD */
+#method{background:var(--ink2)}
+.method-list{margin-top:3rem;display:flex;flex-direction:column;gap:1.3rem}
+.method-item{padding:1.8rem 2rem;background:rgba(255,255,255,.03);border:1px solid rgba(250,246,238,.08);border-left:3px solid var(--gold)}
+.method-item h3{font-family:var(--f-s);font-size:1.35rem;font-style:italic;color:var(--gold);margin-bottom:.6rem}
+.method-item p{font-size:.92rem;color:rgba(250,246,238,.62);line-height:1.8}
+
+/* PROGRAM */
+#program{background:var(--cream2)}
+.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:rgba(14,26,14,.08);margin-top:3.5rem}
+.prog-card{padding:2.6rem 2.2rem;background:var(--cream2);position:relative}
+.prog-n{font-family:var(--f-s);font-size:3rem;font-weight:300;color:rgba(196,113,74,.18);line-height:1;margin-bottom:1rem}
+.prog-title{font-family:var(--f-s);font-size:1.5rem;font-style:italic;color:var(--terracotta);margin-bottom:.9rem}
+.prog-desc{font-size:.88rem;color:rgba(14,26,14,.65);line-height:1.8}
+
+/* MARJORIE */
+#marjorie{background:var(--sand)}
+.marjorie-inner{display:grid;grid-template-columns:1fr 1.5fr;gap:5rem;align-items:center}
+.marjorie-photo{width:100%;border-radius:50%;aspect-ratio:1;object-fit:cover;box-shadow:0 8px 40px rgba(14,26,14,.15),0 0 0 8px rgba(184,148,63,.12)}
+.marjorie-name{font-family:var(--f-s);font-size:1.8rem;font-style:italic;color:var(--ink);margin-bottom:.3rem}
+.marjorie-role{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+
+/* PHOTO STRIP */
+#atelier-photo{background:var(--cream)}
+.photo-strip{margin-top:3rem;position:relative}
+.photo-strip img{width:100%;border-radius:2px;display:block}
+.photo-cap{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:1.6rem 2rem 1.3rem;
+  background:linear-gradient(to top,rgba(20,15,10,.85) 0%,rgba(20,15,10,.55) 60%,transparent 100%);
+  font-family:var(--f-s);font-size:1.15rem;font-style:italic;color:var(--cream);
+  line-height:1.4;
+}
+.photo-cap strong{color:var(--gold3);font-style:normal;font-weight:500}
+
+/* PRICE / INFOS */
+#infos-hybride{background:var(--ink2);position:relative;overflow:hidden}
+.infos-inner{max-width:900px;margin:0 auto;position:relative;z-index:2}
+.studio-photo{margin-top:3rem;border-radius:2px;overflow:hidden}
+.studio-photo img{width:100%}
+.infos-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem}
+.infos-block{padding:2rem 0;border-top:1px solid rgba(250,246,238,.1)}
+.infos-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+.infos-value{font-family:var(--f-s);font-size:1.25rem;color:var(--cream);line-height:1.5}
+.infos-sub{font-size:.85rem;color:rgba(250,246,238,.5);margin-top:.3rem}
+.price-box{margin-top:3rem;padding:2.5rem;background:rgba(184,148,63,.08);border:1px solid rgba(184,148,63,.25);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem}
+.price-amount{font-family:var(--f-s);font-size:3.2rem;font-weight:300;color:var(--gold);line-height:1}
+.price-desc{font-size:.88rem;color:rgba(250,246,238,.6);max-width:32ch;line-height:1.7}
+.cta-box{margin-top:3rem;text-align:center;padding:3rem;background:rgba(255,255,255,.03);border:1px solid rgba(184,148,63,.2)}
+.cta-title{font-family:var(--f-s);font-size:1.8rem;font-style:italic;color:var(--cream);margin-bottom:1.5rem}
+.cta-contacts{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;margin-top:2rem}
+.cc-l{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(250,246,238,.35);margin-bottom:.3rem}
+.cc-v{font-size:1rem;color:var(--gold)}
+
+/* FORMATS */
+#formats{background:var(--cream)}
+.formats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-top:3rem}
+.format-card{background:white;border:1px solid rgba(184,148,63,.18);padding:2.2rem 1.8rem;display:flex;flex-direction:column;gap:1rem}
+.format-badge{display:inline-block;align-self:flex-start;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terracotta);border:1px solid rgba(196,113,74,.3);background:rgba(196,113,74,.08);padding:.3rem .7rem}
+.format-title{font-family:var(--f-s);font-size:1.4rem;font-style:italic;color:var(--ink)}
+.format-tag{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.format-desc{font-size:.88rem;color:rgba(14,26,14,.65);line-height:1.75;flex-grow:1}
+.format-price{font-family:var(--f-s);font-size:1.6rem;color:var(--terracotta)}
+.format-meta{list-style:none;display:flex;flex-direction:column;gap:.35rem;font-size:.8rem;color:rgba(14,26,14,.7);border-top:1px solid rgba(184,148,63,.15);border-bottom:1px solid rgba(184,148,63,.15);padding:.9rem 0;margin:.2rem 0}
+.format-meta li{display:flex;justify-content:space-between;gap:1rem}
+.format-meta li span:first-child{color:var(--muted);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase}
+.format-meta li span:last-child{text-align:right;font-weight:500;color:var(--ink)}
+.format-cta{margin-top:.5rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--terracotta);border-bottom:1px solid var(--terracotta);align-self:flex-start;padding-bottom:2px}
+.format-email{display:flex;gap:.5rem;margin-top:.5rem;flex-wrap:wrap}
+.format-email input{flex:1;min-width:120px;padding:.6rem .8rem;border:1px solid rgba(14,26,14,.15);font-size:.85rem;font-family:var(--f-n)}
+.format-notify{display:inline-block;margin-top:.5rem;padding:.6rem 1rem;background:var(--terracotta);color:white;text-decoration:none;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.format-email button{padding:.6rem 1rem;background:var(--terracotta);color:white;border:none;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:960px){.formats-grid{grid-template-columns:1fr}}
+
+/* FOOTER */
+footer{background:#2C3F52;padding:2.2rem 2.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1.2rem;border-top:1px solid rgba(201,168,76,.2)}
+.fb{display:flex;align-items:center;gap:.7rem}
+.fl{width:28px;height:28px;border-radius:50%;object-fit:cover;opacity:.7}
+.fn{font-family:var(--f-s);font-size:.95rem;color:var(--gold)}
+.fn small{display:block;font-family:var(--f-n);font-size:.62rem;color:rgba(247,243,238,.35);font-style:normal;margin-top:.15rem}
+.fc{font-size:.65rem;color:rgba(247,243,238,.25)}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.vis{opacity:1;transform:none}
+
+/* MOBILE */
+@media(max-width:960px){
+  .hero-grid,.marjorie-inner{grid-template-columns:1fr;gap:2.5rem}
+  .hero-img-wrap{order:-1}
+  .prog-grid{grid-template-columns:1fr}
+  .infos-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .hb{display:block}
+  .price-box{flex-direction:column;text-align:center}
+}
+@media(max-width:600px){
+  nav{padding:.8rem 1.5rem}
+  .sw{padding:4.5rem 1.5rem}
+  #hero{padding:6rem 1.5rem 3rem}
+  .ha{flex-direction:column}
+  .btn-g,.btn-o{text-align:center}
+  footer{flex-direction:column;align-items:flex-start}
+  .hero-badge{position:static;margin-top:1rem;max-width:none}
+}
+
+/* ============================================================
+   NAV GLOBAL DU SITE (identique sur toutes les pages)
+   ============================================================ */
+.nav-reserve{font-family:var(--f-n);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;background:var(--gold);color:var(--dark);padding:.6rem 1.2rem;text-decoration:none;white-space:nowrap;transition:background .25s}
+.nav-reserve:hover{background:var(--gold2)}
+@media(max-width:900px){.nav-reserve{margin-left:auto;margin-right:1rem;padding:.55rem .9rem;font-size:.7rem}.site-nav-burger{order:3}}
+.cta-band{text-align:center;padding:48px 24px;background:var(--cream)}
+.cta-band.dark{background:var(--ink2)}
+.cta-band p{font-size:1rem;margin:0 0 18px;color:var(--ink2)}
+.cta-band.dark p{color:var(--cream)}
+.cta-band small{display:block;margin-top:12px;font-size:.8rem;opacity:.75}
+.alt-write a{color:inherit;text-decoration:underline;text-underline-offset:3px;font-weight:400}
+.format-book{margin-top:.75rem;align-self:flex-start}
+.site-nav{position:fixed;top:0;left:0;right:0;height:68px;background:var(--ink2);display:flex;align-items:center;justify-content:space-between;padding:0 2rem;z-index:100}
+.site-nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.site-nav-logo-text{font-family:var(--f-s);font-size:1.2rem;font-weight:400;color:var(--cream);letter-spacing:.04em;line-height:1.2}
+.site-nav-logo-text span{display:block;font-size:.7rem;font-family:var(--f-n);font-weight:300;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+.site-nav-links{display:flex;gap:2rem;list-style:none}
+.site-nav-links a{font-family:var(--f-n);font-size:.82rem;font-weight:400;color:var(--cream);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;padding-bottom:2px;border-bottom:1px solid transparent;transition:border-color .2s,color .2s}
+.site-nav-links a:hover,.site-nav-links a.active{color:var(--gold);border-bottom-color:var(--gold)}
+.site-nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.site-nav-burger span{display:block;width:24px;height:1.5px;background:var(--cream);transition:transform .3s,opacity .3s}
+.site-nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.site-nav-burger.open span:nth-child(2){opacity:0}
+.site-nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+@media(max-width:700px){
+  .site-nav-burger{display:flex}
+  .site-nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--ink2);flex-direction:column;gap:0;padding:.5rem 0 1rem}
+  .site-nav-links.open{display:flex}
+  .site-nav-links li{padding:0}
+  .site-nav-links a{display:block;padding:.75rem 2rem;border-bottom:none;font-size:.9rem}
+}
+
+</style>
+<link href="/favicon.ico" rel="icon" sizes="48x48"/>
+<link href="/assets/media/favicon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="/assets/media/apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="website" property="og:type"/>
+<meta content="en_GB" property="og:locale"/>
+<meta content="IFSU Équilibre" property="og:site_name"/>
+<meta content="Meditation Discovery — 3 formats | IFSU Ath" property="og:title"/>
+<meta content="Meditation Discovery in Ath: 3 formats (weekly, weekend, online coming soon). Small group, 5 people max. Marjorie Mathieu, IFSU Belgium." property="og:description"/>
+<meta content="https://ifsu-equilibre.be/en/atelier-decouverte.html" property="og:url"/>
+<meta content="https://ifsu-equilibre.be/assets/media/og-image.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+</head>
+<body>
+<nav class="site-nav" id="snav">
+<a class="site-nav-logo" href="/en/">
+<svg height="36" viewbox="0 0 56 56" width="36" xmlns="http://www.w3.org/2000/svg">
+<circle cx="28" cy="28" fill="none" opacity="0.9" r="26" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.8" r="21" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.7" r="16" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.6" r="11" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="28" fill="none" opacity="0.5" r="6" stroke="#C9A84C" stroke-width="0.8"></circle>
+<circle cx="28" cy="2" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="47.5" cy="9.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="54" cy="28" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="47.5" cy="46.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="28" cy="54" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="8.5" cy="46.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="2" cy="28" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<circle cx="8.5" cy="9.5" fill="#C9A84C" opacity="0.75" r="2.2"></circle>
+<defs><lineargradient id="fg" x1="0" x2="0" y1="1" y2="0"><stop offset="0%" stop-color="#C4714A"></stop><stop offset="100%" stop-color="#F0EAE0"></stop></lineargradient></defs>
+<ellipse cx="28" cy="26" fill="url(#fg)" opacity="0.9" rx="3" ry="5"></ellipse>
+</svg>
+<div class="site-nav-logo-text">IFSU Équilibre<span>Ath · Hainaut</span></div>
+</a>
+<button aria-label="Menu" class="site-nav-burger" id="sburger"><span></span><span></span><span></span></button>
+<ul class="site-nav-links" id="snav-links">
+<li><a href="/en/">Home</a></li>
+<li><a href="/en/yoga.html">Yoga</a></li>
+<li><a class="active" href="/en/meditation.html">Meditation</a></li>
+<li><a href="/carnets.html">Notebooks (FR)</a></li>
+<li><a href="/ateliers.html">Workshops (FR)</a></li>
+<li><a href="/retraite.html">Retreat (FR)</a></li>
+<li><a href="/atelier-decouverte.html" hreflang="fr" lang="fr">FR</a></li></ul>
+<a class="nav-reserve" href="#reserver">Book my place</a>
+</nav>
+<!-- HERO -->
+<section id="hero">
+<div class="hbg"></div>
+<div class="hero-grid">
+<div>
+<span class="he">Meditation Discovery · Ath</span>
+<h1 class="ht">Learn to meditate,<br/>in Ath — <em>without putting<br/>pressure on yourself.</em></h1>
+<p class="hs">You've already tried on your own — an app, a couple of YouTube videos, then nothing after day three. That's not a lack of willpower on your part: learning to sit and breathe with nobody to guide you is hard, even for the most motivated. Three formats, one path: choose the one that fits your diary.</p>
+<div class="ha"><a class="btn-g" href="#reserver">Book my place</a>
+<a class="btn-o" href="#formats">See the formats</a></div>
+</div>
+<div class="hero-img-wrap rv">
+<img alt="Meditation space, cushion and herbal tea" src="/assets/media/atelier-decouverte-img-1.jpg"/>
+<div class="hero-badge">5 people maximum per group</div>
+</div>
+</div>
+</section>
+<!-- FORMATS -->
+<section id="formats">
+<div class="sw">
+<p class="sl rv">Three formats</p>
+<h2 class="st rv">One path, <em>the pace that suits you.</em></h2>
+<p class="body-p rv">Same introduction, same content — you choose how to fit it into your diary.</p>
+<div class="formats-grid">
+<div class="format-card rv">
+<div class="format-title">Weekly</div>
+<div class="format-tag">The gentlest pace</div>
+<p class="format-desc">3 workshops, one Thursday evening a week, over 3 weeks. The gentlest pace for fitting it in without upsetting your diary.</p>
+<ul class="format-meta">
+<li><span>Duration</span><span>3 × 1.5–2 h</span></li>
+<li><span>Dates</span><span>5, 12, 19 Nov 2026</span></li>
+<li><span>Time</span><span>18:00</span></li>
+<li><span>Place</span><span>IFSU Studio, Ath</span></li>
+<li><span>Group</span><span>5 people max</span></li>
+</ul>
+<div class="format-price">€180</div>
+<a class="format-cta" href="#infos-hybride">See the details →</a>
+<a class="btn-g format-book" href="#reserver">Book my place</a>
+</div>
+<div class="format-card rv">
+<div class="format-title">Weekend Immersion</div>
+<div class="format-tag">For tight diaries</div>
+<p class="format-desc">2 Saturday afternoons, with two weeks of guided practice between them. For those whose week leaves no room.</p>
+<ul class="format-meta">
+<li><span>Duration</span><span>2 × 3.5 h</span></li>
+<li><span>Dates</span><span>7 and 21 Nov 2026</span></li>
+<li><span>Time</span><span>14:00 – 17:30</span></li>
+<li><span>Place</span><span>IFSU Studio, Ath</span></li>
+<li><span>Group</span><span>5 people max</span></li>
+</ul>
+<div class="format-price">€180</div>
+<a class="format-cta" href="#infos-bootcamp">See the details →</a>
+<a class="btn-g format-book" href="#reserver">Book my place</a>
+</div>
+<div class="format-card rv">
+<span class="format-badge">Coming soon</span>
+<div class="format-title">Online</div>
+<div class="format-tag">At your own pace, on your own</div>
+<p class="format-desc">To move forward alone, at your own pace, with no fixed dates. The full version is coming soon.</p>
+<ul class="format-meta">
+<li><span>Format</span><span>100% online</span></li>
+<li><span>Pace</span><span>Free</span></li>
+<li><span>Launch</span><span>Date to be announced</span></li>
+</ul>
+<div class="format-price">€150</div>
+<a class="format-notify" href="mailto:ifsu@etik.com?subject=Atelier%20vid%C3%A9o%20%3A%20me%20pr%C3%A9venir&amp;body=Bonjour%20Marjorie%2C%0A%0AJe%20souhaite%20%C3%AAtre%20pr%C3%A9venu%C2%B7e%20du%20lancement%20de%20l%27atelier%20vid%C3%A9o.%0A%0AMon%20pr%C3%A9nom%20%3A%20">Notify me by email</a>
+</div>
+</div>
+</div>
+</section>
+<!-- PROBLÈME -->
+<section id="problem">
+<div class="sw">
+<p class="sl rv">The real problem</p>
+<h2 class="st rv">It isn't you.<br/>It's that you were left <em>without a guide.</em></h2>
+<div class="trigger-list">
+<div class="trigger rv"><span class="trigger-icon">◆</span><span class="trigger-text">You never know whether your posture is right, so doubt sets in and you give up.</span></div>
+<div class="trigger rv"><span class="trigger-icon">◆</span><span class="trigger-text">You're afraid of “doing it wrong”, of never managing to calm your thoughts.</span></div>
+<div class="trigger rv"><span class="trigger-icon">◆</span><span class="trigger-text">Alone at home, nobody is there to correct what's sticking, or to tell you it's normal.</span></div>
+</div>
+</div>
+</section>
+<!-- MÉTHODE -->
+<section id="method">
+<div class="sw">
+<p class="sl rv" style="color:var(--gold)">The method</p>
+<h2 class="st rv light" style="color:var(--cream)">A format designed so <em>we move forward together.</em></h2>
+<p class="body-p rv" style="color:rgba(250,246,238,.6)">Small-group workshops, daily audio follow-up at home, and two concrete tools so you're never stuck alone — the common foundation of all 3 formats.</p>
+<div class="method-list">
+<div class="method-item rv">
+<h3>Small-group workshops</h3>
+<p>We learn the posture, correct what's blocking, practise side by side. The number and rhythm of sessions depend on the format chosen.</p>
+</div>
+<div class="method-item rv">
+<h3>Daily audio micro-sessions</h3>
+<p>To keep the thread at home, day after day, without spending hours on it.</p>
+</div>
+<div class="method-item rv">
+<h3>The 15-Day Follow-up Notebook</h3>
+<p>One page a day to note what you feel, what sticks, what moves forward. It's what turns the trial into a habit.</p>
+</div>
+<div class="method-item rv">
+<h3>The “Anti-Blocks” Practical Guide</h3>
+<p>Answers to the most common blocks — legs going numb, the mind racing, discouragement on day 4 — so you're never stuck alone.</p>
+</div>
+<div class="method-item rv">
+<h3>5 people maximum per group</h3>
+<p>Because at that size I really see each person, and everyone can ask their questions without feeling in the way.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- PROGRAMME -->
+<section id="program">
+<div class="sw">
+<p class="sl rv">The programme</p>
+<h2 class="st rv">The same content, <em>whichever format you choose.</em></h2>
+<div class="prog-grid">
+<div class="prog-card rv">
+<div class="prog-n">01</div>
+<div class="prog-title">The foundations</div>
+<div class="prog-desc">Sitting without pain, defusing what we think we know about meditation, getting used to your breath.</div>
+</div>
+<div class="prog-card rv">
+<div class="prog-n">02</div>
+<div class="prog-title">Body and senses</div>
+<div class="prog-desc">Aligning your spine, no longer being distracted by the noises around you, releasing through the body scan.</div>
+</div>
+<div class="prog-card rv">
+<div class="prog-n">03</div>
+<div class="prog-title">Mind and independence</div>
+<div class="prog-desc">Stopping judging yourself in your practice, discovering the sound OM, meditating alone with confidence.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PHOTO ATELIER -->
+<div class="cta-band rv"><p>5 places per group. Reply within 48 h.</p><a class="btn-g" href="#reserver">Book my place</a></div>
+<section id="atelier-photo">
+<div class="sw" style="padding-top:4rem;padding-bottom:4rem">
+<div class="photo-strip rv">
+<img alt="Meditation retreat at Koningsteen, Belgium" src="/assets/media/atelier-decouverte-img-2.jpg"/>
+<p class="photo-cap">Photo taken during a meditation retreat at <strong>Koningsteen, Belgium</strong>.</p>
+</div>
+<div class="photo-strip rv" style="margin-top:2.5rem">
+<img alt="Small group at a meditation workshop" src="/assets/media/atelier-decouverte-img-3.jpg"/>
+<p class="photo-cap">One workshop, in a small group — up to 5 people, in Ath.</p>
+</div>
+</div>
+</section>
+<!-- QUI ANIME -->
+<section id="marjorie">
+<div class="sw">
+<p class="sl rv">Who leads</p>
+<div class="marjorie-inner">
+<img alt="Marjorie Mathieu" class="marjorie-photo rv" src="/assets/media/atelier-decouverte-img-4.jpg"/>
+<div class="rv">
+<div class="marjorie-name">Marjorie Mathieu</div>
+<div class="marjorie-role">IFSU Belgium · Ath</div>
+<p class="body-p" style="margin-top:0">I've practised meditation since 2013 and have taught since 2014. I've learned that you don't need jargon or big promises for it to work: just a clear method and someone to correct you at the right moment. That's what I pass on to you, workshop after workshop, until it becomes as natural as breathing.</p>
+<p class="body-p">And if one day you feel ready to go further — to move on to something deeper, at your own pace, with no pressure — the <a href="/en/cycle-individuel.html" style="color:var(--gold);text-decoration:underline;">individual cycle</a> will be waiting. No urgency. Just a door that stays open.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- INFOS PRATIQUES — HYBRIDE -->
+<div class="cta-band dark rv"><p>You've read this far. What follows happens at the IFSU Studio.</p><a class="btn-g" href="#reserver">Book my place</a><small>Registration open until 2 November</small></div>
+<section id="infos-hybride">
+<div class="sw">
+<div class="infos-inner">
+<p class="sl rv" style="color:var(--gold)">Weekly format — practical information</p>
+<h2 class="st rv" style="color:var(--cream)">Next cohort, <em style="color:var(--gold2)">in Ath.</em></h2>
+<div class="infos-grid">
+<div class="infos-block rv">
+<div class="infos-label">Place</div>
+<div class="infos-value">IFSU Studio</div>
+<div class="infos-sub">Rue des Hauts-Degrés 20, Ath</div>
+<div class="studio-photo"><img alt="IFSU Studio, Ath" src="/assets/media/atelier-decouverte-img-5.jpg"/></div>
+</div>
+<div class="infos-block rv">
+<div class="infos-label">Dates</div>
+<div class="infos-value">Thursdays 18:00</div>
+<div class="infos-sub">5, 12 and 19 November</div>
+</div>
+<div class="infos-block rv">
+<div class="infos-label">Group</div>
+<div class="infos-value">5 participants</div>
+<div class="infos-sub">Strictly limited, for real follow-up</div>
+</div>
+<div class="infos-block rv">
+<div class="infos-label">Format</div>
+<div class="infos-value">4.5 hours minimum + 15 days</div>
+<div class="infos-sub">In person, audios, Notebook and Guide included</div>
+</div>
+</div>
+<div class="price-box rv">
+<div>
+<div class="price-desc" style="margin-bottom:.6rem">Full programme</div>
+<div class="price-desc">At least 4.5 hours in person, 15 days of audio follow-up, Follow-up Notebook and Anti-Blocks Guide included, private group.</div>
+</div>
+<div class="price-amount">€180</div>
+</div>
+<div class="cta-box rv">
+<div class="cta-title">Book my place</div>
+<div class="ha" style="justify-content:center"><a class="btn-g" href="#reserver">Book online</a></div>
+<p class="alt-write" style="text-align:center;font-size:1rem;margin:18px 0 0;color:#fff">Prefer to write to me? <a href="https://wa.me/32477091803">WhatsApp</a> or <a href="mailto:ifsu@etik.com">ifsu@etik.com</a></p>
+<div class="cta-contacts">
+<div>
+<div class="cc-l">WhatsApp</div>
+<div class="cc-v">+32 477 09 18 03</div>
+</div>
+<div>
+<div class="cc-l">Email</div>
+<div class="cc-v">ifsu@etik.com</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INFOS PRATIQUES — BOOTCAMP -->
+<section id="infos-bootcamp" style="background:var(--ink2);position:relative;overflow:hidden">
+<div class="sw">
+<div class="infos-inner">
+<p class="sl rv" style="color:var(--gold)">Weekend Immersion format — practical information</p>
+<h2 class="st rv" style="color:var(--cream)">Two Saturdays, <em style="color:var(--gold2)">for those who only have the weekend.</em></h2>
+<div class="infos-grid">
+<div class="infos-block rv">
+<div class="infos-label">Place</div>
+<div class="infos-value">IFSU Studio</div>
+<div class="infos-sub">Rue des Hauts-Degrés 20, Ath</div>
+<div class="studio-photo"><img alt="IFSU Studio, Ath" src="/assets/media/atelier-decouverte-img-5.jpg"/></div>
+</div>
+<div class="infos-block rv">
+<div class="infos-label">Dates</div>
+<div class="infos-value">2 Saturdays, 14:00–17:30</div>
+<div class="infos-sub">7 and 21 November 2026</div>
+</div>
+<div class="infos-block rv">
+<div class="infos-label">Group</div>
+<div class="infos-value">5 participants</div>
+<div class="infos-sub">Strictly limited, for real follow-up</div>
+</div>
+<div class="infos-block rv">
+<div class="infos-label">Format</div>
+<div class="infos-value">2 × 3.5 h + 13 days</div>
+<div class="infos-sub">In person, audios, Notebook and Guide included</div>
+</div>
+</div>
+<div class="price-box rv">
+<div>
+<div class="price-desc" style="margin-bottom:.6rem">Full programme</div>
+<div class="price-desc">2 Saturdays in person, 13 days of guided audio practice in between, Follow-up Notebook and Anti-Blocks Guide included, private group with daily follow-up.</div>
+</div>
+<div class="price-amount">€180</div>
+</div>
+<div class="cta-box rv">
+<div class="cta-title">Book my weekend</div>
+<div class="ha" style="justify-content:center"><a class="btn-g" href="#reserver">Book online</a></div>
+<p class="alt-write" style="text-align:center;font-size:1rem;margin:18px 0 0;color:#fff">Prefer to write to me? <a href="https://wa.me/32477091803">WhatsApp</a> or <a href="mailto:ifsu@etik.com">ifsu@etik.com</a></p>
+<div class="cta-contacts">
+<div>
+<div class="cc-l">WhatsApp</div>
+<div class="cc-v">+32 477 09 18 03</div>
+</div>
+<div>
+<div class="cc-l">Email</div>
+<div class="cc-v">ifsu@etik.com</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="reserver" style="background:var(--cream);scroll-margin-top:68px">
+<div class="sw" style="max-width:720px;margin:0 auto;padding:72px 24px">
+<div class="sl rv">Booking</div>
+<h2 class="st rv">Book my place</h2>
+<p class="body-p rv">Choose your format in the form. I'll reply within 48 h to confirm your place. Registration open until 2 November.</p>
+<p class="body-p rv" style="margin-top:-.4rem"><a href="/conditions.html" style="display:inline-block;margin-top:.6rem;padding:.5rem 1.2rem;border:1px solid #C4714A;color:#C4714A;text-decoration:none;font-weight:500;font-size:.88rem;font-style:normal;letter-spacing:.02em;border-radius:2px">Terms: price, withdrawal, refund (FR)</a></p>
+<p class="body-p" style="font-size:.85rem">By submitting this form, you agree that your answers will be used to confirm your place. Details in the <a href="/confidentialite.html">privacy policy (FR)</a>.</p>
+<iframe data-tally-src="https://tally.so/embed/J9a4V4?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" frameborder="0" height="1488" loading="lazy" marginheight="0" marginwidth="0" title="Meditation Discovery, Nov. 2026" width="100%"></iframe>
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+<p class="alt-write" style="text-align:center;font-size:1rem;margin:18px 0 0;color:var(--ink2)">Prefer to write to me? <a href="https://wa.me/32477091803">WhatsApp</a> or <a href="mailto:ifsu@etik.com">ifsu@etik.com</a></p>
+</div>
+</section>
+<!-- FOOTER -->
+<footer>
+<div class="fb">
+<img alt="IFSU" class="fl" src="/assets/media/meditation-img-1.png"/>
+<div class="fn">IFSU Belgium <small>Meditation Discovery workshop · Ath, Hainaut</small></div>
+</div>
+<p class="fc">© 2026 IFSU Équilibre · <a href="mailto:ifsu@etik.com" style="color:inherit;">ifsu@etik.com</a></p>
+<p class="fc" style="margin-top:.4rem">Site created by Marjorie Mathieu, IFSU Équilibre. Reproduction of the code is prohibited.</p>
+<p class="fc" style="margin-top:.4rem"><a href="/mentions-legales.html" style="color:inherit;">Legal notice (FR)</a> · <a href="/confidentialite.html" style="color:inherit;">Privacy and cookies (FR)</a> · <a href="/conditions.html" style="color:inherit;">Terms (FR)</a></p>
+</footer>
+<script>
+const nav=document.getElementById('snav');
+window.addEventListener('scroll',()=>nav.classList.toggle('s',scrollY>60));
+document.querySelectorAll('.rv').forEach(el=>{
+  new IntersectionObserver(([e])=>{if(e.isIntersecting)el.classList.add('vis')},{threshold:.1}).observe(el);
+});
+</script>
+<script>
+document.getElementById('sburger').addEventListener('click',function(){
+  this.classList.toggle('open');
+  document.getElementById('snav-links').classList.toggle('open');
+});
+</script>
+</body>
+</html>
