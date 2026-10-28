@@ -1216,6 +1216,39 @@ details[open] summary::after{content:"−";}
 </div>
 </div>
 </section>
+<!-- ACCESS: Google Maps, loaded on click -->
+<style id="acces-css">
+.mapbox-sec{background:#F7F3EE;padding:4rem 1.5rem;}
+.mapbox-in{max-width:900px;margin:0 auto;}
+.mapbox-sec h2{font-family:var(--font-titre,Georgia,serif);font-weight:300;font-size:clamp(1.8rem,4vw,2.6rem);color:#2C3F52;margin:0 0 1rem;}
+.mapbox-addr{margin:0 0 1.5rem;line-height:1.7;color:#444;}
+.mapbox-addr strong{color:#2C3F52;font-weight:500;}
+.mapbox-addr span{font-size:.88rem;color:#666;}
+.mapbox-frame{position:relative;min-height:360px;background:#EDE8E0;border:1px solid rgba(44,63,82,.15);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;padding:1.5rem;text-align:center;}
+.mapbox-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.mapbox-btn{background:#2C3F52;color:#F7F3EE;border:0;padding:.85rem 1.8rem;font:inherit;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;}
+.mapbox-btn:hover,.mapbox-btn:focus-visible{background:#C9A84C;color:#2C3F52;}
+.mapbox-note{margin:0;font-size:.8rem;color:#666;max-width:46ch;}
+.mapbox-note a,.mapbox-open a{color:#2C3F52;text-decoration:underline;text-decoration-color:#C9A84C;text-underline-offset:3px;}
+.mapbox-open{margin:1rem 0 0;font-size:.9rem;}
+</style>
+<section class="mapbox-sec" id="acces" aria-labelledby="acces-titre">
+  <div class="mapbox-in">
+    <h2 id="acces-titre">Getting to the studio</h2>
+    <p class="mapbox-addr"><strong>IFSU Studio</strong><br>Rue des Hauts-Degrés 20, 7800 Ath<br><span>Red-brick front, white door.</span></p>
+    <div class="mapbox-frame" data-src="https://www.google.com/maps?q=Rue+des+Hauts-Degr%C3%A9s+20%2C+7800+Ath%2C+Belgique&z=17&output=embed" data-title="Google Maps: IFSU Studio, rue des Hauts-Degrés 20, Ath">
+      <button type="button" class="mapbox-btn">Show the map</button>
+      <p class="mapbox-note">The map comes from Google Maps and only loads when you click. <a href="/en/confidentialite.html">Learn more</a></p>
+    </div>
+    <p class="mapbox-open"><a href="https://www.google.com/maps/search/?api=1&query=Rue+des+Hauts-Degr%C3%A9s+20%2C+7800+Ath%2C+Belgique" target="_blank" rel="noopener">Open in Google Maps</a></p>
+  </div>
+</section>
+<script>
+(function(){var f=document.querySelector('.mapbox-frame');if(!f)return;var b=f.querySelector('.mapbox-btn');if(!b)return;
+b.addEventListener('click',function(){var i=document.createElement('iframe');i.src=f.getAttribute('data-src');i.title=f.getAttribute('data-title');i.loading='lazy';i.referrerPolicy='no-referrer-when-downgrade';i.setAttribute('allowfullscreen','');
+f.textContent='';f.appendChild(i);});})();
+</script>
+
 <!-- FAQ -->
 <section class="section" id="questions">
 <div class="section-inner">
