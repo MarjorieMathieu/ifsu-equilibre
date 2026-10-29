@@ -12,7 +12,7 @@
     startDate: '2026-10-29',          // premier jour d'affichage (AAAA-MM-JJ)
     endDate: '2026-11-15',            // dernier jour d'affichage, inclus
     imgBase: 'https://ifsu-equilibre.be/assets/media/',
-    delayMs: 3000,
+    delayMs: 10000,
     snoozeDays: 5,                    // après « Plus tard » / fermeture : silence pendant 5 jours
     storageKey: 'ifsu-retraite-popup',
     excludePaths: ['/retraite', '/retraite.html', '/en/retraite', '/en/retraite.html'],
