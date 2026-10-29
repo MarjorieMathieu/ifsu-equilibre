@@ -68,12 +68,13 @@
     var d = new Date();
     return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
   }
+  function skey() { return CFG.storageKey + (isEn() ? '-en' : '-fr'); } // un état par langue : fermer ou cliquer en français n'éteint pas la version anglaise
   function readState() {
-    try { return JSON.parse(window.localStorage.getItem(CFG.storageKey) || '{}') || {}; }
+    try { return JSON.parse(window.localStorage.getItem(skey()) || '{}') || {}; }
     catch (e) { return {}; }
   }
   function writeState(s) {
-    try { window.localStorage.setItem(CFG.storageKey, JSON.stringify(s)); } catch (e) { /* stockage indisponible : on continue */ }
+    try { window.localStorage.setItem(skey(), JSON.stringify(s)); } catch (e) { /* stockage indisponible : on continue */ }
   }
   function pathOf() { return (window.location.pathname || '/'); }
   function listHas(list, p) {
