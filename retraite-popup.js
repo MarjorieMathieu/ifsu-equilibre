@@ -8,7 +8,7 @@
 
   var CFG = {
     pageUrl: 'https://ifsu-equilibre.be/retraite.html', // absolu : fonctionne aussi depuis l'app
-    startDate: '2026-10-30',          // premier jour d'affichage (AAAA-MM-JJ)
+    startDate: '2026-10-29',          // premier jour d'affichage (AAAA-MM-JJ)
     endDate: '2026-11-15',            // dernier jour d'affichage, inclus
     delayMs: 3000,
     snoozeDays: 5,                    // après « Plus tard » / fermeture : silence pendant 5 jours
