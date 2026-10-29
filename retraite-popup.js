@@ -242,7 +242,16 @@
     if (!shouldShow()) return;
     timer = window.setTimeout(function () {
       timer = null;
-      if (!root && shouldShow() && !document.hidden) open();
+      if (root || !shouldShow()) return;
+      if (document.hidden) { // onglet en arrière-plan : on attend qu'il revienne au premier plan
+        document.addEventListener('visibilitychange', function again() {
+          if (document.hidden) return;
+          document.removeEventListener('visibilitychange', again);
+          check();
+        });
+        return;
+      }
+      open();
     }, CFG.delayMs);
   }
 
