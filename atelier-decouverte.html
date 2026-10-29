@@ -8,7 +8,7 @@
 <link rel="alternate" hreflang="fr" href="https://ifsu-equilibre.be/atelier-decouverte.html">
 <link rel="alternate" hreflang="en" href="https://ifsu-equilibre.be/en/atelier-decouverte.html">
 <link rel="alternate" hreflang="x-default" href="https://ifsu-equilibre.be/atelier-decouverte.html">
-<meta name="description" content="Découverte Méditation à Ath : 3 formats (hebdomadaire, week-end, en ligne bientôt). Petit groupe, 5 personnes max. Marjorie Mathieu, IFSU Belgique.">
+<meta name="description" content="Apprendre à méditer seul·e, à Ath : petit groupe de 5, 15 audios, carnet de suivi et guide anti-blocages. Marjorie Mathieu, IFSU Belgique.">
 <link rel="stylesheet" href="/assets/fonts/fonts.css">
 <style>
 :root{
@@ -141,7 +141,7 @@ h2.st em{color:var(--terracotta);font-style:italic}
 
 /* FORMATS */
 #formats{background:var(--cream)}
-.formats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-top:3rem}
+.formats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.8rem;margin-top:3rem}
 .format-card{background:white;border:1px solid rgba(184,148,63,.18);padding:2.2rem 1.8rem;display:flex;flex-direction:column;gap:1rem}
 .format-badge{display:inline-block;align-self:flex-start;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terracotta);border:1px solid rgba(196,113,74,.3);background:rgba(196,113,74,.08);padding:.3rem .7rem}
 .format-title{font-family:var(--f-s);font-size:1.4rem;font-style:italic;color:var(--ink)}
@@ -158,6 +158,31 @@ h2.st em{color:var(--terracotta);font-style:italic}
 .format-notify{display:inline-block;margin-top:.5rem;padding:.6rem 1rem;background:var(--terracotta);color:white;text-decoration:none;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
 .format-email button{padding:.6rem 1rem;background:var(--terracotta);color:white;border:none;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
 @media(max-width:960px){.formats-grid{grid-template-columns:1fr}}
+
+/* POUR QUI */
+#pourqui{background:var(--cream2)}
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.who-card{background:white;border:1px solid rgba(184,148,63,.18);border-top:3px solid var(--terracotta);padding:1.8rem 1.6rem}
+.who-card h3{font-family:var(--f-s);font-size:1.4rem;font-style:italic;font-weight:400;color:var(--ink);margin-bottom:.6rem;line-height:1.25}
+.who-card p{font-size:.9rem;color:rgba(14,26,14,.68);line-height:1.75}
+.solve{margin-top:2.5rem;font-family:var(--f-s);font-size:1.6rem;font-style:italic;color:var(--ink);padding-left:1.2rem;border-left:3px solid var(--gold);line-height:1.4}
+.endbox{margin-top:3rem;padding:2rem 2.2rem;background:white;border-left:3px solid var(--gold)}
+.endbox-l{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+.endbox p{font-family:var(--f-s);font-size:1.5rem;font-style:italic;color:var(--ink);line-height:1.45}
+.takeaway{margin-top:2.5rem}
+.takeaway h3{font-family:var(--f-s);font-size:1.5rem;font-style:italic;font-weight:400;color:var(--terracotta);margin-bottom:1rem}
+.takeaway ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.takeaway li{font-size:.94rem;color:rgba(14,26,14,.72);padding-left:1.4rem;position:relative;line-height:1.7}
+.takeaway li::before{content:'◆';position:absolute;left:0;top:.4rem;color:var(--gold);font-size:.6rem}
+.online-row{margin-top:1.8rem;display:flex;align-items:center;justify-content:space-between;gap:1.2rem 2rem;flex-wrap:wrap;padding:1.4rem 1.8rem;background:white;border:1px dashed rgba(184,148,63,.45)}
+.online-row .ot{flex:1 1 300px}
+.online-row .format-title{margin:.5rem 0 .2rem}
+.online-row .format-desc{flex-grow:0}
+.online-row .format-price{white-space:nowrap}
+.price-list{list-style:none;margin-top:.2rem;display:flex;flex-direction:column;gap:.35rem}
+.price-list li{font-size:.88rem;color:rgba(250,246,238,.62);padding-left:1.1rem;position:relative;line-height:1.6}
+.price-list li::before{content:'—';position:absolute;left:0;color:var(--gold)}
+@media(max-width:960px){.who-grid{grid-template-columns:1fr}.online-row{flex-direction:column;align-items:flex-start}}
 
 /* FOOTER */
 footer{background:#2C3F52;padding:2.2rem 2.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1.2rem;border-top:1px solid rgba(201,168,76,.2)}
@@ -232,7 +257,7 @@ footer{background:#2C3F52;padding:2.2rem 2.5rem;display:flex;flex-wrap:wrap;just
 <meta property="og:locale" content="fr_BE">
 <meta property="og:site_name" content="IFSU Équilibre">
 <meta property="og:title" content="Découverte Méditation — 3 formats | IFSU Ath">
-<meta property="og:description" content="Découverte Méditation à Ath : 3 formats (hebdomadaire, week-end, en ligne bientôt). Petit groupe, 5 personnes max. Marjorie Mathieu, IFSU Belgique.">
+<meta property="og:description" content="Apprendre à méditer seul·e, à Ath : petit groupe de 5, 15 audios, carnet de suivi et guide anti-blocages. Marjorie Mathieu, IFSU Belgique.">
 <meta property="og:url" content="https://ifsu-equilibre.be/atelier-decouverte.html">
 <meta property="og:image" content="https://ifsu-equilibre.be/assets/media/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -291,11 +316,11 @@ footer{background:#2C3F52;padding:2.2rem 2.5rem;display:flex;flex-wrap:wrap;just
   <div class="hero-grid">
     <div>
       <span class="he">Découverte Méditation · Ath</span>
-      <h1 class="ht">Apprenez à méditer,<br>à Ath — <em>sans te mettre<br>la pression.</em></h1>
-      <p class="hs">Tu as déjà essayé seul·e — une appli, deux vidéos YouTube, puis plus rien après le troisième jour. Ce n'est pas un manque de volonté de ta part : c'est qu'apprendre à s'asseoir et respirer sans personne pour te guider, c'est difficile, même pour les plus motivés. Trois formats, un seul chemin : choisis celui qui correspond à ton agenda.</p>
+      <h1 class="ht">Apprends à méditer seul·e, <em>à Ath.</em></h1>
+      <p class="hs">Tu as déjà essayé de méditer… puis arrêté ? À Ath, tu apprends une méthode simple pour pratiquer seul·e : 3 jeudis soir ou 2 samedis après-midi, 5 personnes maximum, 15 audios, un carnet de suivi et un guide anti-blocages.</p>
       <div class="ha">
-        <a href="#reserver" class="btn-g">Je réserve ma place</a>
-        <a href="#formats" class="btn-o">Voir les formats</a>
+        <a href="#reserver" class="btn-g">Je veux apprendre à méditer seul·e</a>
+        <a href="#formats" class="btn-o">Voir les 3 formats</a>
       </div>
     </div>
     <div class="hero-img-wrap rv">
@@ -305,23 +330,46 @@ footer{background:#2C3F52;padding:2.2rem 2.5rem;display:flex;flex-wrap:wrap;just
   </div>
 </section>
 
+<!-- POUR QUI -->
+<section id="pourqui">
+  <div class="sw">
+    <p class="sl rv">Pour qui</p>
+    <h2 class="st rv">Ce programme est fait pour toi <em>si…</em></h2>
+    <div class="who-grid">
+      <div class="who-card rv">
+        <h3>Tu n'as jamais médité.</h3>
+        <p>Tu veux une méthode simple, progressive, avec quelqu'un à côté de toi pour démarrer.</p>
+      </div>
+      <div class="who-card rv">
+        <h3>Tu as essayé, puis arrêté.</h3>
+        <p>Une appli, une vidéo, un cours. Tu veux comprendre ce qui a coincé et retrouver une pratique réaliste.</p>
+      </div>
+      <div class="who-card rv">
+        <h3>Tu médites parfois.</h3>
+        <p>Sans régularité, sans méthode claire. Tu veux un cadre, un suivi et des réponses concrètes pour tenir dans la durée.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FORMATS -->
 <section id="formats">
   <div class="sw">
     <p class="sl rv">Trois formats</p>
-    <h2 class="st rv">Un seul chemin, <em>le rythme qui te convient.</em></h2>
-    <p class="body-p rv">Même initiation, même contenu — à toi de choisir comment l'intégrer à ton agenda.</p>
+    <h2 class="st rv">Une même méthode, <em>pour devenir autonome.</em></h2>
+    <p class="body-p rv">Même méthode, même contenu — tu choisis comment l'intégrer à ton agenda.</p>
     <div class="formats-grid">
       <div class="format-card rv">
         <div class="format-title">Hebdomadaire</div>
         <div class="format-tag">Le rythme le plus doux</div>
-        <p class="format-desc">3 ateliers, un jeudi soir par semaine, sur 3 semaines. Le rythme le plus doux pour intégrer sans bousculer ton agenda.</p>
+        <p class="format-desc">3 ateliers, un jeudi soir par semaine, sur 3 semaines. Le rythme le plus doux pour intégrer sans bousculer ton agenda. Entre les ateliers : un audio par jour, et un audio de rappel le mercredi (11 et 18 nov.) pour préparer tes questions.</p>
         <ul class="format-meta">
           <li><span>Durée</span><span>3 × 1h30-2h</span></li>
           <li><span>Dates</span><span>5, 12, 19 nov. 2026</span></li>
           <li><span>Horaire</span><span>18h00</span></li>
           <li><span>Lieu</span><span>Studio IFSU, Ath</span></li>
           <li><span>Groupe</span><span>5 personnes max</span></li>
+          <li><span>Suivi</span><span>15 audios · Carnet · Guide</span></li>
         </ul>
         <div class="format-price">180 €</div>
         <a href="#infos-hybride" class="format-cta">Voir les détails →</a>
@@ -337,24 +385,21 @@ footer{background:#2C3F52;padding:2.2rem 2.5rem;display:flex;flex-wrap:wrap;just
           <li><span>Horaire</span><span>14h00 – 17h30</span></li>
           <li><span>Lieu</span><span>Studio IFSU, Ath</span></li>
           <li><span>Groupe</span><span>5 personnes max</span></li>
+          <li><span>Suivi</span><span>Audios · Carnet · Guide</span></li>
         </ul>
         <div class="format-price">180 €</div>
         <a href="#infos-bootcamp" class="format-cta">Voir les détails →</a>
         <a href="#reserver" class="btn-g format-book">Je réserve ma place</a>
       </div>
-      <div class="format-card rv">
+    </div>
+    <div class="online-row rv">
+      <div class="ot">
         <span class="format-badge">Disponible prochainement</span>
-        <div class="format-title">En Ligne</div>
-        <div class="format-tag">À ton rythme, seul·e</div>
-        <p class="format-desc">Pour avancer seul·e, à ton propre rythme, sans contrainte de date fixe. La version complète arrive bientôt.</p>
-        <ul class="format-meta">
-          <li><span>Format</span><span>100% en ligne</span></li>
-          <li><span>Rythme</span><span>Libre</span></li>
-          <li><span>Lancement</span><span>Date à venir</span></li>
-        </ul>
-        <div class="format-price">150 €</div>
-        <a class="format-notify" href="mailto:ifsu@etik.com?subject=Atelier%20vid%C3%A9o%20%3A%20me%20pr%C3%A9venir&body=Bonjour%20Marjorie%2C%0A%0AJe%20souhaite%20%C3%AAtre%20pr%C3%A9venu%C2%B7e%20du%20lancement%20de%20l%27atelier%20vid%C3%A9o.%0A%0AMon%20pr%C3%A9nom%20%3A%20">Me prévenir par e-mail</a>
+        <div class="format-title">En ligne — à ton rythme, seul·e</div>
+        <p class="format-desc">100 % en ligne, sans date fixe. La version complète arrive bientôt.</p>
       </div>
+      <div class="format-price">150 €</div>
+      <a class="format-notify" href="mailto:ifsu@etik.com?subject=Atelier%20vid%C3%A9o%20%3A%20me%20pr%C3%A9venir&body=Bonjour%20Marjorie%2C%0A%0AJe%20souhaite%20%C3%AAtre%20pr%C3%A9venu%C2%B7e%20du%20lancement%20de%20l%27atelier%20vid%C3%A9o.%0A%0AMon%20pr%C3%A9nom%20%3A%20">Être prévenu·e du lancement</a>
     </div>
   </div>
 </section>
@@ -369,6 +414,7 @@ footer{background:#2C3F52;padding:2.2rem 2.5rem;display:flex;flex-wrap:wrap;just
       <div class="trigger rv"><span class="trigger-icon">◆</span><span class="trigger-text">Tu as peur de « mal faire », de ne jamais réussir à calmer tes pensées.</span></div>
       <div class="trigger rv"><span class="trigger-icon">◆</span><span class="trigger-text">Seul·e chez toi, personne n'est là pour corriger ce qui coince, ni pour te dire que c'est normal.</span></div>
     </div>
+    <p class="solve rv">Ici : une méthode, un suivi chaque jour, un groupe de cinq.</p>
   </div>
 </section>
 
@@ -377,7 +423,7 @@ footer{background:#2C3F52;padding:2.2rem 2.5rem;display:flex;flex-wrap:wrap;just
   <div class="sw">
     <p class="sl rv" style="color:var(--gold)">La méthode</p>
     <h2 class="st rv light" style="color:var(--cream)">Un format pensé pour <em>qu'on avance ensemble.</em></h2>
-    <p class="body-p rv" style="color:rgba(250,246,238,.6)">Des ateliers en petit groupe, un suivi audio quotidien à la maison, et deux outils concrets pour ne jamais rester bloqué·e seul·e — le socle commun aux 3 formats.</p>
+    <p class="body-p rv" style="color:rgba(250,246,238,.6)">Tu n'es pas laissé·e seul·e après le premier atelier : un audio chaque jour, un carnet de suivi, des réponses concrètes aux blocages. C'est le socle commun aux formats en présentiel.</p>
     <div class="method-list">
       <div class="method-item rv">
         <h3>Des ateliers en petit groupe</h3>
@@ -398,6 +444,10 @@ footer{background:#2C3F52;padding:2.2rem 2.5rem;display:flex;flex-wrap:wrap;just
       <div class="method-item rv">
         <h3>Quand c'est inconfortable</h3>
         <p>Il arrive que quelque chose de désagréable remonte : une peur, une colère, une tension intérieure. La tradition IFSU y voit une libération de tension. On ne résiste pas, on ne se juge pas, et si besoin on raccourcit la séance. C'est un réglage, pas un échec.</p>
+      </div>
+      <div class="method-item rv">
+        <h3>Une méthode transmise, pas une séance de relaxation</h3>
+        <p>Ce que tu apprends vient de la méditation védique IFSU, que j'enseigne depuis 2014. Je te donne la méthode, puis tu la pratiques : je conseille, je débloque, tu t'assois.</p>
       </div>
       <div class="method-item rv">
         <h3>5 personnes maximum par groupe</h3>
@@ -428,6 +478,21 @@ footer{background:#2C3F52;padding:2.2rem 2.5rem;display:flex;flex-wrap:wrap;just
         <div class="prog-title">Le mental et l'autonomie</div>
         <div class="prog-desc">Arrêter de se juger dans sa pratique, découvrir le son OM, méditer seul·e avec confiance.</div>
       </div>
+    </div>
+    <div class="endbox rv">
+      <div class="endbox-l">Ce que tu sauras faire à la fin</div>
+      <p>Pratiquer chez toi, sans personne à côté, une méditation complète d'une dizaine de minutes. Repérer ce qui coince. Reprendre après un jour manqué.</p>
+    </div>
+    <div class="takeaway rv">
+      <h3>Ce que tu repars avec</h3>
+      <ul>
+        <li>Une pratique que tu peux refaire seul·e, à la maison.</li>
+        <li>15 audios pour t'accompagner jour après jour.</li>
+        <li>Un carnet de suivi pour que l'essai devienne une habitude.</li>
+        <li>Un guide pour les blocages fréquents : jambes qui s'endorment, mental qui s'agite, découragement au jour 4.</li>
+        <li>Un groupe de 5 : tes questions reçoivent des réponses adaptées.</li>
+        <li>Après le programme : un rendez-vous du groupe au Studio, sur inscription, pour garder le fil.</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -499,7 +564,7 @@ footer{background:#2C3F52;padding:2.2rem 2.5rem;display:flex;flex-wrap:wrap;just
       <div class="price-box rv">
         <div>
           <div class="price-desc" style="margin-bottom:.6rem">Programme complet</div>
-          <div class="price-desc">4h30 minimum de présentiel, 15 jours de suivi audio, Carnet de Suivi et Guide Anti-Blocages inclus, groupe privé.</div>
+          <ul class="price-list"><li>3 ateliers en présentiel, 4h30 minimum</li><li>15 audios quotidiens, plus un rappel le mercredi</li><li>Carnet de Suivi et Guide Anti-Blocages</li><li>Groupe de 5, groupe privé</li></ul>
         </div>
         <div class="price-amount">180 €</div>
       </div>
@@ -558,7 +623,7 @@ footer{background:#2C3F52;padding:2.2rem 2.5rem;display:flex;flex-wrap:wrap;just
       <div class="price-box rv">
         <div>
           <div class="price-desc" style="margin-bottom:.6rem">Programme complet</div>
-          <div class="price-desc">2 samedis en présentiel, 13 jours de pratique audio guidée entre les deux, Carnet de Suivi et Guide Anti-Blocages inclus, groupe privé avec suivi quotidien.</div>
+          <ul class="price-list"><li>2 samedis en présentiel, 2 × 3h30</li><li>13 jours de pratique audio guidée entre les deux</li><li>Carnet de Suivi et Guide Anti-Blocages</li><li>Groupe privé avec suivi quotidien</li></ul>
         </div>
         <div class="price-amount">180 €</div>
       </div>
