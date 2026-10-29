@@ -67,6 +67,7 @@
 /* Reset */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
   font-family: var(--font-corps);
   font-weight: 300;
@@ -115,7 +116,7 @@ a { color: inherit; }
   font-size: 0.7rem;
   font-family: var(--font-corps);
   font-weight: 300;
-  color: var(--gris-bleuté);
+  color: #92AEC5;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -217,7 +218,7 @@ a { color: inherit; }
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--terracotta);
+  color: #A85A38;
   margin-bottom: 1rem;
 }
 
@@ -310,7 +311,7 @@ a { color: inherit; }
   font-weight: 300;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--lin);
   margin-top: 0.6rem;
 }
 
@@ -318,7 +319,7 @@ a { color: inherit; }
   font-family: var(--font-titre);
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
   font-style: italic;
-  color: var(--gris-bleuté);
+  color: #92AEC5;
   margin-bottom: 2.5rem;
   font-weight: 300;
 }
@@ -329,7 +330,7 @@ a { color: inherit; }
   font-weight: 300;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--lin);
 }
 
 /* ============================================================
@@ -351,11 +352,11 @@ a { color: inherit; }
 }
 
 .btn-terracotta {
-  color: var(--terracotta);
-  border-color: var(--terracotta);
+  color: #A85A38;
+  border-color: #A85A38;
 }
 .btn-terracotta:hover {
-  background: var(--terracotta);
+  background: #A85A38;
   color: var(--lin);
 }
 
@@ -473,7 +474,7 @@ a { color: inherit; }
 }
 
 .horaires-table .tarif {
-  color: var(--terracotta);
+  color: #A85A38;
   font-weight: 400;
 }
 
@@ -546,7 +547,7 @@ a { color: inherit; }
 
 .citation-source {
   font-size: 0.8rem;
-  color: var(--gris-bleuté);
+  color: #55748B;
   margin-top: 0.5rem;
   letter-spacing: 0.08em;
 }
@@ -568,7 +569,7 @@ a { color: inherit; }
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--terracotta);
+  color: #A85A38;
   margin-bottom: 1rem;
 }
 
@@ -640,14 +641,14 @@ a { color: inherit; }
 .qs-chapter:last-child { padding-bottom: 0; }
 
 .qs-marker { position: sticky; top: calc(var(--nav-h) + 2rem); align-self: start; }
-.qs-year { font-family: var(--font-titre); font-size: 2.4rem; font-weight: 300; line-height: 1; color: var(--gold); margin-bottom: 0.6rem; }
+.qs-year { font-family: var(--font-titre); font-size: 2.4rem; font-weight: 300; line-height: 1; color: #8A6A20; margin-bottom: 0.6rem; }
 .qs-kicker {
   font-family: var(--font-corps);
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--terracotta);
+  color: #A85A38;
 }
 
 .qs-body { max-width: 36rem; }
@@ -688,8 +689,8 @@ a { color: inherit; }
   margin: 2.25rem 0 1.25rem;
 }
 .qs-cta { font-size: 0.95rem; line-height: 1.7; color: #555; }
-.qs-cta a { color: var(--terracotta); text-underline-offset: 3px; }
-.qs-cta a:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 3px; }
+.qs-cta a { color: #A85A38; text-underline-offset: 3px; }
+.qs-cta a:focus-visible { outline: 2px solid #A85A38; outline-offset: 3px; }
 
 .qs-side { display: grid; gap: 1.25rem; }
 @media (min-width: 901px) and (min-height: 860px) {
@@ -742,7 +743,7 @@ a { color: inherit; }
   font-weight: 300;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gris-bleuté);
+  color: #92AEC5;
   margin-bottom: 2rem;
 }
 
@@ -773,7 +774,7 @@ a { color: inherit; }
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--gris-bleuté);
+  color: #92AEC5;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -826,7 +827,7 @@ a { color: inherit; }
 .hero-video-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(44,63,82,0.5) 0%, rgba(44,63,82,0.75) 100%);
+  background: linear-gradient(to bottom, rgba(44,63,82,0.62) 0%, rgba(44,63,82,0.82) 100%);
 }
 .hero-video-content {
   position: relative;
@@ -863,12 +864,12 @@ a { color: inherit; }
   font-weight: 500;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: var(--terracotta);
+  color: #A85A38;
 }
-.univers-card:nth-child(1) .univers-card-label { color: var(--terracotta); }
-.univers-card:nth-child(2) .univers-card-label { color: var(--gold); }
+.univers-card:nth-child(1) .univers-card-label { color: #A85A38; }
+.univers-card:nth-child(2) .univers-card-label { color: #8A6A20; }
 .univers-card:nth-child(3) .univers-card-label { color: var(--ardoise); }
-.univers-card:nth-child(4) .univers-card-label { color: var(--gris-bleuté); }
+.univers-card:nth-child(4) .univers-card-label { color: #55748B; }
 
 /* Bandeau Carnets sous la grille */
 .carnets-strip {
@@ -937,7 +938,10 @@ a { color: inherit; }
   100% { transform: translateX(-50%); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .marquee-track { animation: none; overflow-x: auto; }
+  .marquee-bar { white-space: normal; }
+  .marquee-track { animation: none; overflow-x: visible; flex-wrap: wrap; }
+  .marquee-track span { white-space: normal; padding-right: 0; }
+  .marquee-track span[aria-hidden="true"] { display: none; }
 }
 .univers-card-title {
   font-family: var(--font-titre);
@@ -966,8 +970,26 @@ a { color: inherit; }
   transition: color .2s;
 }
 .univers-card-link::after { content: '→'; }
-.univers-card:hover .univers-card-link { color: var(--terracotta); }
+.univers-card:hover .univers-card-link { color: #A85A38; }
 
+/* Tableau tarifs */
+.tarifs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .9rem;
+  margin-top: .5rem;
+}
+.tarifs-table th, .tarifs-table td {
+  padding: .5rem 0;
+  border-bottom: 1px solid rgba(74,98,116,.15);
+  text-align: left;
+}
+.tarifs-table th { font-weight: 500; color: var(--ardoise-dark); }
+.tarifs-table td { text-align: right; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; margin: -1px;
+  padding: 0; overflow: hidden; clip: rect(0,0,0,0); border: 0;
+}
 </style>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" href="/assets/media/favicon-192.png" sizes="192x192">
@@ -1010,7 +1032,7 @@ a { color: inherit; }
     </svg>
     <div class="nav-logo-text">IFSU Équilibre<span>Ath · Hainaut</span></div>
   </a>
-  <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="nav-burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
   <ul class="nav-links" id="nav-links">
     <li><a href="/" class="active">Accueil</a></li>
     <li><a href="yoga.html">Yoga</a></li>
@@ -1033,7 +1055,7 @@ a { color: inherit; }
 
 <!-- HERO VIDÉO — vidéo en transparence derrière le titre -->
 <section class="hero-video">
-  <video autoplay muted loop playsinline>
+  <video autoplay muted loop playsinline preload="metadata" poster="assets/media/index-video-1-poster.jpg" aria-hidden="true">
     <source src="assets/media/index-video-1.mp4" type="video/mp4">
   </video>
   <div class="hero-video-overlay"></div>
@@ -1056,7 +1078,7 @@ a { color: inherit; }
       <ellipse cx="28" cy="26" rx="3" ry="5" fill="url(#fh)" opacity="0.9"/>
     </svg>
     <p class="hero-title">IFSU Équilibre</p>
-    <p class="hero-quote">« Si tu sais respirer, tu sais faire du Yoga. »<span class="hero-quote-author">— Tirumalai Krishnamacharya</span></p>
+    <p class="hero-quote">« Si tu sais respirer, tu sais faire du Yoga. »<span class="hero-quote-author">— T. K. V. Desikachar</span></p>
     <h1 class="hero-sub" style="font-weight:inherit;margin-top:0">Yoga Viniyoga &amp; Méditation Védique IFSU à Ath</h1>
     <p class="hero-tagline">Studio IFSU · Rue des Hauts-Degrés 20 · Ath</p>
   </div>
@@ -1076,17 +1098,25 @@ a { color: inherit; }
 <!-- PLANNING -->
 <section class="section" id="planning">
   <div class="section-inner text-center">
-    <p class="section-label">Cette semaine</p>
-    <h2 class="section-title">Planning des cours</h2>
+    <p class="section-label">Cours collectifs</p>
+    <h2 class="section-title">Horaires & réservation</h2>
   </div>
   <div class="section-inner" style="max-width:600px;">
     <div style="background:var(--lin-deep);border:1px solid rgba(74,98,116,.15);border-radius:8px;padding:2.5rem 2rem;text-align:center;">
       <p style="font-family:var(--font-titre);font-size:1.3rem;font-weight:400;color:var(--ardoise-dark);margin-bottom:.75rem;">Mardi et mercredi, Studio IFSU Ath</p>
       <p style="font-size:.9rem;color:var(--anthracite);margin-bottom:1.75rem;">Planning en direct, réservation et carte de fidélité : tout se passe désormais sur l'app.</p>
-      <a href="https://ifsu-equilibre.web.app/" target="_blank" rel="noopener" style="display:inline-block;background:var(--terracotta);color:var(--lin);font-size:.9rem;padding:.85rem 2rem;border-radius:4px;text-decoration:none;">Voir le planning &amp; réserver</a>
+      <a href="https://ifsu-equilibre.web.app/" target="_blank" rel="noopener" style="display:inline-block;background:#A85A38;color:var(--lin);font-size:.9rem;padding:.85rem 2rem;border-radius:4px;text-decoration:none;">Voir le planning &amp; réserver</a>
     </div>
     <p style="font-size:.85rem;color:var(--ardoise-dark);margin-top:1rem;">Maximum 6 participants par séance. Studio IFSU, Ath.</p>
-    <p style="font-size:.85rem;margin-top:.5rem;">15€ la séance · abonnement 48€ (4 séances/mois) ou 60€ (5 séances/mois) · carte de fidélité 150€ (10 séances + 1 offerte, validité 4 mois) · séance privée 45€, sur rendez-vous.</p>
+    <table class="tarifs-table">
+      <caption class="sr-only">Tarifs des cours et séances privées</caption>
+      <tr><th scope="row">Séance à l'unité</th><td>15 €</td></tr>
+      <tr><th scope="row">Abonnement</th><td>48 € · 4 séances/mois</td></tr>
+      <tr><th scope="row">Abonnement</th><td>60 € · 5 séances/mois</td></tr>
+      <tr><th scope="row">Carte de fidélité</th><td>150 € · 10 séances + 1 offerte · validité 4 mois</td></tr>
+      <tr><th scope="row">Séance privée</th><td>45 € · sur rendez-vous</td></tr>
+    </table>
+    <p style="font-size:.85rem;margin-top:.75rem;">La carte revient à environ 13,64 € la séance.</p>
   </div>
 </section>
 
@@ -1098,7 +1128,7 @@ a { color: inherit; }
         <span class="univers-card-label">Yoga Viniyoga</span>
         <h2 class="univers-card-title">Le corps qui bouge<br>comme il peut</h2>
         <p class="univers-card-text">Séances de 90 minutes, petit groupe ou individuel. La posture s'adapte à toi — pas l'inverse. Lignée Krishnamacharya, enseignement depuis 2014.</p>
-        <span class="univers-card-link">Voir les horaires</span>
+        <span class="univers-card-link">Découvrir les cours</span>
       </a>
       <a href="meditation.html" class="univers-card">
         <span class="univers-card-label">Méditation Védique IFSU</span>
@@ -1249,8 +1279,8 @@ f.textContent='';f.appendChild(i);});})();
 <section style="background:var(--ardoise);padding:3rem 2rem;text-align:center;margin-top:5rem;">
   <h2 style="font-family:var(--font-titre);font-size:1.6rem;font-weight:300;color:var(--lin);margin-bottom:1.25rem;">Une question ? Un doute ?</h2>
   <p style="font-size:.9rem;color:rgba(247,243,238,.8);margin-bottom:.3rem;">Écris à <a href="mailto:ifsu@etik.com" style="color:var(--lin);">ifsu@etik.com</a></p>
-  <p style="font-size:.9rem;color:rgba(247,243,238,.8);">Ou par WhatsApp au <a href="tel:+32477091803" style="color:var(--lin);">0477 09 18 03</a></p>
-  <p style="margin-top:1rem;font-size:.82rem;color:rgba(247,243,238,.4);">Réservations via l'<a href="https://ifsu-equilibre.web.app/" target="_blank" style="color:rgba(247,243,238,.5);">app IFSU Équilibre</a></p>
+  <p style="font-size:.9rem;color:rgba(247,243,238,.8);">Ou par WhatsApp au <a href="https://wa.me/32477091803" target="_blank" rel="noopener" style="color:var(--lin);">0477 09 18 03</a></p>
+  <p style="margin-top:1rem;font-size:.82rem;color:rgba(247,243,238,.85);">Réservations via l'<a href="https://ifsu-equilibre.web.app/" target="_blank" rel="noopener" style="color:rgba(247,243,238,.9);">app IFSU Équilibre</a></p>
 </section>
 
 <footer class="footer">
@@ -1259,14 +1289,35 @@ f.textContent='';f.appendChild(i);});})();
   <div class="footer-divider"></div>
   <div class="footer-contact"><a href="mailto:ifsu@etik.com">ifsu@etik.com</a><br><a href="tel:+32477091803">0477 09 18 03</a></div>
   <div class="footer-social">
-    <a href="https://facebook.com/IFSU.Yoga.Meditation.Ath" target="_blank">Facebook</a>
-    <a href="https://mastodon.social/@IFSUYogameditation" target="_blank">Mastodon</a>
+    <a href="https://facebook.com/IFSU.Yoga.Meditation.Ath" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://mastodon.social/@IFSUYogameditation" target="_blank" rel="noopener">Mastodon</a>
   </div>
   <p class="footer-legal">© 2026 IFSU Équilibre · <a href="https://ifsu-equilibre.be" style="color:inherit;">ifsu-equilibre.be</a></p>
   <p class="footer-legal" style="margin-top:.4rem">Site créé par Marjorie Mathieu, IFSU Équilibre. Toute reproduction du code est interdite.</p>
   <p class="footer-legal" style="margin-top:.4rem"><a href="mentions-legales.html" style="color:inherit;">Mentions légales</a> · <a href="confidentialite.html" style="color:inherit;">Confidentialité et cookies</a> · <a href="conditions.html" style="color:inherit;">Conditions</a></p>
 </footer>
-<script>document.getElementById('burger').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');});</script>
+<script>(function(){
+  var burger = document.getElementById('burger');
+  var nav = document.getElementById('nav-links');
+  if (burger) {
+    burger.addEventListener('click', function(){
+      var open = burger.classList.toggle('open');
+      nav.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+  /* Bandeau retraite : masqué automatiquement après le 27 novembre 2026 */
+  if (new Date() >= new Date('2026-11-28T00:00:00')) {
+    var bar = document.querySelector('.marquee-bar');
+    if (bar) bar.remove();
+  }
+  /* Réduction des animations : vidéo en pause, bandeau lisible sans défilement */
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var v = document.querySelector('.hero-video video');
+    if (v) { v.pause(); v.removeAttribute('autoplay'); }
+    document.querySelectorAll('.marquee-track').forEach(function(t){ t.style.animation = 'none'; });
+  }
+})();</script>
 
 <script defer src="/retraite-popup.js"></script>
 </body></html>
