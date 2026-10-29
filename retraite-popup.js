@@ -12,8 +12,8 @@
     startDate: '2026-10-29',          // premier jour d'affichage (AAAA-MM-JJ)
     endDate: '2026-11-15',            // dernier jour d'affichage, inclus
     imgBase: 'https://ifsu-equilibre.be/assets/media/',
-    delayMs: 10000,
-    snoozeDays: 5,                    // après « Plus tard » / fermeture : silence pendant 5 jours
+    delayMs: 600,                     // apparition quasi immédiate
+    snoozeMs: 10000,                  // après « Plus tard » / fermeture : il revient après 10 secondes
     storageKey: 'ifsu-retraite-popup',
     excludePaths: ['/retraite', '/retraite.html', '/en/retraite', '/en/retraite.html'],
     excludePrefixes: [],
@@ -94,7 +94,7 @@
     if (CFG.onlyPaths && !listHas(CFG.onlyPaths, p)) return false;
     var s = readState();
     if (s.clicked) return false;
-    if (s.dismissedAt && (Date.now() - s.dismissedAt) < CFG.snoozeDays * 86400000) return false;
+    if (s.dismissedAt && (Date.now() - s.dismissedAt) < CFG.snoozeMs) return false;
     return true;
   }
 
@@ -160,6 +160,7 @@
     r.classList.remove('irt-in');
     window.setTimeout(function () { if (r.parentNode) r.parentNode.removeChild(r); }, 260);
     if (lastFocus && lastFocus.focus) { try { lastFocus.focus(); } catch (e) { /* rien */ } }
+    if (reason !== 'cta' && !CFG.preview) window.setTimeout(check, CFG.snoozeMs + 100); // revient après le délai
   }
 
   function onKey(e) {
