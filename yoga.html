@@ -26,6 +26,7 @@
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Rue des Hauts-Degrés 20",
+    "postalCode": "7800",
     "addressLocality": "Ath",
     "addressRegion": "Hainaut",
     "addressCountry": "BE"
@@ -755,11 +756,8 @@ a { color: inherit; }
 <style>
 /* — dynamisme : tout reste lisible sans JavaScript — */
 html{scroll-behavior:smooth;}
-section[id]{scroll-margin-top:calc(var(--nav-h) + 12px);}
+section[id]{scroll-margin-top:calc(var(--nav-h) + var(--sub-h, 0px) + 12px);}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
-.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease;transition-delay:var(--d,0s);}
-.js .reveal.in{opacity:1;transform:none;}
-@media(prefers-reduced-motion:reduce){.js .reveal{transform:none;transition:opacity .3s;}}
 .principe{transition:transform .25s ease,box-shadow .25s ease;}
 .js .principe.in{transition:transform .25s ease,box-shadow .25s ease;}
 .principe:hover,.js .principe.in:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(44,63,82,.10);}
@@ -910,6 +908,41 @@ details[open] summary::after{content:"−";}
 </style>
 <style id="where-photo">.y-where{display:flex;gap:1.1rem;align-items:center;justify-content:space-between}.y-where-photo{flex:none;width:96px;margin:0}.y-where-photo img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:4px}
 </style>
+<style id="yoga-corrections">
+/* Corrections ciblées : préserver la charte, améliorer la lisibilité. */
+.nav-logo-text span,.footer-tagline,.footer-social a{color:#92AEC5;}
+.footer-legal{color:rgba(247,243,238,.75);}
+.portrait-marjorie{height:auto;}
+.section-label{color:#A85A38;}
+.y-intro p[style*="color:var(--terracotta)"]{color:#A85A38!important;}
+.y-ind .quisuisje-grid>div:first-child span[style*="color:var(--gold)"]{color:#7A5F14!important;}
+.btn-terracotta{color:#A85A38;border-color:#A85A38;}
+.btn-terracotta:hover{background:#A85A38;color:var(--lin);}
+.y-cours .btn-gold{color:#7A5F14;}
+.y-cours .btn-gold:hover{color:var(--ardoise-dark);}
+.y-video-toggle{
+  position:absolute;right:1rem;top:1rem;z-index:2;min-height:44px;
+  padding:.65rem 1rem;border:1px solid var(--lin);background:var(--ardoise-dark);
+  color:var(--lin);font:500 .85rem/1.4 var(--font-corps);cursor:pointer;
+}
+.y-video-toggle[hidden]{display:none;}
+.nav-burger{min-width:44px;min-height:44px;align-items:center;justify-content:center;}
+.avis-btn:focus-visible,.y-video-toggle:focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation:none!important;transition:none!important;}
+}
+</style>
+<noscript><style>
+@media(max-width:700px){
+  body.page-body{padding-top:0;}
+  .nav{position:relative;height:auto;min-height:68px;flex-wrap:wrap;padding-top:1rem;}
+  .nav-burger{display:none;}
+  .nav-links{display:flex;position:static;order:4;width:100%;flex-direction:row;flex-wrap:wrap;gap:0!important;}
+  .nav-links a{padding:.65rem .75rem;}
+  .y-sub{top:0;}
+}
+</style></noscript>
 </head>
 <body class="page-body">
 
@@ -930,7 +963,7 @@ details[open] summary::after{content:"−";}
     </svg>
     <div class="nav-logo-text">IFSU Équilibre<span>Ath · Hainaut</span></div>
   </a>
-  <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="nav-burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
   <ul class="nav-links" id="nav-links">
     <li><a href="/">Accueil</a></li>
     <li><a href="yoga.html" class='active'>Yoga</a></li>
@@ -973,7 +1006,7 @@ details[open] summary::after{content:"−";}
 <section class="section y-intro">
   <div class="section-inner">
     <p class="section-text">Le Viniyoga part d'un principe simple : il n'y a pas de posture standard, il y a <em>ta</em> posture. Ta morphologie, ton souffle, ce que ton corps peut faire aujourd'hui. On adapte.</p>
-    <p class="section-text">Séances de 90 minutes en petit groupe. Le souffle mène. Le mouvement suit. On fait des pauses. Personne ne sortira d'ici sur une civière.</p>
+    <p class="section-text">Séances de 90 minutes en petit groupe. Le souffle mène. Le mouvement suit. On fait des pauses et on respecte les limites du jour.</p>
 
     <div class="divider"></div>
 
@@ -1003,7 +1036,8 @@ details[open] summary::after{content:"−";}
 
     <div class="y-cours-grid" id="horaires">
       <figure class="y-video">
-        <video muted loop playsinline preload="none" poster="assets/media/yoga-hero.jpg" data-src="assets/media/index-video-1.mp4" aria-label="Un cours collectif au Studio IFSU"></video>
+        <video id="cours-video" muted loop playsinline preload="none" poster="assets/media/yoga-hero.jpg" data-src="assets/media/index-video-1.mp4" aria-label="Un cours collectif au Studio IFSU"></video>
+        <button type="button" class="y-video-toggle" aria-controls="cours-video" hidden>Mettre la vidéo en pause</button>
         <figcaption>Six personnes. Jamais un numéro.</figcaption>
       </figure>
 
@@ -1021,10 +1055,14 @@ details[open] summary::after{content:"−";}
 
     <div class="y-prices">
       <div class="y-price"><p class="y-amount">15 €</p><p class="y-what">la séance</p></div>
-      <div class="y-price"><p class="y-amount">48 €</p><p class="y-what">par mois, abonnement 4 jours<br>60 € par mois, abonnement 5 jours</p></div>
+      <div class="y-price"><p class="y-amount">48 €</p><p class="y-what">par mois, pour 4 séances<br>60 € par mois, pour 5 séances</p></div>
       <div class="y-price"><p class="y-amount">150 €</p><p class="y-what">carte de fidélité : 10 séances + 1 offerte, valable 4 mois</p></div>
     </div>
-    <p class="y-fine">Pas de cours d'essai. Apporte un tapis, une tenue confortable et un plaid ou une couverture pour la relaxation. Annulation gratuite jusqu'à 48h avant.<br><a href="conditions.html" style="display:inline-block;margin-top:.6rem;padding:.5rem 1.2rem;border:1px solid #C4714A;color:#C4714A;text-decoration:none;font-weight:500;font-size:.88rem;font-style:normal;letter-spacing:.02em;border-radius:2px">Lire les conditions</a></p>
+    <!-- À confirmer : fonctionnement des abonnements (créneau fixe ou séances au choix, reports)
+         et accès à une première séance à l'unité. Ne pas inventer de règle commerciale. -->
+    <p class="y-fine">La carte de fidélité revient à environ 13,64 € par séance, contre 12 € avec l'abonnement ; sa validité est de quatre mois.</p>
+    <p class="y-fine">Pas de cours d'essai. Pour une première venue, écris-moi afin de choisir la formule adaptée. Apporte un tapis, une tenue confortable et un plaid ou une couverture pour la relaxation. Annulation gratuite jusqu'à 48 h avant.<br><a href="conditions.html" style="display:inline-block;margin-top:.6rem;padding:.5rem 1.2rem;border:1px solid #A85A38;color:#A85A38;text-decoration:none;font-weight:500;font-size:.88rem;font-style:normal;letter-spacing:.02em;border-radius:2px">Lire les conditions</a></p>
+    <!-- À confirmer dans les conditions : conséquence d'une annulation à moins de 48 h. -->
   </div>
 </section>
 
@@ -1098,13 +1136,13 @@ details[open] summary::after{content:"−";}
       <div style="padding:.25rem 0 .25rem 1.5rem;border-left:2px solid var(--terracotta);margin-bottom:2rem;">
         <div>
           <p style="font-family:var(--font-titre);font-size:1.2rem;color:var(--lin);margin-bottom:.4rem;">Le dos qui n'oublie jamais le bureau</p>
-          <p style="font-size:.9rem;color:rgba(247,243,238,.75);line-height:1.7;">Cervicales, dorsales, lombaires — figées par des heures assises. On mobilise la colonne segment par segment, on relâche les chaînes qui se raidissent devant un écran. Ça se sent dès la première séance, pas dans six mois.</p>
+          <p style="font-size:.9rem;color:rgba(247,243,238,.75);line-height:1.7;">Cervicales, dorsales, lombaires : on travaille la mobilité de la colonne et le relâchement, selon tes possibilités. Les sensations et la progression varient d'une personne à l'autre.</p>
         </div>
       </div>
       <div style="padding:.25rem 0 .25rem 1.5rem;border-left:2px solid var(--terracotta);margin-bottom:2rem;">
         <div>
           <p style="font-family:var(--font-titre);font-size:1.2rem;color:var(--lin);margin-bottom:.4rem;">La tête qui ne décroche jamais</p>
-          <p style="font-size:.9rem;color:rgba(247,243,238,.75);line-height:1.7;">Ruminations, vigilance permanente, sommeil léger. Allonger l'expiration stimule le nerf vague et fait basculer le système nerveux vers le repos. Ce n'est pas de la magie, c'est de la physiologie — et ça marche pendant le cours, pas seulement en théorie.</p>
+          <p style="font-size:.9rem;color:rgba(247,243,238,.75);line-height:1.7;">Quand la tête reste occupée, on prend le temps d'observer le souffle. On travaille une respiration confortable, avec une expiration progressivement allongée, pour favoriser l'apaisement, sans forcer ni promettre un résultat.</p>
         </div>
       </div>
       <div style="padding:.25rem 0 .25rem 1.5rem;border-left:2px solid var(--terracotta);">
@@ -1124,9 +1162,9 @@ details[open] summary::after{content:"−";}
       <div>
         <p class="section-label">Ce qu'on en dit</p>
         <h2 class="section-title" style="margin-bottom:.4rem;">Sur Google</h2>
-        <p class="avis-note">Quatre avis publiés sur la fiche Google, à 5 étoiles sur 5.</p>
+        <p class="avis-note">Quatre avis reproduits ci-dessous, notés chacun 5 étoiles sur 5. <a href="https://www.google.com/maps/search/?api=1&amp;query=Studio+IFSU+Rue+des+Hauts-Degr%C3%A9s+20+7800+Ath" target="_blank" rel="noopener">Rechercher la fiche du studio sur Google Maps</a></p>
       </div>
-      <div class="avis-arrows" aria-hidden="true">
+      <div class="avis-arrows">
         <button type="button" class="avis-btn" data-dir="-1" aria-label="Avis précédent">←</button>
         <button type="button" class="avis-btn" data-dir="1" aria-label="Avis suivant">→</button>
       </div>
@@ -1178,7 +1216,7 @@ details[open] summary::after{content:"−";}
         <p class="section-text">Pas de promesses miraculeuses. Pas d'allégeance à signer. Tu viens, tu pratiques, tu repars quand tu veux. L'objectif est que tu deviennes ton propre guide.</p>
       </div>
       <div>
-        <img src="assets/media/index-img-2.png" alt="Marjorie Mathieu — IFSU Équilibre" class="portrait-marjorie">
+        <img src="assets/media/index-img-2.png" alt="Marjorie Mathieu — IFSU Équilibre" class="portrait-marjorie" width="1024" height="1536" loading="lazy" decoding="async">
         <div class="badge-ifsu">
           <p class="badge-ifsu-titre">Formation & Lignée</p>
           <ul style="list-style:none;margin:0;">
@@ -1289,11 +1327,11 @@ f.textContent='';f.appendChild(i);});})();
 <section class="section section-dark text-center">
   <div class="section-inner">
     
-    <h2 class="section-title" style="color:var(--lin);">Toutes les réservations en ligne</h2>
-    <p class="section-text" style="max-width:480px;margin:0 auto 2rem;">Cours, ateliers, événements — tout est en ligne.</p>
+    <h2 class="section-title" style="color:var(--lin);">Réserver ton cours ou ta séance</h2>
+    <p class="section-text" style="max-width:580px;margin:0 auto 2rem;">Cours collectifs dans l'application ; séances individuelles sur rendez-vous par e-mail.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-      <a href="https://ifsu-equilibre.web.app/" target="_blank" class="btn btn-gold">Inscription</a>
-      <a href="https://www.facebook.com/IFSU.Yoga.Meditation.Ath" target="_blank" class="btn btn-light">Page Facebook</a>
+      <a href="https://ifsu-equilibre.web.app/" target="_blank" rel="noopener" class="btn btn-gold">Réserver un cours collectif</a>
+      <a href="mailto:ifsu@etik.com?subject=S%C3%A9ance%20individuelle" class="btn btn-light">Demander une séance individuelle</a>
     </div>
   </div>
 </section>
@@ -1304,36 +1342,71 @@ f.textContent='';f.appendChild(i);});})();
   <div class="footer-divider"></div>
   <div class="footer-contact"><a href="mailto:ifsu@etik.com">ifsu@etik.com</a><br><a href="tel:+32477091803">0477 09 18 03</a></div>
   <div class="footer-social">
-    <a href="https://facebook.com/IFSU.Yoga.Meditation.Ath" target="_blank">Facebook</a>
-    <a href="https://mastodon.social/@IFSUYogameditation" target="_blank">Mastodon</a>
+    <a href="https://facebook.com/IFSU.Yoga.Meditation.Ath" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://mastodon.social/@IFSUYogameditation" target="_blank" rel="noopener">Mastodon</a>
   </div>
   <p class="footer-legal">© 2026 IFSU Équilibre · <a href="https://ifsu-equilibre.be" style="color:inherit;">ifsu-equilibre.be</a></p>
   <p class="footer-legal" style="margin-top:.4rem">Site créé par Marjorie Mathieu, IFSU Équilibre. Toute reproduction du code est interdite.</p>
   <p class="footer-legal" style="margin-top:.4rem"><a href="mentions-legales.html" style="color:inherit;">Mentions légales</a> · <a href="confidentialite.html" style="color:inherit;">Confidentialité et cookies</a> · <a href="conditions.html" style="color:inherit;">Conditions</a></p>
 </footer>
-<script>document.getElementById('burger').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');});</script>
+<script>
+(function(){
+  var burger=document.getElementById('burger'), menu=document.getElementById('nav-links');
+  function setOpen(open){
+    burger.classList.toggle('open',open);menu.classList.toggle('open',open);
+    burger.setAttribute('aria-expanded',String(open));
+    burger.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');
+  }
+  burger.addEventListener('click',function(){setOpen(burger.getAttribute('aria-expanded')!=='true');});
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))setOpen(false);});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&burger.getAttribute('aria-expanded')==='true'){setOpen(false);burger.focus();}
+  });
+  window.matchMedia('(max-width:700px)').addEventListener('change',function(){setOpen(false);});
+})();
+</script>
 <script>
 (function(){
   // carrousel d'avis
   var tr=document.getElementById('avis-track');
   document.querySelectorAll('.avis-btn').forEach(function(b){b.addEventListener('click',function(){
     var c=tr&&tr.querySelector('.avis-card'); if(!c) return;
-    tr.scrollBy({left:(+b.dataset.dir)*(c.offsetWidth+20),behavior:'smooth'});
+    tr.scrollBy({left:(+b.dataset.dir)*(c.offsetWidth+20),behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
   });});
-  // vidéo : seulement sur grand écran et sans préférence « mouvement réduit » (5 Mo)
+  // Vidéo : grand écran uniquement, mouvement réduit respecté, commande pause/reprise.
   var v=document.querySelector('.y-video video');
-  if(v && window.matchMedia('(min-width:900px)').matches && !window.matchMedia('(prefers-reduced-motion:reduce)').matches){
-    v.src=v.dataset.src; var p=v.play(); if(p&&p.catch)p.catch(function(){});
+  var toggle=document.querySelector('.y-video-toggle');
+  var large=window.matchMedia('(min-width:901px)'), reduced=window.matchMedia('(prefers-reduced-motion:reduce)');
+  if(v&&toggle){
+    function syncVideo(){toggle.textContent=v.paused?'Lire la vidéo':'Mettre la vidéo en pause';}
+    function tryPlay(){var p=v.play();if(p&&p.catch)p.catch(function(){syncVideo();});}
+    function loadVideo(){
+      if(!v.getAttribute('src'))v.src=v.dataset.src;
+      toggle.hidden=false;tryPlay();
+    }
+    v.addEventListener('play',syncVideo);v.addEventListener('pause',syncVideo);
+    v.addEventListener('error',function(){toggle.hidden=true;v.removeAttribute('src');v.load();});
+    toggle.addEventListener('click',function(){if(v.paused)tryPlay();else v.pause();});
+    function preferencesChanged(){if(!large.matches||reduced.matches)v.pause();}
+    large.addEventListener('change',preferencesChanged);
+    reduced.addEventListener('change',preferencesChanged);
+    if(large.matches&&!reduced.matches)loadVideo();
   }
   // menu de page : section active
   var links=[].slice.call(document.querySelectorAll('.y-sub ul a'));
   var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
   var bar=document.querySelector('.y-sub ul');
+  var previous=-1;
   function spy(){
-    var y=window.scrollY+130, cur=-1;
+    var y=window.scrollY+parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-h'))+document.querySelector('.y-sub').offsetHeight+13, cur=-1;
     secs.forEach(function(el,i){if(el&&el.offsetTop<=y)cur=i;});
     links.forEach(function(a,i){var on=i===cur;a.classList.toggle('on',on);if(on)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');});
-    if(cur>-1&&links[cur]){var a=links[cur];bar.scrollTo({left:a.offsetLeft-24,behavior:'auto'});}
+    if(cur!==previous&&cur>-1&&links[cur]){
+      var a=links[cur], rect=a.getBoundingClientRect(), frame=bar.getBoundingClientRect();
+      if(rect.left<frame.left)bar.scrollBy({left:rect.left-frame.left-8,behavior:'auto'});
+      else if(rect.right>frame.right)bar.scrollBy({left:rect.right-frame.right+8,behavior:'auto'});
+    }
+    previous=cur;
   }
   window.addEventListener('scroll',spy,{passive:true}); window.addEventListener('resize',spy); spy();
 })();
