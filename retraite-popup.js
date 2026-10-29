@@ -10,6 +10,7 @@
     pageUrl: 'https://ifsu-equilibre.be/retraite.html', // absolu : fonctionne aussi depuis l'app
     startDate: '2026-10-29',          // premier jour d'affichage (AAAA-MM-JJ)
     endDate: '2026-11-15',            // dernier jour d'affichage, inclus
+    imgBase: 'https://ifsu-equilibre.be/assets/media/',
     delayMs: 3000,
     snoozeDays: 5,                    // après « Plus tard » / fermeture : silence pendant 5 jours
     storageKey: 'ifsu-retraite-popup',
@@ -88,34 +89,37 @@
   var CSS = [
     '.irt-root,.irt-root *{box-sizing:border-box}',
     '.irt-root{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;padding:16px;',
-    'background:rgba(44,44,44,.55);font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;color:#2C2C2C;',
+    'background:radial-gradient(circle at 50% 30%,rgba(138,74,44,.82),rgba(70,38,26,.88) 72%);font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;color:#3B2A22;',
     'opacity:0;transition:opacity .25s ease}',
     '.irt-root.irt-in{opacity:1}',
-    '.irt-dialog{position:relative;width:100%;max-width:440px;max-height:calc(100vh - 32px);overflow:auto;background:#F7F3EE;',
-    'border-radius:4px;box-shadow:0 18px 60px rgba(0,0,0,.28);transform:translateY(10px);transition:transform .25s ease}',
+    '.irt-dialog{position:relative;width:100%;max-width:480px;max-height:calc(100vh - 32px);overflow:auto;background:#F8EEDF;',
+    'border-radius:24px;box-shadow:0 24px 60px rgba(30,14,8,.5);transform:translateY(10px);transition:transform .25s ease}',
     '.irt-root.irt-in .irt-dialog{transform:none}',
     '.irt-dialog:focus{outline:none}',
-    '.irt-band{height:9px;background:linear-gradient(90deg,#4A6274 0 70%,#C9A84C 70% 100%)}',
-    '.irt-body{padding:28px 30px 26px}',
-    '.irt-eyebrow{margin:0 0 10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#4A6274}',
-    '.irt-title{margin:0 0 14px;font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:36px;line-height:1.05;color:#2C2C2C}',
-    '.irt-text{margin:0 0 14px;font-size:16px;line-height:1.55}',
-    '.irt-quote{margin:0 0 6px;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:21px;line-height:1.3;color:#C4714A}',
-    '.irt-pickup{margin:0;font-size:14px;color:#4A6274}',
-    '.irt-rows{margin:0 0 12px;padding:0;list-style:none;border-top:1px solid rgba(74,98,116,.25)}',
-    '.irt-rows li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid rgba(74,98,116,.25);font-size:16px}',
-    '.irt-rows b{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:24px;line-height:1;color:#2C2C2C;white-space:nowrap}',
-    '.irt-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:22px}',
-    '.irt-btn{appearance:none;display:inline-block;border:0;border-radius:3px;padding:13px 22px;background:#4A6274;color:#F7F3EE;',
+    '.irt-hero{padding:18px 0 0;text-align:center;background:linear-gradient(180deg,#F1D3A8 0%,#F8EEDF 100%)}',
+    '.irt-hero img{display:block;margin:0 auto;width:200px;height:auto}',
+    '.irt-body{padding:8px 36px 26px}',
+    '.irt-eyebrow{margin:0 0 8px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#7A3E24}',
+    '.irt-title{margin:0 0 12px;font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:38px;line-height:1.02;color:#3B2A22}',
+    '.irt-text{margin:0 0 16px;font-size:16px;line-height:1.55}',
+    '.irt-rows{margin:0 0 12px;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}',
+    '.irt-rows li{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 18px;background:#F0DEC4;border-radius:14px;font-size:16px}',
+    '.irt-rows b{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:30px;line-height:1;color:#7A3E24;white-space:nowrap}',
+    '.irt-pickup{margin:0 0 18px;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:20px;line-height:1.3;color:#6B4A3A}',
+    '.irt-foot{position:relative;min-height:96px;display:flex;align-items:flex-end;padding-right:116px}',
+    '.irt-mug{position:absolute;right:-6px;bottom:-4px;width:104px;height:auto;transform:rotate(4deg);filter:drop-shadow(0 6px 8px rgba(60,25,10,.28))}',
+    '.irt-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px}',
+    '.irt-btn{appearance:none;display:inline-block;border:0;border-radius:999px;padding:14px 24px;background:#9C4F2E;color:#FFF8EE;',
     'font:500 15px/1 "DM Sans",system-ui,sans-serif;letter-spacing:.02em;text-decoration:none;cursor:pointer}',
-    '.irt-btn:hover{background:#3d5262}',
-    '.irt-link{appearance:none;border:0;background:none;padding:6px 2px;color:#4A6274;font:400 15px/1 "DM Sans",system-ui,sans-serif;',
+    '.irt-btn:hover{background:#7F3F24}',
+    '.irt-link{appearance:none;border:0;background:none;padding:10px 2px;color:#7A3E24;font:400 15px/1 "DM Sans",system-ui,sans-serif;',
     'text-decoration:underline;text-underline-offset:3px;cursor:pointer}',
-    '.irt-x{position:absolute;top:14px;right:14px;width:36px;height:36px;border:0;border-radius:50%;background:rgba(247,243,238,.92);',
-    'color:#2C2C2C;font-size:22px;line-height:1;cursor:pointer}',
-    '.irt-x:hover{background:#fff}',
+    '.irt-x{position:absolute;top:14px;right:14px;z-index:2;width:40px;height:40px;border:0;border-radius:50%;background:#EFDDC4;',
+    'color:#3B2A22;font-size:24px;line-height:1;cursor:pointer}',
+    '.irt-x:hover{background:#E6CFAE}',
     '.irt-btn:focus-visible,.irt-link:focus-visible,.irt-x:focus-visible{outline:3px solid #C9A84C;outline-offset:2px}',
-    '@media (max-width:480px){.irt-body{padding:24px 22px 22px}.irt-title{font-size:32px}}',
+    '@media (max-width:480px){.irt-body{padding:8px 22px 24px}.irt-title{font-size:32px}.irt-hero img{width:180px}.irt-foot{padding-right:104px}.irt-mug{width:92px}}',
+    '@media (max-height:640px){.irt-hero img{width:150px}}',
     '@media (prefers-reduced-motion:reduce){.irt-root,.irt-dialog{transition:none}}'
   ].join('');
 
@@ -175,7 +179,13 @@
     dlg.setAttribute('aria-labelledby', 'irt-title');
     dlg.setAttribute('tabindex', '-1');
 
-    dlg.appendChild(el('div', 'irt-band'));
+    var hero = el('div', 'irt-hero');
+    var himg = el('img');
+    himg.src = CFG.imgBase + 'retraite-fauteuil.webp';
+    himg.alt = '';
+    himg.width = 250; himg.height = 220;
+    hero.appendChild(himg);
+    dlg.appendChild(hero);
 
     var x = el('button', 'irt-x', '×');
     x.type = 'button';
@@ -202,6 +212,12 @@
     if (T.quote) body.appendChild(el('p', 'irt-quote', T.quote));
     if (T.note) body.appendChild(el('p', 'irt-pickup', T.note));
 
+    var foot = el('div', 'irt-foot');
+    var mug = el('img', 'irt-mug');
+    mug.src = CFG.imgBase + 'retraite-tasse.webp';
+    mug.alt = '';
+    mug.width = 112; mug.height = 137;
+    foot.appendChild(mug);
     var actions = el('div', 'irt-actions');
     var cta = el('a', 'irt-btn', T.cta);
     cta.href = CFG.pageUrl;
@@ -219,7 +235,8 @@
     later.addEventListener('click', function () { close('dismiss'); });
     actions.appendChild(cta);
     actions.appendChild(later);
-    body.appendChild(actions);
+    foot.appendChild(actions);
+    body.appendChild(foot);
     dlg.appendChild(body);
 
     root.appendChild(dlg);
