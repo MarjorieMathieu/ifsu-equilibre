@@ -8,14 +8,15 @@
 
   var CFG = {
     pageUrl: 'https://ifsu-equilibre.be/retraite.html', // absolu : fonctionne aussi depuis l'app
+    pageUrlEn: 'https://ifsu-equilibre.be/en/retraite.html',
     startDate: '2026-10-29',          // premier jour d'affichage (AAAA-MM-JJ)
     endDate: '2026-11-15',            // dernier jour d'affichage, inclus
     imgBase: 'https://ifsu-equilibre.be/assets/media/',
     delayMs: 3000,
     snoozeDays: 5,                    // après « Plus tard » / fermeture : silence pendant 5 jours
     storageKey: 'ifsu-retraite-popup',
-    excludePaths: ['/retraite', '/retraite.html'],
-    excludePrefixes: ['/en/'],        // pages anglaises : pas de popup en français
+    excludePaths: ['/retraite', '/retraite.html', '/en/retraite', '/en/retraite.html'],
+    excludePrefixes: [],
     onlyPaths: null,
     watchRoutes: true,
     preview: false,
@@ -40,8 +41,20 @@
       cta: 'Voir le programme'
     }
   };
+  var EN = {
+    eyebrow: 'IFSU Retreat · 23 – 27 November',
+    title: 'A retreat day, in concrete terms',
+    body: 'Silent walk in the morning, group practice, a time for listening and sharing, guided relaxation at the end of the afternoon. There are breaks: it is not a marathon.',
+    rows: [['The 5 days', '€750'], ['One day: Tuesday, Wednesday or Thursday', '€150']],
+    note: 'At Koningsteen, between Brussels and Antwerp. Accommodation and meals included.',
+    cta: 'See the programme',
+    later: 'Maybe later',
+    close: 'Close'
+  };
   var COMMON = { later: 'Plus tard', close: 'Fermer' };
+  function isEn() { return (window.location.pathname || '/').indexOf('/en/') === 0 || (window.location.pathname || '/') === '/en'; }
   function texts(v) {
+    if (isEn()) return EN;
     var t = {}, k, base = VERSIONS[v] || VERSIONS.B;
     for (k in base) t[k] = base[k];
     for (k in COMMON) t[k] = COMMON[k];
@@ -220,7 +233,7 @@
     foot.appendChild(mug);
     var actions = el('div', 'irt-actions');
     var cta = el('a', 'irt-btn', T.cta);
-    cta.href = CFG.pageUrl;
+    cta.href = isEn() ? CFG.pageUrlEn : CFG.pageUrl;
     cta.addEventListener('click', function (e) {
       if (typeof CFG.onCta === 'function') {
         e.preventDefault();
