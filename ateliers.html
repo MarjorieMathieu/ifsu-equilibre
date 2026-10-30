@@ -767,6 +767,9 @@ a { color: inherit; }
 @media(min-width:701px) and (max-width:900px){.nav-reserve ~ .lang-flag{margin-left:0}.site-nav:has(.nav-reserve) .site-nav-links{gap:.55rem!important}.site-nav:has(.nav-reserve) .site-nav-links a{font-size:.6rem!important;letter-spacing:.06em!important}.site-nav:has(.nav-reserve) .site-nav-logo{min-width:0}}
 @media(max-width:520px){.nav-reserve{margin-right:.5rem!important;padding:.5rem .65rem!important;letter-spacing:.06em!important}}
 </style>
+<link rel="stylesheet" href="/assets/site-accessibility.css">
+<link rel="alternate" hreflang="fr" href="https://ifsu-equilibre.be/ateliers.html">
+<link rel="alternate" hreflang="en" href="https://ifsu-equilibre.be/en/ateliers.html">
 </head>
 <body class="page-body">
 <nav class="nav">
@@ -803,7 +806,7 @@ a { color: inherit; }
 <header class="hero-page">
   <div class="hero-page-inner">
     <p class="hero-page-label">Ateliers & Événements</p>
-    <h1 class="hero-page-title">Trois heures.<br>Yoga, chanting, méditation.</h1>
+    <h1 class="hero-page-title">Les ateliers.<br>Yoga, chant, méditation.</h1>
     <p class="hero-page-sub">Des formats ponctuels pour aller plus loin — sans s'engager sur la durée</p>
   </div>
 </header>
@@ -812,16 +815,28 @@ a { color: inherit; }
   <img src="assets/media/ateliers-img-1.jpg" alt="Cours collectif yoga — IFSU Équilibre Ath" class="photo-cours">
 </section>
 
+<section class="section">
+  <h2 class="section-title">À venir : découverte de la méditation</h2>
+  <p class="section-text">Trois jeudis soir ou deux samedis après-midi en novembre 2026. Petit groupe de 3 à 5 personnes, 180 €. Inscriptions jusqu'au 2 novembre 2026 inclus.</p>
+  <a class="btn btn-terracotta" href="atelier-decouverte.html">Découvrir les deux formats</a>
+</section>
 <section class="section" style="padding-top:0;">
+  <h2 class="section-title">Autres ateliers et archives</h2>
   <div class="carnet-grid">
 {% assign ateliers_tries = site.ateliers | sort: "date" %}
+{% assign aujourd_hui = site.time | date: "%Y-%m-%d" %}
 {% for atelier in ateliers_tries %}
+{% assign date_atelier = atelier.date | date: "%Y-%m-%d" %}
     <article class="carnet-card">
-      <span class="carnet-tag atelier">Atelier 3h</span>
+      <span class="carnet-tag atelier">Atelier 3 h</span>
       <h2 class="carnet-card-title">{{ atelier.title }}</h2>
       <p class="carnet-card-text">{{ atelier.intro1 }}</p>
-      <span class="carnet-card-meta">{{ atelier.date | date: "%-d %B %Y" }} · {{ atelier.duree }} · {{ atelier.tarif }} € · max {{ atelier.places }}</span>
+      <span class="carnet-card-meta">{{ atelier.date | date: "%d/%m/%Y" }} · {{ atelier.duree }} · {{ atelier.tarif }} € · max {{ atelier.places }}</span>
+      {% if date_atelier < aujourd_hui %}
+      <span class="carnet-card-link">Atelier passé : inscriptions closes</span>
+      {% else %}
       <a href="https://ifsu-equilibre.web.app/" target="_blank" rel="noopener" class="carnet-card-link">Réserver</a>
+      {% endif %}
     </article>
 {% endfor %}
   </div>
@@ -831,13 +846,13 @@ a { color: inherit; }
 <section class="section section-alt">
   <div class="section-inner">
     <p class="section-label">Format récurrent</p>
-    <h2 class="section-title">Les ateliers 3h</h2>
+    <h2 class="section-title">Les ateliers 3 h</h2>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem;">
       <div class="info-bloc">
         <p class="info-bloc-title">Tarif unique</p>
-        <div class="info-ligne"><span class="info-ligne-label">Atelier 3h</span><span class="info-ligne-valeur">25 €</span></div>
+        <div class="info-ligne"><span class="info-ligne-label">Atelier 3 h</span><span class="info-ligne-valeur">25 €</span></div>
         <div class="info-ligne"><span class="info-ligne-label">Confirmation</span><span class="info-ligne-valeur">À réception du paiement</span></div>
-        <div class="info-ligne"><span class="info-ligne-label">Annulation</span><span class="info-ligne-valeur">Gratuite jusqu'à 48h avant</span></div>
+        <div class="info-ligne"><span class="info-ligne-label">Annulation</span><span class="info-ligne-valeur">Gratuite jusqu'à 48 h avant</span></div>
       </div>
       <div class="info-bloc">
         <p class="info-bloc-title">Paiement</p>
@@ -875,4 +890,5 @@ a { color: inherit; }
 </footer>
 <script>document.getElementById('burger').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');});</script>
 <script defer src="/retraite-popup.js"></script>
+<script src="/assets/site-accessibility.js" defer></script>
 </body></html>
