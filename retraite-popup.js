@@ -12,10 +12,9 @@
     startDate: '2026-10-29',          // premier jour d'affichage (AAAA-MM-JJ)
     endDate: '2026-11-15',            // dernier jour d'affichage, inclus
     imgBase: 'https://ifsu-equilibre.be/assets/media/',
-    delayMs: 600,                     // apparition quasi immédiate
-    snoozeMs: 10000,                  // après « Plus tard » / fermeture : il revient après 10 secondes
-    storageKey: 'ifsu-retraite-popup',
-    excludePaths: ['/retraite', '/retraite.html', '/en/retraite', '/en/retraite.html'],
+    delayMs: 8000,                    // laisser le temps de découvrir la page
+    storageKey: 'ifsu-retraite-session-2026',
+    excludePaths: ['/retraite', '/retraite.html', '/en/retraite', '/en/retraite.html', '/atelier-decouverte.html', '/en/atelier-decouverte.html', '/conditions.html', '/en/conditions.html', '/confidentialite.html', '/en/confidentialite.html', '/mentions-legales.html', '/en/mentions-legales.html', '/404.html', '/en/404.html'],
     excludePrefixes: [],
     onlyPaths: null,
     watchRoutes: true,
@@ -68,13 +67,12 @@
     var d = new Date();
     return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
   }
-  function skey() { return CFG.storageKey + (isEn() ? '-en' : '-fr'); } // un état par langue : fermer ou cliquer en français n'éteint pas la version anglaise
   function readState() {
-    try { return JSON.parse(window.localStorage.getItem(skey()) || '{}') || {}; }
+    try { return JSON.parse(window.sessionStorage.getItem(CFG.storageKey) || '{}') || {}; }
     catch (e) { return {}; }
   }
   function writeState(s) {
-    try { window.localStorage.setItem(skey(), JSON.stringify(s)); } catch (e) { /* stockage indisponible : on continue */ }
+    try { window.sessionStorage.setItem(CFG.storageKey, JSON.stringify(s)); } catch (e) { /* stockage indisponible : on continue */ }
   }
   function pathOf() { return (window.location.pathname || '/'); }
   function listHas(list, p) {
@@ -94,8 +92,7 @@
     for (var i = 0; CFG.excludePrefixes && i < CFG.excludePrefixes.length; i++) { if (p.indexOf(CFG.excludePrefixes[i]) === 0) return false; }
     if (CFG.onlyPaths && !listHas(CFG.onlyPaths, p)) return false;
     var s = readState();
-    if (s.clicked) return false;
-    if (s.dismissedAt && (Date.now() - s.dismissedAt) < CFG.snoozeMs) return false;
+    if (s.shown || s.clicked || s.dismissedAt) return false;
     return true;
   }
 
@@ -161,7 +158,7 @@
     r.classList.remove('irt-in');
     window.setTimeout(function () { if (r.parentNode) r.parentNode.removeChild(r); }, 260);
     if (lastFocus && lastFocus.focus) { try { lastFocus.focus(); } catch (e) { /* rien */ } }
-    if (reason !== 'cta' && !CFG.preview) window.setTimeout(check, CFG.snoozeMs + 100); // revient après le délai
+    // Ne pas relancer la fenêtre après sa fermeture pendant cette visite.
   }
 
   function onKey(e) {
@@ -177,6 +174,7 @@
 
   function open(version) {
     if (root || document.getElementById('irt-root')) return;
+    if (!CFG.preview) writeState({ shown: true });
     if (typeof version === 'string') T = texts(version);
     if (!document.getElementById('irt-style')) {
       var st = document.createElement('style');
