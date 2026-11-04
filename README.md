@@ -2,7 +2,7 @@
 
 Site de IFSU studio (yoga Viniyoga et méditation védique IFSU), Ath, Hainaut.
 
-https://www.ifsu-equilibre.be/
+https://www.ifsu-studio.be/
 
 Site statique publié avec GitHub Pages. Les pages sont des fichiers HTML ; les carnets et ateliers sont dans `_carnets/` et `_ateliers/`.
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ifsu-equilibre.be/sitemap.xml
+Sitemap: https://ifsu-studio.be/sitemap.xml
