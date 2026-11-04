@@ -48,3 +48,42 @@ html[data-ifsu-enhanced] .fi .fa[hidden] { display: none !important; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .he, .ht, .hs, .ha, .hscroll, .hero-emblem { opacity: 1 !important; }
 }
+
+/* ===== Allègement (nov. 2026) : respiration + textes repliables ===== */
+.section { padding: 6rem 2rem; }
+.section-text { max-width: 38rem; line-height: 1.85; margin-bottom: 1.5rem; }
+.section-inner.text-center .section-text { margin-left: auto; margin-right: auto; }
+.section-title { margin-bottom: 2rem; }
+@media (max-width: 720px) {
+  .section { padding: 4.5rem 1.5rem; }
+  .section-text { font-size: 1.02rem; margin-bottom: 1.4rem; }
+}
+.fold { margin-top: 0.5rem; }
+.fold > summary {
+  list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .78rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--terracotta); padding: .6rem 0; border-bottom: 1px solid currentColor;
+}
+.fold > summary::-webkit-details-marker { display: none; }
+.fold > summary::after { content: "+"; font-size: 1rem; line-height: 1; }
+.fold[open] > summary::after { content: "−"; }
+.fold > summary .fold-close, .fold[open] > summary .fold-open { display: none; }
+.fold[open] > summary .fold-close { display: inline; }
+.fold > summary:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 4px; }
+.fold-body { margin-top: 1.5rem; }
+.qs-chapter { padding: 3.5rem 0; }
+.fold + .qs-cta { margin-top: 2rem; }
+
+/* Mise en page texte + photo, alternée gauche/droite */
+.split { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 4.5rem; align-items: center; max-width: 1100px; margin: 0 auto; }
+.split.rev { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); }
+.split.rev .split-fig { order: -1; }
+.split-text { min-width: 0; }
+.split-fig { margin: 0; }
+.split-fig img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; max-height: 32rem; }
+.split-text .section-title, .split-text .st { max-width: none; }
+@media (max-width: 860px) {
+  .split, .split.rev { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .split.rev .split-fig { order: 0; }
+  .split-fig img { aspect-ratio: 16 / 9; max-height: 13rem; }
+}
