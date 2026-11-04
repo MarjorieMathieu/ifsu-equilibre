@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>{{ page.title }} — Les Carnets de la Tradition</title>
+<title>{{ page.seo_title | default: page.title }} · IFSU studio</title>
 <link rel="canonical" href="https://ifsu-equilibre.be{{ page.url }}">
 <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
 <link rel="stylesheet" href="/assets/fonts/fonts.css">
