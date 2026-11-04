@@ -1,6 +1,6 @@
-# IFSU Équilibre · Marjorie Mathieu
+# IFSU studio · Marjorie Mathieu
 
-Site de IFSU Équilibre (yoga Viniyoga et méditation védique IFSU), Ath, Hainaut.
+Site de IFSU studio (yoga Viniyoga et méditation védique IFSU), Ath, Hainaut.
 
 https://www.ifsu-equilibre.be/
 

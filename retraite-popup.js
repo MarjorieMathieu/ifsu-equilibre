@@ -1,4 +1,4 @@
-/*! IFSU Équilibre — popup « retraite novembre 2026 ». Autonome, sans dépendance.
+/*! IFSU studio — popup « retraite novembre 2026 ». Autonome, sans dépendance.
  *
  * SITE (Jekyll) et APP : une balise script (src="/retraite-popup.js", attribut defer) avant la fermeture du body.
  * Réglages : window.IFSU_RETRAITE = { ... } AVANT le chargement du script.
