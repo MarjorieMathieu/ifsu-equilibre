@@ -7,11 +7,11 @@
   'use strict';
 
   var CFG = {
-    pageUrl: 'https://ifsu-equilibre.be/retraite.html', // absolu : fonctionne aussi depuis l'app
-    pageUrlEn: 'https://ifsu-equilibre.be/en/retraite.html',
+    pageUrl: 'https://ifsu-studio.be/retraite.html', // absolu : fonctionne aussi depuis l'app
+    pageUrlEn: 'https://ifsu-studio.be/en/retraite.html',
     startDate: '2026-10-29',          // premier jour d'affichage (AAAA-MM-JJ)
     endDate: '2026-11-15',            // dernier jour d'affichage, inclus
-    imgBase: 'https://ifsu-equilibre.be/assets/media/',
+    imgBase: 'https://ifsu-studio.be/assets/media/',
     delayMs: 8000,                    // laisser le temps de découvrir la page
     storageKey: 'ifsu-retraite-session-2026',
     excludePaths: ['/retraite', '/retraite.html', '/en/retraite', '/en/retraite.html', '/atelier-decouverte.html', '/en/atelier-decouverte.html', '/conditions.html', '/en/conditions.html', '/confidentialite.html', '/en/confidentialite.html', '/mentions-legales.html', '/en/mentions-legales.html', '/404.html', '/en/404.html'],
