@@ -12,8 +12,8 @@
       var introduction = registration.querySelector('.body-p');
       if (heading) heading.textContent = closed;
       if (introduction) introduction.textContent = en
-        ? 'Registration for both November 2026 formats closed on 2 November 2026. For information, contact ifsu@etik.com.'
-        : "Les inscriptions aux deux formats de novembre 2026 se sont terminées le 2 novembre 2026. Pour toute information, écris à ifsu@etik.com.";
+        ? 'Registration for both December 2026 formats closed on 2 December 2026. For information, contact ifsu@etik.com.'
+        : "Les inscriptions aux deux formats de décembre 2026 se sont terminées le 2 décembre 2026. Pour toute information, écris à ifsu@etik.com.";
       registration.querySelectorAll('iframe, .form-fallback').forEach(function (element) { element.hidden = true; });
       document.querySelectorAll('a[href="#reserver"]').forEach(function (link) { link.textContent = closed; });
     }
