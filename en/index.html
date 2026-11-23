@@ -1348,17 +1348,16 @@ f.textContent='';f.appendChild(i);});})();
 (function(){
   var pop=document.getElementById('atelier-pop');
   if(!pop) return;
-  var KEY='ifsu-atelier-pop', WAIT_DAYS=7;
+  var KEY='ifsu-atelier-pop', FORCE=/[?&]popup=1(&|$)/.test(location.search);
   /* Fin d'affichage : à mettre à jour quand la date de cohorte change */
   var END=new Date('2026-12-03T00:00:00');
-  if(new Date()>=END) return;
+  if(!FORCE&&new Date()>=END) return;
   /* Pas sur la page de l'atelier elle-même */
   if(/atelier-decouverte/.test(location.pathname)) return;
-  function recentlyDismissed(){
-    try{var t=parseInt(localStorage.getItem(KEY)||'0',10);return t&&(Date.now()-t)<WAIT_DAYS*864e5;}catch(e){return false;}
-  }
-  function remember(){try{localStorage.setItem(KEY,String(Date.now()));}catch(e){}}
-  if(recentlyDismissed()) return;
+  /* Fermé = masqué pour la visite en cours seulement ; il revient à la visite suivante jusqu'à la date de fin */
+  function dismissed(){try{return !FORCE&&sessionStorage.getItem(KEY)==='1';}catch(e){return false;}}
+  function remember(){try{sessionStorage.setItem(KEY,'1');}catch(e){}}
+  if(dismissed()) return;
   var shown=false, tries=0;
   function otherDialogOpen(){
     var d=document.querySelectorAll('[role="dialog"],dialog[open]');
@@ -1384,10 +1383,10 @@ f.textContent='';f.appendChild(i);});})();
   }
   function onScroll(){
     var h=document.documentElement.scrollHeight-innerHeight;
-    if(h>0&&scrollY/h>0.4) show();
+    if(h>0&&scrollY/h>0.25) show();
   }
   window.addEventListener('scroll',onScroll,{passive:true});
-  setTimeout(show,15000);
+  setTimeout(show,FORCE?800:6000);
   pop.addEventListener('click',function(e){
     if(e.target.closest('[data-apop-close]')) hide();
     else if(e.target.closest('[data-apop-go]')) remember();
